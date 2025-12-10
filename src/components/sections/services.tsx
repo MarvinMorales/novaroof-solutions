@@ -6,38 +6,38 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 const servicesData = [
     {
         icon: <Home />,
-        title: "Instalación de Techos de Tejas",
-        description: "Ofrecemos instalación experta de techos de tejas asfálticas, de madera, y de otros materiales, garantizando belleza y durabilidad.",
+        title: "Shingle Roof Installation",
+        description: "We offer expert installation of asphalt, wood, and other shingle roofs, ensuring beauty and durability.",
         imageId: "service-shingle"
     },
     {
         icon: <Replace />,
-        title: "Instalación de Techos de Metal",
-        description: "Instalamos techos de metal modernos y resistentes que ofrecen una longevidad superior y eficiencia energética.",
+        title: "Metal Roof Installation",
+        description: "We install modern, durable metal roofs that offer superior longevity and energy efficiency.",
         imageId: "service-metal"
     },
     {
         icon: <Wrench />,
-        title: "Reparación de Techos",
-        description: "Desde goteras menores hasta daños importantes, nuestro equipo repara su techo rápidamente para proteger su hogar.",
+        title: "Roof Repair",
+        description: "From minor leaks to major damage, our team quickly repairs your roof to protect your home.",
         imageId: "service-repair"
     },
     {
         icon: <ShieldCheck />,
-        title: "Inspección de Techos",
-        description: "Realizamos inspecciones detalladas para evaluar la condición de su techo y prevenir problemas futuros.",
+        title: "Roof Inspection",
+        description: "We perform detailed inspections to assess your roof's condition and prevent future problems.",
         imageId: "service-inspection"
     },
     {
         icon: <Droplets />,
-        title: "Servicios de Canalones",
-        description: "Instalación, reparación y limpieza de canalones para asegurar un drenaje adecuado y proteger los cimientos de su casa.",
+        title: "Gutter Services",
+        description: "Installation, repair, and cleaning of gutters to ensure proper drainage and protect your home's foundation.",
         imageId: "service-gutter"
     },
     {
         icon: <Zap />,
-        title: "Reparación de Daños por Tormenta",
-        description: "Asistencia rápida y eficaz para reparar daños causados por viento, granizo u otras condiciones climáticas severas.",
+        title: "Storm Damage Repair",
+        description: "Fast and effective assistance to repair damage caused by wind, hail, or other severe weather conditions.",
         imageId: "service-storm"
     },
 ]
@@ -50,9 +50,9 @@ export function Services() {
         <section id="services" className="w-full py-16 md:py-24">
             <div className="container">
                 <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Nuestros Servicios de Techado</h2>
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Roofing Services</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
-                        Soluciones completas y profesionales para cualquier tipo de techo. Nos especializamos en una amplia gama de servicios para mantener su hogar seguro y protegido.
+                        Complete and professional solutions for any type of roof. We specialize in a wide range of services to keep your home safe and protected.
                     </p>
                 </div>
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

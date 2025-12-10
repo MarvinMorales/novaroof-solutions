@@ -9,10 +9,11 @@ import { cn } from '@/lib/utils';
 import { useState } from 'react';
 
 const navLinks = [
-  { href: '/', label: 'Inicio' },
-  { href: '/about', label: 'Sobre Nosotros' },
-  { href: '/#services', label: 'Servicios' },
-  { href: '/#contact', label: 'Contacto' },
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About Us' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#faq', label: 'FAQ' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 const RoofIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -26,6 +27,15 @@ const RoofIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export function Header() {
   const pathname = usePathname();
   const [isSheetOpen, setSheetOpen] = useState(false);
+
+  const isLinkActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    if (href.startsWith('/#')) {
+      // Could enhance this with intersection observer if needed
+      return false;
+    }
+    return pathname.startsWith(href);
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
@@ -41,7 +51,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 'text-sm font-medium transition-colors hover:text-primary',
-                (pathname === link.href && link.href !== '/#services' && link.href !== '/#contact') ? 'text-primary' : 'text-muted-foreground'
+                isLinkActive(link.href) ? 'text-primary' : 'text-muted-foreground'
               )}
             >
               {link.label}
@@ -50,7 +60,7 @@ export function Header() {
         </nav>
         <div className="hidden items-center gap-4 md:flex">
           <Button asChild>
-            <Link href="/#contact">Obtener Presupuesto</Link>
+            <Link href="/#contact">Get a Quote</Link>
           </Button>
         </div>
         <div className="md:hidden">
@@ -58,7 +68,7 @@ export function Header() {
             <SheetTrigger asChild>
               <Button variant="outline" size="icon">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Abrir menú</span>
+                <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
@@ -75,7 +85,7 @@ export function Header() {
                       onClick={() => setSheetOpen(false)}
                       className={cn(
                         'text-lg font-medium transition-colors hover:text-primary',
-                         (pathname === link.href && link.href !== '/#services' && link.href !== '/#contact') ? 'text-primary' : 'text-foreground'
+                         isLinkActive(link.href) ? 'text-primary' : 'text-foreground'
                       )}
                     >
                       {link.label}
@@ -83,7 +93,7 @@ export function Header() {
                   ))}
                 </nav>
                 <Button asChild size="lg" className="mt-4" onClick={() => setSheetOpen(false)}>
-                  <Link href="/#contact">Obtener Presupuesto</Link>
+                  <Link href="/#contact">Get a Quote</Link>
                 </Button>
               </div>
             </SheetContent>

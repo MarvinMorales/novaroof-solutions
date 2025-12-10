@@ -1,50 +1,50 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Política de Cookies',
-  description: 'Información sobre cómo NovaRoof Solutions LLC utiliza cookies en nuestro sitio web.',
+  title: 'Cookie Policy',
+  description: 'Information about how NovaRoof Solutions LLC uses cookies on our website.',
 };
 
 export default function CookiePolicyPage() {
   return (
     <div className="container py-16 md:py-24">
       <article className="prose prose-lg mx-auto max-w-3xl dark:prose-invert">
-        <h1 className="font-headline text-4xl md:text-5xl font-bold">Política de Cookies</h1>
-        <p className="text-muted-foreground">Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <h1 className="font-headline text-4xl md:text-5xl font-bold">Cookie Policy</h1>
+        <p className="text-muted-foreground">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
         <p>
-          Esta Política de Cookies explica qué son las cookies y cómo las usamos. Debe leer esta política para comprender qué tipo de cookies utilizamos, o la información que recopilamos mediante cookies y cómo se utiliza esa información.
+          This Cookie Policy explains what cookies are and how we use them. You should read this policy to understand what type of cookies we use, the information we collect using cookies and how that information is used.
         </p>
 
-        <h2 className="font-headline">¿Qué son las cookies?</h2>
+        <h2 className="font-headline">What are cookies?</h2>
         <p>
-          Las cookies son pequeños archivos de texto que se almacenan en su navegador cuando visita un sitio web. Permiten que el sitio web recuerde sus acciones y preferencias (como inicio de sesión, idioma, tamaño de fuente y otras preferencias de visualización) durante un período de tiempo, para que no tenga que volver a introducirlas cada vez que regrese al sitio o navegue de una página a otra.
+          Cookies are small text files that are stored on your browser when you visit a website. They allow the website to remember your actions and preferences (such as login, language, font size and other display preferences) over a period of time, so you don’t have to keep re-entering them whenever you come back to the site or browse from one page to another.
         </p>
 
-        <h2 className="font-headline">Cómo utilizamos las cookies</h2>
+        <h2 className="font-headline">How we use cookies</h2>
         <p>
-          Utilizamos cookies para varios propósitos, que incluyen:
+          We use cookies for a variety of purposes, including:
         </p>
         <ul>
-          <li><strong>Cookies Esenciales:</strong> Algunas cookies son esenciales para que pueda experimentar la funcionalidad completa de nuestro sitio. Nos permiten mantener las sesiones de los usuarios y prevenir cualquier amenaza de seguridad. No recopilan ni almacenan ninguna información personal.</li>
-          <li><strong>Cookies de Análisis:</strong> Estas cookies almacenan información como el número de visitantes del sitio web, el número de visitantes únicos, qué páginas del sitio web han sido visitadas, la fuente de la visita, etc. Estos datos nos ayudan a comprender y analizar qué tan bien funciona el sitio web y dónde necesita mejorar.</li>
-          <li><strong>Cookies de Funcionalidad:</strong> Estas son las cookies que ayudan a ciertas funcionalidades no esenciales en nuestro sitio web. Estas funcionalidades incluyen incrustar contenido como videos o compartir contenido del sitio web en plataformas de redes sociales.</li>
+          <li><strong>Essential Cookies:</strong> Some cookies are essential for you to be able to experience the full functionality of our site. They allow us to maintain user sessions and prevent any security threats. They do not collect or store any personal information.</li>
+          <li><strong>Analytics Cookies:</strong> These cookies store information like the number of visitors to the website, the number of unique visitors, which pages of the website have been visited, the source of the visit, etc. These data help us understand and analyze how well the website performs and where it needs improvement.</li>
+          <li><strong>Functionality Cookies:</strong> These are the cookies that help certain non-essential functionalities on our website. These functionalities include embedding content like videos or sharing content of the website on social media platforms.</li>
         </ul>
 
-        <h2 className="font-headline">Sus opciones con respecto a las cookies</h2>
+        <h2 className="font-headline">Your choices regarding cookies</h2>
         <p>
-          Si prefiere evitar las cookies en nuestro sitio web, primero debe deshabilitar el uso de cookies en su navegador y luego eliminar las cookies guardadas en su navegador asociadas con este sitio web. Puede usar esta opción para evitar el uso de cookies en cualquier momento.
+          If you'd like to avoid the use of cookies on our website, you must first disable the use of cookies in your browser and then delete the cookies saved in your browser associated with this website. You may use this option for preventing the use of cookies at any time.
         </p>
         <p>
-          Si no acepta nuestras cookies, puede experimentar algunos inconvenientes en su uso del sitio web y algunas funciones pueden no funcionar correctamente.
+          If you do not accept our cookies, you may experience some inconvenience in your use of the website and some features may not function properly.
         </p>
-        <h2 className="font-headline">Contáctenos</h2>
+        <h2 className="font-headline">Contact Us</h2>
         <p>
-          Si tiene alguna pregunta sobre esta Política de Cookies, puede contactarnos:
+          If you have any questions about this Cookie Policy, you can contact us:
         </p>
         <ul>
-          <li>Por correo electrónico: contacto@novaroof.com</li>
-          <li>Visitando esta página en nuestro sitio web: /#contact</li>
+          <li>By email: contact@novaroof.com</li>
+          <li>By visiting this page on our website: /#contact</li>
         </ul>
       </article>
     </div>

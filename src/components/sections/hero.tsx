@@ -21,17 +21,17 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
       <div className="relative z-10 text-center px-4 max-w-4xl">
         <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-4 drop-shadow-lg">
-          La Excelencia en Techos para su Hogar
+          Excellence in Roofing for Your Home
         </h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-neutral-200 mb-8 drop-shadow-md">
-          NovaRoof Solutions: Artesanía de calidad, durabilidad y confianza para su tranquilidad.
+          NovaRoof Solutions: Quality craftsmanship, durability, and trust for your peace of mind.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg">
-            <Link href="/#services">Nuestros Servicios</Link>
+            <Link href="/#services">Our Services</Link>
           </Button>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/#contact">Obtener Presupuesto Gratis</Link>
+            <Link href="/#contact">Get a Free Quote</Link>
           </Button>
         </div>
       </div>

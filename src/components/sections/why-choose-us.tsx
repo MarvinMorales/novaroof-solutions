@@ -7,23 +7,23 @@ const whyUsImage = PlaceHolderImages.find(img => img.id === 'why-us-quality');
 const features = [
     {
         icon: <Gem className="h-8 w-8 text-primary" />,
-        title: "Materiales de Primera Calidad",
-        description: "Solo utilizamos materiales de los fabricantes más reputados, asegurando que su techo sea duradero, resistente y estéticamente agradable."
+        title: "Premium Quality Materials",
+        description: "We only use materials from the most reputable manufacturers, ensuring your roof is durable, resistant, and aesthetically pleasing."
     },
     {
         icon: <Award className="h-8 w-8 text-primary" />,
-        title: "Experiencia Comprobada",
-        description: "Con más de una década en la industria, nuestro equipo de expertos certificados tiene el conocimiento para manejar cualquier desafío de techado."
+        title: "Proven Experience",
+        description: "With over a decade in the industry, our team of certified experts has the knowledge to handle any roofing challenge."
     },
     {
         icon: <ShieldCheck className="h-8 w-8 text-primary" />,
-        title: "Garantía de Satisfacción",
-        description: "Respaldamos nuestro trabajo con garantías sólidas. Su tranquilidad es nuestra prioridad, y no estamos satisfechos hasta que usted lo esté."
+        title: "Satisfaction Guarantee",
+        description: "We stand behind our work with solid warranties. Your peace of mind is our priority, and we're not satisfied until you are."
     },
     {
         icon: <Clock className="h-8 w-8 text-primary" />,
-        title: "Puntualidad y Profesionalismo",
-        description: "Respetamos su tiempo y su propiedad. Cumplimos con los plazos acordados y mantenemos un área de trabajo limpia y segura en todo momento."
+        title: "Punctuality and Professionalism",
+        description: "We respect your time and property. We meet agreed-upon deadlines and maintain a clean and safe work area at all times."
     }
 ]
 
@@ -33,9 +33,9 @@ export function WhyChooseUs() {
             <div className="container">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
-                        <h2 className="font-headline text-3xl md:text-4xl font-bold">¿Por Qué Elegir NovaRoof Solutions?</h2>
+                        <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Choose NovaRoof Solutions?</h2>
                         <p className="text-lg text-muted-foreground">
-                            Cuando elige NovaRoof, no solo está obteniendo un techo nuevo. Está invirtiendo en tranquilidad, seguridad y un servicio al cliente sin igual.
+                            When you choose NovaRoof, you're not just getting a new roof. You're investing in peace of mind, security, and unparalleled customer service.
                         </p>
                         <div className="space-y-6 pt-4">
                             {features.map(feature => (

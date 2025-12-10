@@ -7,11 +7,11 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: {
-    default: 'NovaRoof Solutions LLC - Su Socio de Confianza en Techos',
+    default: 'NovaRoof Solutions LLC - Your Trusted Partner in Roofing',
     template: '%s | NovaRoof Solutions LLC',
   },
-  description: 'NovaRoof Solutions LLC ofrece servicios expertos en techos, incluyendo instalación, reparación e inspección. Calidad artesanal y servicio confiable.',
-  keywords: ['techos', 'reparación de techos', 'instalación de techos', 'servicios de canalones', 'daños por tormenta'],
+  description: 'NovaRoof Solutions LLC offers expert roofing services, including installation, repair, and inspection. Quality craftsmanship and reliable service.',
+  keywords: ['roofing', 'roof repair', 'roof installation', 'gutter services', 'storm damage'],
   icons: {
     icon: '/favicon.ico',
   },
@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

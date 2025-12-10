@@ -25,35 +25,35 @@ export function Footer() {
               <span className="font-headline text-2xl">NovaRoof Solutions</span>
             </Link>
             <p className="text-muted-foreground text-sm">
-              Su socio de confianza para todas sus necesidades de techado. Calidad y durabilidad garantizadas.
+              Your trusted partner for all your roofing needs. Quality and durability guaranteed.
             </p>
           </div>
 
           <div>
-            <h3 className="font-headline text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+            <h3 className="font-headline text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">Sobre Nosotros</Link></li>
-              <li><Link href="/#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Servicios</Link></li>
-              <li><Link href="/#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contacto</Link></li>
-              <li><Link href="/#testimonials" className="text-sm text-muted-foreground hover:text-primary transition-colors">Testimonios</Link></li>
+              <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/#faq" className="text-sm text-muted-foreground hover:text-primary transition-colors">FAQ</Link></li>
+              <li><Link href="/#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-headline text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Política de Privacidad</Link></li>
-              <li><Link href="/cookie-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Política de Cookies</Link></li>
-              <li><Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-primary transition-colors">Términos de Servicio</Link></li>
+              <li><Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/cookie-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cookie Policy</Link></li>
+              <li><Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-headline text-lg font-semibold mb-4">Contáctenos</h3>
+            <h3 className="font-headline text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-muted-foreground">123 Calle Principal, Ciudad, Estado, 12345</span>
+                    <span className="text-muted-foreground">123 Main Street, City, State, 12345</span>
                 </li>
                 <li className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-primary shrink-0" />
@@ -61,7 +61,7 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary shrink-0" />
-                    <a href="mailto:contacto@novaroof.com" className="text-muted-foreground hover:text-primary transition-colors">contacto@novaroof.com</a>
+                    <a href="mailto:contact@novaroof.com" className="text-muted-foreground hover:text-primary transition-colors">contact@novaroof.com</a>
                 </li>
             </ul>
           </div>
@@ -69,7 +69,7 @@ export function Footer() {
       </div>
       <div className="bg-muted/50">
         <div className="container py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} NovaRoof Solutions LLC. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} NovaRoof Solutions LLC. All rights reserved.</p>
           <div className="flex items-center gap-4 mt-4 sm:mt-0">
             <SocialIcon href="#">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd"></path></svg>

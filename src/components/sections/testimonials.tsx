@@ -18,7 +18,7 @@ const testimonials = [
     name: "Carlos Rodriguez",
     location: "Miami, FL",
     avatar: PlaceHolderImages.find(p => p.id === 'testimonial-avatar-1'),
-    comment: "El equipo de NovaRoof fue increíblemente profesional. Reemplazaron mi techo en tiempo récord y el resultado es impecable. ¡Totalmente recomendados!",
+    comment: "The NovaRoof team was incredibly professional. They replaced my roof in record time and the result is flawless. Highly recommended!",
     rating: 5,
   },
   {
@@ -26,7 +26,7 @@ const testimonials = [
     name: "Maria Gonzalez",
     location: "Fort Lauderdale, FL",
     avatar: PlaceHolderImages.find(p => p.id === 'testimonial-avatar-2'),
-    comment: "Tenía una gotera persistente que otros no pudieron arreglar. NovaRoof la encontró y solucionó el problema de raíz. Muy agradecida por su honestidad y pericia.",
+    comment: "I had a persistent leak that others couldn't fix. NovaRoof found and solved the root problem. Very grateful for their honesty and expertise.",
     rating: 5,
   },
   {
@@ -34,7 +34,7 @@ const testimonials = [
     name: "David Chen",
     location: "Boca Raton, FL",
     avatar: PlaceHolderImages.find(p => p.id === 'testimonial-avatar-3'),
-    comment: "El proceso de presupuesto fue claro y detallado. No hubo sorpresas. La calidad del trabajo y la limpieza al finalizar fueron excepcionales.",
+    comment: "The quoting process was clear and detailed. There were no surprises. The quality of the work and the cleanup afterward were exceptional.",
     rating: 5,
   },
 ];
@@ -50,9 +50,9 @@ export function Testimonials() {
     <section id="testimonials" className="w-full py-16 md:py-24 bg-card">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Lo que dicen nuestros clientes</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-                Estamos orgullosos de la confianza que nuestros clientes depositan en nosotros.
+                We are proud of the trust our clients place in us.
             </p>
         </div>
         <Carousel

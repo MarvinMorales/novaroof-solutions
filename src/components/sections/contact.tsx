@@ -29,23 +29,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const contactSchema = z.object({
-  name: z.string().min(2, "El nombre debe tener al menos 2 caracteres."),
-  email: z.string().email("Por favor, introduce una dirección de correo electrónico válida."),
+  name: z.string().min(2, "Name must be at least 2 characters."),
+  email: z.string().email("Please enter a valid email address."),
   phone: z.string().optional(),
-  service: z.string().min(1, "Por favor, selecciona un servicio."),
-  message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres."),
+  service: z.string().min(1, "Please select a service."),
+  message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 const services = [
-  "Instalación de Techo Nuevo",
-  "Reparación de Techo",
-  "Inspección de Techo",
-  "Reemplazo de Techo",
-  "Servicio de Canalones",
-  "Daños por Tormenta",
-  "Otro",
+  "New Roof Installation",
+  "Roof Repair",
+  "Roof Inspection",
+  "Roof Replacement",
+  "Gutter Services",
+  "Storm Damage",
+  "Other",
 ];
 
 export function Contact() {
@@ -67,7 +67,7 @@ export function Contact() {
   useEffect(() => {
     if (state.status === "success") {
       toast({
-        title: "Mensaje Enviado",
+        title: "Message Sent",
         description: state.message,
       });
       form.reset();
@@ -85,13 +85,12 @@ export function Contact() {
       <div className="container grid md:grid-cols-2 gap-12 items-start">
         <div className="space-y-6">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Obtenga un Presupuesto Gratuito
+            Get a Free Quote
           </h2>
           <p className="text-muted-foreground">
-            ¿Listo para comenzar su próximo proyecto de techado? Complete el
-            formulario y uno de nuestros especialistas se pondrá en contacto con
-            usted a la brevedad para discutir sus necesidades y ofrecerle un
-            presupuesto gratuito y sin compromiso.
+            Ready to start your next roofing project? Complete the
+            form and one of our specialists will contact you shortly to discuss your needs and provide a
+            free, no-obligation quote.
           </p>
           <div className="space-y-4">
              <div className="flex items-start gap-4">
@@ -99,9 +98,9 @@ export function Contact() {
                     <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                    <h3 className="font-semibold text-lg">Correo Electrónico</h3>
-                    <p className="text-muted-foreground">Envíenos sus preguntas o solicitudes.</p>
-                    <a href="mailto:contacto@novaroof.com" className="text-primary hover:underline">contacto@novaroof.com</a>
+                    <h3 className="font-semibold text-lg">Email</h3>
+                    <p className="text-muted-foreground">Send us your questions or requests.</p>
+                    <a href="mailto:contact@novaroof.com" className="text-primary hover:underline">contact@novaroof.com</a>
                 </div>
             </div>
             <div className="flex items-start gap-4">
@@ -109,8 +108,8 @@ export function Contact() {
                     <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                    <h3 className="font-semibold text-lg">Teléfono</h3>
-                    <p className="text-muted-foreground">Llámenos para una consulta directa.</p>
+                    <h3 className="font-semibold text-lg">Phone</h3>
+                    <p className="text-muted-foreground">Call us for a direct consultation.</p>
                     <a href="tel:+1234567890" className="text-primary hover:underline">+1 (234) 567-890</a>
                 </div>
             </div>
@@ -119,8 +118,8 @@ export function Contact() {
                     <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                    <h3 className="font-semibold text-lg">Oficina</h3>
-                    <p className="text-muted-foreground">123 Calle Principal, Ciudad, Estado, 12345</p>
+                    <h3 className="font-semibold text-lg">Office</h3>
+                    <p className="text-muted-foreground">123 Main Street, City, State, 12345</p>
                 </div>
             </div>
           </div>
@@ -128,7 +127,7 @@ export function Contact() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Formulario de Contacto</CardTitle>
+            <CardTitle>Contact Form</CardTitle>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -138,7 +137,7 @@ export function Contact() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Nombre Completo</FormLabel>
+                      <FormLabel>Full Name</FormLabel>
                       <FormControl>
                         <Input placeholder="John Doe" {...field} />
                       </FormControl>
@@ -152,11 +151,11 @@ export function Contact() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Correo Electrónico</FormLabel>
+                        <FormLabel>Email</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="su@email.com"
+                            placeholder="your@email.com"
                             {...field}
                           />
                         </FormControl>
@@ -169,7 +168,7 @@ export function Contact() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Teléfono (Opcional)</FormLabel>
+                        <FormLabel>Phone (Optional)</FormLabel>
                         <FormControl>
                           <Input
                             type="tel"
@@ -187,7 +186,7 @@ export function Contact() {
                   name="service"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Servicio de Interés</FormLabel>
+                      <FormLabel>Service of Interest</FormLabel>
                       <Select
                         onValueChange={field.onChange}
                         defaultValue={field.value}
@@ -195,7 +194,7 @@ export function Contact() {
                       >
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Seleccione un servicio" />
+                            <SelectValue placeholder="Select a service" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -215,10 +214,10 @@ export function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Mensaje</FormLabel>
+                      <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Cuéntenos sobre su proyecto..."
+                          placeholder="Tell us about your project..."
                           className="min-h-[120px]"
                           {...field}
                         />
@@ -228,7 +227,7 @@ export function Contact() {
                   )}
                 />
                 <Button type="submit" className="w-full" size="lg">
-                  Enviar Mensaje
+                  Send Message
                 </Button>
               </form>
             </Form>

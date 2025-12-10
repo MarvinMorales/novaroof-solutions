@@ -5,28 +5,28 @@ import { CheckCircle } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sobre Nosotros',
-  description: 'Conozca la historia, misión y el equipo experto detrás de NovaRoof Solutions LLC, su socio de confianza en soluciones de techado.',
+  title: 'About Us',
+  description: 'Learn about the history, mission, and expert team behind NovaRoof Solutions LLC, your trusted partner in roofing solutions.',
 };
 
 const aboutImage = PlaceHolderImages.find(img => img.id === 'about-us-team');
 
 const values = [
   {
-    title: 'Calidad Insuperable',
-    description: 'Utilizamos solo los mejores materiales y las técnicas más avanzadas para garantizar un techo duradero y resistente.'
+    title: 'Unsurpassed Quality',
+    description: 'We use only the best materials and the most advanced techniques to ensure a durable and long-lasting roof.'
   },
   {
-    title: 'Integridad y Honestidad',
-    description: 'Creemos en la transparencia total. Ofrecemos precios justos, presupuestos claros y una comunicación honesta en cada paso del proceso.'
+    title: 'Integrity and Honesty',
+    description: 'We believe in total transparency. We offer fair prices, clear estimates, and honest communication at every step.'
   },
   {
-    title: 'La Seguridad es Primero',
-    description: 'Cumplimos con los más altos estándares de seguridad para proteger a nuestro equipo, su familia y su propiedad durante todo el proyecto.'
+    title: 'Safety First',
+    description: 'We adhere to the highest safety standards to protect our team, your family, and your property throughout the project.'
   },
   {
-    title: 'Satisfacción del Cliente',
-    description: 'Su satisfacción es nuestra máxima prioridad. No consideramos un trabajo terminado hasta que usted esté 100% satisfecho con el resultado.'
+    title: 'Customer Satisfaction',
+    description: 'Your satisfaction is our top priority. We don\'t consider a job finished until you are 100% satisfied with the result.'
   }
 ]
 
@@ -34,25 +34,25 @@ export default function AboutPage() {
   return (
     <div className="bg-background">
       <section className="container py-16 md:py-24 text-center">
-        <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">Sobre NovaRoof Solutions LLC</h1>
+        <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">About NovaRoof Solutions LLC</h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          Construyendo confianza desde las alturas, un techo a la vez.
+          Building trust from the top, one roof at a time.
         </p>
       </section>
 
       <section className="container pb-16 md:pb-24">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="font-headline text-3xl font-semibold">Nuestra Historia</h2>
+            <h2 className="font-headline text-3xl font-semibold">Our Story</h2>
             <p className="text-muted-foreground">
-              Fundada en 2010, NovaRoof Solutions LLC nació de la visión de un veterano de la industria del techado con más de 20 años de experiencia. Cansado de ver a propietarios de viviendas lidiar con mano de obra de mala calidad y falta de profesionalismo, nuestro fundador se propuso crear una empresa que pusiera la integridad, la calidad y la satisfacción del cliente por encima de todo.
+              Founded in 2010, NovaRoof Solutions LLC was born from the vision of a roofing industry veteran with over 20 years of experience. Tired of seeing homeowners deal with poor workmanship and a lack of professionalism, our founder set out to create a company that put integrity, quality, and customer satisfaction above all else.
             </p>
             <p className="text-muted-foreground">
-              Comenzamos como un pequeño equipo dedicado y, gracias a nuestra reputación de excelencia y a las recomendaciones de nuestros clientes, hemos crecido hasta convertirnos en uno de los contratistas de techado más respetados de la región.
+              We started as a small, dedicated team, and thanks to our reputation for excellence and customer referrals, we have grown into one of the most respected roofing contractors in the region.
             </p>
-            <h2 className="font-headline text-3xl font-semibold mt-8">Nuestra Misión</h2>
+            <h2 className="font-headline text-3xl font-semibold mt-8">Our Mission</h2>
             <p className="text-muted-foreground">
-              Nuestra misión es simple: proporcionar a cada cliente una solución de techado superior que proteja su inversión más importante, su hogar. Nos esforzamos por ofrecer una experiencia excepcional desde la consulta inicial hasta la limpieza final, garantizando tranquilidad y un resultado que supere las expectativas.
+              Our mission is simple: to provide every customer with a superior roofing solution that protects their most important investment—their home. We strive to deliver an exceptional experience from the initial consultation to the final cleanup, ensuring peace of mind and a result that exceeds expectations.
             </p>
           </div>
           <div>
@@ -73,9 +73,9 @@ export default function AboutPage() {
       <section className="bg-card">
         <div className="container py-16 md:py-24">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Nuestros Valores Fundamentales</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Core Values</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Los principios que guían cada proyecto que emprendemos.
+              The principles that guide every project we undertake.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
