@@ -1,3 +1,82 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-roofing",
+      "description": "A modern house roof under a clear blue sky.",
+      "imageUrl": "https://images.unsplash.com/photo-1565363887713-783cd82d36d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwcm9vZnxlbnwwfHx8fDE3NjU0MDgyMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern roof"
+    },
+    {
+      "id": "service-shingle",
+      "description": "Close-up of newly installed asphalt shingles.",
+      "imageUrl": "https://images.unsplash.com/photo-1559368611-813457131803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyb29mJTIwc2hpbmdsZXN8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "roof shingles"
+    },
+    {
+      "id": "service-metal",
+      "description": "A sleek, modern metal roof on a house.",
+      "imageUrl": "https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZXRhbCUyMHJvb2Z8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "metal roof"
+    },
+    {
+      "id": "service-repair",
+      "description": "A roofer carefully repairing damaged tiles on a roof.",
+      "imageUrl": "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyb29mJTIwcmVwYWlyfGVufDB8fHx8MTc2NTQwODIwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "roof repair"
+    },
+    {
+      "id": "service-inspection",
+      "description": "A professional inspector examining a roof with a clipboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1722876720000-f39b65b7d4a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyb29mJTIwaW5zcGVjdGlvbnxlbnwwfHx8fDE3NjU0MDgyMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "roof inspection"
+    },
+    {
+      "id": "service-gutter",
+      "description": "Clean, new gutters installed along the edge of a roof.",
+      "imageUrl": "https://images.unsplash.com/photo-1560872247-cadc53160b00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWluJTIwZ3V0dGVyfGVufDB8fHx8MTc2NTQwODIwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rain gutter"
+    },
+    {
+      "id": "service-storm",
+      "description": "A house with a roof being repaired after storm damage.",
+      "imageUrl": "https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3Rvcm0lMjBkYW1hZ2V8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "storm damage"
+    },
+    {
+      "id": "about-us-team",
+      "description": "A diverse and professional construction team smiling.",
+      "imageUrl": "https://images.unsplash.com/photo-1509453721491-c3af5961df76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTM3NjQ5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction team"
+    },
+    {
+      "id": "why-us-quality",
+      "description": "A hand holding a high-quality roofing material sample.",
+      "imageUrl": "https://images.unsplash.com/photo-1765099271937-b56f29e7679f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxxdWFsaXR5JTIwbWF0ZXJpYWx8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "quality material"
+    },
+    {
+      "id": "why-us-experience",
+      "description": "An experienced roofer working on a complex roof structure.",
+      "imageUrl": "https://images.unsplash.com/photo-1584549239925-5554aa6b9183?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxleHBlcmllbmNlZCUyMHdvcmtlcnxlbnwwfHx8fDE3NjU0MDgyMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "experienced worker"
+    },
+    {
+      "id": "testimonial-avatar-1",
+      "description": "A smiling man's portrait.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUzOTM4NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-avatar-2",
+      "description": "A smiling woman's portrait.",
+      "imageUrl": "https://images.unsplash.com/photo-1592621385612-4d7129426394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTMyNTc1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-avatar-3",
+      "description": "A smiling person's portrait.",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUzNDA5MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    }
+  ]
 }
