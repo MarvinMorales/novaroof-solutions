@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -47,7 +47,7 @@ const renderStars = (rating: number) => {
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="w-full py-16 md:py-24 bg-card">
+    <section id="testimonials" className="w-full py-16 md:py-24 bg-muted/50">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
@@ -60,26 +60,37 @@ export function Testimonials() {
             align: "start",
             loop: true,
           }}
-          className="w-full max-w-4xl mx-auto mt-12"
+          className="w-full max-w-5xl mx-auto mt-12"
         >
           <CarouselContent>
             {testimonials.map((testimonial) => (
               <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <Card className="flex flex-col h-full">
-                    <CardContent className="p-6 flex flex-col items-center text-center flex-grow">
-                      {testimonial.avatar && (
-                        <Avatar className="w-20 h-20 mb-4 border-2 border-primary">
-                          <AvatarImage src={testimonial.avatar.imageUrl} alt={testimonial.name} data-ai-hint={testimonial.avatar.imageHint} />
-                          <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                        </Avatar>
-                      )}
-                       <div className="flex mb-2">
-                            {renderStars(testimonial.rating)}
+                <div className="p-2 h-full">
+                  <Card className="flex flex-col h-full bg-card shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <CardContent className="p-6 flex flex-col flex-grow">
+                      <div className="flex-grow space-y-4">
+                        <div className="flex items-center gap-2">
+                           <div className="flex text-yellow-400">
+                                {renderStars(testimonial.rating)}
+                            </div>
                         </div>
-                      <p className="text-muted-foreground mb-4 italic flex-grow">"{testimonial.comment}"</p>
-                      <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm text-muted-foreground">{testimonial.location}</div>
+                        <div className="relative">
+                            <Quote className="absolute -top-2 -left-4 h-8 w-8 text-muted-foreground/20" />
+                            <p className="text-muted-foreground italic z-10 relative">"{testimonial.comment}"</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-4 mt-6 pt-6 border-t">
+                        {testimonial.avatar && (
+                          <Avatar className="w-12 h-12 border-2 border-primary">
+                            <AvatarImage src={testimonial.avatar.imageUrl} alt={testimonial.name} data-ai-hint={testimonial.avatar.imageHint} />
+                            <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                          </Avatar>
+                        )}
+                        <div>
+                            <div className="font-semibold">{testimonial.name}</div>
+                            <div className="text-sm text-muted-foreground">{testimonial.location}</div>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
