@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-roofing",
-      "description": "A modern house roof under a clear blue sky.",
-      "imageUrl": "https://images.unsplash.com/photo-1565363887713-783cd82d36d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwcm9vZnxlbnwwfHx8fDE3NjU0MDgyMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern roof"
+      "description": "A beautiful modern home with a stylish roof at dusk.",
+      "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaG91c2V8ZW58MHx8fHwxNzE3NzgwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern house"
     },
     {
       "id": "service-shingle",

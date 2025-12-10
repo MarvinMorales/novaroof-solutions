@@ -18,13 +18,13 @@ export function Hero() {
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
       <div className="relative z-10 text-center px-4 max-w-4xl">
         <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-4 drop-shadow-lg">
-          Protegiendo Su Hogar, Techo a Techo
+          La Excelencia en Techos para su Hogar
         </h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-neutral-200 mb-8 drop-shadow-md">
-          NovaRoof Solutions: Calidad, durabilidad y confianza para todas sus necesidades de techado.
+          NovaRoof Solutions: Artesanía de calidad, durabilidad y confianza para su tranquilidad.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg">
