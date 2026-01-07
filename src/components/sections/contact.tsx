@@ -100,7 +100,7 @@ export function Contact() {
                 <div>
                     <h3 className="font-semibold text-lg">Email</h3>
                     <p className="text-muted-foreground">Send us your questions or requests.</p>
-                    <a href="mailto:contact@novaroof.com" className="text-primary hover:underline">contact@novaroof.com</a>
+                    <a href="mailto:contact@novaroofsolutions.com" className="text-primary hover:underline">contact@novaroofsolutions.com</a>
                 </div>
             </div>
             <div className="flex items-start gap-4">
@@ -110,7 +110,7 @@ export function Contact() {
                 <div>
                     <h3 className="font-semibold text-lg">Phone</h3>
                     <p className="text-muted-foreground">Call us for a direct consultation.</p>
-                    <a href="tel:+1234567890" className="text-primary hover:underline">+1 (234) 567-890</a>
+                    <a href="tel:5623177925" className="text-primary hover:underline">562-317-7925</a>
                 </div>
             </div>
              <div className="flex items-start gap-4">
@@ -119,7 +119,7 @@ export function Contact() {
                 </div>
                 <div>
                     <h3 className="font-semibold text-lg">Office</h3>
-                    <p className="text-muted-foreground">123 Main Street, City, State, 12345</p>
+                    <p className="text-muted-foreground">2105 Vista Oeste NW Suite E 3752 Albuquerque NM, 87120</p>
                 </div>
             </div>
           </div>

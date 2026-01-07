@@ -43,7 +43,7 @@ export default function CookiePolicyPage() {
           If you have any questions about this Cookie Policy, you can contact us:
         </p>
         <ul>
-          <li>By email: contact@novaroof.com</li>
+          <li>By email: contact@novaroofsolutions.com</li>
           <li>By visiting this page on our website: /#contact</li>
         </ul>
       </article>

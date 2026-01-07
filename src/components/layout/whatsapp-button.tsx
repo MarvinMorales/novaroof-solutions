@@ -7,7 +7,7 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export function WhatsAppButton() {
     return (
         <Link
-            href="https://wa.me/1234567890" // TODO: Replace with your actual WhatsApp number
+            href="https://wa.me/15623177925"
             target="_blank"
             rel="noopener noreferrer"
             className="fixed bottom-6 right-6 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300 z-50 flex items-center justify-center w-14 h-14"

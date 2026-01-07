@@ -53,15 +53,15 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-muted-foreground">123 Main Street, City, State, 12345</span>
+                    <span className="text-muted-foreground">2105 Vista Oeste NW Suite E 3752 Albuquerque NM, 87120</span>
                 </li>
                 <li className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-primary shrink-0" />
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">+1 (234) 567-890</a>
+                    <a href="tel:5623177925" className="text-muted-foreground hover:text-primary transition-colors">562-317-7925</a>
                 </li>
                 <li className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary shrink-0" />
-                    <a href="mailto:contact@novaroof.com" className="text-muted-foreground hover:text-primary transition-colors">contact@novaroof.com</a>
+                    <a href="mailto:contact@novaroofsolutions.com" className="text-muted-foreground hover:text-primary transition-colors">contact@novaroofsolutions.com</a>
                 </li>
             </ul>
           </div>

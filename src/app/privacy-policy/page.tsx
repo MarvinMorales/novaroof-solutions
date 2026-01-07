@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
         <p className="text-muted-foreground">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
         <p>
-          NovaRoof Solutions LLC ("we," "us," or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [www.novaroof.com], including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site").
+          NovaRoof Solutions LLC ("we," "us," or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.novaroofsolutions.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site").
         </p>
         <p>
           Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
@@ -49,7 +49,7 @@ export default function PrivacyPolicyPage() {
           If you have questions or comments about this Privacy Policy, please contact us at:
         </p>
         <ul>
-          <li>By email: contact@novaroof.com</li>
+          <li>By email: contact@novaroofsolutions.com</li>
           <li>By visiting this page on our website: /#contact</li>
         </ul>
       </article>
