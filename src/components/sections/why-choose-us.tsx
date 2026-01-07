@@ -51,7 +51,7 @@ export function WhyChooseUs() {
                             ))}
                         </div>
                     </div>
-                     <div className="lg:block hidden">
+                     <div>
                         {whyUsImage && (
                             <Image
                                 src={whyUsImage.imageUrl}
