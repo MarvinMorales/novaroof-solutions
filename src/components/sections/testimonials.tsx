@@ -8,16 +8,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Star, Quote } from "lucide-react";
+import { User, Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
     id: 1,
     name: "Carlos Rodriguez",
     location: "Miami, FL",
-    avatar: PlaceHolderImages.find(p => p.id === 'testimonial-avatar-1'),
     comment: "The NovaRoof team was incredibly professional. They replaced my roof in record time and the result is flawless. Highly recommended!",
     rating: 5,
   },
@@ -25,7 +22,6 @@ const testimonials = [
     id: 2,
     name: "Maria Gonzalez",
     location: "Fort Lauderdale, FL",
-    avatar: PlaceHolderImages.find(p => p.id === 'testimonial-avatar-2'),
     comment: "I had a persistent leak that others couldn't fix. NovaRoof found and solved the root problem. Very grateful for their honesty and expertise.",
     rating: 5,
   },
@@ -33,7 +29,6 @@ const testimonials = [
     id: 3,
     name: "David Chen",
     location: "Boca Raton, FL",
-    avatar: PlaceHolderImages.find(p => p.id === 'testimonial-avatar-3'),
     comment: "The quoting process was clear and detailed. There were no surprises. The quality of the work and the cleanup afterward were exceptional.",
     rating: 5,
   },
@@ -80,12 +75,9 @@ export function Testimonials() {
                         </div>
                       </div>
                       <div className="flex items-center gap-4 mt-6 pt-6 border-t">
-                        {testimonial.avatar && (
-                          <Avatar className="w-12 h-12 border-2 border-primary">
-                            <AvatarImage src={testimonial.avatar.imageUrl} alt={testimonial.name} data-ai-hint={testimonial.avatar.imageHint} />
-                            <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                          </Avatar>
-                        )}
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary border-2 border-primary">
+                          <User className="h-6 w-6" />
+                        </div>
                         <div>
                             <div className="font-semibold">{testimonial.name}</div>
                             <div className="text-sm text-muted-foreground">{testimonial.location}</div>
