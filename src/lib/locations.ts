@@ -36,6 +36,15 @@ export const locations: LocationData[] = [
     climate: "a humid subtropical climate, characterized by hot summers and mild winters, with periods of heavy rain.",
     commonRisks: ["large hail", "flash floods", "strong thunderstorms", "wind damage"],
   },
+  {
+    city: "Miami",
+    state: "Florida",
+    stateCode: "FL",
+    slug: "miami-fl",
+    zipCodes: ["33101", "33109", "33125", "33126", "33127"],
+    climate: "a tropical monsoon climate, with hot, humid summers and warm, dry winters. It is prone to hurricanes and tropical storms, demanding robust roofing solutions.",
+    commonRisks: ["hurricanes", "high winds", "heavy rainfall", "intense sun exposure"],
+  }
 ];
 
 export const services = [
