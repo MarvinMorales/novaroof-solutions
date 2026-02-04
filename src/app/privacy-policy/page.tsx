@@ -28,55 +28,72 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="container py-16 md:py-24">
-      <article className="prose prose-lg mx-auto max-w-3xl dark:prose-invert">
-        <h1 className="font-headline text-4xl md:text-5xl font-bold">Privacy Policy</h1>
-        <p className="text-muted-foreground">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    <div className="bg-muted/40">
+      <div className="container py-16 md:py-24">
+        <article className="max-w-4xl mx-auto bg-card p-8 md:p-12 rounded-lg shadow-md">
+            <header className="text-center mb-12">
+                <h1 className="font-headline text-4xl md:text-5xl font-bold">Privacy Policy</h1>
+                <p className="mt-3 text-muted-foreground">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            </header>
+            
+            <div className="space-y-6 text-muted-foreground text-base md:text-lg">
+                <p>
+                  USA Roof Pros ("we," "us," or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site").
+                </p>
+                <p>
+                  Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
+                </p>
 
-        <p>
-          USA Roof Pros ("we," "us," or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site").
-        </p>
-        <p>
-          Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
-        </p>
+                <div className="space-y-4 pt-6">
+                    <h2 className="font-headline text-2xl font-semibold border-b pb-2 text-foreground">Collection of Your Information</h2>
+                    <p>
+                      We may collect information about you in a variety of ways. The information we may collect on the Site includes:
+                    </p>
+                    <h3 className="font-headline text-xl font-semibold pt-2 text-foreground">Personal Data</h3>
+                    <p>
+                      Personally identifiable information, such as your name, email address, and telephone number, that you voluntarily give to us when you use our contact forms to be connected with a roofing contractor. We collect this information to provide our referral services.
+                    </p>
+                </div>
+                
+                 <div className="space-y-4 pt-6">
+                    <h2 className="font-headline text-2xl font-semibold border-b pb-2 text-foreground">Use of Your Information</h2>
+                    <p>
+                      Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:
+                    </p>
+                    <ul className="list-disc list-outside pl-5 space-y-2">
+                        <li>Connect you with licensed and insured roofing contractors in your area.</li>
+                        <li>Facilitate the provision of quotes for roofing services.</li>
+                        <li>Email you regarding your service request.</li>
+                        <li>Request feedback on the services provided by contractors in our network.</li>
+                    </ul>
+                </div>
+                
+                 <div className="space-y-4 pt-6">
+                    <h2 className="font-headline text-2xl font-semibold border-b pb-2 text-foreground">Disclosure of Your Information</h2>
+                    <p>
+                     By submitting your information, you consent to us sharing it with one or more third-party roofing contractors in our network to fulfill your service request. We are a marketing and referral service; we do not perform the roofing work ourselves.
+                    </p>
+                </div>
 
-        <h2 className="font-headline">Collection of Your Information</h2>
-        <p>
-          We may collect information about you in a variety of ways. The information we may collect on the Site includes:
-        </p>
-        <h3 className="font-headline">Personal Data</h3>
-        <p>
-          Personally identifiable information, such as your name, email address, and telephone number, that you voluntarily give to us when you use our contact forms to be connected with a roofing contractor. We collect this information to provide our referral services.
-        </p>
-        
-        <h2 className="font-headline">Use of Your Information</h2>
-        <p>
-          Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:
-        </p>
-        <ul>
-          <li>Connect you with licensed and insured roofing contractors in your area.</li>
-          <li>Facilitate the provision of quotes for roofing services.</li>
-          <li>Email you regarding your service request.</li>
-          <li>Request feedback on the services provided by contractors in our network.</li>
-        </ul>
+                 <div className="space-y-4 pt-6">
+                    <h2 className="font-headline text-2xl font-semibold border-b pb-2 text-foreground">Security of Your Information</h2>
+                    <p>
+                      We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.
+                    </p>
+                </div>
 
-        <h2 className="font-headline">Disclosure of Your Information</h2>
-        <p>
-         By submitting your information, you consent to us sharing it with one or more third-party roofing contractors in our network to fulfill your service request. We are a marketing and referral service; we do not perform the roofing work ourselves.
-        </p>
-
-        <h2 className="font-headline">Security of Your Information</h2>
-        <p>
-          We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.
-        </p>
-        <h2 className="font-headline">Contact Us</h2>
-        <p>
-          If you have questions or comments about this Privacy Policy, please contact us at:
-        </p>
-        <ul>
-          <li>By email: contact@usaroofpros.com</li>
-        </ul>
-      </article>
+                 <div className="space-y-4 pt-6">
+                    <h2 className="font-headline text-2xl font-semibold border-b pb-2 text-foreground">Contact Us</h2>
+                    <p>
+                      If you have questions or comments about this Privacy Policy, please contact us:
+                    </p>
+                    <ul className="list-disc list-outside pl-5 space-y-2">
+                        <li>By email: <a href="mailto:contact@usaroofpros.com" className="text-primary hover:underline">contact@usaroofpros.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+      </div>
     </div>
   );
 }

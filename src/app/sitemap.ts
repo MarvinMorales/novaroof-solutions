@@ -1,9 +1,9 @@
 import { MetadataRoute } from 'next';
 import { locations, services } from '@/lib/locations';
 
-const URL = 'https://www.usaroofpros.com'; // IMPORTANT: Replace with your production domain
+const URL = 'https://www.usaroofpros.com';
 
-const priorityMap: { [key: string]: number } = {
+const priorityMap: Record<string, number> = {
   'emergency-roof-repair': 1.0,
   'storm-damage-roof': 0.9,
   'roof-leak-repair': 0.9,
@@ -11,28 +11,34 @@ const priorityMap: { [key: string]: number } = {
   'roof-replacement': 0.7,
 };
 
+const changeFreqMap: Record<string, MetadataRoute.Sitemap[number]['changeFrequency']> = {
+  'emergency-roof-repair': 'weekly',
+  'storm-damage-roof': 'weekly',
+  'roof-leak-repair': 'monthly',
+  'roof-repair': 'monthly',
+  'roof-replacement': 'yearly',
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const servicePages = locations.flatMap((location) =>
-    services.map((service) => ({
-      url: `${URL}/${service.slug}/${location.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: priorityMap[service.slug] || 0.5,
-    }))
+    services
+      .filter((service) => priorityMap[service.slug]) // allowlist SEO pages only
+      .map((service) => ({
+        url: `${URL}/${service.slug}/${location.slug}`,
+        lastModified: location.updatedAt
+          ? new Date(location.updatedAt)
+          : new Date('2025-01-01'),
+        changeFrequency: changeFreqMap[service.slug],
+        priority: priorityMap[service.slug],
+      }))
   );
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: URL,
-      lastModified: new Date(),
+      lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',
       priority: 1,
-    },
-    {
-      url: `${URL}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
     },
   ];
 
