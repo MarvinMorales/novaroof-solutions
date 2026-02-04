@@ -8,6 +8,7 @@ import { Contact } from '@/components/sections/contact';
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 import { generateLocalBusinessSchema, generateFaqSchema } from '@/lib/schema';
 import { Services } from '@/components/sections/services';
+import { CitySpecificSection } from '@/components/sections/city-specific-section';
 
 const SERVICE_SLUG = 'emergency-roof-repair';
 
@@ -99,6 +100,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       />
       <Hero />
       <HowItWorks />
+      <CitySpecificSection location={location} />
       <Faq faqs={faqs} />
       <Contact />
     </>

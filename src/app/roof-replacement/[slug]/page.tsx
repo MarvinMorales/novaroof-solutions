@@ -6,6 +6,7 @@ import { HowItWorks } from '@/components/sections/how-it-works';
 import { Faq } from '@/components/sections/faq';
 import { Contact } from '@/components/sections/contact';
 import { generateLocalBusinessSchema, generateFaqSchema } from '@/lib/schema';
+import { CitySpecificSection } from '@/components/sections/city-specific-section';
 
 const SERVICE_SLUG = 'roof-replacement';
 
@@ -66,6 +67,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       />
       <Hero />
       <HowItWorks />
+      <CitySpecificSection location={location} />
       <Faq faqs={faqs}/>
       <Contact />
     </>
