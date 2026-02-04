@@ -3,9 +3,26 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CheckCircle } from 'lucide-react';
 import type { Metadata } from 'next';
 
+const pageTitle = 'About USA Roof Pros';
+const pageDescription = 'Learn how USA Roof Pros connects homeowners with top-rated, licensed, and insured roofing contractors across the United States.';
+const ogImageUrl = 'https://images.unsplash.com/photo-1509453721491-c3af5961df76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTM3NjQ5OXww&ixlib=rb-4.1.0&q=80&w=1200';
+
 export const metadata: Metadata = {
-  title: 'About USA Roof Pros',
-  description: 'Learn how USA Roof Pros connects homeowners with top-rated, licensed, and insured roofing contractors across the United States.',
+  title: pageTitle,
+  description: pageDescription,
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'website',
+    url: '/about',
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [ogImageUrl],
+  },
 };
 
 const aboutImage = PlaceHolderImages.find(img => img.id === 'about-us-team');

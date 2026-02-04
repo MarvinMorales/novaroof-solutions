@@ -1,8 +1,25 @@
 import type { Metadata } from 'next';
 
+const pageTitle = 'Terms of Service';
+const pageDescription = 'Read the terms and conditions for using the USA Roof Pros website.';
+const ogImageUrl = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaG91c2V8ZW58MHx8fHwxNzE3NzgwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1200';
+
 export const metadata: Metadata = {
-  title: 'Terms of Service',
-  description: 'Read the terms and conditions for using the USA Roof Pros website.',
+  title: pageTitle,
+  description: pageDescription,
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'website',
+    url: '/terms-of-service',
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [ogImageUrl],
+  },
 };
 
 export default function TermsOfServicePage() {
