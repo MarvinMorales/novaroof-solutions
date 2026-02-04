@@ -451,5 +451,11 @@ export const services = [
     }
 ];
 
+export const getNearbyCities = (currentState: string, currentCity: string): LocationData[] => {
+  return locations
+    .filter(loc => loc.state === currentState && loc.city !== currentCity)
+    .slice(0, 4);
+};
+
 export const getServiceBySlug = (slug: string) => services.find(s => s.slug === slug);
 export const getLocationBySlug = (slug: string) => locations.find(l => l.slug === slug);

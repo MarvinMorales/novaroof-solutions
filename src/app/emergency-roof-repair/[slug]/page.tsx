@@ -5,10 +5,9 @@ import { Hero } from '@/components/sections/hero';
 import { HowItWorks } from '@/components/sections/how-it-works';
 import { Faq } from '@/components/sections/faq';
 import { Contact } from '@/components/sections/contact';
-import { Breadcrumbs } from '@/components/layout/breadcrumbs';
-import { generateLocalBusinessSchema, generateFaqSchema } from '@/lib/schema';
-import { Services } from '@/components/sections/services';
+import { generateLocalBusinessSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
+import { NearbyLocations } from '@/components/sections/nearby-locations';
 
 const SERVICE_SLUG = 'emergency-roof-repair';
 
@@ -31,15 +30,19 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   const title = `${service.title} in ${location.city}, ${location.stateCode} | Free Inspection`;
   const description = service.description.replace('{city}', location.city).replace('{state}', location.stateCode);
+  const canonicalUrl = `/${SERVICE_SLUG}/${location.slug}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title,
       description,
       type: 'website',
-      url: `/emergency-roof-repair/${location.slug}`,
+      url: canonicalUrl,
       images: [
         {
           url: 'https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3Rvcm0lMjBkYW1hZ2V8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1200',
@@ -87,11 +90,6 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   const faqs = getFaqs(location.city);
 
-  const breadcrumbLinks = [
-    { name: 'Home', href: '/' },
-    { name: service.title, href: `/${service.slug}/${location.slug}` },
-  ];
-
   return (
     <>
       <script
@@ -103,6 +101,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <CitySpecificSection location={location} />
       <Faq faqs={faqs} />
       <Contact />
+      <NearbyLocations currentLocation={location} service={service} />
     </>
   );
 }

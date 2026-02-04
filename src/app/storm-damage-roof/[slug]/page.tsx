@@ -5,8 +5,9 @@ import { Hero } from '@/components/sections/hero';
 import { HowItWorks } from '@/components/sections/how-it-works';
 import { Faq } from '@/components/sections/faq';
 import { Contact } from '@/components/sections/contact';
-import { generateLocalBusinessSchema, generateFaqSchema } from '@/lib/schema';
+import { generateLocalBusinessSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
+import { NearbyLocations } from '@/components/sections/nearby-locations';
 
 const SERVICE_SLUG = 'storm-damage-roof';
 
@@ -30,15 +31,19 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const title = `${service.title} in ${location.city}, ${location.stateCode} | Insurance Claims Help`;
   const description = service.description.replace('{city}', location.city).replace('{state}', location.stateCode);
   const ogImageUrl = 'https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3Rvcm0lMjBkYW1hZ2V8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1200';
+  const canonicalUrl = `/${SERVICE_SLUG}/${location.slug}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title,
       description,
       type: 'website',
-      url: `/${SERVICE_SLUG}/${location.slug}`,
+      url: canonicalUrl,
       images: [{ url: ogImageUrl, width: 1200, height: 630, alt: title }],
     },
     twitter: {
@@ -81,6 +86,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <CitySpecificSection location={location} />
       <Faq faqs={faqs}/>
       <Contact />
+      <NearbyLocations currentLocation={location} service={service} />
     </>
   );
 }
