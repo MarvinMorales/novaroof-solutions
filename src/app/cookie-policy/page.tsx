@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy',
-  description: 'Information about how NovaRoof Solutions LLC uses cookies on our website.',
+  description: 'Information about how USA Roof Pros uses cookies on our website.',
 };
 
 export default function CookiePolicyPage() {
@@ -13,7 +13,7 @@ export default function CookiePolicyPage() {
         <p className="text-muted-foreground">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
         <p>
-          This Cookie Policy explains what cookies are and how we use them. You should read this policy to understand what type of cookies we use, the information we collect using cookies and how that information is used.
+          This Cookie Policy explains what cookies are and how USA Roof Pros ("we," "us," or "our") uses them. You should read this policy to understand what type of cookies we use, the information we collect using cookies and how that information is used.
         </p>
 
         <h2 className="font-headline">What are cookies?</h2>
@@ -43,8 +43,7 @@ export default function CookiePolicyPage() {
           If you have any questions about this Cookie Policy, you can contact us:
         </p>
         <ul>
-          <li>By email: contact@novaroofsolutions.com</li>
-          <li>By visiting this page on our website: /#contact</li>
+          <li>By email: contact@usaroofpros.com</li>
         </ul>
       </article>
     </div>

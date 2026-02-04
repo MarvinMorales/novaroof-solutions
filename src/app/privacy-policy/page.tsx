@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'Learn how NovaRoof Solutions LLC collects, uses, and protects your personal information.',
+  description: 'Learn how USA Roof Pros collects, uses, and protects your personal information.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
         <p className="text-muted-foreground">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
         <p>
-          NovaRoof Solutions LLC ("we," "us," or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.novaroofsolutions.com, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site").
+          USA Roof Pros ("we," "us," or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site").
         </p>
         <p>
           Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
@@ -25,20 +25,24 @@ export default function PrivacyPolicyPage() {
         </p>
         <h3 className="font-headline">Personal Data</h3>
         <p>
-          Personally identifiable information, such as your name, email address, and telephone number, that you voluntarily give to us when you register with the Site or when you choose to participate in various activities related to the Site, such as contact forms and newsletters.
+          Personally identifiable information, such as your name, email address, and telephone number, that you voluntarily give to us when you use our contact forms to be connected with a roofing contractor. We collect this information to provide our referral services.
         </p>
-
+        
         <h2 className="font-headline">Use of Your Information</h2>
         <p>
           Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:
         </p>
         <ul>
-          <li>Create and manage your account.</li>
-          <li>Email you regarding your account or order.</li>
-          <li>Respond to your service and support requests.</li>
-          <li>Request feedback and contact you about your use of the Site.</li>
-          <li>Send you a newsletter.</li>
+          <li>Connect you with licensed and insured roofing contractors in your area.</li>
+          <li>Facilitate the provision of quotes for roofing services.</li>
+          <li>Email you regarding your service request.</li>
+          <li>Request feedback on the services provided by contractors in our network.</li>
         </ul>
+
+        <h2 className="font-headline">Disclosure of Your Information</h2>
+        <p>
+         By submitting your information, you consent to us sharing it with one or more third-party roofing contractors in our network to fulfill your service request. We are a marketing and referral service; we do not perform the roofing work ourselves.
+        </p>
 
         <h2 className="font-headline">Security of Your Information</h2>
         <p>
@@ -49,8 +53,7 @@ export default function PrivacyPolicyPage() {
           If you have questions or comments about this Privacy Policy, please contact us at:
         </p>
         <ul>
-          <li>By email: contact@novaroofsolutions.com</li>
-          <li>By visiting this page on our website: /#contact</li>
+          <li>By email: contact@usaroofpros.com</li>
         </ul>
       </article>
     </div>

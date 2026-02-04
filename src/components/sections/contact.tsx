@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
-import { submitContactForm, type ContactFormState } from "@/app/actions";
+import { submitLeadForm, type LeadFormState } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -26,9 +26,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
-const contactSchema = z.object({
+const leadSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Please enter a valid email address."),
   phone: z.string().optional(),
@@ -36,25 +36,26 @@ const contactSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
-type ContactFormValues = z.infer<typeof contactSchema>;
+type LeadFormValues = z.infer<typeof leadSchema>;
 
 const services = [
-  "New Roof Installation",
+  "Emergency Roof Repair",
   "Roof Repair",
-  "Roof Inspection",
   "Roof Replacement",
+  "Storm Damage Repair",
+  "Roof Leak Repair",
+  "Roof Inspection",
   "Gutter Services",
-  "Storm Damage",
   "Other",
 ];
 
 export function Contact() {
   const { toast } = useToast();
-  const initialState: ContactFormState = { message: "", status: "idle" };
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  const initialState: LeadFormState = { message: "", status: "idle" };
+  const [state, formAction] = useFormState(submitLeadForm, initialState);
 
-  const form = useForm<ContactFormValues>({
-    resolver: zodResolver(contactSchema),
+  const form = useForm<LeadFormValues>({
+    resolver: zodResolver(leadSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -67,7 +68,7 @@ export function Contact() {
   useEffect(() => {
     if (state.status === "success") {
       toast({
-        title: "Message Sent",
+        title: "Request Sent!",
         description: state.message,
       });
       form.reset();
@@ -85,12 +86,10 @@ export function Contact() {
       <div className="container grid md:grid-cols-2 gap-12 items-start">
         <div className="space-y-6">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Get a Free Quote
+            Get Your Free Roofing Quote
           </h2>
           <p className="text-muted-foreground">
-            Ready to start your next roofing project? Complete the
-            form and one of our specialists will contact you shortly to discuss your needs and provide a
-            free, no-obligation quote.
+            Ready to start your roofing project? Fill out the form, and we'll connect you with a top-rated, licensed, and insured roofer in your area for a free, no-obligation inspection and quote.
           </p>
           <div className="space-y-4">
              <div className="flex items-start gap-4">
@@ -98,9 +97,9 @@ export function Contact() {
                     <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                    <h3 className="font-semibold text-lg">Email</h3>
-                    <p className="text-muted-foreground">Send us your questions or requests.</p>
-                    <a href="mailto:contact@novaroofsolutions.com" className="text-primary hover:underline">contact@novaroofsolutions.com</a>
+                    <h3 className="font-semibold text-lg">Email Us</h3>
+                    <p className="text-muted-foreground">For questions about our service.</p>
+                    <a href="mailto:contact@usaroofpros.com" className="text-primary hover:underline">contact@usaroofpros.com</a>
                 </div>
             </div>
             <div className="flex items-start gap-4">
@@ -108,18 +107,9 @@ export function Contact() {
                     <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                    <h3 className="font-semibold text-lg">Phone</h3>
-                    <p className="text-muted-foreground">Call us for a direct consultation.</p>
-                    <a href="tel:5623177925" className="text-primary hover:underline">562-317-7925</a>
-                </div>
-            </div>
-             <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 pt-1">
-                    <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                    <h3 className="font-semibold text-lg">Office</h3>
-                    <p className="text-muted-foreground">2105 Vista Oeste NW Suite E 3752 Albuquerque NM, 87120</p>
+                    <h3 className="font-semibold text-lg">Call Us</h3>
+                    <p className="text-muted-foreground">Speak directly with our team.</p>
+                    <a href="tel:888-555-7663" className="text-primary hover:underline">888-555-ROOF</a>
                 </div>
             </div>
           </div>
@@ -127,7 +117,7 @@ export function Contact() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Contact Form</CardTitle>
+            <CardTitle>Find a Local Roofer</CardTitle>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -186,7 +176,7 @@ export function Contact() {
                   name="service"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Service of Interest</FormLabel>
+                      <FormLabel>Service Needed</FormLabel>
                       <Select
                         onValueChange={field.onChange}
                         defaultValue={field.value}
@@ -214,10 +204,10 @@ export function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Project Details</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell us about your project..."
+                          placeholder="Tell us about your roofing project..."
                           className="min-h-[120px]"
                           {...field}
                         />
@@ -227,7 +217,7 @@ export function Contact() {
                   )}
                 />
                 <Button type="submit" className="w-full" size="lg">
-                  Send Message
+                  Connect Me With a Pro
                 </Button>
               </form>
             </Form>

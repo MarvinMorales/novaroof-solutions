@@ -4,38 +4,50 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import { generateFaqSchema } from "@/lib/schema"
 
-const faqs = [
+const defaultFaqs = [
     {
-        question: "How long does a roof replacement take?",
-        answer: "A typical residential roof replacement can take anywhere from 1 to 3 days, depending on the size of the roof, the materials being used, and the weather conditions. We work efficiently to minimize disruption to your daily life."
+        question: "How does your service work?",
+        answer: "It's simple. You fill out our form with details about your roofing needs. We then match you with a qualified, licensed, and insured roofing contractor in your local area who will contact you to provide a free, no-obligation quote."
     },
     {
-        question: "How do I know if I need a roof repair or a full replacement?",
-        answer: "It depends on the age of your roof and the extent of the damage. Small leaks or a few missing shingles can often be repaired. However, if your roof is over 20 years old, has widespread damage, or shows signs of sagging, a replacement is likely the safer and more cost-effective option in the long run. We offer a free inspection to help you make the best decision."
+        question: "Is this service free for homeowners?",
+        answer: "Yes, our service is 100% free for homeowners. We are compensated by the contractors in our network."
     },
     {
-        question: "What roofing materials do you offer?",
-        answer: "We offer a wide variety of roofing materials to suit different styles and budgets, including asphalt shingles, metal roofing, wood shakes, and more. We can help you choose the best material for your home's architecture and your specific needs."
+        question: "Are the roofing contractors licensed and insured?",
+        answer: "Absolutely. We only partner with professional roofing companies that are fully licensed and insured in their respective states. We verify their credentials to ensure you're connected with reputable pros."
     },
     {
-        question: "Do you offer a warranty on your work?",
-        answer: "Yes, absolutely. We stand behind our workmanship with a comprehensive labor warranty, in addition to the manufacturer's warranty on the materials used. Your complete satisfaction and peace of mind are our top priorities."
+        question: "What kind of roofing services can I request?",
+        answer: "You can request a wide range of services, including emergency roof repair, full roof replacement, storm damage assessment, leak repairs, new roof installation, and routine inspections."
     },
     {
-        question: "How much does a new roof cost?",
-        answer: "The cost of a new roof varies greatly depending on factors like the size and slope of your roof, the materials you choose, and the complexity of the job. We provide a detailed, transparent, and free estimate after a thorough inspection of your property."
+        question: "Am I obligated to hire the contractor you connect me with?",
+        answer: "No, not at all. You are under no obligation to hire any contractor we connect you with. We recommend getting multiple quotes to make the best decision for your home and budget."
     }
 ]
 
-export function Faq() {
+type FaqProps = {
+  faqs?: { question: string; answer: string }[];
+  addSchema?: boolean;
+}
+
+export function Faq({ faqs = defaultFaqs, addSchema = true }: FaqProps) {
     return (
         <section id="faq" className="w-full py-16 md:py-24 bg-card">
+            {addSchema && (
+                 <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(generateFaqSchema(faqs)) }}
+                />
+            )}
             <div className="container">
                 <div className="text-center max-w-3xl mx-auto">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
-                        Have questions? We have answers. Here are some of the most common questions we receive about our roofing services.
+                        Your questions about finding the right roofer, answered.
                     </p>
                 </div>
                 <div className="max-w-3xl mx-auto mt-12">

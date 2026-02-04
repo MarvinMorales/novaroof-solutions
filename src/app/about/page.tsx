@@ -1,32 +1,31 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about the history, mission, and expert team behind NovaRoof Solutions LLC, your trusted partner in roofing solutions.',
+  title: 'About USA Roof Pros',
+  description: 'Learn how USA Roof Pros connects homeowners with top-rated, licensed, and insured roofing contractors across the United States.',
 };
 
 const aboutImage = PlaceHolderImages.find(img => img.id === 'about-us-team');
 
 const values = [
   {
-    title: 'Unsurpassed Quality',
-    description: 'We use only the best materials and the most advanced techniques to ensure a durable and long-lasting roof.'
+    title: 'Verified Professionals',
+    description: 'Every roofer in our network is licensed, insured, and has a proven track record of quality workmanship.'
   },
   {
-    title: 'Integrity and Honesty',
-    description: 'We believe in total transparency. We offer fair prices, clear estimates, and honest communication at every step.'
+    title: 'Speed and Efficiency',
+    description: 'We quickly connect you with available contractors in your area, which is critical during roofing emergencies.'
   },
   {
-    title: 'Safety First',
-    description: 'We adhere to the highest safety standards to protect our team, your family, and your property throughout the project.'
+    title: 'Total Transparency',
+    description: 'We believe in a clear and honest process. Get free, no-obligation quotes so you can make informed decisions.'
   },
   {
-    title: 'Customer Satisfaction',
-    description: 'Your satisfaction is our top priority. We don\'t consider a job finished until you are 100% satisfied with the result.'
+    title: 'Customer Focus',
+    description: 'Our goal is to make the process of finding a trustworthy roofer as simple and stress-free as possible for homeowners.'
   }
 ]
 
@@ -34,25 +33,25 @@ export default function AboutPage() {
   return (
     <div className="bg-background">
       <section className="container py-16 md:py-24 text-center">
-        <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">About NovaRoof Solutions LLC</h1>
+        <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">About USA Roof Pros</h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          Building trust from the top, one roof at a time.
+          Connecting homeowners with America's most trusted roofing professionals.
         </p>
       </section>
 
       <section className="container pb-16 md:pb-24">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="font-headline text-3xl font-semibold">Our Story</h2>
+            <h2 className="font-headline text-3xl font-semibold">Our Mission</h2>
             <p className="text-muted-foreground">
-              Founded in 2010, NovaRoof Solutions LLC was born from the vision of a roofing industry veteran with over 20 years of experience. Tired of seeing homeowners deal with poor workmanship and a lack of professionalism, our founder set out to create a company that put integrity, quality, and customer satisfaction above all else.
+              Finding a reliable roofing contractor can be stressful, especially when you have a leak or storm damage. USA Roof Pros was founded to solve this problem. We are not a roofing company; we are a marketing and referral service dedicated to making it easy for homeowners to connect with pre-screened, high-quality local roofers.
             </p>
             <p className="text-muted-foreground">
-              We started as a small, dedicated team, and thanks to our reputation for excellence and customer referrals, we have grown into one of the most respected roofing contractors in the region.
+              Our extensive network of licensed and insured contractors ensures that no matter where you are, you can quickly get a quote from a qualified professional you can trust. We do the vetting so you don't have to.
             </p>
-            <h2 className="font-headline text-3xl font-semibold mt-8">Our Mission</h2>
-            <p className="text-muted-foreground">
-              Our mission is simple: to provide every customer with a superior roofing solution that protects their most important investment—their home. We strive to deliver an exceptional experience from the initial consultation to the final cleanup, ensuring peace of mind and a result that exceeds expectations.
+            <h2 className="font-headline text-3xl font-semibold mt-8">How We Help</h2>
+             <p className="text-muted-foreground">
+              We bridge the gap between homeowners in need and skilled roofers ready to help. From minor repairs to full replacements and emergency services, our platform simplifies the process, providing peace of mind and ensuring your home is protected by the best in the business.
             </p>
           </div>
           <div>
@@ -73,9 +72,9 @@ export default function AboutPage() {
       <section className="bg-card">
         <div className="container py-16 md:py-24">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Core Values</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Core Principles</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              The principles that guide every project we undertake.
+              The principles that guide our service and our network.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -2,16 +2,15 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { WhatsAppButton } from '@/components/layout/whatsapp-button';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: {
-    default: 'NovaRoof Solutions LLC - Your Trusted Partner in Roofing',
-    template: '%s | NovaRoof Solutions LLC',
+    default: 'USA Roof Pros - Connecting You With Trusted Local Roofers',
+    template: '%s | USA Roof Pros',
   },
-  description: 'NovaRoof Solutions LLC offers expert roofing services, including installation, repair, and inspection. Quality craftsmanship and reliable service.',
-  keywords: ['roofing', 'roof repair', 'roof installation', 'gutter services', 'storm damage'],
+  description: 'We connect you with licensed and insured local roofing contractors for repair, replacement, and emergency services. Get a free, no-obligation quote today.',
+  keywords: ['roofing contractors', 'roof repair', 'roof replacement', 'emergency roof repair', 'storm damage'],
   icons: {
     icon: '/favicon.ico',
   },
@@ -33,7 +32,6 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
-        {/* <WhatsAppButton /> */}
         <Toaster />
       </body>
     </html>

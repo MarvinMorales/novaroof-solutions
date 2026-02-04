@@ -13,23 +13,20 @@ import { User, Star, Quote } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Carlos Rodriguez",
-    location: "Miami, FL",
-    comment: "The NovaRoof team was incredibly professional. They replaced my roof in record time and the result is flawless. Highly recommended!",
+    name: "John S.",
+    comment: "The contractor USA Roof Pros connected me with was fantastic. They were on time, professional, and did a high-quality roof replacement. The whole process was easier than I expected.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Maria Gonzalez",
-    location: "Fort Lauderdale, FL",
-    comment: "I had a persistent leak that others couldn't fix. NovaRoof found and solved the root problem. Very grateful for their honesty and expertise.",
+    name: "Maria G.",
+    comment: "I had a storm damage emergency and used this service. They found a local roofer who came out the same day to put a tarp on and gave me a fair quote for the repair. A lifesaver!",
     rating: 5,
   },
   {
     id: 3,
-    name: "David Chen",
-    location: "Boca Raton, FL",
-    comment: "The quoting process was clear and detailed. There were no surprises. The quality of the work and the cleanup afterward were exceptional.",
+    name: "David L.",
+    comment: "Finding a trustworthy roofer is tough. This service made it simple. The quote was clear, and the work was exceptional. I'd definitely use them again to find other contractors.",
     rating: 5,
   },
 ];
@@ -45,9 +42,9 @@ export function Testimonials() {
     <section id="testimonials" className="w-full py-16 md:py-24 bg-muted/50">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">What Homeowners Say</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-                We are proud of the trust our clients place in us.
+                We're proud to connect homeowners with top-rated professionals.
             </p>
         </div>
         <Carousel
@@ -80,7 +77,7 @@ export function Testimonials() {
                         </div>
                         <div>
                             <div className="font-semibold">{testimonial.name}</div>
-                            <div className="text-sm text-muted-foreground">{testimonial.location}</div>
+                            <div className="text-sm text-muted-foreground">Homeowner</div>
                         </div>
                       </div>
                     </CardContent>

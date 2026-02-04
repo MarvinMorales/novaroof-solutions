@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
-  description: 'Read the terms and conditions for using the NovaRoof Solutions LLC website.',
+  description: 'Read the terms and conditions for using the USA Roof Pros website.',
 };
 
 export default function TermsOfServicePage() {
@@ -14,25 +14,28 @@ export default function TermsOfServicePage() {
 
         <h2 className="font-headline">1. Agreement to Terms</h2>
         <p>
-          These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and NovaRoof Solutions LLC (“Company”, “we”, “us”, or “our”), concerning your access to and use of the www.novaroofsolutions.com website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).
+          These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and USA Roof Pros (“Company”, “we”, “us”, or “our”), concerning your access to and use of our website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).
+        </p>
+        <p>
+          We are a roofing marketing and referral service. We do not provide roofing services ourselves. We connect homeowners with licensed and insured third-party roofing contractors.
         </p>
         <p>
           You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Service. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF SERVICE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY.
         </p>
 
-        <h2 className="font-headline">2. Intellectual Property</h2>
+        <h2 className="font-headline">2. Our Services</h2>
+        <p>
+          Our Site provides a platform where you can request to be connected with roofing contractors. We do not endorse any specific contractor, nor do we guarantee the quality of their work. Any contractual agreement for roofing work is strictly between you and the contractor. We are not a party to that agreement.
+        </p>
+
+        <h2 className="font-headline">3. Intellectual Property</h2>
         <p>
           Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the “Content”) and the trademarks, service marks, and logos contained therein (the “Marks”) are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws.
         </p>
-
-        <h2 className="font-headline">3. User Representations</h2>
-        <p>
-          By using the Site, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such information as necessary; (3) you have the legal capacity and you agree to comply with these Terms of Service; (4) you will not access the Site through automated or non-human means, whether through a bot, script, or otherwise; (5) you will not use the Site for any illegal or unauthorized purpose.
-        </p>
-
+        
         <h2 className="font-headline">4. Governing Law</h2>
         <p>
-          These Terms shall be governed by and defined following the laws of the state in which NovaRoof Solutions LLC operates, without regard to its conflict of law provisions.
+          These Terms shall be governed by and defined following the laws of the United States.
         </p>
         
         <h2 className="font-headline">5. Contact Us</h2>
@@ -40,8 +43,7 @@ export default function TermsOfServicePage() {
           In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:
         </p>
         <ul>
-          <li>By email: contact@novaroofsolutions.com</li>
-          <li>By visiting this page on our website: /#contact</li>
+          <li>By email: contact@usaroofpros.com</li>
         </ul>
       </article>
     </div>

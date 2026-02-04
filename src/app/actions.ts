@@ -2,7 +2,7 @@
 
 import { z } from "zod";
 
-const contactSchema = z.object({
+const leadSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters."),
     email: z.string().email("Please enter a valid email address."),
     phone: z.string().optional(),
@@ -10,16 +10,16 @@ const contactSchema = z.object({
     message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
-export type ContactFormState = {
+export type LeadFormState = {
     message: string;
     status: "idle" | "success" | "error";
 };
 
-export async function submitContactForm(
-    prevState: ContactFormState,
+export async function submitLeadForm(
+    prevState: LeadFormState,
     formData: FormData
-): Promise<ContactFormState> {
-    const validatedFields = contactSchema.safeParse({
+): Promise<LeadFormState> {
+    const validatedFields = leadSchema.safeParse({
         name: formData.get("name"),
         email: formData.get("email"),
         phone: formData.get("phone"),
@@ -35,12 +35,12 @@ export async function submitContactForm(
         };
     }
     
-    // Here you would typically send an email or save to a database.
-    // For this example, we'll just log it to the console.
-    console.log("New Contact Form Submission:", validatedFields.data);
+    // In a real application, this lead would be sent to a CRM
+    // or a lead distribution system.
+    console.log("New Roofing Lead Captured:", validatedFields.data);
 
     return {
-        message: "Thank you for contacting us! We will get back to you soon.",
+        message: "Thank you! We've received your request and will connect you with a qualified local roofer shortly.",
         status: "success",
     };
 }

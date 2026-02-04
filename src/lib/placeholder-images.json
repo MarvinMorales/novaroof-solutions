@@ -53,30 +53,6 @@
       "description": "Four different types of quality roofing materials displayed.",
       "imageUrl": "https://roofmaster.ca/wp-content/uploads/2020/08/4-best-roofing-materials-for-the-canadian-climate.jpg",
       "imageHint": "roofing materials"
-    },
-    {
-      "id": "why-us-experience",
-      "description": "An experienced roofer working on a complex roof structure.",
-      "imageUrl": "https://images.unsplash.com/photo-1584549239925-5554aa6b9183?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxleHBlcmllbmNlZCUyMHdvcmtlcnxlbnwwfHx8fDE3NjU0MDgyMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "experienced worker"
-    },
-    {
-      "id": "testimonial-avatar-1",
-      "description": "A smiling man's portrait.",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUzOTM4NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "man portrait"
-    },
-    {
-      "id": "testimonial-avatar-2",
-      "description": "A smiling woman's portrait.",
-      "imageUrl": "https://images.unsplash.com/photo-1592621385612-4d7129426394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTMyNTc1NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman portrait"
-    },
-    {
-      "id": "testimonial-avatar-3",
-      "description": "A smiling person's portrait.",
-      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjUzNDA5MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person portrait"
     }
   ]
 }
