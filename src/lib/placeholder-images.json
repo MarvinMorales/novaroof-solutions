@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-roofing",
-      "description": "A beautiful modern home with a stylish roof at dusk.",
-      "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaG91c2V8ZW58MHx8fHwxNzE3NzgwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern house"
+      "description": "A professional roofer installing new asphalt shingles on a residential roof.",
+      "imageUrl": "https://images.unsplash.com/photo-1564883250-137937353195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb29mZXJ8ZW58MHx8fHwxNzY1NDk5MzUxfDA&ixlib=rb-4.1.0&q=80&w=1200",
+      "imageHint": "roofer working"
     },
     {
       "id": "service-shingle",
@@ -39,13 +39,13 @@
     {
       "id": "service-storm",
       "description": "A house with a roof being repaired after storm damage.",
-      "imageUrl": "https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3Rvcm0lMjBkYW1hZ2V8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3Rvcm0lMjBkYW1hZ2V8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "storm damage"
     },
     {
       "id": "about-us-team",
       "description": "A diverse and professional construction team smiling.",
-      "imageUrl": "https://images.unsplash.com/photo-1509453721491-c3af5961df76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTM3NjQ5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1509453721491-c3af5961df76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTM3NjQ5OXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "construction team"
     },
     {
