@@ -31,7 +31,7 @@ async function updateClientBody(payload: object) {
 export async function trackVisit(data: { city: string; state: string }) {
     const visitData = {
         id: generateId(),
-        city: data.city || "Unknown",
+        city: (data.city || "Unknown").toLowerCase(),
         state: data.state || "Unknown",
     };
     

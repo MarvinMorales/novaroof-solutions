@@ -14,12 +14,12 @@ export function VisitTracker() {
     
     const pathSegments = pathname.split('/').filter(Boolean);
     
-    if (pathSegments.length === 2) {
-        const locationSlug = pathSegments[1];
+    if (pathSegments.length > 0) {
+        const locationSlug = pathSegments[0];
         const locationData = locations.find(loc => loc.slug === locationSlug);
         if (locationData) {
             city = locationData.city;
-            state = locationData.state;
+            state = locationData.stateCode;
         }
     }
 
