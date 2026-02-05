@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const heroImage = PlaceHolderImages.find(p => p.id === 'hero-roofing');
+const heroImage = {
+  description: "A professional roofer installing new asphalt shingles on a residential roof.",
+  imageUrl: "https://images.unsplash.com/photo-1564883250-137937353195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb29mZXJ8ZW58MHx8fHwxNzY1NDk5MzUxfDA&ixlib=rb-4.1.0&q=80&w=1200",
+  imageHint: "roofer working"
+};
 
 export function Hero() {
-  if (!heroImage) return null;
-
   return (
     <section className="relative h-[70vh] md:h-[85vh] w-full flex items-center justify-center text-primary-foreground">
       <Image
