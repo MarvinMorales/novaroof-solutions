@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -20,6 +20,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card";
 import { useState } from "react";
 import { useTranslation } from "@/hooks/use-translation";
+import { getLocationBySlug, getServiceBySlug } from "@/lib/locations";
 
 const leadSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -47,6 +48,7 @@ const formatPhoneNumber = (value: string) => {
 
 export function Contact() {
   const router = useRouter();
+  const pathname = usePathname();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { t } = useTranslation();
@@ -64,11 +66,28 @@ export function Contact() {
   async function onSubmit(data: LeadFormValues) {
     setIsSubmitting(true);
     try {
+      let serviceValue = "Not specified in form";
+      const pathSegments = pathname.split('/').filter(Boolean);
+
+      if (pathname === '/') {
+          serviceValue = "from landing page";
+      } else if (pathSegments.length === 1) {
+          const location = getLocationBySlug(pathSegments[0]);
+          if (location) {
+              serviceValue = "from city-state";
+          }
+      } else if (pathSegments.length === 2) {
+          const service = getServiceBySlug(pathSegments[1]);
+          if (service) {
+              serviceValue = service.slug;
+          }
+      }
+
       const leadData = {
         name: data.name,
         phone: data.phone,
         zip: data.zip,
-        service: "Not specified in form",
+        service: serviceValue,
         message: data.problem,
         email: `${data.phone.replace(/\D/g, '')}@autogen.email`,
       };
@@ -89,7 +108,7 @@ export function Contact() {
 
 
   return (
-    <section id="contact" className="w-full py-16 md:py-24 bg-background">
+    <section id="contact" className="w-full py-16 md:py-24 bg-muted/50">
       <div className="container">
         <Card className="max-w-2xl mx-auto shadow-2xl">
           <CardHeader className="text-center">
