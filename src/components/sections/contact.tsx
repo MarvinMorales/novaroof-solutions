@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card";
 import { useState } from "react";
+import { useTranslation } from "@/hooks/use-translation";
 
 const leadSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -48,6 +49,7 @@ export function Contact() {
   const router = useRouter();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { t } = useTranslation();
 
   const form = useForm<LeadFormValues>({
     resolver: zodResolver(leadSchema),
@@ -91,9 +93,9 @@ export function Contact() {
       <div className="container">
         <Card className="max-w-2xl mx-auto shadow-2xl">
           <CardHeader className="text-center">
-            <CardTitle className="font-headline text-3xl md:text-4xl">Get Your Free Roofing Quote Today</CardTitle>
+            <CardTitle className="font-headline text-3xl md:text-4xl">{t('Contact.title')}</CardTitle>
             <CardDescription className="text-lg text-muted-foreground pt-2">
-              Fill out the form below and we'll connect you with a licensed local roofer in minutes.
+              {t('Contact.description')}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -104,9 +106,9 @@ export function Contact() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Full Name</FormLabel>
+                      <FormLabel>{t('Contact.nameLabel')}</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} />
+                        <Input placeholder={t('Contact.namePlaceholder')} {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -118,7 +120,7 @@ export function Contact() {
                       name="phone"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Phone Number</FormLabel>
+                          <FormLabel>{t('Contact.phoneLabel')}</FormLabel>
                           <FormControl>
                             <Input
                               type="tel"
@@ -139,7 +141,7 @@ export function Contact() {
                       name="zip"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>ZIP Code</FormLabel>
+                          <FormLabel>{t('Contact.zipLabel')}</FormLabel>
                           <FormControl>
                             <Input placeholder="12345" {...field} maxLength={5} />
                           </FormControl>
@@ -153,10 +155,10 @@ export function Contact() {
                   name="problem"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Describe Your Roofing Problem</FormLabel>
+                      <FormLabel>{t('Contact.problemLabel')}</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="E.g., 'I have a leak in my living room ceiling' or 'I need a quote for a full roof replacement.'"
+                          placeholder={t('Contact.problemPlaceholder')}
                           className="min-h-[120px]"
                           {...field}
                         />
@@ -166,7 +168,7 @@ export function Contact() {
                   )}
                 />
                 <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
-                  {isSubmitting ? "Connecting..." : "Connect Me With a Pro"}
+                  {isSubmitting ? t('Contact.submitting') : t('Contact.submitButton')}
                 </Button>
               </form>
             </Form>

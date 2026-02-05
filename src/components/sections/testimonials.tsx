@@ -12,6 +12,7 @@ import { User, Star, Quote } from "lucide-react";
 import type { LocationData, ServiceData } from "@/lib/locations";
 import { testimonialsData, type Testimonial } from "@/lib/testimonials-data";
 import { useMemo } from "react";
+import { useTranslation } from "@/hooks/use-translation";
 
 
 const renderStars = (rating: number) => {
@@ -29,6 +30,7 @@ const defaultTestimonials = testimonialsData.filter(t => !t.city && !t.serviceSl
 
 
 export function Testimonials({ location, service }: TestimonialsProps) {
+  const { t } = useTranslation();
 
   const testimonialsToDisplay = useMemo(() => {
     let filtered: Testimonial[] = [];
@@ -66,9 +68,9 @@ export function Testimonials({ location, service }: TestimonialsProps) {
     <section id="testimonials" className="w-full py-16 md:py-24 bg-muted/50">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">What Homeowners Say</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">{t('Testimonials.title')}</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-                We're proud to connect homeowners with top-rated professionals.
+                {t('Testimonials.description')}
             </p>
         </div>
         <Carousel
@@ -104,7 +106,7 @@ export function Testimonials({ location, service }: TestimonialsProps) {
                         </div>
                         <div>
                             <div className="font-semibold">{testimonial.name}</div>
-                            <div className="text-sm text-muted-foreground">Homeowner</div>
+                            <div className="text-sm text-muted-foreground">{t('Testimonials.homeowner')}</div>
                         </div>
                       </div>
                     </CardContent>

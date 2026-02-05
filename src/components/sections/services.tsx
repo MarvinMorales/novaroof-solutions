@@ -1,54 +1,51 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Wrench, Home, ShieldCheck, Droplets, Zap, Replace, Eye } from "lucide-react";
+import { Wrench, Home, ShieldCheck, Droplets, Zap, Eye } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { useTranslation } from "@/hooks/use-translation";
 
 const servicesData = [
     {
         icon: <Home />,
-        title: "Roof Replacement",
-        description: "Whether your roof is aging or has extensive damage, we connect you with pros for full replacements. Choose from high-quality materials like asphalt shingles, durable metal, or elegant tile for long-lasting protection.",
+        titleKey: "roof-replacement",
         imageId: "service-shingle",
         slug: "roof-replacement"
     },
     {
         icon: <Wrench />,
-        title: "Roof Repair",
-        description: "From missing shingles to damaged flashing, we find local experts to handle all types of roof repairs. Extend the life of your roof by fixing small issues before they become big problems.",
+        titleKey: "roof-repair",
         imageId: "service-repair",
         slug: "roof-repair"
     },
     {
         icon: <Zap />,
-        title: "Emergency & Storm Damage",
-        description: "When disaster strikes, a fast response is critical. We provide access to 24/7 emergency services for urgent repairs after storms, hail, or high winds to secure your home and prevent further damage.",
+        titleKey: "emergency-roof-repair",
         imageId: "service-storm",
         slug: "emergency-roof-repair"
     },
     {
         icon: <Eye />,
-        title: "Roof Inspection",
-        description: "Get a professional assessment of your roof's condition. We connect you with experts who can identify potential issues, estimate remaining lifespan, and document damage for insurance claims.",
+        titleKey: "roof-inspection",
         imageId: "service-inspection",
         slug: "roof-inspection" 
     },
     {
         icon: <ShieldCheck />,
-        title: "Roof Leak Repair",
-        description: "Our network specializes in advanced leak detection and reliable repairs to protect your home's structure and interior. Stop water damage and prevent mold growth with a permanent fix.",
+        titleKey: "roof-leak-repair",
         imageId: "solution-leak-repair", 
         slug: "roof-leak-repair"
     },
     {
         icon: <Droplets />,
-        title: "Gutter Services",
-        description: "Proper water drainage is essential. We connect you with experts for seamless gutter installation, repairs, cleaning, and gutter guard installation to protect your roof and foundation.",
+        titleKey: "gutter-services",
         imageId: "service-gutter",
         slug: "gutter-services"
     },
-]
+];
 
 const getImage = (id: string) => PlaceHolderImages.find(p => p.id === id);
 
@@ -58,20 +55,25 @@ type ServicesProps = {
     excludeSlug?: string;
 }
 
-export function Services({ locationSlug, title = "Comprehensive Roofing Solutions", excludeSlug }: ServicesProps) {
+export function Services({ locationSlug, title, excludeSlug }: ServicesProps) {
+    const { t } = useTranslation();
+
     const servicesToDisplay = excludeSlug 
         ? servicesData.filter(s => s.slug !== excludeSlug)
         : servicesData;
     
+    const defaultTitle = t('ServicesSection.title');
+    const finalTitle = title || defaultTitle;
+    
     const subtitle = excludeSlug 
-        ? `We also connect you with professionals for these related services in your area.`
-        : `Whatever your roofing needs, we connect you with the right professionals for the job. Explore our most requested services.`;
+        ? t('ServicesSection.subtitleExcluded')
+        : t('ServicesSection.subtitle');
 
     return (
         <section id="services" className="w-full py-16 md:py-24">
             <div className="container">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold">{title}</h2>
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold">{finalTitle}</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
                         {subtitle}
                     </p>
@@ -80,8 +82,11 @@ export function Services({ locationSlug, title = "Comprehensive Roofing Solution
                     {servicesToDisplay.map((service) => {
                         const image = getImage(service.imageId);
                         const link = locationSlug ? `/${locationSlug}/${service.slug}/` : `/service/${service.slug}/`;
+                        const serviceTitle = t(`Services.${service.titleKey}.title`);
+                        const serviceDescription = t(`Services.${service.titleKey}.description`);
+
                         return (
-                            <Card key={service.title} className="flex flex-col overflow-hidden group transition-shadow duration-300 w-full hover:shadow-xl bg-card">
+                            <Card key={service.titleKey} className="flex flex-col overflow-hidden group transition-shadow duration-300 w-full hover:shadow-xl bg-card">
                                 {image && (
                                     <Link href={link} className="overflow-hidden block">
                                         <div className="overflow-hidden">
@@ -103,17 +108,17 @@ export function Services({ locationSlug, title = "Comprehensive Roofing Solution
                                     <div>
                                         <CardTitle className="font-headline text-xl">
                                              <Link href={link} className="hover:text-primary transition-colors duration-300">
-                                                {service.title}
+                                                {serviceTitle}
                                             </Link>
                                         </CardTitle>
                                     </div>
                                 </CardHeader>
                                 <CardContent className="flex-grow">
-                                    <p className="text-muted-foreground text-sm">{service.description}</p>
+                                    <p className="text-muted-foreground text-sm">{serviceDescription}</p>
                                 </CardContent>
                                 <CardFooter>
                                     <Button asChild className="w-full" variant="secondary">
-                                        <Link href={link}>I want to know more</Link>
+                                        <Link href={link}>{t('ServicesSection.learnMore')}</Link>
                                     </Button>
                                 </CardFooter>
                             </Card>

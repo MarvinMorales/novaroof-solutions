@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils';
 import { WhatsAppButton } from '@/components/layout/whatsapp-button';
 import { VisitTracker } from '@/components/analytics/visit-tracker';
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
+import { I18nProvider } from '@/context/i18n-context';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -77,13 +78,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("scroll-smooth", roboto.variable)}>
       <body className="font-body antialiased flex flex-col min-h-screen">
-        <Header />
-        <Breadcrumbs />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        {/* <WhatsAppButton /> */}
-        <Toaster />
-        <VisitTracker />
+        <I18nProvider>
+          <Header />
+          <Breadcrumbs />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          {/* <WhatsAppButton /> */}
+          <Toaster />
+          <VisitTracker />
+        </I18nProvider>
       </body>
     </html>
   );

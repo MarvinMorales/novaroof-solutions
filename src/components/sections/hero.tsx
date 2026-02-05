@@ -7,6 +7,7 @@ import { Phone } from 'lucide-react';
 import { trackCall } from '@/lib/api-client';
 import { cn } from '@/lib/utils';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { useTranslation } from '@/hooks/use-translation';
 
 const defaultHeroImage: ImagePlaceholder = {
   id: 'hero-default',
@@ -25,6 +26,8 @@ type HeroProps = {
 }
 
 export function Hero({ h1, subheading, size = 'default', showButtons = true, image, variant = 'image' }: HeroProps) {
+    const { t } = useTranslation();
+    
     const handleCallClick = () => {
         trackCall();
     };
@@ -58,7 +61,7 @@ export function Hero({ h1, subheading, size = 'default', showButtons = true, ima
             isImageVariant && "drop-shadow-lg",
             size === 'default' ? "text-4xl md:text-6xl lg:text-7xl" : "text-4xl md:text-5xl"
         )}>
-          {h1 || "Need a Roofer? Get a Free Quote Today."}
+          {h1 || t('HomePage.hero.title')}
         </h1>
         {subheading && (
             <p className={cn(
@@ -73,11 +76,11 @@ export function Hero({ h1, subheading, size = 'default', showButtons = true, ima
         {showButtons && (
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button asChild size="lg">
-                <Link href="/#contact">Get Your Free Quote</Link>
+                <Link href="/#contact">{t('HomePage.hero.primaryCta')}</Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
                 <a href="tel:5623177925" onClick={handleCallClick} className="flex items-center gap-2">
-                    <Phone /> Call For a Roofer Now
+                    <Phone /> {t('HomePage.hero.secondaryCta')}
                 </a>
               </Button>
             </div>

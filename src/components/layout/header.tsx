@@ -14,12 +14,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { trackCall } from '@/lib/api-client';
+import { useTranslation } from '@/hooks/use-translation';
+import { LanguageSwitcher } from './language-switcher';
 
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about/', label: 'About Us' },
-];
 
 const services = [
     { href: `/service/roof-repair/`, label: 'Roof Repair', slug: 'roof-repair' },
@@ -38,8 +35,14 @@ const BrandIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 export function Header() {
+  const { t } = useTranslation();
   const pathname = usePathname();
   const [isSheetOpen, setSheetOpen] = useState(false);
+
+  const navLinks = [
+    { href: '/', label: t('Header.home') },
+    { href: '/about/', label: t('Header.about') },
+  ];
 
   const isLinkActive = (href: string) => {
     if (href === '/') return pathname === '/';
@@ -84,18 +87,19 @@ export function Header() {
           ))}
             <DropdownMenu>
               <DropdownMenuTrigger className={cn('text-sm font-medium transition-colors hover:text-primary text-muted-foreground flex items-center gap-1', {'text-primary': isServicePageActive()})}>
-                Services <ChevronDown className="h-4 w-4" />
+                {t('Header.services')} <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {services.map(service => (
                     <DropdownMenuItem key={service.href} asChild>
-                        <Link href={service.href}>{service.label}</Link>
+                        <Link href={service.href}>{t(`Services.${service.slug}.title`)}</Link>
                     </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
         </nav>
         <div className="hidden items-center gap-2 md:flex">
+          <LanguageSwitcher />
           <Button asChild variant="outline">
               <a href="tel:5623177925" onClick={handleCallClick} className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
@@ -103,7 +107,7 @@ export function Header() {
               </a>
           </Button>
           <Button asChild>
-            <Link href="/#contact">Get a Free Quote</Link>
+            <Link href="/#contact">{t('Header.getQuote')}</Link>
           </Button>
         </div>
         <div className="md:hidden">
@@ -131,17 +135,17 @@ export function Header() {
                          isLinkActive(link.href) ? 'text-primary' : 'text-foreground'
                       )}
                     >
-                      {link.label}
+                      {link.label in t('Services') ? t(`Services.${link.slug}.title`) : link.label}
                     </Link>
                   ))}
                 </nav>
                  <Button asChild size="lg" className="mt-4" variant="outline">
                     <a href="tel:5623177925" onClick={() => { handleCallClick(); setSheetOpen(false); }}>
-                        <Phone /> Call Now
+                        <Phone /> {t('Header.callNow')}
                     </a>
                 </Button>
                 <Button asChild size="lg" className="mt-2" onClick={() => setSheetOpen(false)}>
-                  <Link href="/#contact">Get a Free Quote</Link>
+                  <Link href="/#contact">{t('Header.getQuote')}</Link>
                 </Button>
               </div>
             </SheetContent>

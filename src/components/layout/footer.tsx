@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Mail, Phone, ShieldCheck } from 'lucide-react';
 import { trackCall } from '@/lib/api-client';
+import { useTranslation } from '@/hooks/use-translation';
 
 const BrandIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <ShieldCheck {...props} />
@@ -15,6 +16,8 @@ const SocialIcon = ({ href, children }: { href: string; children: React.ReactNod
 )
 
 export function Footer() {
+  const { t } = useTranslation();
+
   const handleCallClick = () => {
     trackCall();
   };
@@ -31,31 +34,31 @@ export function Footer() {
               <span className="font-headline text-2xl">NovaRoof Solutions</span>
             </Link>
             <p className="text-muted-foreground text-sm">
-              Connecting you with trusted, local roofing contractors for all your repair and replacement needs.
+              {t('Footer.tagline')}
             </p>
           </div>
 
           <div>
-            <h3 className="font-headline text-lg font-semibold mb-4">Services</h3>
+            <h3 className="font-headline text-lg font-semibold mb-4">{t('Footer.services')}</h3>
             <ul className="space-y-2">
-              <li><Link href={`/${defaultLocationSlug}/roof-repair/`} className="text-sm text-muted-foreground hover:text-primary transition-colors">Roof Repair</Link></li>
-              <li><Link href={`/${defaultLocationSlug}/roof-replacement/`} className="text-sm text-muted-foreground hover:text-primary transition-colors">Roof Replacement</Link></li>
-              <li><Link href={`/${defaultLocationSlug}/storm-damage-roof/`} className="text-sm text-muted-foreground hover:text-primary transition-colors">Storm Damage</Link></li>
-              <li><Link href={`/${defaultLocationSlug}/emergency-roof-repair/`} className="text-sm text-muted-foreground hover:text-primary transition-colors">Emergency Repair</Link></li>
+              <li><Link href={`/${defaultLocationSlug}/roof-repair/`} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('Footer.roofRepair')}</Link></li>
+              <li><Link href={`/${defaultLocationSlug}/roof-replacement/`} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('Footer.roofReplacement')}</Link></li>
+              <li><Link href={`/${defaultLocationSlug}/storm-damage-roof/`} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('Footer.stormDamage')}</Link></li>
+              <li><Link href={`/${defaultLocationSlug}/emergency-roof-repair/`} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('Footer.emergencyRepair')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-headline text-lg font-semibold mb-4">Legal</h3>
+            <h3 className="font-headline text-lg font-semibold mb-4">{t('Footer.legal')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/privacy-policy/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/cookie-policy/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cookie Policy</Link></li>
-              <li><Link href="/terms-of-service/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link href="/privacy-policy/" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('Footer.privacyPolicy')}</Link></li>
+              <li><Link href="/cookie-policy/" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('Footer.cookiePolicy')}</Link></li>
+              <li><Link href="/terms-of-service/" className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('Footer.termsOfService')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-headline text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="font-headline text-lg font-semibold mb-4">{t('Footer.contact')}</h3>
             <ul className="space-y-3 text-sm">
                 <li className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-primary shrink-0" />
@@ -70,13 +73,13 @@ export function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t">
           <p className="text-xs text-muted-foreground text-center">
-            <strong>Disclaimer:</strong> NovaRoof Solutions is a roofing marketing and referral service. We do not perform roofing work ourselves. We connect homeowners with licensed and insured roofing contractors in their area. All contractual agreements and warranties are between the homeowner and the selected contractor.
+            <strong>{t('Footer.disclaimerTitle')}:</strong> {t('Footer.disclaimer')}
           </p>
         </div>
       </div>
       <div className="bg-muted/50">
         <div className="container py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} NovaRoof Solutions. All rights reserved.</p>
+          <p>{t('Footer.copyright', { year: new Date().getFullYear() })}</p>
         </div>
       </div>
     </footer>
