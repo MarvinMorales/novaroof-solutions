@@ -1,6 +1,6 @@
 
 import type { Metadata, Viewport } from 'next';
-import { Inter, Space_Grotesk } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
@@ -10,16 +10,12 @@ import { WhatsAppButton } from '@/components/layout/whatsapp-button';
 import { VisitTracker } from '@/components/analytics/visit-tracker';
 import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 
-const inter = Inter({
+const roboto = Roboto({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['400', '500', '700'],
+  variable: '--font-roboto',
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['500', '700'],
-  variable: '--font-space-grotesk',
-});
 
 const APP_NAME = "NovaRoof Solutions";
 const APP_DEFAULT_TITLE = "NovaRoof Solutions - Connecting You With Trusted Local Roofers";
@@ -79,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("scroll-smooth", inter.variable, spaceGrotesk.variable)}>
+    <html lang="en" className={cn("scroll-smooth", roboto.variable)}>
       <body className="font-body antialiased flex flex-col min-h-screen">
         <Header />
         <Breadcrumbs />
