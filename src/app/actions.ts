@@ -3,29 +3,9 @@
 
 import { z } from "zod";
 
-const API_ENDPOINT = "https://consulting-api.vercel.app/v1/clients/update-client-body";
-
-const generateId = () => `id-${Date.now()}-${Math.random().toString(36).substring(2)}`;
-
-async function updateClientBody(payload: object) {
-  try {
-    const response = await fetch(API_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-      cache: 'no-store', // This is the critical fix
-    });
-
-    if (!response.ok) {
-      const errorBody = await response.text();
-      console.error(`API Error: ${response.status} ${response.statusText}`, errorBody);
-    }
-  } catch (error) {
-    console.error("Failed to call tracking API", error);
-  }
-}
+// NOTE: This file is now only for server-side form validation.
+// All external API tracking calls have been moved to the client-side
+// in /src/lib/api-client.ts.
 
 const leadSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters."),
@@ -35,9 +15,12 @@ const leadSchema = z.object({
     message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
+// We are adding the validated data to the state so the client component can
+// access it and make the tracking call.
 export type LeadFormState = {
     message: string;
     status: "idle" | "success" | "error";
+    data?: z.infer<typeof leadSchema>;
 };
 
 export async function submitLeadForm(
@@ -60,50 +43,13 @@ export async function submitLeadForm(
         };
     }
     
-    console.log("New Roofing Lead Captured:", validatedFields.data);
+    console.log("New Roofing Lead Captured (Server Validation Complete):", validatedFields.data);
 
-    const leadData = {
-        id: generateId(),
-        name: validatedFields.data.name,
-        email: validatedFields.data.email,
-        phone: validatedFields.data.phone || "",
-        service: validatedFields.data.service,
-        details: validatedFields.data.message,
-    };
-    
-    // Send complete payload for mailingLeads
-    await updateClientBody({ 
-        visits: [],
-        mailingLeads: [leadData],
-        calls: 0
-    });
-
+    // The external API call is now handled on the client-side (in contact.tsx) 
+    // upon receiving this successful state.
     return {
         message: "Thank you! We've received your request and will connect you with a qualified local roofer shortly.",
         status: "success",
+        data: validatedFields.data
     };
-}
-
-export async function trackCallAction() {
-    // Send complete payload for calls
-    await updateClientBody({ 
-        visits: [],
-        mailingLeads: [],
-        calls: 1 
-    });
-}
-
-export async function trackVisitAction(data: { city: string; state: string }) {
-    const visitData = {
-        id: generateId(),
-        city: data.city || "",
-        state: data.state || "",
-    };
-    
-    // Send complete payload for visits
-    await updateClientBody({ 
-        visits: [visitData],
-        mailingLeads: [],
-        calls: 0
-    });
 }

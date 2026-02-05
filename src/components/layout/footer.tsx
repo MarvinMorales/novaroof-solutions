@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Mail, Phone, MapPin, ShieldCheck } from 'lucide-react';
-import { trackCallAction } from '@/app/actions';
+import { trackCall } from '@/lib/api-client';
 
 const BrandIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <ShieldCheck {...props} />
@@ -16,7 +16,7 @@ const SocialIcon = ({ href, children }: { href: string; children: React.ReactNod
 
 export function Footer() {
   const handleCallClick = () => {
-    trackCallAction();
+    trackCall();
   };
 
   return (

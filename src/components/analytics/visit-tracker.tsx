@@ -2,8 +2,8 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { trackVisitAction } from '@/app/actions';
 import { locations } from '@/lib/locations';
+import { trackVisit } from '@/lib/api-client';
 
 export function VisitTracker() {
   const pathname = usePathname();
@@ -23,7 +23,8 @@ export function VisitTracker() {
         }
     }
 
-    trackVisitAction({ city, state });
+    // Call the frontend tracking function
+    trackVisit({ city, state });
 
   }, [pathname]);
 

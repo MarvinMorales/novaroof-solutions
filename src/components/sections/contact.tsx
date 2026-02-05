@@ -6,7 +6,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
-import { submitLeadForm, type LeadFormState, trackCallAction } from "@/app/actions";
+import { submitLeadForm, type LeadFormState } from "@/app/actions";
+import { trackLead, trackCall } from "@/lib/api-client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -71,6 +72,10 @@ export function Contact() {
         title: "Request Sent!",
         description: state.message,
       });
+      // Call tracking API on successful submission
+      if (state.data) {
+        trackLead(state.data);
+      }
       form.reset();
     } else if (state.status === "error") {
       toast({
@@ -82,7 +87,7 @@ export function Contact() {
   }, [state, toast, form]);
 
   const handleCallClick = () => {
-    trackCallAction();
+    trackCall();
   };
 
   return (
