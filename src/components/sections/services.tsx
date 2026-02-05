@@ -53,20 +53,30 @@ const getImage = (id: string) => PlaceHolderImages.find(p => p.id === id);
 
 type ServicesProps = {
     locationSlug?: string;
+    title?: string;
+    excludeSlug?: string;
 }
 
-export function Services({ locationSlug = 'houston-tx' }: ServicesProps) {
+export function Services({ locationSlug = 'houston-tx', title = "Comprehensive Roofing Solutions", excludeSlug }: ServicesProps) {
+    const servicesToDisplay = excludeSlug 
+        ? servicesData.filter(s => s.slug !== excludeSlug)
+        : servicesData;
+    
+    const subtitle = excludeSlug 
+        ? `We also connect you with professionals for these related services in your area.`
+        : `Whatever your roofing needs, we connect you with the right professionals for the job. Explore our most requested services.`;
+
     return (
         <section id="services" className="w-full py-16 md:py-24">
             <div className="container">
                 <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Comprehensive Roofing Solutions</h2>
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold">{title}</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
-                        Whatever your roofing needs, we connect you with the right professionals for the job. Explore our most requested services.
+                        {subtitle}
                     </p>
                 </div>
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {servicesData.map((service) => {
+                    {servicesToDisplay.map((service) => {
                         const image = getImage(service.imageId);
                         const link = `/${locationSlug}/${service.slug}/`;
                         return (

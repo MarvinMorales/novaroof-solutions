@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import { getLocationBySlug, getServiceBySlug, locations, services } from '@/lib/locations';
 import { notFound } from 'next/navigation';
 import { Hero } from '@/components/sections/hero';
-import { HowItWorks } from '@/components/sections/how-it-works';
 import { Faq } from '@/components/sections/faq';
 import { Contact } from '@/components/sections/contact';
 import { generateLocalBusinessSchema, generateBreadcrumbSchema } from '@/lib/schema';
@@ -115,7 +114,8 @@ export default function Page({ params }: { params: { locationSlug: string, servi
 
   const breadcrumbs: BreadcrumbLink[] = [
     { name: "Home", href: "/" },
-    { name: `${service.name} in ${location.city}`, href: `/${location.slug}/${service.slug}/` }
+    { name: `${location.city}, ${location.stateCode}`, href: `/${location.slug}/` },
+    { name: service.name, href: `/${location.slug}/${service.slug}/` }
   ];
 
   return (
@@ -128,15 +128,15 @@ export default function Page({ params }: { params: { locationSlug: string, servi
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs.map((c, i) => ({ name: c.name, item: `${fullUrl}${c.href}` })))) }}
       />
-      <Breadcrumbs links={breadcrumbs} />
       <Hero 
-        h1={`${service.h1} in ${location.city}`}
-        subheading={service.description.replace('{city}', location.city).replace('{state}', location.state)}
+        h1={`${service.name} in ${location.city}`}
+        size="small"
+        showButtons={false}
       />
-      <HowItWorks />
-      <ServiceProcess serviceSlug={service.slug} />
-      <Services />
+      <Breadcrumbs links={breadcrumbs} />
       <CitySpecificSection location={location} />
+      <ServiceProcess serviceSlug={service.slug} />
+      <Services title={`Other Services in ${location.city}`} locationSlug={location.slug} excludeSlug={service.slug} />
       <Faq faqs={faqs} />
       <Testimonials />
       <Contact />
