@@ -27,7 +27,7 @@ export function HowItWorks() {
     return (
         <section id="how-it-works" className="w-full py-16 md:py-24">
             <div className="container">
-                <div className="max-w-3xl">
+                <div className="max-w-3xl mx-auto text-center">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">How It Works</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
                         Finding a trusted roofer has never been easier. Follow our simple, 3-step process to get your project started.
@@ -37,14 +37,14 @@ export function HowItWorks() {
                     <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-border -translate-y-1/2" aria-hidden="true"></div>
                     <div className="grid md:grid-cols-4 gap-8 md:gap-12 relative">
                         {steps.map(step => (
-                            <div key={step.title} className="flex items-start gap-4 md:flex-col md:items-center md:text-center">
+                            <div key={step.title} className="flex items-start gap-4 md:flex-col md:items-center">
                                 <div className="flex-shrink-0 mt-1 md:mt-0 bg-background border-2 border-border p-2 rounded-full z-10">
                                     <div className='bg-primary/10 rounded-full p-3'>
                                         {step.icon}
                                     </div>
                                 </div>
                                 <div className="md:mt-4">
-                                    <h3 className="font-headline text-xl font-semibold">{step.title}</h3>
+                                    <h3 className="font-headline text-xl font-semibold md:text-center">{step.title}</h3>
                                     <p className="text-muted-foreground mt-1">{step.description}</p>
                                 </div>
                             </div>

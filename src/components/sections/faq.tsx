@@ -44,7 +44,7 @@ export function Faq({ faqs = defaultFaqs, addSchema = true }: FaqProps) {
                 />
             )}
             <div className="container">
-                <div className="max-w-3xl">
+                <div className="max-w-3xl mx-auto text-center">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
                         Your questions about finding the right roofer, answered.
@@ -55,7 +55,7 @@ export function Faq({ faqs = defaultFaqs, addSchema = true }: FaqProps) {
                         {faqs.map((faq, index) => (
                             <AccordionItem key={index} value={`item-${index}`}>
                                 <AccordionTrigger className="text-left font-semibold text-lg">{faq.question}</AccordionTrigger>
-                                <AccordionContent className="text-muted-foreground">
+                                <AccordionContent className="text-muted-foreground text-left">
                                     {faq.answer}
                                 </AccordionContent>
                             </AccordionItem>

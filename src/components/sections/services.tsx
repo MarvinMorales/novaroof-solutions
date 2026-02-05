@@ -70,7 +70,7 @@ export function Services({ locationSlug = 'houston-tx', title = "Comprehensive R
     return (
         <section id="services" className="w-full py-16 md:py-24">
             <div className="container">
-                <div className="max-w-3xl">
+                <div className="max-w-3xl mx-auto text-center">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">{title}</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
                         {subtitle}
