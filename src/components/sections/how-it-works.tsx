@@ -27,7 +27,7 @@ export function HowItWorks() {
     return (
         <section id="how-it-works" className="w-full py-16 md:py-24">
             <div className="container">
-                <div className="text-center max-w-3xl mx-auto">
+                <div className="max-w-3xl">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">How It Works</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
                         Finding a trusted roofer has never been easier. Follow our simple, 3-step process to get your project started.

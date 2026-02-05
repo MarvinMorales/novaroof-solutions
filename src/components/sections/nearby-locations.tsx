@@ -20,13 +20,15 @@ export function NearbyLocations({ currentLocation, service }: NearbyLocationsPro
   return (
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container">
-        <h2 className="font-headline text-2xl md:text-3xl font-bold text-center">
-          Serving Other Areas in {currentLocation.state}
-        </h2>
-        <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-          In addition to {currentLocation.city}, we also connect homeowners with trusted roofers in these nearby communities:
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <div className="max-w-2xl">
+            <h2 className="font-headline text-2xl md:text-3xl font-bold">
+            Serving Other Areas in {currentLocation.state}
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+            In addition to {currentLocation.city}, we also connect homeowners with trusted roofers in these nearby communities:
+            </p>
+        </div>
+        <div className="mt-8 flex flex-wrap justify-start gap-4">
           {nearby.map(location => (
             <Link
               key={location.slug}

@@ -66,7 +66,7 @@ export function ServiceProcess({ serviceSlug }: { serviceSlug: string }) {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
             {data.title}
           </h2>

@@ -70,7 +70,7 @@ export function Services({ locationSlug = 'houston-tx', title = "Comprehensive R
     return (
         <section id="services" className="w-full py-16 md:py-24">
             <div className="container">
-                <div className="text-center max-w-3xl mx-auto">
+                <div className="max-w-3xl">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">{title}</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
                         {subtitle}
@@ -110,7 +110,7 @@ export function Services({ locationSlug = 'houston-tx', title = "Comprehensive R
                                     <p className="text-muted-foreground text-sm">{service.description}</p>
                                 </CardContent>
                                 <CardFooter>
-                                    <Button asChild className="w-full" variant="outline">
+                                    <Button asChild className="w-full" variant="secondary">
                                         <Link href={link}>I want to know more</Link>
                                     </Button>
                                 </CardFooter>

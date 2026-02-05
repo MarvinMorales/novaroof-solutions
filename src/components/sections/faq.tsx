@@ -44,7 +44,7 @@ export function Faq({ faqs = defaultFaqs, addSchema = true }: FaqProps) {
                 />
             )}
             <div className="container">
-                <div className="text-center max-w-3xl mx-auto">
+                <div className="max-w-3xl">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
                     <p className="mt-4 text-lg text-muted-foreground">
                         Your questions about finding the right roofer, answered.

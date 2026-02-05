@@ -20,7 +20,7 @@ export function CitySpecificSection({ location }: { location: LocationData }) {
   return (
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
             Your Local {location.city} Roofing Challenges, Solved
           </h2>
@@ -85,10 +85,12 @@ export function CitySpecificSection({ location }: { location: LocationData }) {
           })}
         </div>
         
-        <div className="mt-16 text-center prose prose-lg dark:prose-invert max-w-4xl mx-auto">
-            <h3>We Understand {location.city} Roofs</h3>
-             <p className="lead !text-muted-foreground">{location.localContent.risks}</p>
-            <p>The licensed roofers in our network understand these local challenges inside and out. They have the experience to recommend and install the right materials—from impact-resistant shingles to handle hail to advanced underlayment for moisture protection—ensuring your home is protected year-round.</p>
+        <div className="mt-16 max-w-4xl">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">We Understand {location.city} Roofs</h2>
+            <div className="mt-4 space-y-4 text-lg text-muted-foreground">
+                <p>{location.localContent.risks}</p>
+                <p>The licensed roofers in our network understand these local challenges inside and out. They have the experience to recommend and install the right materials—from impact-resistant shingles to handle hail to advanced underlayment for moisture protection—ensuring your home is protected year-round.</p>
+            </div>
         </div>
 
       </div>
