@@ -52,5 +52,53 @@
     "description": "Four different types of quality roofing materials displayed.",
     "imageUrl": "https://roofmaster.ca/wp-content/uploads/2020/08/4-best-roofing-materials-for-the-canadian-climate.jpg",
     "imageHint": "roofing materials"
+  },
+  {
+    "id": "problem-hail-damage",
+    "description": "Close up of an asphalt shingle roof with clear circular damage marks from a hailstorm.",
+    "imageUrl": "https://images.unsplash.com/photo-1574749372993-9042155d91e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwaGFpbCUyMGRhbWFnZXxlbnwwfHx8fDE3NjU1MDIwODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "hail damage"
+  },
+  {
+    "id": "solution-new-shingles",
+    "description": "A perfectly installed new roof with high-quality architectural shingles.",
+    "imageUrl": "https://images.unsplash.com/photo-1559368611-813457131803?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyb29mJTIwc2hpbmdsZXN8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "new shingles"
+  },
+  {
+    "id": "problem-wind-damage",
+    "description": "A section of a roof where high winds have torn off several asphalt shingles, exposing the underlayment.",
+    "imageUrl": "https://images.unsplash.com/photo-1621262334814-4a572a15b13c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3aW5kJTIwZGFtYWdlJTIwcm9vZnxlbnwwfHx8fDE3NjU1MDIxMTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "wind damage"
+  },
+  {
+    "id": "solution-roof-repair",
+    "description": "A roofer in safety gear carefully replacing a damaged shingle on a roof.",
+    "imageUrl": "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyb29mJTIwcmVwYWlyfGVufDB8fHx8MTc2NTQwODIwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "roof repair"
+  },
+  {
+    "id": "problem-sun-damage",
+    "description": "Close-up of old, sun-baked asphalt shingles that are curling up at the edges and cracking.",
+    "imageUrl": "https://images.unsplash.com/photo-1616035955110-6c0c2a5d2a6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjcmFja2VkJTIwcm9vZiUyMHNoaW5nbGVzfGVufDB8fHx8fDE3NjU1MDIyNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "cracked shingles"
+  },
+  {
+    "id": "solution-cool-roof",
+    "description": "A beautiful new roof on a modern home, designed to be reflective and energy-efficient.",
+    "imageUrl": "https://images.unsplash.com/photo-1600585153443-a616443603d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXclMjByb29mfGVufDB8fHx8fDE3NjU1MDIzMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "new roof"
+  },
+  {
+    "id": "problem-leak-damage",
+    "description": "A large, brown water stain on a white ceiling, indicating a significant roof leak.",
+    "imageUrl": "https://images.unsplash.com/photo-1593077595562-506b3a8a3a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjZWlsaW5nJTIwbGVha3xlbnwwfHx8fDE3NjU1MDIxNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "ceiling leak"
+  },
+  {
+    "id": "solution-leak-repair",
+    "description": "A roofer applying waterproof sealant around a vent pipe on a roof to fix a leak.",
+    "imageUrl": "https://images.unsplash.com/photo-1533282960533-51328aa49826?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwbGVhayUyMHJlcGFpcnxlbnwwfHx8fDE3NjU1MDI3NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "roof sealant"
   }
 ]
