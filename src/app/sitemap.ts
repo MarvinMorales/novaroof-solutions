@@ -11,6 +11,8 @@ const priorityMap: Record<string, number> = {
   'roof-leak-repair': 0.9,
   'roof-repair': 0.8,
   'roof-replacement': 0.7,
+  'roof-inspection': 0.7,
+  'gutter-services': 0.6,
 };
 
 const changeFreqMap: Record<
@@ -22,6 +24,8 @@ const changeFreqMap: Record<
   'roof-leak-repair': 'monthly',
   'roof-repair': 'monthly',
   'roof-replacement': 'yearly',
+  'roof-inspection': 'monthly',
+  'gutter-services': 'monthly',
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -56,7 +60,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.5,
-    }
+    },
+    {
+      url: `${URL}/contact/`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
   ];
 
   const legalPages: MetadataRoute.Sitemap = [
