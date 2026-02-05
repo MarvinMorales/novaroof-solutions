@@ -57,7 +57,7 @@ export const generateBreadcrumbSchema = (crumbs: Breadcrumb[]) => {
 }
 
 export const generateLocalBusinessSchema = (location: LocationData, service: typeof serviceData[0]) => {
-  const url = `https://www.novaroofsolutions.com/${service.slug}/${location.slug}/`;
+  const url = `https://www.novaroofsolutions.com/${location.slug}/${service.slug}/`;
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -68,7 +68,7 @@ export const generateLocalBusinessSchema = (location: LocationData, service: typ
         "name": "NovaRoof Solutions",
         "description": `NovaRoof Solutions is a marketing and referral service that connects homeowners with pre-screened, licensed, and insured local roofing contractors in ${location.city}, ${location.state}. We do not perform roofing work ourselves.`,
         "telephone": "+1-562-317-7925",
-        "url": url,
+        "url": "https://www.novaroofsolutions.com",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": location.city,
@@ -84,7 +84,7 @@ export const generateLocalBusinessSchema = (location: LocationData, service: typ
         "name": location.city
     },
     "name": `${service.title} in ${location.city}`,
-    "description": service.description.replace('{city}', location.city).replace('{state}', location.stateCode),
+    "description": service.description.replace('{city}', location.city).replace('{state}', location.state),
     "providerMobility": "dynamic"
   };
 };

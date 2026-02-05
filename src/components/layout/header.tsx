@@ -18,15 +18,15 @@ import { trackCall } from '@/lib/api-client';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About Us' },
+  { href: '/about/', label: 'About Us' },
 ];
 
 const services = [
-    { href: '/roof-repair/houston-tx/', label: 'Roof Repair' },
-    { href: '/roof-replacement/houston-tx/', label: 'Roof Replacement' },
-    { href: '/emergency-roof-repair/houston-tx/', label: 'Emergency Repair' },
-    { href: '/storm-damage-roof/houston-tx/', label: 'Storm Damage' },
-    { href: '/roof-leak-repair/houston-tx/', label: 'Roof Leak Repair' },
+    { href: '/houston-tx/roof-repair/', label: 'Roof Repair' },
+    { href: '/houston-tx/roof-replacement/', label: 'Roof Replacement' },
+    { href: '/houston-tx/emergency-roof-repair/', label: 'Emergency Repair' },
+    { href: '/houston-tx/storm-damage-roof/', label: 'Storm Damage' },
+    { href: '/houston-tx/roof-leak-repair/', label: 'Roof Leak Repair' },
 ];
 
 
@@ -41,11 +41,18 @@ export function Header() {
 
   const isLinkActive = (href: string) => {
     if (href === '/') return pathname === '/';
-    return pathname.startsWith(href);
+    // Match /about/ as well
+    if (href.endsWith('/') && href.length > 1) {
+      return pathname.startsWith(href);
+    }
+    return pathname === href;
   }
 
   const isServicePageActive = () => {
-      return services.some(service => pathname.startsWith(service.href.split('/')[1]));
+      const pathSegments = pathname.split('/');
+      if (pathSegments.length < 3) return false;
+      const serviceSlug = pathSegments[2];
+      return services.some(service => service.href.split('/')[2] === serviceSlug);
   }
 
   const handleCallClick = () => {

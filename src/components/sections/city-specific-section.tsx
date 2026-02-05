@@ -1,20 +1,4 @@
 import type { LocationData } from '@/lib/locations';
-import { Sun, Wind, CloudHail, Zap, Droplets } from 'lucide-react';
-
-const riskIcons: { [key: string]: React.ReactNode } = {
-  hurricanes: <Wind />,
-  hailstorms: <CloudHail />,
-  "heavy rainfall": <Droplets />,
-  "high winds": <Wind />,
-  "severe hailstorms": <CloudHail />,
-  tornadoes: <Wind />,
-  "intense sun exposure": <Sun />,
-  "large hail": <CloudHail />,
-  "flash floods": <Droplets />,
-  "strong thunderstorms": <Zap />,
-  "wind damage": <Wind />,
-  "uv degradation": <Sun />,
-};
 
 export function CitySpecificSection({ location }: { location: LocationData }) {
   return (

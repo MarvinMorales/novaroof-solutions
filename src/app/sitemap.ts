@@ -25,16 +25,17 @@ const changeFreqMap: Record<
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const servicePages = services
-    .filter((service) => priorityMap[service.slug])
-    .flatMap((service) =>
-      locations.map((location) => ({
-        url: `${URL}/${service.slug}/${location.slug}/`,
-        lastModified: new Date(),
-        changeFrequency: changeFreqMap[service.slug],
-        priority: priorityMap[service.slug],
-      }))
-  );
+  const servicePages = locations
+    .flatMap((location) =>
+      services
+        .filter((service) => priorityMap[service.slug])
+        .map((service) => ({
+          url: `${URL}/${location.slug}/${service.slug}/`,
+          lastModified: new Date(),
+          changeFrequency: changeFreqMap[service.slug],
+          priority: priorityMap[service.slug],
+        }))
+    );
 
   const staticPages: MetadataRoute.Sitemap = [
     {
