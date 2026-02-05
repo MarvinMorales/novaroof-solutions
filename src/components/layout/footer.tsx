@@ -1,5 +1,8 @@
+"use client";
+
 import Link from 'next/link';
 import { Mail, Phone, MapPin, ShieldCheck } from 'lucide-react';
+import { trackCallAction } from '@/app/actions';
 
 const BrandIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <ShieldCheck {...props} />
@@ -12,6 +15,10 @@ const SocialIcon = ({ href, children }: { href: string; children: React.ReactNod
 )
 
 export function Footer() {
+  const handleCallClick = () => {
+    trackCallAction();
+  };
+
   return (
     <footer className="bg-card border-t">
       <div className="container pt-12 pb-8">
@@ -50,7 +57,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
                 <li className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-primary shrink-0" />
-                    <a href="tel:888-555-7663" className="text-muted-foreground hover:text-primary transition-colors">888-555-ROOF</a>
+                    <a href="tel:888-555-7663" onClick={handleCallClick} className="text-muted-foreground hover:text-primary transition-colors">888-555-ROOF</a>
                 </li>
                 <li className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary shrink-0" />

@@ -1,6 +1,28 @@
+
 "use server";
 
 import { z } from "zod";
+import { randomUUID } from "crypto";
+
+const API_ENDPOINT = "https://consulting-api.vercel.app/v1/clients/update-client-body";
+
+async function updateClientBody(payload: object) {
+  try {
+    const response = await fetch(API_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      console.error(`API Error: ${response.status} ${response.statusText}`, await response.text());
+    }
+  } catch (error) {
+    console.error("Failed to call tracking API", error);
+  }
+}
 
 const leadSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters."),
@@ -35,12 +57,33 @@ export async function submitLeadForm(
         };
     }
     
-    // In a real application, this lead would be sent to a CRM
-    // or a lead distribution system.
     console.log("New Roofing Lead Captured:", validatedFields.data);
+
+    const leadData = {
+        id: randomUUID(),
+        name: validatedFields.data.name,
+        email: validatedFields.data.email,
+        phone: validatedFields.data.phone || "",
+        service: validatedFields.data.service,
+        details: validatedFields.data.message,
+    };
+    await updateClientBody({ mailingLeads: [leadData] });
 
     return {
         message: "Thank you! We've received your request and will connect you with a qualified local roofer shortly.",
         status: "success",
     };
+}
+
+export async function trackCallAction() {
+    await updateClientBody({ calls: 1 });
+}
+
+export async function trackVisitAction(data: { city: string; state: string }) {
+    const visitData = {
+        id: randomUUID(),
+        city: data.city || "",
+        state: data.state || "",
+    };
+    await updateClientBody({ visits: [visitData] });
 }

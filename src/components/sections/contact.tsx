@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
-import { submitLeadForm, type LeadFormState } from "@/app/actions";
+import { submitLeadForm, type LeadFormState, trackCallAction } from "@/app/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -81,6 +81,10 @@ export function Contact() {
     }
   }, [state, toast, form]);
 
+  const handleCallClick = () => {
+    trackCallAction();
+  };
+
   return (
     <section id="contact" className="w-full py-16 md:py-24 bg-card">
       <div className="container grid md:grid-cols-2 gap-12 items-start">
@@ -109,7 +113,7 @@ export function Contact() {
                 <div>
                     <h3 className="font-semibold text-lg">Call Us</h3>
                     <p className="text-muted-foreground">Speak directly with our team.</p>
-                    <a href="tel:888-555-7663" className="text-primary hover:underline">888-555-ROOF</a>
+                    <a href="tel:888-555-7663" onClick={handleCallClick} className="text-primary hover:underline">888-555-ROOF</a>
                 </div>
             </div>
           </div>
