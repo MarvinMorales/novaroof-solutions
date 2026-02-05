@@ -83,14 +83,15 @@ export function ServiceProcess({ serviceSlug }: { serviceSlug: string }) {
               <div key={item.step} className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div className={isReversed ? 'lg:order-2' : ''}>
                   {image && (
-                    <Image
-                      src={image.imageUrl}
-                      alt={image.description}
-                      data-ai-hint={image.imageHint}
-                      width={800}
-                      height={600}
-                      className="rounded-lg shadow-lg object-cover aspect-[4/3]"
-                    />
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg">
+                      <Image
+                        src={image.imageUrl}
+                        alt={image.description}
+                        data-ai-hint={image.imageHint}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   )}
                 </div>
                 <div className={isReversed ? 'lg:order-1' : ''}>

@@ -15,7 +15,7 @@ export function CitySpecificSection({ location }: { location: LocationData }) {
       .filter(Boolean) // Filter out any undefined keys
   )].slice(0, 2);
 
-  const problemsToDisplay = problemKeys.map(key => localProblemsMap[key]);
+  const problemsToDisplay = problemKeys.map(key => localProblemsMap[key]).filter(Boolean);
 
   return (
     <section className="py-16 md:py-24 bg-muted/50">
@@ -38,24 +38,26 @@ export function CitySpecificSection({ location }: { location: LocationData }) {
               <Card key={index} className="overflow-hidden shadow-lg w-full bg-card">
                 <div className="grid grid-cols-2">
                     {problemImage && (
-                        <Image
-                            src={problemImage.imageUrl}
-                            alt={problemImage.description}
-                            data-ai-hint={problemImage.imageHint}
-                            width={400}
-                            height={300}
-                            className="object-cover w-full h-48"
-                        />
+                        <div className="relative h-48">
+                            <Image
+                                src={problemImage.imageUrl}
+                                alt={problemImage.description}
+                                data-ai-hint={problemImage.imageHint}
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
                     )}
                     {solutionImage && (
-                         <Image
-                            src={solutionImage.imageUrl}
-                            alt={solutionImage.description}
-                            data-ai-hint={solutionImage.imageHint}
-                            width={400}
-                            height={300}
-                            className="object-cover w-full h-48"
-                        />
+                         <div className="relative h-48">
+                             <Image
+                                src={solutionImage.imageUrl}
+                                alt={solutionImage.description}
+                                data-ai-hint={solutionImage.imageHint}
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
                     )}
                 </div>
                 <div className="p-6">

@@ -1,8 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Wrench, Home, ShieldCheck, Droplets, Zap, Replace } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 const servicesData = [
     {
@@ -80,9 +81,9 @@ export function Services({ locationSlug = 'houston-tx', title = "Comprehensive R
                         const image = getImage(service.imageId);
                         const link = `/${locationSlug}/${service.slug}/`;
                         return (
-                            <Link href={link} key={service.title} className="flex">
-                                <Card className="flex flex-col overflow-hidden group hover:shadow-xl transition-shadow duration-300 w-full">
-                                    {image && (
+                            <Card key={service.title} className="flex flex-col overflow-hidden group transition-shadow duration-300 w-full hover:shadow-xl bg-card">
+                                {image && (
+                                    <Link href={link} className="overflow-hidden block">
                                         <div className="overflow-hidden">
                                             <Image 
                                                 src={image.imageUrl}
@@ -93,18 +94,27 @@ export function Services({ locationSlug = 'houston-tx', title = "Comprehensive R
                                                 className="object-cover w-full h-48 group-hover:scale-105 transition-transform duration-300"
                                             />
                                         </div>
-                                    )}
-                                    <CardHeader className="flex-row items-center gap-4">
-                                        <div className="bg-primary text-primary-foreground p-3 rounded-md">
-                                            {service.icon}
-                                        </div>
-                                        <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="flex-grow">
-                                        <p className="text-muted-foreground text-sm">{service.description}</p>
-                                    </CardContent>
-                                </Card>
-                            </Link>
+                                    </Link>
+                                )}
+                                <CardHeader className="flex-row items-start gap-4">
+                                    <div className="bg-primary text-primary-foreground p-3 rounded-md mt-1 shrink-0">
+                                        {service.icon}
+                                    </div>
+                                    <CardTitle className="font-headline text-xl">
+                                         <Link href={link} className="hover:text-primary transition-colors duration-300">
+                                            {service.title}
+                                        </Link>
+                                    </CardTitle>
+                                </CardHeader>
+                                <CardContent className="flex-grow">
+                                    <p className="text-muted-foreground text-sm">{service.description}</p>
+                                </CardContent>
+                                <CardFooter>
+                                    <Button asChild className="w-full" variant="outline">
+                                        <Link href={link}>I want to know more</Link>
+                                    </Button>
+                                </CardFooter>
+                            </Card>
                         )
                     })}
                 </div>
