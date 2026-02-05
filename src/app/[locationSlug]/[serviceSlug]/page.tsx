@@ -139,7 +139,7 @@ export default function Page({ params }: { params: { locationSlug: string, servi
         variant="solid"
       />
       <Breadcrumbs links={breadcrumbs} />
-      <CitySpecificSection location={location} />
+      <CitySpecificSection location={location} service={service} />
       <ServiceProcess serviceSlug={service.slug} />
       <Services title={`Other Services in ${location.city}`} locationSlug={location.slug} excludeSlug={service.slug} />
       <Faq faqs={faqs} />

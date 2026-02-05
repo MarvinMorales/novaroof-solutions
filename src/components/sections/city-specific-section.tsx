@@ -1,4 +1,4 @@
-import type { LocationData } from '@/lib/locations';
+import type { LocationData, ServiceData } from '@/lib/locations';
 import { localProblemsMap, commonRiskToProblemKey } from '@/lib/local-problems';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -7,15 +7,33 @@ import { AlertCircle, ShieldCheck } from 'lucide-react';
 
 const getImage = (id: string) => PlaceHolderImages.find(p => p.id === id);
 
-export function CitySpecificSection({ location }: { location: LocationData }) {
-  // Get unique problem keys from the location's common risks, max 2 for display
-  const problemKeys = [...new Set(
+const serviceToRelevantProblems: Record<string, string[]> = {
+    'roof-repair': ['hail', 'wind', 'sun', 'rain'],
+    'roof-leak-repair': ['rain', 'hail', 'wind'],
+    'roof-replacement': ['sun', 'hail', 'wind'],
+    'emergency-roof-repair': ['wind', 'hail', 'rain'],
+    'storm-damage-roof': ['wind', 'hail', 'rain'],
+    'roof-inspection': ['hail', 'wind', 'sun', 'rain'],
+};
+
+export function CitySpecificSection({ location, service }: { location: LocationData, service: ServiceData }) {
+  const locationProblemKeys = [...new Set(
     location.commonRisks
       .map(risk => commonRiskToProblemKey[risk])
-      .filter(Boolean) // Filter out any undefined keys
-  )].slice(0, 2);
+      .filter(Boolean)
+  )];
 
-  const problemsToDisplay = problemKeys.map(key => localProblemsMap[key]).filter(Boolean);
+  const serviceProblemKeys = serviceToRelevantProblems[service.slug] || [];
+
+  const relevantProblemKeys = locationProblemKeys.filter(key => serviceProblemKeys.includes(key));
+  
+  const finalProblemKeys = (relevantProblemKeys.length > 0 ? relevantProblemKeys : locationProblemKeys).slice(0, 2);
+
+  const problemsToDisplay = finalProblemKeys.map(key => localProblemsMap[key]).filter(Boolean);
+
+  if (problemsToDisplay.length === 0) {
+    return null;
+  }
 
   return (
     <section className="py-16 md:py-24 bg-muted/50">
@@ -87,7 +105,7 @@ export function CitySpecificSection({ location }: { location: LocationData }) {
         
         <div className="mt-16 max-w-4xl mx-auto">
             <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-center">We Understand {location.city} Roofs</h2>
-            <div className="mt-4 space-y-4 text-lg text-muted-foreground">
+            <div className="mt-4 space-y-4 text-lg text-left text-muted-foreground">
                 <p>{location.localContent.risks}</p>
                 <p>The licensed roofers in our network understand these local challenges inside and out. They have the experience to recommend and install the right materials—from impact-resistant shingles to handle hail to advanced underlayment for moisture protection—ensuring your home is protected year-round.</p>
             </div>
