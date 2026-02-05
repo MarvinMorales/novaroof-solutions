@@ -5,11 +5,12 @@ import { Hero } from '@/components/sections/hero';
 import { HowItWorks } from '@/components/sections/how-it-works';
 import { Faq } from '@/components/sections/faq';
 import { Contact } from '@/components/sections/contact';
-import { generateLocalBusinessSchema } from '@/lib/schema';
+import { generateLocalBusinessSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
 import { Services } from '@/components/sections/services';
 import { Testimonials } from '@/components/sections/testimonials';
+import { Breadcrumbs, type BreadcrumbLink } from '@/components/layout/breadcrumbs';
 
 const SERVICE_SLUG = 'emergency-roof-repair';
 
@@ -30,9 +31,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   }
 
-  const title = `${service.title} in ${location.city}, ${location.stateCode} | Free Inspection`;
-  const description = service.description.replace('{city}', location.city).replace('{state}', location.stateCode);
-  const canonicalUrl = `/${SERVICE_SLUG}/${location.slug}`;
+  const title = `${service.title} in ${location.city}, ${location.stateCode} | 24/7 Response`;
+  const description = `Need urgent ${service.name.toLowerCase()} in ${location.city}? We connect you with licensed 24/7 roofers for storm, hail, or leak damage. Get a fast, free inspection.`;
+  const canonicalUrl = `/${SERVICE_SLUG}/${location.slug}/`;
 
   return {
     title,
@@ -66,23 +67,23 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 const getFaqs = (city: string) => [
     {
       question: `How quickly can I get an emergency roofer to my house in ${city}?`,
-      answer: `We can connect you with a local emergency roofer in ${city} often within hours of your call. Our network is available 24/7 to respond to urgent needs.`
+      answer: `Our goal is to connect you with a local emergency roofer in ${city} within minutes of your request. Depending on contractor availability and your location, they can often be at your property within hours to assess the damage and perform temporary repairs like tarping.`
     },
     {
       question: "What constitutes a roofing emergency?",
-      answer: "A roofing emergency is any situation that immediately endangers your property and safety, such as major leaks during a storm, significant structural damage from a fallen tree, or extensive damage from high winds or hail."
+      answer: "A roofing emergency is any situation that immediately endangers your property and safety. This includes major active leaks during a storm, significant structural damage from a fallen tree, extensive shingle loss from high winds, or any damage that exposes your home's interior to the elements."
     },
     {
-      question: "What should I do immediately after my roof is damaged?",
-      answer: "For your safety, stay inside and avoid the damaged area. If there's a leak, use buckets to catch water and move valuable items. Do not go on the roof. Call a professional for an emergency tarping service to prevent further water damage."
+      question: "What's the first thing I should do if my roof is severely damaged?",
+      answer: "Your safety is the top priority. Stay inside and away from the damaged area. If water is coming in, use buckets to catch it and move valuable items. Do not go on the roof yourself. Your next step should be to call us or fill out our form to get a professional roofer dispatched for an emergency tarping service to prevent further water damage."
     },
     {
-      question: "Will my insurance cover emergency roof repairs?",
-      answer: "Most homeowner's insurance policies cover emergency repairs required to prevent further damage to your home (e.g., tarping). The contractors in our network can help document the damage for your insurance claim."
+      question: "Will my homeowner's insurance cover emergency roof repairs?",
+      answer: "Most homeowner's insurance policies cover the cost of temporary, emergency repairs required to prevent further damage to your home (mitigation), such as tarping. The licensed contractors in our network are experienced in documenting damage for insurance claims and can provide the necessary paperwork."
     },
     {
-      question: "Should I attempt to fix the roof myself in an emergency?",
-      answer: "No, for your safety, you should never attempt to get on your roof during or after a storm. It can be extremely dangerous. Wait for a licensed and insured professional."
+      question: "Is the initial inspection and quote for emergency service free?",
+      answer: `Yes. The roofer we connect you with will provide a free, no-obligation inspection and quote for the permanent repairs. Emergency tarping or temporary repairs may have a separate charge, which the contractor will discuss with you upfront.`
     }
 ];
 
@@ -95,6 +96,12 @@ export default function Page({ params }: { params: { slug: string } }) {
   }
 
   const faqs = getFaqs(location.city);
+  const fullUrl = `https://www.novaroofsolutions.com`;
+
+  const breadcrumbs: BreadcrumbLink[] = [
+    { name: "Home", href: "/" },
+    { name: service.name, href: `/${service.slug}/${location.slug}/` }
+  ];
 
   return (
     <>
@@ -102,7 +109,15 @@ export default function Page({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateLocalBusinessSchema(location, service)) }}
       />
-      <Hero />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs.map((c, i) => ({ name: c.name, item: `${fullUrl}${c.href}` })))) }}
+      />
+      <Breadcrumbs links={breadcrumbs} />
+      <Hero 
+        h1={`${service.h1} in ${location.city}`}
+        subheading={`Storms, hail, or fallen trees can cause sudden roof damage. We connect you with 24/7 emergency roofers in ${location.city} to secure your home fast.`}
+      />
       <HowItWorks />
       <Services />
       <CitySpecificSection location={location} />

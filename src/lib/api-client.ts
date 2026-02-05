@@ -2,7 +2,8 @@
 
 const API_ENDPOINT = "https://consulting-api.vercel.app/v1/clients/update-client-body";
 
-const generateId = () => `id-${Date.now()}-${Math.random().toString(36).substring(2)}`;
+// Use crypto.randomUUID() available in modern browsers and workers for a true UUIDv4.
+const generateId = () => crypto.randomUUID();
 
 async function updateClientBody(payload: object) {
   try {
@@ -12,23 +13,26 @@ async function updateClientBody(payload: object) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(payload),
-      cache: 'no-store',
+      cache: 'no-store', 
     });
 
     if (!response.ok) {
       const errorBody = await response.text();
       console.error(`API Error: ${response.status} ${response.statusText}`, errorBody);
+      throw new Error(`API request failed: ${response.statusText}`);
     }
+     return await response.json();
   } catch (error) {
     console.error("Failed to call tracking API", error);
+    throw error;
   }
 }
 
 export async function trackVisit(data: { city: string; state: string }) {
     const visitData = {
         id: generateId(),
-        city: data.city || "",
-        state: data.state || "",
+        city: data.city || "Unknown",
+        state: data.state || "Unknown",
     };
     
     await updateClientBody({ 
@@ -38,14 +42,14 @@ export async function trackVisit(data: { city: string; state: string }) {
     });
 }
 
-export async function trackLead(leadData: { name: string; email: string; phone?: string; service: string; message: string; }) {
+export async function trackLead(leadData: { name: string; email: string; phone: string; service: string; message: string; zip: string; }) {
      const leadPayload = {
         id: generateId(),
         name: leadData.name,
         email: leadData.email,
-        phone: leadData.phone || "",
+        phone: leadData.phone,
         service: leadData.service,
-        details: leadData.message,
+        details: `${leadData.message} (ZIP: ${leadData.zip})`,
     };
     
     await updateClientBody({ 

@@ -1,5 +1,5 @@
 
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/header';
@@ -20,23 +20,57 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 });
 
+const APP_NAME = "NovaRoof Solutions";
+const APP_DEFAULT_TITLE = "NovaRoof Solutions - Connecting You With Trusted Local Roofers";
+const APP_TITLE_TEMPLATE = "%s | NovaRoof Solutions";
+const APP_DESCRIPTION = "We connect you with licensed and insured local roofing contractors for repair, replacement, and emergency services. Get a free, no-obligation quote today.";
+
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.novaroofsolutions.com'), // IMPORTANT: Replace with your production domain
+  applicationName: APP_NAME,
   title: {
-    default: 'NovaRoof Solutions - Connecting You With Trusted Local Roofers',
-    template: '%s | NovaRoof Solutions',
+    default: APP_DEFAULT_TITLE,
+    template: APP_TITLE_TEMPLATE,
   },
-  description: 'We connect you with licensed and insured local roofing contractors for repair, replacement, and emergency services. Get a free, no-obligation quote today.',
-  keywords: ['roofing contractors', 'roof repair', 'roof replacement', 'emergency roof repair', 'storm damage'],
-  icons: {
-    icon: '/favicon.ico',
+  description: APP_DESCRIPTION,
+  metadataBase: new URL('https://www.novaroofsolutions.com'),
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: APP_DEFAULT_TITLE,
   },
+  formatDetection: {
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    siteName: APP_NAME,
+    title: {
+      default: APP_DEFAULT_TITLE,
+      template: APP_TITLE_TEMPLATE,
+    },
+    description: APP_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary",
+    title: {
+      default: APP_DEFAULT_TITLE,
+      template: APP_TITLE_TEMPLATE,
+    },
+    description: APP_DESCRIPTION,
+  },
+  keywords: ['roofing contractors', 'roof repair', 'roof replacement', 'emergency roof repair', 'storm damage', 'local roofers'],
   robots: {
     index: true,
     follow: true,
   }
 };
+
+export const viewport: Viewport = {
+  themeColor: "#8B0000",
+};
+
 
 export default function RootLayout({
   children,

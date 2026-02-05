@@ -1,23 +1,14 @@
 "use client";
 
-import { useFormState } from "react-dom";
-import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
-import { submitLeadForm, type LeadFormState } from "@/app/actions";
-import { trackLead, trackCall } from "@/lib/api-client";
+import { trackLead } from "@/lib/api-client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import {
   Form,
   FormControl,
@@ -26,8 +17,19 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Mail, Phone } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../ui/card";
+import { useState } from "react";
+
+const leadSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  phone: z.string().refine((value) => /^\(\d{3}\) \d{3}-\d{4}$/.test(value), {
+    message: "Please enter a valid 10-digit phone number.",
+  }),
+  zip: z.string().regex(/^\d{5}$/, { message: "Please enter a valid 5-digit ZIP code." }),
+  problem: z.string().min(10, { message: "Please describe your project in at least 10 characters." }),
+});
+
+type LeadFormValues = z.infer<typeof leadSchema>;
 
 const formatPhoneNumber = (value: string) => {
     if (!value) return value;
@@ -41,117 +43,62 @@ const formatPhoneNumber = (value: string) => {
     return `(${onlyNums.slice(0, 3)}) ${onlyNums.slice(3, 6)}-${onlyNums.slice(6, 10)}`;
 };
 
-const leadSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters."),
-  email: z.string().email("Please enter a valid email address."),
-  phone: z.string().optional().refine(
-    (value) => {
-        if (!value) return true;
-        const onlyNums = value.replace(/\D/g, '');
-        return onlyNums.length === 10;
-    },
-    {
-        message: "Phone number must have 10 digits.",
-    }
-  ),
-  service: z.string().min(1, "Please select a service."),
-  message: z.string().min(10, "Message must be at least 10 characters."),
-});
-
-type LeadFormValues = z.infer<typeof leadSchema>;
-
-const services = [
-  "Emergency Roof Repair",
-  "Roof Repair",
-  "Roof Replacement",
-  "Storm Damage Repair",
-  "Roof Leak Repair",
-  "Roof Inspection",
-  "Gutter Services",
-  "Other",
-];
 
 export function Contact() {
+  const router = useRouter();
   const { toast } = useToast();
-  const initialState: LeadFormState = { message: "", status: "idle" };
-  const [state, formAction] = useFormState(submitLeadForm, initialState);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<LeadFormValues>({
     resolver: zodResolver(leadSchema),
     defaultValues: {
       name: "",
-      email: "",
       phone: "",
-      service: "",
-      message: "",
+      zip: "",
+      problem: "",
     },
   });
 
-  useEffect(() => {
-    if (state.status === "success") {
+  async function onSubmit(data: LeadFormValues) {
+    setIsSubmitting(true);
+    try {
+      const leadData = {
+        name: data.name,
+        phone: data.phone,
+        zip: data.zip,
+        service: "Not specified in form",
+        message: data.problem,
+        email: `${data.phone.replace(/\D/g, '')}@autogen.email`,
+      };
+
+      await trackLead(leadData);
+      router.push('/thank-you');
+
+    } catch (error) {
+      console.error("Form submission error:", error);
       toast({
-        title: "Request Sent!",
-        description: state.message,
-      });
-      // Call tracking API on successful submission
-      if (state.data) {
-        trackLead(state.data);
-      }
-      form.reset();
-    } else if (state.status === "error") {
-      toast({
-        title: "Error",
-        description: state.message,
+        title: "Submission Error",
+        description: "Something went wrong. Please check your connection and try again.",
         variant: "destructive",
       });
+      setIsSubmitting(false);
     }
-  }, [state, toast, form]);
+  }
 
-  const handleCallClick = () => {
-    trackCall();
-  };
 
   return (
-    <section id="contact" className="w-full py-16 md:py-24 bg-card">
-      <div className="container grid md:grid-cols-2 gap-12 items-start">
-        <div className="space-y-6">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Get Your Free Roofing Quote
-          </h2>
-          <p className="text-muted-foreground">
-            Ready to start your roofing project? Fill out the form, and we'll connect you with a top-rated, licensed, and insured roofer in your area for a free, no-obligation inspection and quote.
-          </p>
-          <div className="space-y-4">
-             <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 pt-1">
-                    <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                    <h3 className="font-semibold text-lg">Email Us</h3>
-                    <p className="text-muted-foreground">For questions about our service.</p>
-                    <a href="mailto:contact@novaroofsolutions.com" className="text-primary hover:underline">contact@novaroofsolutions.com</a>
-                </div>
-            </div>
-            <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 pt-1">
-                    <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                    <h3 className="font-semibold text-lg">Call Us</h3>
-                    <p className="text-muted-foreground">Speak directly with our team.</p>
-                    <a href="tel:5623177925" onClick={handleCallClick} className="text-primary hover:underline">(562) 317-7925</a>
-                </div>
-            </div>
-          </div>
-        </div>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Find a Local Roofer</CardTitle>
+    <section id="contact" className="w-full py-16 md:py-24 bg-muted/30">
+      <div className="container">
+        <Card className="max-w-2xl mx-auto shadow-2xl">
+          <CardHeader className="text-center">
+            <CardTitle className="font-headline text-3xl md:text-4xl">Get Your Free Roofing Quote Today</CardTitle>
+            <CardDescription className="text-lg text-muted-foreground pt-2">
+              Fill out the form below and we'll connect you with a licensed local roofer in minutes.
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <Form {...form}>
-              <form action={formAction} className="space-y-4">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
                   control={form.control}
                   name="name"
@@ -165,83 +112,51 @@ export function Contact() {
                     </FormItem>
                   )}
                 />
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="email"
-                            placeholder="your@email.com"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Phone (Optional)</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="tel"
-                            placeholder="(123) 456-7890"
-                            {...field}
-                            onChange={(e) => {
-                                const formatted = formatPhoneNumber(e.target.value);
-                                field.onChange(formatted);
-                            }}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+                 <div className="grid sm:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="phone"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Phone Number</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="tel"
+                              placeholder="(123) 456-7890"
+                              {...field}
+                              onChange={(e) => {
+                                  const formatted = formatPhoneNumber(e.target.value);
+                                  field.onChange(formatted);
+                              }}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="zip"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>ZIP Code</FormLabel>
+                          <FormControl>
+                            <Input placeholder="12345" {...field} maxLength={5} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                 </div>
                 <FormField
                   control={form.control}
-                  name="service"
+                  name="problem"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Service Needed</FormLabel>
-                      <Select
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                        name={field.name}
-                      >
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a service" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          {services.map((service) => (
-                            <SelectItem key={service} value={service}>
-                              {service}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Project Details</FormLabel>
+                      <FormLabel>Describe Your Roofing Problem</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell us about your roofing project..."
+                          placeholder="E.g., 'I have a leak in my living room ceiling' or 'I need a quote for a full roof replacement.'"
                           className="min-h-[120px]"
                           {...field}
                         />
@@ -250,8 +165,8 @@ export function Contact() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full" size="lg">
-                  Connect Me With a Pro
+                <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                  {isSubmitting ? "Connecting..." : "Connect Me With a Pro"}
                 </Button>
               </form>
             </Form>

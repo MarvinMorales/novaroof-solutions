@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, ShieldCheck } from 'lucide-react';
+import { Menu, ShieldCheck, Phone } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
@@ -13,6 +13,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { trackCall } from '@/lib/api-client';
 
 
 const navLinks = [
@@ -42,6 +43,10 @@ export function Header() {
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
   }
+
+  const handleCallClick = () => {
+    trackCall();
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
@@ -76,7 +81,13 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
         </nav>
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="hidden items-center gap-2 md:flex">
+          <Button asChild variant="outline">
+              <a href="tel:5623177925" onClick={handleCallClick} className="flex items-center gap-2">
+                  <Phone className="h-4 w-4" />
+                  (562) 317-7925
+              </a>
+          </Button>
           <Button asChild>
             <Link href="/#contact">Get a Free Quote</Link>
           </Button>
@@ -110,7 +121,12 @@ export function Header() {
                     </Link>
                   ))}
                 </nav>
-                <Button asChild size="lg" className="mt-4" onClick={() => setSheetOpen(false)}>
+                 <Button asChild size="lg" className="mt-4" variant="outline">
+                    <a href="tel:5623177925" onClick={() => { handleCallClick(); setSheetOpen(false); }}>
+                        <Phone /> Call Now
+                    </a>
+                </Button>
+                <Button asChild size="lg" className="mt-2" onClick={() => setSheetOpen(false)}>
                   <Link href="/#contact">Get a Free Quote</Link>
                 </Button>
               </div>
