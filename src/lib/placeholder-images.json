@@ -100,5 +100,41 @@
     "description": "A roofer applying waterproof sealant around a vent pipe on a roof to fix a leak.",
     "imageUrl": "https://images.unsplash.com/photo-1533282960533-51328aa49826?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwbGVhayUyMHJlcGFpcnxlbnwwfHx8fDE3NjU1MDI3NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "imageHint": "roof sealant"
+  },
+  {
+    "id": "process-tear-off",
+    "description": "Roofers tearing off old shingles from a residential roof to prepare for a new installation.",
+    "imageUrl": "https://westpacroofing.com/wp-content/uploads/2022/07/Questions-to-Ask-Before-Hiring-a-Roofer.jpg",
+    "imageHint": "roof tear-off"
+  },
+  {
+    "id": "process-deck-inspection",
+    "description": "A close-up of a wooden roof deck being inspected for water damage or rot before new underlayment is installed.",
+    "imageUrl": "https://static.wixstatic.com/media/2d8c0d_6a6b8c7e0c0d4a7b8e1b1c1e7a5c8c6c~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2d8c0d_6a6b8c7e0c0d4a7b8e1b1c1e7a5c8c6c~mv2.jpg",
+    "imageHint": "wood deck"
+  },
+  {
+    "id": "process-underlayment",
+    "description": "A roofer rolling out new black synthetic underlayment on a clean roof deck, providing a water-resistant barrier.",
+    "imageUrl": "https://images.unsplash.com/photo-1599015953935-433a7a99c922?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwdW5kZXJsYXltZW50fGVufDB8fHx8fDE3MjE4MzQ5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "roof underlayment"
+  },
+  {
+    "id": "process-shingle-install",
+    "description": "A roofer uses a nail gun to install new architectural asphalt shingles on a roof.",
+    "imageUrl": "https://images.unsplash.com/photo-1564883250-137937353195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb29mZXJ8ZW58MHx8fHwxNzY1NDk5MzUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "installing shingles"
+  },
+  {
+    "id": "process-flashing-install",
+    "description": "Detailed view of a roofer installing new metal step flashing along a chimney to prevent leaks.",
+    "imageUrl": "https://images.unsplash.com/photo-1629824959524-e5a31b46327c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwZmxhc2hpbmd8ZW58MHx8fHwxNzIxODM1MDI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "roof flashing"
+  },
+  {
+    "id": "process-final-cleanup",
+    "description": "A clean residential yard and driveway after a roof replacement, with a pristine new roof in the background.",
+    "imageUrl": "https://images.unsplash.com/photo-1605144834838-23f87b374971?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwY2xlYW51cHxlbnwwfHx8fDE3MjE4MzUwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "job cleanup"
   }
 ]

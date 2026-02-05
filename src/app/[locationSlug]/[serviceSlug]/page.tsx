@@ -11,6 +11,7 @@ import { NearbyLocations } from '@/components/sections/nearby-locations';
 import { Testimonials } from '@/components/sections/testimonials';
 import { Breadcrumbs, type BreadcrumbLink } from '@/components/layout/breadcrumbs';
 import { Services } from '@/components/sections/services';
+import { ServiceProcess } from '@/components/sections/service-process';
 
 export async function generateStaticParams() {
   const params: { locationSlug: string; serviceSlug: string }[] = [];
@@ -133,6 +134,7 @@ export default function Page({ params }: { params: { locationSlug: string, servi
         subheading={service.description.replace('{city}', location.city).replace('{state}', location.state)}
       />
       <HowItWorks />
+      <ServiceProcess serviceSlug={service.slug} />
       <Services />
       <CitySpecificSection location={location} />
       <Faq faqs={faqs} />
