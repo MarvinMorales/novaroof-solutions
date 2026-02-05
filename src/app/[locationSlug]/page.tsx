@@ -8,7 +8,7 @@ import { Contact } from '@/components/sections/contact';
 import { generateOrganizationSchema } from '@/lib/schema';
 import { Testimonials } from '@/components/sections/testimonials';
 import { Services } from '@/components/sections/services';
-import { Breadcrumbs, type BreadcrumbLink } from '@/components/layout/breadcrumbs';
+import { type BreadcrumbLink } from '@/components/layout/breadcrumbs';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 
 
@@ -83,13 +83,12 @@ export default function Page({ params }: { params: { locationSlug: string } }) {
       />
       <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs.map((c, i) => ({ name: c.name, item: `${fullUrl}${c.href}` })))) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbSchema(breadcrumbs.map((c) => ({ name: c.name, item: `${fullUrl}${c.href}` })))) }}
       />
       <Hero 
         h1={`Trusted Roofing Services in ${location.city}`}
         subheading={`We connect homeowners in ${location.city}, ${location.state}, with top-rated, licensed, and insured roofing contractors. Get a free, no-obligation quote today for repairs, replacements, and emergency services.`}
       />
-      <Breadcrumbs links={breadcrumbs} />
       <HowItWorks />
       <Services locationSlug={location.slug} />
       <Faq />

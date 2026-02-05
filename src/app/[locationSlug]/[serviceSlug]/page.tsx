@@ -8,7 +8,7 @@ import { generateLocalBusinessSchema, generateBreadcrumbSchema } from '@/lib/sch
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
 import { Testimonials } from '@/components/sections/testimonials';
-import { Breadcrumbs, type BreadcrumbLink } from '@/components/layout/breadcrumbs';
+import { type BreadcrumbLink } from '@/components/layout/breadcrumbs';
 import { Services } from '@/components/sections/services';
 import { ServiceProcess } from '@/components/sections/service-process';
 import { StickyCTA } from '@/components/layout/sticky-cta';
@@ -162,7 +162,6 @@ export default function Page({ params }: { params: { locationSlug: string, servi
         showButtons={false}
         variant="solid"
       />
-      <Breadcrumbs links={breadcrumbs} />
       <CitySpecificSection location={location} service={service} />
       <ServiceProcess serviceSlug={service.slug} />
       <Services title={`Other Services in ${location.city}`} locationSlug={location.slug} excludeSlug={service.slug} />

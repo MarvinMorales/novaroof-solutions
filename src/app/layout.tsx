@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { WhatsAppButton } from '@/components/layout/whatsapp-button';
 import { VisitTracker } from '@/components/analytics/visit-tracker';
+import { Breadcrumbs } from '@/components/layout/breadcrumbs';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -81,6 +82,7 @@ export default function RootLayout({
     <html lang="en" className={cn("scroll-smooth", inter.variable, spaceGrotesk.variable)}>
       <body className="font-body antialiased flex flex-col min-h-screen">
         <Header />
+        <Breadcrumbs />
         <main className="flex-grow">{children}</main>
         <Footer />
         {/* <WhatsAppButton /> */}
