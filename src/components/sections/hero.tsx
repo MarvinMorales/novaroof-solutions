@@ -11,9 +11,9 @@ import { useTranslation } from '@/hooks/use-translation';
 
 const defaultHeroImage: ImagePlaceholder = {
   id: 'hero-default',
-  description: "A professional roofer installing new asphalt shingles on a residential roof.",
-  imageUrl: "https://images.unsplash.com/photo-1564883250-137937353195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb29mZXJ8ZW58MHx8fHwxNzY1NDk5MzUxfDA&ixlib=rb-4.1.0&q=80&w=1200",
-  imageHint: "roofer working"
+  description: "A beautiful modern house with a perfectly installed new roof.",
+  imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaG91c2V8ZW58MHx8fHwxNzE3NzgwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1200",
+  imageHint: "modern house"
 };
 
 type HeroProps = {

@@ -1,112 +1,113 @@
+'use client';
+
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CheckCircle } from 'lucide-react';
-import type { Metadata } from 'next';
-
-const pageTitle = 'About NovaRoof Solutions';
-const pageDescription = 'Learn how NovaRoof Solutions connects homeowners with top-rated, licensed, and insured roofing contractors across the United States.';
-const ogImageUrl = 'https://images.unsplash.com/photo-1509453721491-c3af5961df76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTM3NjQ5OXww&ixlib=rb-4.1.0&q=80&w=1200';
-
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  openGraph: {
-    title: pageTitle,
-    description: pageDescription,
-    type: 'website',
-    url: '/about',
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageTitle,
-    description: pageDescription,
-    images: [ogImageUrl],
-  },
-};
+import Head from 'next/head';
+import { useTranslation } from '@/hooks/use-translation';
 
 const aboutImage = PlaceHolderImages.find(img => img.id === 'about-us-team');
 
 const values = [
   {
-    title: 'Verified Professionals',
-    description: 'Every roofer in our network is licensed, insured, and has a proven track record of quality workmanship.'
+    titleKey: 'value1Title',
+    descriptionKey: 'value1Desc'
   },
   {
-    title: 'Speed and Efficiency',
-    description: 'We quickly connect you with available contractors in your area, which is critical during roofing emergencies.'
+    titleKey: 'value2Title',
+    descriptionKey: 'value2Desc'
   },
   {
-    title: 'Total Transparency',
-    description: 'We believe in a clear and honest process. Get free, no-obligation quotes so you can make informed decisions.'
+    titleKey: 'value3Title',
+    descriptionKey: 'value3Desc'
   },
   {
-    title: 'Customer Focus',
-    description: 'Our goal is to make the process of finding a trustworthy roofer as simple and stress-free as possible for homeowners.'
+    titleKey: 'value4Title',
+    descriptionKey: 'value4Desc'
   }
-]
+];
 
 export default function AboutPage() {
-  return (
-    <div className="bg-background">
-      <section className="container py-16 md:py-24 text-center">
-        <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">About NovaRoof Solutions</h1>
-        <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          Connecting homeowners with America's most trusted roofing professionals.
-        </p>
-      </section>
+  const { t } = useTranslation();
+  const pageTitle = t('AboutPage.meta.title');
+  const pageDescription = t('AboutPage.meta.description');
+  const ogImageUrl = 'https://images.unsplash.com/photo-1509453721491-c3af5961df76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTM3NjQ5OXww&ixlib=rb-4.1.0&q=80&w=1200';
 
-      <section className="container pb-16 md:pb-24">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="font-headline text-3xl font-semibold">Our Mission</h2>
-            <p className="text-muted-foreground">
-              Finding a reliable roofing contractor can be stressful, especially when you have a leak or storm damage. NovaRoof Solutions was founded to solve this problem. We are not a roofing company; we are a marketing and referral service dedicated to making it easy for homeowners to connect with pre-screened, high-quality local roofers.
-            </p>
-            <p className="text-muted-foreground">
-              Our extensive network of licensed and insured contractors ensures that no matter where you are, you can quickly get a quote from a qualified professional you can trust. We do the vetting so you don't have to.
-            </p>
-            <h2 className="font-headline text-3xl font-semibold mt-8">How We Help</h2>
-             <p className="text-muted-foreground">
-              We bridge the gap between homeowners in need and skilled roofers ready to help. From minor repairs to full replacements and emergency services, our platform simplifies the process, providing peace of mind and ensuring your home is protected by the best in the business.
-            </p>
+  return (
+    <>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/about" />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={ogImageUrl} />
+      </Head>
+      <div className="bg-background">
+        <section className="container py-16 md:py-24 text-center">
+          <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">{t('AboutPage.title')}</h1>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+            {t('AboutPage.subtitle')}
+          </p>
+        </section>
+
+        <section className="container pb-16 md:pb-24">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="font-headline text-3xl font-semibold">{t('AboutPage.missionTitle')}</h2>
+              <p className="text-muted-foreground">
+                {t('AboutPage.missionText1')}
+              </p>
+              <p className="text-muted-foreground">
+                {t('AboutPage.missionText2')}
+              </p>
+              <h2 className="font-headline text-3xl font-semibold mt-8">{t('AboutPage.howWeHelpTitle')}</h2>
+              <p className="text-muted-foreground">
+                {t('AboutPage.howWeHelpText')}
+              </p>
+            </div>
+            <div>
+              {aboutImage && (
+                <Image
+                  src={aboutImage.imageUrl}
+                  alt={aboutImage.description}
+                  data-ai-hint={aboutImage.imageHint}
+                  width={800}
+                  height={600}
+                  className="rounded-lg shadow-lg object-cover aspect-[4/3]"
+                />
+              )}
+            </div>
           </div>
-          <div>
-            {aboutImage && (
-              <Image
-                src={aboutImage.imageUrl}
-                alt={aboutImage.description}
-                data-ai-hint={aboutImage.imageHint}
-                width={800}
-                height={600}
-                className="rounded-lg shadow-lg object-cover aspect-[4/3]"
-              />
-            )}
-          </div>
-        </div>
-      </section>
-      
-      <section className="bg-card">
-        <div className="container py-16 md:py-24">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Core Principles</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              The principles that guide our service and our network.
-            </p>
-          </div>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value) => (
-              <div key={value.title} className="text-center">
-                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground mb-4">
-                  <CheckCircle className="h-6 w-6" />
+        </section>
+        
+        <section className="bg-card">
+          <div className="container py-16 md:py-24">
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">{t('AboutPage.principlesTitle')}</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                {t('AboutPage.principlesSubtitle')}
+              </p>
+            </div>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value) => (
+                <div key={value.titleKey} className="text-center">
+                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground mb-4">
+                    <CheckCircle className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-headline text-xl font-semibold">{t(`AboutPage.${value.titleKey}`)}</h3>
+                  <p className="mt-2 text-muted-foreground text-sm">{t(`AboutPage.${value.descriptionKey}`)}</p>
                 </div>
-                <h3 className="font-headline text-xl font-semibold">{value.title}</h3>
-                <p className="mt-2 text-muted-foreground text-sm">{value.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

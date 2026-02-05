@@ -116,5 +116,28 @@ export const messages = {
     problemPlaceholder: "Ej: 'Tengo una fuga en el techo de mi sala' o 'Necesito una cotización para un reemplazo completo del techo.'",
     submitButton: "Conectarme con un Profesional",
     submitting: "Conectando..."
+  },
+  AboutPage: {
+    meta: {
+        title: "Sobre NovaRoof Solutions",
+        description: "Descubra cómo NovaRoof Solutions conecta a los propietarios de viviendas con los contratistas de techos mejor calificados, con licencia y asegurados en todo Estados Unidos."
+    },
+    title: "Sobre NovaRoof Solutions",
+    subtitle: "Conectando a los propietarios de viviendas con los profesionales de techado más confiables de América.",
+    missionTitle: "Nuestra Misión",
+    missionText1: "Encontrar un contratista de techado confiable puede ser estresante, especialmente cuando tienes una fuga o daño por tormenta. NovaRoof Solutions se fundó para resolver este problema. No somos una empresa de techado; somos un servicio de marketing y referencia dedicado a facilitar que los propietarios se conecten con techadores locales preseleccionados y de alta calidad.",
+    missionText2: "Nuestra extensa red de contratistas con licencia y asegurados garantiza que, sin importar dónde te encuentres, puedas obtener rápidamente una cotización de un profesional calificado en quien puedas confiar. Nosotros hacemos la selección para que tú no tengas que hacerlo.",
+    howWeHelpTitle: "Cómo Ayudamos",
+    howWeHelpText: "Cerramos la brecha entre los propietarios necesitados y los techadores calificados listos para ayudar. Desde reparaciones menores hasta reemplazos completos y servicios de emergencia, nuestra plataforma simplifica el proceso, brindando tranquilidad y asegurando que tu hogar esté protegido por los mejores en el negocio.",
+    principlesTitle: "Nuestros Principios Fundamentales",
+    principlesSubtitle: "Los principios que guían nuestro servicio y nuestra red.",
+    value1Title: "Profesionales Verificados",
+    value1Desc: "Cada techador en nuestra red tiene licencia, está asegurado y tiene un historial comprobado de mano de obra de calidad.",
+    value2Title: "Velocidad y Eficiencia",
+    value2Desc: "Te conectamos rápidamente con contratistas disponibles en tu área, lo cual es crítico durante emergencias de techado.",
+    value3Title: "Transparencia Total",
+    value3Desc: "Creemos en un proceso claro y honesto. Obtén cotizaciones gratuitas y sin compromiso para que puedas tomar decisiones informadas.",
+    value4Title: "Enfoque en el Cliente",
+    value4Desc: "Nuestro objetivo es hacer que el proceso de encontrar un techador confiable sea lo más simple y libre de estrés posible para los propietarios de viviendas."
   }
 };

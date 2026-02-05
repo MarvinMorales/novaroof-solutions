@@ -58,7 +58,7 @@ export const messages = {
     title: "Comprehensive Roofing Solutions",
     subtitle: "Whatever your roofing needs, we connect you with the right professionals for the job. Explore our most requested services.",
     subtitleExcluded: "We also connect you with professionals for these related services in your area.",
-    learnMore: "I want to know more"
+    learnMore: "Learn More"
   },
   Services: {
     'roof-replacement': {
@@ -116,5 +116,28 @@ export const messages = {
     problemPlaceholder: "E.g., 'I have a leak in my living room ceiling' or 'I need a quote for a full roof replacement.'",
     submitButton: "Connect Me With a Pro",
     submitting: "Connecting..."
+  },
+  AboutPage: {
+    meta: {
+        title: "About NovaRoof Solutions",
+        description: "Learn how NovaRoof Solutions connects homeowners with top-rated, licensed, and insured roofing contractors across the United States."
+    },
+    title: "About NovaRoof Solutions",
+    subtitle: "Connecting homeowners with America's most trusted roofing professionals.",
+    missionTitle: "Our Mission",
+    missionText1: "Finding a reliable roofing contractor can be stressful, especially when you have a leak or storm damage. NovaRoof Solutions was founded to solve this problem. We are not a roofing company; we are a marketing and referral service dedicated to making it easy for homeowners to connect with pre-screened, high-quality local roofers.",
+    missionText2: "Our extensive network of licensed and insured contractors ensures that no matter where you are, you can quickly get a quote from a qualified professional you can trust. We do the vetting so you don't have to.",
+    howWeHelpTitle: "How We Help",
+    howWeHelpText: "We bridge the gap between homeowners in need and skilled roofers ready to help. From minor repairs to full replacements and emergency services, our platform simplifies the process, providing peace of mind and ensuring your home is protected by the best in the business.",
+    principlesTitle: "Our Core Principles",
+    principlesSubtitle: "The principles that guide our service and our network.",
+    value1Title: "Verified Professionals",
+    value1Desc: "Every roofer in our network is licensed, insured, and has a proven track record of quality workmanship.",
+    value2Title: "Speed and Efficiency",
+    value2Desc: "We quickly connect you with available contractors in your area, which is critical during roofing emergencies.",
+    value3Title: "Total Transparency",
+    value3Desc: "We believe in a clear and honest process. Get free, no-obligation quotes so you can make informed decisions.",
+    value4Title: "Customer Focus",
+    value4Desc: "Our goal is to make the process of finding a trustworthy roofer as simple and stress-free as possible for homeowners."
   }
 };
