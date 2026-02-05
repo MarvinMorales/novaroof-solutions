@@ -89,3 +89,5 @@ export function Hero({ h1, subheading, size = 'default', showButtons = true, ima
     </section>
   );
 }
+
+    

@@ -108,6 +108,13 @@ const getFaqs = (serviceSlug: string) => {
             { question: "Are seamless gutters really better than sectional gutters?", answer: "Yes. Seamless gutters are custom-made for your home from a single piece of aluminum. This eliminates the seams (joints) which are the most common points of failure and leaks in traditional sectional gutters." },
             { question: "Do gutter guards actually work?", answer: "High-quality gutter guards are very effective at keeping out leaves and large debris, which significantly reduces the need for frequent cleaning. However, no system is completely maintenance-free, and they may still require occasional clearing of fine sediment." },
             { question: `How much does it cost to install new gutters?`, answer: `For an average-sized home, new seamless aluminum gutter installation typically costs between $1,000 and $3,000. The final price depends on the total linear footage and complexity of your home's roofline.` }
+        ],
+        'metal-roofing': [
+            { question: `Is a metal roof a good investment?`, answer: `Absolutely. Metal roofs are extremely durable, fire-resistant, and can withstand high winds. They are also energy-efficient, reflecting solar heat to keep your home cooler and lower energy bills, making them a smart long-term investment.` },
+            { question: "How long does a metal roof last?", answer: "A professionally installed metal roof can last 50 years or even longer, which is two to three times the lifespan of a typical asphalt shingle roof. They require very little maintenance." },
+            { question: `Is a metal roof noisy when it rains?`, answer: `This is a common myth. When installed over a solid roof deck with proper insulation, a metal roof is no noisier during a rainstorm than a shingle roof.` },
+            { question: "Can you install a metal roof over existing shingles?", answer: "In some cases, yes, which can save on labor costs for tearing off the old roof. However, a full tear-off is often recommended to allow for inspection of the underlying roof deck for any damage." },
+            { question: `How much more does a metal roof cost than shingles?`, answer: `Initially, a metal roof can cost two to three times more than an asphalt shingle roof. However, its long lifespan, durability, and energy savings often make it a more cost-effective choice over the life of your home.` }
         ]
     };
     return allFaqs[serviceSlug as keyof typeof allFaqs] || [];
@@ -142,3 +149,5 @@ export default function Page({ params }: { params: { serviceSlug: string } }) {
     </div>
   );
 }
+
+    

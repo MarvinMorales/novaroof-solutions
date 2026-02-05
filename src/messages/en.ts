@@ -84,6 +84,10 @@ export const messages = {
     'gutter-services': {
       title: "Gutter Services",
       description: "Proper water drainage is essential. We connect you with experts for seamless gutter installation, repairs, cleaning, and gutter guard installation to protect your roof and foundation."
+    },
+    'metal-roofing': {
+      title: "Metal Roofing",
+      description: "Upgrade to a durable, energy-efficient metal roof. We connect you with pros who specialize in standing seam and other metal systems for a modern look and long-lasting protection."
     }
   },
   FAQ: {
@@ -141,3 +145,5 @@ export const messages = {
     value4Desc: "Our goal is to make the process of finding a trustworthy roofer as simple and stress-free as possible for homeowners."
   }
 };
+
+    

@@ -232,5 +232,17 @@
     "description": "A close-up of a high-quality mesh gutter guard installed over a gutter to keep leaves out.",
     "imageUrl": "https://images.unsplash.com/photo-1662991199321-bd4e167041a3?q=80&w=800&auto=format&fit=crop",
     "imageHint": "gutter guard"
+  },
+  {
+    "id": "process-metal-panel-install",
+    "description": "A worker installing a standing seam metal roof panel on a residential home.",
+    "imageUrl": "https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?q=80&w=800&auto=format&fit=crop",
+    "imageHint": "metal roof panels"
+  },
+  {
+    "id": "process-metal-trim-install",
+    "description": "Close-up of a worker installing the final metal trim and flashing on a metal roof.",
+    "imageUrl": "https://images.unsplash.com/photo-1629824959524-e5a31b46327c?q=80&w=800&auto=format&fit=crop",
+    "imageHint": "metal roof trim"
   }
 ]

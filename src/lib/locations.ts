@@ -153,6 +153,14 @@ export const services = [
         h1: "Gutter Services",
         description: "Ensure proper water management with professional gutter services in {city}, {state}. We connect you with experts for gutter cleaning, repair, installation, and gutter guard systems.",
         imageId: "service-gutter"
+    },
+    {
+        slug: "metal-roofing",
+        name: "Metal Roofing",
+        title: "Metal Roofing Installation",
+        h1: "Metal Roofing Services",
+        description: "Upgrade to a durable, energy-efficient metal roof in {city}, {state}. We connect you with specialists in standing seam and other metal roofing systems. Get a long-lasting solution with a free quote.",
+        imageId: "service-metal"
     }
 ];
 
@@ -164,3 +172,5 @@ export const getNearbyCities = (currentState: string, currentCity: string): Loca
 
 export const getServiceBySlug = (slug: string) => services.find(s => s.slug === slug);
 export const getLocationBySlug = (slug: string) => locations.find(l => l.slug === slug);
+
+    

@@ -84,7 +84,7 @@ const processData: Record<string, { title: string, intro: string, steps: Process
       },
     ],
   },
-    'emergency-roof-repair': {
+  'emergency-roof-repair': {
     title: 'The Emergency Storm Damage Process: Your First Response',
     intro: 'When a storm hits, speed and expertise are critical. Our network is designed for rapid response to secure your home and guide you through the restoration process. Here’s what you can expect in a roofing emergency.',
     steps: [
@@ -174,6 +174,36 @@ const processData: Record<string, { title: string, intro: string, steps: Process
       },
     ],
   },
+  'metal-roofing': {
+    title: 'The Metal Roof Installation Process: Precision & Durability',
+    intro: 'Installing a metal roof is a skilled trade that requires precision and specialized tools. The professionals in our network follow a meticulous process to ensure your new roof is beautiful, weatherproof, and lasts a lifetime.',
+    steps: [
+      {
+        step: 1,
+        title: 'Site Prep & Old Roof Removal',
+        description: 'First, the crew protects your home\'s exterior. Then, the old roofing material is completely removed down to the deck. This allows for a full inspection of the wood sheathing to ensure a solid foundation for the new metal system.',
+        imageId: 'process-tear-off',
+      },
+      {
+        step: 2,
+        title: 'Installing High-Temperature Underlayment',
+        description: 'A critical step for metal roofs is installing a high-temperature, self-adhering underlayment. This provides a vital secondary waterproof barrier and protects the sheathing from the intense heat that metal can transfer.',
+        imageId: 'process-underlayment',
+      },
+      {
+        step: 3,
+        title: 'Installing Panels & Seaming',
+        description: 'The long, custom-cut metal panels are laid out and fastened to the deck with concealed clips and screws. For standing seam roofs, a special tool is used to mechanically lock the seams together, creating a single, monolithic waterproof surface.',
+        imageId: 'process-metal-panel-install',
+      },
+      {
+        step: 4,
+        title: 'Installing Trim, Flashing, & Vents',
+        description: 'The final step is installing all the detail pieces. This includes custom-fabricated trim for the eaves and rakes, flashing around chimneys and skylights, and sealing vents. This meticulous trim work is what gives a metal roof its clean, finished look and ensures it\'s completely weathertight.',
+        imageId: 'process-metal-trim-install',
+      },
+    ],
+  },
 };
 
 processData['roof-leak-repair'] = processData['roof-repair'];
@@ -230,3 +260,5 @@ export function ServiceProcess({ serviceSlug }: { serviceSlug: string }) {
     </section>
   );
 }
+
+    

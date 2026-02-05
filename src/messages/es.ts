@@ -84,6 +84,10 @@ export const messages = {
     'gutter-services': {
       title: "Servicios de Canaletas",
       description: "Un drenaje de agua adecuado es esencial. Te conectamos con expertos para la instalación, reparación, limpieza de canaletas sin costura y sistemas de protección de canaletas para proteger tu techo y cimientos."
+    },
+    'metal-roofing': {
+      title: "Techos de Metal",
+      description: "Actualiza a un techo de metal duradero y de bajo consumo. Te conectamos con profesionales que se especializan en sistemas de costura alzada y otros sistemas metálicos para una apariencia moderna y protección duradera."
     }
   },
   FAQ: {
@@ -141,3 +145,5 @@ export const messages = {
     value4Desc: "Nuestro objetivo es hacer que el proceso de encontrar un techador confiable sea lo más simple y libre de estrés posible para los propietarios de viviendas."
   }
 };
+
+    

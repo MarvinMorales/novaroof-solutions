@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Wrench, Home, ShieldCheck, Droplets, Zap, Eye } from "lucide-react";
+import { Wrench, Home, ShieldCheck, Droplets, Zap, Eye, Mountain } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
@@ -44,6 +44,12 @@ const servicesData = [
         titleKey: "gutter-services",
         imageId: "service-gutter",
         slug: "gutter-services"
+    },
+    {
+        icon: <Mountain />,
+        titleKey: "metal-roofing",
+        imageId: "service-metal",
+        slug: "metal-roofing"
     },
 ];
 
@@ -129,3 +135,5 @@ export function Services({ locationSlug, title, excludeSlug }: ServicesProps) {
         </section>
     );
 }
+
+    

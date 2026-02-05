@@ -26,6 +26,7 @@ const services = [
     { href: `/service/roof-leak-repair/`, label: 'Roof Leak Repair', slug: 'roof-leak-repair' },
     { href: `/service/roof-inspection/`, label: 'Roof Inspection', slug: 'roof-inspection' },
     { href: `/service/gutter-services/`, label: 'Gutter Services', slug: 'gutter-services' },
+    { href: `/service/metal-roofing/`, label: 'Metal Roofing', slug: 'metal-roofing' },
 ];
 
 
@@ -155,3 +156,5 @@ export function Header() {
     </header>
   );
 }
+
+    

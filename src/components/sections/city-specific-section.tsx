@@ -15,6 +15,7 @@ const serviceToRelevantProblems: Record<string, string[]> = {
     'emergency-roof-repair': ['wind', 'hail', 'rain'],
     'storm-damage-roof': ['wind', 'hail', 'rain'],
     'roof-inspection': ['hail', 'wind', 'sun', 'rain'],
+    'metal-roofing': ['sun', 'wind', 'hail'],
 };
 
 const serviceSpecificTexts: Record<string, { intro: string; summary: string }> = {
@@ -41,6 +42,10 @@ const serviceSpecificTexts: Record<string, { intro: string; summary: string }> =
     'roof-inspection': {
         intro: "A regular roof inspection in {city} is your best defense against unexpected, costly repairs. Here are the specific climate-related issues an inspector will look for on your property.",
         summary: "A professional inspection is key to identifying issues like {problemListString} before they become catastrophes. The inspectors in our {city} network provide thorough assessments and detailed reports, giving you a clear picture of your roof's health and a plan to address any vulnerabilities."
+    },
+    'metal-roofing': {
+        intro: "Choosing a metal roof in {city} is a premium choice for durability and energy efficiency. Here are the local factors that make metal a popular option for discerning homeowners.",
+        summary: "For homeowners in {city} concerned about {problemListString}, a metal roof is a superior solution. The contractors in our network are experts in installing standing seam and other metal systems that provide unparalleled longevity and performance against the toughest local weather conditions."
     },
 };
 
@@ -145,3 +150,5 @@ export function CitySpecificSection({ location, service }: { location: LocationD
     </section>
   );
 }
+
+    

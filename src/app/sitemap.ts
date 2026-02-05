@@ -13,6 +13,7 @@ const priorityMap: Record<string, number> = {
   'roof-replacement': 0.7,
   'roof-inspection': 0.7,
   'gutter-services': 0.6,
+  'metal-roofing': 0.7,
 };
 
 const changeFreqMap: Record<
@@ -26,6 +27,7 @@ const changeFreqMap: Record<
   'roof-replacement': 'yearly',
   'roof-inspection': 'monthly',
   'gutter-services': 'monthly',
+  'metal-roofing': 'yearly',
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -78,3 +80,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticPages, ...locationPages, ...servicePages, ...legalPages];
 }
+
+    
