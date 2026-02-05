@@ -35,15 +35,25 @@ export function CitySpecificSection({ location, service }: { location: LocationD
     return null;
   }
 
+  // Generate a dynamic list of problem titles for the summary text.
+  const problemTitles = problemsToDisplay.map(p => p.problem.title.toLowerCase());
+  let problemListString = "";
+  if (problemTitles.length > 1) {
+    problemListString = `${problemTitles.slice(0, -1).join(', ')} and ${problemTitles.slice(-1)}`;
+  } else if (problemTitles.length === 1) {
+    problemListString = problemTitles[0];
+  }
+
+
   return (
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
-            Your Local {location.city} Roofing Challenges, Solved
+            Common Causes of {service.name} in {location.city}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            {location.localContent.intro}
+             The unique climate in {location.city} presents specific challenges for your roof. Here are the most common issues that lead to needing professional roofing services.
           </p>
         </div>
 
@@ -103,13 +113,14 @@ export function CitySpecificSection({ location, service }: { location: LocationD
           })}
         </div>
         
-        <div className="mt-16 max-w-4xl mx-auto">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-center">We Understand {location.city} Roofs</h2>
-            <div className="mt-4 space-y-4 text-lg text-left text-muted-foreground">
-                <p>{location.localContent.risks}</p>
-                <p>The licensed roofers in our network understand these local challenges inside and out. They have the experience to recommend and install the right materials—from impact-resistant shingles to handle hail to advanced underlayment for moisture protection—ensuring your home is protected year-round.</p>
+        {problemListString && (
+            <div className="mt-16 max-w-4xl mx-auto">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-center">Local Expertise Matters</h2>
+                <div className="mt-4 space-y-4 text-lg text-left text-muted-foreground">
+                    <p>The licensed roofers in our network understand how {location.city}'s specific climate contributes to issues like {problemListString}. They have the local experience to accurately diagnose the root cause of your problem and recommend the right materials and repair techniques for a long-lasting solution, ensuring your home is protected from these specific threats year-round.</p>
+                </div>
             </div>
-        </div>
+        )}
 
       </div>
     </section>
