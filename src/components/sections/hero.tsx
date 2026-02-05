@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const heroImage = {
   description: "A professional roofer working on a roof.",
-  imageUrl: "https://static.wixstatic.com/media/ba2cd3_7beb9da6a792462d9aa2a4c2c00a2f33~mv2.jpg/v1/fill/w_740,h_494,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ba2cd3_7beb9da6a792462d9aa2a4c2c00a2f33~mv2.jpg",
+  imageUrl: "https://westpacroofing.com/wp-content/uploads/2022/07/Questions-to-Ask-Before-Hiring-a-Roofer.jpg",
   imageHint: "roofer working"
 };
 
