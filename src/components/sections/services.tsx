@@ -10,49 +10,52 @@ const servicesData = [
         title: "Roof Replacement",
         description: "Whether your roof is aging or has extensive damage, we connect you with pros for full replacements. Choose from high-quality materials like asphalt shingles, durable metal, or elegant tile for long-lasting protection.",
         imageId: "service-shingle",
-        link: "/houston-tx/roof-replacement/"
+        slug: "roof-replacement"
     },
     {
         icon: <Wrench />,
         title: "Roof Repair",
         description: "From missing shingles to damaged flashing, we find local experts to handle all types of roof repairs. Extend the life of your roof by fixing small issues before they become big problems.",
         imageId: "service-repair",
-        link: "/houston-tx/roof-repair/"
+        slug: "roof-repair"
     },
     {
         icon: <Zap />,
         title: "Emergency & Storm Damage",
         description: "When disaster strikes, a fast response is critical. We provide access to 24/7 emergency services for urgent repairs after storms, hail, or high winds to secure your home and prevent further damage.",
         imageId: "service-storm",
-        link: "/houston-tx/emergency-roof-repair/"
+        slug: "emergency-roof-repair"
     },
     {
         icon: <ShieldCheck />,
         title: "Roof Inspection",
         description: "Get a professional assessment of your roof's condition. We connect you with experts who can identify potential issues, estimate remaining lifespan, and document damage for insurance claims.",
         imageId: "service-inspection",
-        link: "/houston-tx/roof-repair/" 
+        slug: "roof-repair" 
     },
     {
         icon: <Replace />,
         title: "Roof Leak Repair",
         description: "Our network specializes in advanced leak detection and reliable repairs to protect your home's structure and interior. Stop water damage and prevent mold growth with a permanent fix.",
         imageId: "service-metal", 
-        link: "/houston-tx/roof-leak-repair/"
+        slug: "roof-leak-repair"
     },
     {
         icon: <Droplets />,
         title: "Gutter Services",
         description: "Proper water drainage is essential. We connect you with experts for seamless gutter installation, repairs, cleaning, and gutter guard installation to protect your roof and foundation.",
         imageId: "service-gutter",
-        link: "/houston-tx/roof-repair/"
+        slug: "roof-repair"
     },
 ]
 
 const getImage = (id: string) => PlaceHolderImages.find(p => p.id === id);
 
+type ServicesProps = {
+    locationSlug?: string;
+}
 
-export function Services() {
+export function Services({ locationSlug = 'houston-tx' }: ServicesProps) {
     return (
         <section id="services" className="w-full py-16 md:py-24">
             <div className="container">
@@ -65,8 +68,9 @@ export function Services() {
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {servicesData.map((service) => {
                         const image = getImage(service.imageId);
+                        const link = `/${locationSlug}/${service.slug}/`;
                         return (
-                            <Link href={service.link} key={service.title} className="flex">
+                            <Link href={link} key={service.title} className="flex">
                                 <Card className="flex flex-col overflow-hidden group hover:shadow-xl transition-shadow duration-300 w-full">
                                     {image && (
                                         <div className="overflow-hidden">

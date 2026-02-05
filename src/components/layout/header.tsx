@@ -21,12 +21,13 @@ const navLinks = [
   { href: '/about/', label: 'About Us' },
 ];
 
+const defaultLocationSlug = 'houston-tx';
 const services = [
-    { href: '/houston-tx/roof-repair/', label: 'Roof Repair' },
-    { href: '/houston-tx/roof-replacement/', label: 'Roof Replacement' },
-    { href: '/houston-tx/emergency-roof-repair/', label: 'Emergency Repair' },
-    { href: '/houston-tx/storm-damage-roof/', label: 'Storm Damage' },
-    { href: '/houston-tx/roof-leak-repair/', label: 'Roof Leak Repair' },
+    { href: `/${defaultLocationSlug}/roof-repair/`, label: 'Roof Repair' },
+    { href: `/${defaultLocationSlug}/roof-replacement/`, label: 'Roof Replacement' },
+    { href: `/${defaultLocationSlug}/emergency-roof-repair/`, label: 'Emergency Repair' },
+    { href: `/${defaultLocationSlug}/storm-damage-roof/`, label: 'Storm Damage' },
+    { href: `/${defaultLocationSlug}/roof-leak-repair/`, label: 'Roof Leak Repair' },
 ];
 
 
@@ -52,7 +53,7 @@ export function Header() {
       const pathSegments = pathname.split('/');
       if (pathSegments.length < 3) return false;
       const serviceSlug = pathSegments[2];
-      return services.some(service => service.href.split('/')[2] === serviceSlug);
+      return services.some(service => service.href.includes(serviceSlug));
   }
 
   const handleCallClick = () => {
