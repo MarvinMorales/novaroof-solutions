@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card } from '@/components/ui/card';
 import { AlertCircle, ShieldCheck } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 const getImage = (id: string) => PlaceHolderImages.find(p => p.id === id);
 
@@ -92,56 +93,39 @@ export function CitySpecificSection({ location, service }: { location: LocationD
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {problemsToDisplay.map((item, index) => {
             const problemImage = getImage(item.problem.imageId);
-            const solutionImage = getImage(item.solution.imageId);
 
             return (
-              <Card key={index} className="overflow-hidden shadow-lg w-full bg-card">
-                <div className="grid grid-cols-2">
-                    {problemImage && (
-                        <div className="relative h-48">
-                            <Image
-                                src={problemImage.imageUrl}
-                                alt={problemImage.description}
-                                data-ai-hint={problemImage.imageHint}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    )}
-                    {solutionImage && (
-                         <div className="relative h-48">
-                             <Image
-                                src={solutionImage.imageUrl}
-                                alt={solutionImage.description}
-                                data-ai-hint={solutionImage.imageHint}
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    )}
-                </div>
-                <div className="p-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <div className="flex items-center gap-2 mb-2">
-                                <AlertCircle className="h-6 w-6 text-destructive shrink-0" />
-                                <h3 className="font-headline text-lg font-semibold text-destructive">The Problem</h3>
-                            </div>
-                            <h4 className="font-semibold text-foreground mb-1">{item.problem.title}</h4>
-                            <p className="text-sm text-muted-foreground">{item.problem.description.replace(/{city}/g, location.city)}</p>
-                        </div>
-                        <div>
-                            <div className="flex items-center gap-2 mb-2">
-                                <ShieldCheck className="h-6 w-6 text-primary shrink-0" />
-                                <h3 className="font-headline text-lg font-semibold text-primary">The Solution</h3>
-                            </div>
-                             <h4 className="font-semibold text-foreground mb-1">{item.solution.title}</h4>
-                            <p className="text-sm text-muted-foreground">{item.solution.description.replace(/{city}/g, location.city)}</p>
-                        </div>
+              <Card key={index} className="overflow-hidden shadow-lg w-full bg-card flex flex-col">
+                {problemImage && (
+                  <div className="relative aspect-video w-full">
+                    <Image
+                      src={problemImage.imageUrl}
+                      alt={problemImage.description}
+                      data-ai-hint={problemImage.imageHint}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div className="p-6 flex-grow flex flex-col">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <AlertCircle className="h-6 w-6 text-destructive shrink-0" />
+                      <h3 className="font-headline text-xl font-semibold">{item.problem.title}</h3>
                     </div>
+                    <p className="text-muted-foreground">{item.problem.description.replace(/{city}/g, location.city)}</p>
+                  </div>
+                  <Separator className="my-6" />
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <ShieldCheck className="h-6 w-6 text-primary shrink-0" />
+                      <h3 className="font-headline text-xl font-semibold">{item.solution.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground">{item.solution.description.replace(/{city}/g, location.city)}</p>
+                  </div>
                 </div>
               </Card>
             );
@@ -149,9 +133,9 @@ export function CitySpecificSection({ location, service }: { location: LocationD
         </div>
         
         {problemListString && (
-            <div className="mt-16 max-w-4xl mx-auto">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter text-center">Local Expertise Matters</h2>
-                <div className="mt-4 space-y-4 text-lg text-left text-muted-foreground">
+            <div className="mt-16 max-w-4xl mx-auto text-center">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">Local Expertise Matters</h2>
+                <div className="mt-4 space-y-4 text-lg text-muted-foreground text-left">
                     <p>{summaryText}</p>
                 </div>
             </div>
