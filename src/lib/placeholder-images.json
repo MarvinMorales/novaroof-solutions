@@ -136,5 +136,101 @@
     "description": "A clean residential yard and driveway after a roof replacement, with a pristine new roof in the background.",
     "imageUrl": "https://images.unsplash.com/photo-1605144834838-23f87b374971?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwY2xlYW51cHxlbnwwfHx8fDE3MjE4MzUwODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "imageHint": "job cleanup"
+  },
+  {
+    "id": "process-repair-inspection",
+    "description": "A roofer on a ladder inspecting a roof for repair needs.",
+    "imageUrl": "https://picsum.photos/seed/repair-inspect/800/600",
+    "imageHint": "roof inspection"
+  },
+  {
+    "id": "process-repair-assessment",
+    "description": "Close-up of a roofer pointing out cracked and missing shingles on a roof.",
+    "imageUrl": "https://picsum.photos/seed/repair-assess/800/600",
+    "imageHint": "shingle damage"
+  },
+  {
+    "id": "process-repair-execution",
+    "description": "A roofer carefully nailing down a new shingle to repair a damaged section of a roof.",
+    "imageUrl": "https://picsum.photos/seed/repair-execute/800/600",
+    "imageHint": "roof repair"
+  },
+  {
+    "id": "process-repair-final-check",
+    "description": "A roofer looking over a completed roof repair job, ensuring everything is sealed.",
+    "imageUrl": "https://picsum.photos/seed/repair-check/800/600",
+    "imageHint": "roof check"
+  },
+  {
+    "id": "process-storm-tarping",
+    "description": "A large blue tarp securely fastened over a storm-damaged section of a roof to prevent further water intrusion.",
+    "imageUrl": "https://picsum.photos/seed/storm-tarp/800/600",
+    "imageHint": "emergency tarp"
+  },
+  {
+    "id": "process-storm-documentation",
+    "description": "A roofer taking photos of hail damage on a roof with a smartphone for an insurance claim.",
+    "imageUrl": "https://picsum.photos/seed/storm-docs/800/600",
+    "imageHint": "damage documentation"
+  },
+  {
+    "id": "process-storm-insurance-meet",
+    "description": "A roofer and an insurance adjuster standing on the ground looking up at a roof together.",
+    "imageUrl": "https://picsum.photos/seed/storm-insurance/800/600",
+    "imageHint": "insurance adjuster"
+  },
+  {
+    "id": "process-storm-full-repair",
+    "description": "A full roofing crew working together to replace a roof damaged by a severe storm.",
+    "imageUrl": "https://picsum.photos/seed/storm-repair/800/600",
+    "imageHint": "storm repair"
+  },
+  {
+    "id": "process-inspection-exterior",
+    "description": "A roof inspector walking around the exterior of a home, looking at siding and lower roof sections.",
+    "imageUrl": "https://picsum.photos/seed/inspect-exterior/800/600",
+    "imageHint": "home exterior"
+  },
+  {
+    "id": "process-inspection-roof-walk",
+    "description": "A roof inspector carefully walking on a roof, checking for soft spots, damaged shingles, and worn flashing.",
+    "imageUrl": "https://picsum.photos/seed/inspect-roof/800/600",
+    "imageHint": "roof walk"
+  },
+  {
+    "id": "process-inspection-attic",
+    "description": "An inspector using a flashlight inside a dark attic to check the underside of the roof deck for signs of leaks or mold.",
+    "imageUrl": "https://picsum.photos/seed/inspect-attic/800/600",
+    "imageHint": "attic inspection"
+  },
+  {
+    "id": "process-inspection-report",
+    "description": "A person reviewing a detailed roofing inspection report on a tablet, showing photos and recommendations.",
+    "imageUrl": "https://picsum.photos/seed/inspect-report/800/600",
+    "imageHint": "inspection report"
+  },
+  {
+    "id": "process-gutter-cleaning",
+    "description": "A professional using gloves to scoop out wet leaves and debris from a clogged residential gutter.",
+    "imageUrl": "https://picsum.photos/seed/gutter-clean/800/600",
+    "imageHint": "gutter cleaning"
+  },
+  {
+    "id": "process-gutter-repair",
+    "description": "A worker applying waterproof sealant to a leaking corner joint of a metal gutter.",
+    "imageUrl": "https://picsum.photos/seed/gutter-repair/800/600",
+    "imageHint": "gutter repair"
+  },
+  {
+    "id": "process-gutter-installation",
+    "description": "A new section of seamless aluminum gutter being installed on the fascia board of a house.",
+    "imageUrl": "https://picsum.photos/seed/gutter-install/800/600",
+    "imageHint": "gutter installation"
+  },
+  {
+    "id": "process-gutter-guards",
+    "description": "A close-up of a high-quality mesh gutter guard installed over a gutter to keep leaves out.",
+    "imageUrl": "https://picsum.photos/seed/gutter-guard/800/600",
+    "imageHint": "gutter guard"
   }
 ]

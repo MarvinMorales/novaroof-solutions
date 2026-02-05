@@ -54,7 +54,130 @@ const processData: Record<string, { title: string, intro: string, steps: Process
       },
     ],
   },
+  'roof-repair': {
+    title: 'The Roof Repair Process: Targeted and Efficient',
+    intro: 'A roof repair is a precise operation designed to address specific issues without replacing the entire roof. The professionals in our network follow a clear process to ensure your problem is fixed correctly, extending the life of your roof and preventing future damage.',
+    steps: [
+      {
+        step: 1,
+        title: 'Initial Inspection & Assessment',
+        description: 'The process begins with a thorough inspection. A roofer will examine the exterior and interior of your home to pinpoint the exact source and extent of the damage, whether it\'s a few missing shingles, damaged flashing, or a hard-to-find leak.',
+        imageId: 'process-repair-inspection',
+      },
+      {
+        step: 2,
+        title: 'Damage Analysis & Clear Quote',
+        description: 'Once the problem is identified, the contractor will explain the issue to you in clear terms. You will receive a detailed, upfront quote that outlines the scope of work, materials required for the repair, and the total cost. There are no hidden fees.',
+        imageId: 'process-repair-assessment',
+      },
+      {
+        step: 3,
+        title: 'Precise Repair Execution',
+        description: 'The repair work begins. This could involve replacing damaged shingles, resealing or replacing faulty flashing around chimneys or vents, or applying professional-grade sealant to fix a puncture. The goal is to integrate the repair seamlessly with your existing roof.',
+        imageId: 'process-repair-execution',
+      },
+      {
+        step: 4,
+        title: 'Final Check & Site Cleanup',
+        description: 'After the repair is complete, the contractor performs a final quality check to ensure the fix is secure and weatherproof. They will also clean up any debris from the work, leaving your property as clean as they found it.',
+        imageId: 'process-repair-final-check',
+      },
+    ],
+  },
+    'emergency-roof-repair': {
+    title: 'The Emergency Storm Damage Process: Your First Response',
+    intro: 'When a storm hits, speed and expertise are critical. Our network is designed for rapid response to secure your home and guide you through the restoration process. Here’s what you can expect in a roofing emergency.',
+    steps: [
+      {
+        step: 1,
+        title: 'Immediate Tarping & Damage Mitigation',
+        description: 'The first priority is to stop the water. An emergency crew will be dispatched to your home to cover the damaged areas of your roof with heavy-duty tarps, preventing further water intrusion and protecting your home\'s interior from costly damage.',
+        imageId: 'process-storm-tarping',
+      },
+      {
+        step: 2,
+        title: 'Thorough Damage Documentation',
+        description: 'Once the home is secure, the contractor will conduct a detailed inspection of the entire roof, documenting all wind, hail, or debris damage with photos and notes. This documentation is crucial for your insurance claim.',
+        imageId: 'process-storm-documentation',
+      },
+      {
+        step: 3,
+        title: 'Insurance Claim Assistance',
+        description: 'The roofing professionals in our network are experts at dealing with insurance companies. They can help you file your claim, meet with the adjuster on-site to point out all the damage, and ensure the scope of work is approved correctly.',
+        imageId: 'process-storm-insurance-meet',
+      },
+      {
+        step: 4,
+        title: 'Complete & Professional Restoration',
+        description: 'After the insurance claim is approved, the crew will perform a full, professional repair or replacement as required. They will use high-quality, wind-resistant materials to restore your roof to a condition that is often better and stronger than it was before the storm.',
+        imageId: 'process-storm-full-repair',
+      },
+    ],
+  },
+  'roof-inspection': {
+    title: 'The Professional Roof Inspection Process: A Comprehensive Check-up',
+    intro: 'A roof inspection is like a physical for your home, providing a detailed assessment of its condition. The qualified inspectors in our network use a systematic approach to uncover hidden issues before they become expensive problems.',
+    steps: [
+      {
+        step: 1,
+        title: 'Ground-Level & Exterior Examination',
+        description: 'The inspection starts on the ground. The inspector checks for signs of damage on your siding and eaves, examines your gutters for blockages and shingle granules, and assesses the overall ventilation system from below.',
+        imageId: 'process-inspection-exterior',
+      },
+      {
+        step: 2,
+        title: 'On-Roof, Hands-On Assessment',
+        description: 'The inspector will safely access your roof to perform a hands-on check. They will examine the condition of the shingles (looking for cracks, blisters, or curling), inspect all flashing, seals around vents and pipes, and check for any signs of weakness.',
+        imageId: 'process-inspection-roof-walk',
+      },
+      {
+        step: 3,
+        title: 'Interior & Attic Check',
+        description: 'One of the most critical steps is checking the interior. The inspector will enter your attic to look for signs of water intrusion, moisture, mold, rot, or inadequate ventilation that are invisible from the outside.',
+        imageId: 'process-inspection-attic',
+      },
+      {
+        step: 4,
+        title: 'Detailed Report & Recommendations',
+        description: 'You will receive a comprehensive report, complete with photos, that details the inspector\'s findings. The report will outline the roof\'s current condition, remaining lifespan, and provide clear recommendations for any necessary repairs or maintenance.',
+        imageId: 'process-inspection-report',
+      },
+    ],
+  },
+  'gutter-services': {
+    title: 'The Gutter Service Process: Protecting Your Foundation',
+    intro: 'Gutters are a critical part of your roofing system, channeling thousands of gallons of water away from your home. Our network pros follow a clear process for cleaning, repairing, and installing gutters to protect your foundation and siding.',
+    steps: [
+      {
+        step: 1,
+        title: 'Gutter & Downspout Cleaning',
+        description: 'The service begins with a complete cleaning. All leaves, shingle grit, sticks, and other debris are removed by hand from every section of your gutters. Downspouts are then flushed to ensure there are no hidden blockages causing backups.',
+        imageId: 'process-gutter-cleaning',
+      },
+      {
+        step: 2,
+        title: 'Inspection & Minor Repairs',
+        description: 'As they clean, the crew inspects for problems. This includes checking for leaky seams, loose or sagging sections, and improper slope. Minor repairs, like re-sealing corners or re-fastening hangers, can often be done on the spot.',
+        imageId: 'process-gutter-repair',
+      },
+      {
+        step: 3,
+        title: 'New Gutter Installation (If Needed)',
+        description: 'For old or damaged systems, we connect you with pros for seamless gutter installation. Custom-fit to your home on-site, seamless gutters have no joints, which means no leaks and a clean, professional look.',
+        imageId: 'process-gutter-installation',
+      },
+      {
+        step: 4,
+        title: 'Gutter Guard Installation',
+        description: 'To prevent future clogs, consider installing gutter guards. The pros in our network can recommend and install high-quality mesh or screen systems that keep debris out while allowing water to flow freely, saving you from future cleaning hassles.',
+        imageId: 'process-gutter-guards',
+      },
+    ],
+  },
 };
+
+processData['roof-leak-repair'] = processData['roof-repair'];
+processData['storm-damage-roof'] = processData['emergency-roof-repair'];
 
 export function ServiceProcess({ serviceSlug }: { serviceSlug: string }) {
   const data = processData[serviceSlug];
@@ -66,7 +189,7 @@ export function ServiceProcess({ serviceSlug }: { serviceSlug: string }) {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
             {data.title}
           </h2>

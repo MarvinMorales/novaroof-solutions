@@ -32,13 +32,13 @@ const servicesData = [
         title: "Roof Inspection",
         description: "Get a professional assessment of your roof's condition. We connect you with experts who can identify potential issues, estimate remaining lifespan, and document damage for insurance claims.",
         imageId: "service-inspection",
-        slug: "roof-repair" 
+        slug: "roof-inspection" 
     },
     {
         icon: <Replace />,
         title: "Roof Leak Repair",
         description: "Our network specializes in advanced leak detection and reliable repairs to protect your home's structure and interior. Stop water damage and prevent mold growth with a permanent fix.",
-        imageId: "service-metal", 
+        imageId: "solution-leak-repair", 
         slug: "roof-leak-repair"
     },
     {
@@ -46,7 +46,7 @@ const servicesData = [
         title: "Gutter Services",
         description: "Proper water drainage is essential. We connect you with experts for seamless gutter installation, repairs, cleaning, and gutter guard installation to protect your roof and foundation.",
         imageId: "service-gutter",
-        slug: "roof-repair"
+        slug: "gutter-services"
     },
 ]
 
@@ -97,14 +97,16 @@ export function Services({ locationSlug = 'houston-tx', title = "Comprehensive R
                                     </Link>
                                 )}
                                 <CardHeader className="flex-row items-start gap-4">
-                                    <div className="bg-primary text-primary-foreground p-3 rounded-md mt-1 shrink-0">
+                                    <div className="bg-primary/10 text-primary p-3 rounded-md mt-1 shrink-0">
                                         {service.icon}
                                     </div>
-                                    <CardTitle className="font-headline text-xl">
-                                         <Link href={link} className="hover:text-primary transition-colors duration-300">
-                                            {service.title}
-                                        </Link>
-                                    </CardTitle>
+                                    <div>
+                                        <CardTitle className="font-headline text-xl">
+                                             <Link href={link} className="hover:text-primary transition-colors duration-300">
+                                                {service.title}
+                                            </Link>
+                                        </CardTitle>
+                                    </div>
                                 </CardHeader>
                                 <CardContent className="flex-grow">
                                     <p className="text-muted-foreground text-sm">{service.description}</p>
