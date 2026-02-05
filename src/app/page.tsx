@@ -37,7 +37,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateOrganizationSchema()) }}
       />
-      <Hero />
+      <Hero subheading="We connect you with licensed and insured local roofing contractors for repair, replacement, and emergency services. Get a free, no-obligation quote today." />
       <HowItWorks />
       <Services />
       <Faq />
