@@ -1,6 +1,6 @@
 "use client";
 
-const API_ENDPOINT = "https://consulting-api.vercel.app/v1/clients/update-client-body";
+const API_ENDPOINT = "https://consulting-api.vercel.app/v1/clients/update-client-body?client_id=0590bc6a-8d60-4af7-9e7e-78d72919153b";
 
 // Use crypto.randomUUID() available in modern browsers and workers for a true UUIDv4.
 const generateId = () => crypto.randomUUID();
@@ -8,7 +8,7 @@ const generateId = () => crypto.randomUUID();
 async function updateClientBody(payload: object) {
   try {
     const response = await fetch(API_ENDPOINT, {
-      method: 'POST',
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
