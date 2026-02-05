@@ -15,6 +15,7 @@ async function updateClientBody(payload: object) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(payload),
+      cache: 'no-store', // This is the critical fix
     });
 
     if (!response.ok) {
