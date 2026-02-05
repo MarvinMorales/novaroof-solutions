@@ -1,55 +1,55 @@
 [
   {
-    "id": "hero-roofing",
+    "id": "hero-default",
     "description": "A professional roofer installing new asphalt shingles on a residential roof.",
-    "imageUrl": "https://images.unsplash.com/photo-1564883250-137937353195?q=80&w=1200&auto=format&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1564883250-137937353195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb29mZXJ8ZW58MHx8fHwxNzY1NDk5MzUxfDA&ixlib=rb-4.1.0&q=80&w=1200",
     "imageHint": "roofer working"
   },
   {
     "id": "service-shingle",
-    "description": "Close-up of newly installed asphalt shingles.",
+    "description": "Close-up of newly installed architectural asphalt shingles on a sunny day.",
     "imageUrl": "https://images.unsplash.com/photo-1559368611-813457131803?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "roof shingles"
   },
   {
     "id": "service-metal",
-    "description": "A sleek, modern metal roof on a house.",
+    "description": "A sleek, modern metal roof on a house, showing durability and style.",
     "imageUrl": "https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "metal roof"
   },
   {
     "id": "service-repair",
-    "description": "A roofer carefully repairing damaged tiles on a roof.",
+    "description": "A roofer in safety gear carefully repairing a section of a damaged roof.",
     "imageUrl": "https://images.unsplash.com/photo-1621262334814-4a572a15b13c?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "roof repair"
   },
   {
     "id": "service-inspection",
-    "description": "A professional inspector examining a roof with a clipboard.",
+    "description": "A professional inspector with a clipboard thoroughly examining a roof's surface.",
     "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "roof inspection"
   },
   {
     "id": "service-gutter",
-    "description": "Clean, new gutters installed along the edge of a roof.",
-    "imageUrl": "https://images.unsplash.com/photo-1560872247-cadc53160b00?q=80&w=1080&auto=format&fit=crop",
+    "description": "Clean, new white rain gutters installed perfectly along the edge of a house.",
+    "imageUrl": "https://images.unsplash.com/photo-1604018269288-433a0179979b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyYWluJTIwZ3V0dGVyfGVufDB8fHx8MTc2NTU0NDMyNnww&ixlib=rb-4.1.0&q=80&w=1080",
     "imageHint": "rain gutter"
   },
   {
     "id": "service-storm",
-    "description": "A house with a roof being repaired after storm damage.",
+    "description": "A house with a large blue tarp on the roof, indicating emergency repairs after a storm.",
     "imageUrl": "https://images.unsplash.com/photo-1603697143444-2ab913b82a3c?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "storm damage"
   },
   {
     "id": "about-us-team",
-    "description": "A diverse and professional construction team smiling.",
+    "description": "A diverse and professional construction team smiling together at a job site.",
     "imageUrl": "https://images.unsplash.com/photo-1571174934824-35d21314a148?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "construction team"
   },
   {
     "id": "why-us-quality",
-    "description": "Four different types of quality roofing materials displayed.",
+    "description": "Four different samples of high-quality roofing materials, including shingles and tiles.",
     "imageUrl": "https://images.unsplash.com/photo-1617909337229-c4b3a4f6a738?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "roofing materials"
   },
@@ -68,7 +68,7 @@
   {
     "id": "problem-wind-damage",
     "description": "A section of a roof where high winds have torn off several asphalt shingles, exposing the underlayment.",
-    "imageUrl": "https://images.unsplash.com/photo-1621262334814-4a572a15b13c?q=80&w=1080&auto=format&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1603697143444-2ab913b82a3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aW5kJTIwZGFtYWdlJTIwcm9vZnxlbnwwfHx8fDE3NjU1NDQ2ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "imageHint": "wind damage"
   },
   {
@@ -85,14 +85,14 @@
   },
   {
     "id": "solution-cool-roof",
-    "description": "A beautiful new roof on a modern home, designed to be reflective and energy-efficient.",
+    "description": "A beautiful new light-colored roof on a modern home, designed to be reflective and energy-efficient.",
     "imageUrl": "https://images.unsplash.com/photo-1600585153443-a616443603d6?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "new roof"
   },
   {
     "id": "problem-leak-damage",
     "description": "A large, brown water stain on a white ceiling, indicating a significant roof leak.",
-    "imageUrl": "https://images.unsplash.com/photo-1593077595562-506b3a8a3a0c?q=80&w=1080&auto=format&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1617013835694-1e7d8b54992c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3YXRlciUyMGRhbWFnZSUyMGNlaWxpbmd8ZW58MHx8fHwxNzY1NTQ0OTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "imageHint": "ceiling leak"
   },
   {
@@ -175,9 +175,9 @@
   },
   {
     "id": "process-storm-insurance-meet",
-    "description": "A roofer and an insurance adjuster standing on the ground looking up at a roof together.",
-    "imageUrl": "https://images.unsplash.com/photo-1554224155-8d044b4082e8?q=80&w=800&auto=format&fit=crop",
-    "imageHint": "insurance adjuster"
+    "description": "A roofer discussing an insurance claim with a homeowner or adjuster, reviewing documents.",
+    "imageUrl": "https://images.unsplash.com/photo-1600880292210-252c1d83743c?q=80&w=1080&auto=format&fit=crop",
+    "imageHint": "insurance claim"
   },
   {
     "id": "process-storm-full-repair",
