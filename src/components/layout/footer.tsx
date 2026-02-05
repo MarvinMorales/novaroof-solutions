@@ -36,10 +36,10 @@ export function Footer() {
           <div>
             <h3 className="font-headline text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link href="/houston-tx/roof-repair" className="text-sm text-muted-foreground hover:text-primary transition-colors">Roof Repair</Link></li>
-              <li><Link href="/houston-tx/roof-replacement" className="text-sm text-muted-foreground hover:text-primary transition-colors">Roof Replacement</Link></li>
-              <li><Link href="/houston-tx/storm-damage-roof" className="text-sm text-muted-foreground hover:text-primary transition-colors">Storm Damage</Link></li>
-              <li><Link href="/houston-tx/emergency-roof-repair" className="text-sm text-muted-foreground hover:text-primary transition-colors">Emergency Repair</Link></li>
+              <li><Link href="/roof-repair/houston-tx/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Roof Repair</Link></li>
+              <li><Link href="/roof-replacement/houston-tx/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Roof Replacement</Link></li>
+              <li><Link href="/storm-damage-roof/houston-tx/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Storm Damage</Link></li>
+              <li><Link href="/emergency-roof-repair/houston-tx/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Emergency Repair</Link></li>
             </ul>
           </div>
 

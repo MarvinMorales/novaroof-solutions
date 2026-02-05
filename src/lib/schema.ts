@@ -1,4 +1,4 @@
-import { LocationData, services } from "./locations";
+import { LocationData, services as serviceData } from "./locations";
 
 type FAQ = {
   question: string;
@@ -56,8 +56,8 @@ export const generateBreadcrumbSchema = (crumbs: Breadcrumb[]) => {
     }
 }
 
-export const generateLocalBusinessSchema = (location: LocationData, service: typeof services[0]) => {
-  const url = `https://www.novaroofsolutions.com/${location.slug}/${service.slug}/`;
+export const generateLocalBusinessSchema = (location: LocationData, service: typeof serviceData[0]) => {
+  const url = `https://www.novaroofsolutions.com/${service.slug}/${location.slug}/`;
   return {
     "@context": "https://schema.org",
     "@type": "Service",

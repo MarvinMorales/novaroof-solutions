@@ -30,7 +30,7 @@ export function NearbyLocations({ currentLocation, service }: NearbyLocationsPro
           {nearby.map(location => (
             <Link
               key={location.slug}
-              href={`/${location.slug}/${service.slug}`}
+              href={`/${service.slug}/${location.slug}/`}
               className="bg-background border rounded-lg p-4 flex items-center gap-3 hover:bg-accent hover:shadow-md transition-all"
             >
               <MapPin className="h-5 w-5 text-primary" />

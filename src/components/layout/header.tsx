@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, ShieldCheck, Phone } from 'lucide-react';
+import { Menu, ShieldCheck, Phone, ChevronDown } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
@@ -22,11 +22,11 @@ const navLinks = [
 ];
 
 const services = [
-    { href: '/houston-tx/roof-repair', label: 'Roof Repair' },
-    { href: '/houston-tx/roof-replacement', label: 'Roof Replacement' },
-    { href: '/houston-tx/emergency-roof-repair', label: 'Emergency Repair' },
-    { href: '/houston-tx/storm-damage-roof', label: 'Storm Damage' },
-    { href: '/houston-tx/roof-leak-repair', label: 'Roof Leak Repair' },
+    { href: '/roof-repair/houston-tx/', label: 'Roof Repair' },
+    { href: '/roof-replacement/houston-tx/', label: 'Roof Replacement' },
+    { href: '/emergency-roof-repair/houston-tx/', label: 'Emergency Repair' },
+    { href: '/storm-damage-roof/houston-tx/', label: 'Storm Damage' },
+    { href: '/roof-leak-repair/houston-tx/', label: 'Roof Leak Repair' },
 ];
 
 
@@ -41,8 +41,11 @@ export function Header() {
 
   const isLinkActive = (href: string) => {
     if (href === '/') return pathname === '/';
-    // This will need adjustment if we want to highlight "Services" when on a service page
     return pathname.startsWith(href);
+  }
+
+  const isServicePageActive = () => {
+      return services.some(service => pathname.startsWith(service.href.split('/')[1]));
   }
 
   const handleCallClick = () => {
@@ -70,8 +73,8 @@ export function Header() {
             </Link>
           ))}
             <DropdownMenu>
-              <DropdownMenuTrigger className={cn('text-sm font-medium transition-colors hover:text-primary text-muted-foreground flex items-center gap-1', {'text-primary': pathname.includes(services[0].href.split('/')[1])})}>
-                Services
+              <DropdownMenuTrigger className={cn('text-sm font-medium transition-colors hover:text-primary text-muted-foreground flex items-center gap-1', {'text-primary': isServicePageActive()})}>
+                Services <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {services.map(service => (

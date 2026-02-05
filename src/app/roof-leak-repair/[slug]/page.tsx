@@ -8,7 +8,6 @@ import { Contact } from '@/components/sections/contact';
 import { generateLocalBusinessSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
-import { Services } from '@/components/sections/services';
 import { Testimonials } from '@/components/sections/testimonials';
 import { Breadcrumbs, type BreadcrumbLink } from '@/components/layout/breadcrumbs';
 
@@ -31,8 +30,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   }
 
-  const title = `${service.title} in ${location.city}, ${location.stateCode} | Stop Leaks Fast`;
-  const description = `Find expert ${service.name.toLowerCase()} in ${location.city}. Don't let a small leak cause major damage. We find local pros to stop water intrusion fast. Get your free leak detection quote.`;
+  const title = `Roof Leak Repair in ${location.city}, ${location.stateCode} | Stop Leaks Fast`;
+  const description = `Find expert roof leak repair in ${location.city}. Don't let a small leak cause major damage. We connect you with local pros to stop water intrusion fast. Get your free leak detection quote.`;
   const ogImageUrl = 'https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyb29mJTIwcmVwYWlyfGVufDB8fHx8MTc2NTQwODIwN3ww&ixlib=rb-4.1.0&q=80&w=1200';
   const canonicalUrl = `/${SERVICE_SLUG}/${location.slug}/`;
 
@@ -61,7 +60,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 const getFaqs = (city: string) => [
     {
       question: `How can I tell where a roof leak is coming from?`,
-      answer: `It can be tricky as water often travels from the entry point before showing up on your ceiling. Our network pros in ${city} use specialized tools and techniques, like thermal imaging or water testing, to pinpoint the exact source of the leak and ensure a reliable repair.`
+      answer: `It can be tricky, as water often travels from the entry point before showing up on your ceiling. Our network pros in ${city} use specialized techniques like water testing and thermal imaging to pinpoint the exact source of the leak, ensuring a complete and reliable repair.`
     },
     {
       question: "Is a small, slow roof leak a big deal?",
@@ -77,7 +76,11 @@ const getFaqs = (city: string) => [
     },
     {
         question: `How much does it cost to fix a roof leak in ${city}?`,
-        answer: `The cost of a roof leak repair in ${city} varies widely depending on the source and extent of the damage. A simple fix might cost a few hundred dollars, while a more complex issue could be more. The best way to know for sure is to get a free, detailed inspection from a local pro.`
+        answer: `The cost of a roof leak repair in ${city} varies widely. A simple fix on a single-story home might cost between $300-$700. A more complex leak involving flashing or rotted decking could be $1,200 or more. The only way to know for sure is to get a free, detailed inspection from a local pro.`
+    },
+     {
+        question: `How long does a typical leak repair take?`,
+        answer: `Most common roof leak repairs can be completed by a professional in just a few hours. More complex issues that require replacing underlying wood might take a full day. The contractors we connect you with will provide a clear timeline with their quote.`
     }
 ];
 
@@ -109,11 +112,10 @@ export default function Page({ params }: { params: { slug: string } }) {
       <Breadcrumbs links={breadcrumbs} />
       <Hero 
         h1={`${service.h1} in ${location.city}`}
-        subheading={`A small leak can lead to big problems. We find ${city} roofers who specialize in fast, accurate leak detection and repair to protect your home.`}
+        subheading={`A small leak can lead to big problems. We find ${location.city} roofers who specialize in fast, accurate leak detection and repair to protect your home.`}
       />
       <HowItWorks />
-      <Services />
-      <CitySpecificSection location={location} />
+      <CitySpecificSection location={location} service={service} />
       <Faq faqs={faqs}/>
       <Testimonials />
       <Contact />

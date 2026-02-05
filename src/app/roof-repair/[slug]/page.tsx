@@ -7,10 +7,10 @@ import { Faq } from '@/components/sections/faq';
 import { Contact } from '@/components/sections/contact';
 import { generateLocalBusinessSchema, generateBreadcrumbSchema } from '@/lib/schema';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
-import { Services } from '@/components/sections/services';
 import { Testimonials } from '@/components/sections/testimonials';
 import { Breadcrumbs, type BreadcrumbLink } from '@/components/layout/breadcrumbs';
-import { CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const SERVICE_SLUG = 'roof-repair';
 
@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
     };
   }
 
-  const title = `Austin Roof Repair Experts | Free Inspections | NovaRoof Solutions`;
-  const description = `Need fast roof repair in Austin, TX? We connect you with vetted local roofers for hail damage, leaks & more. Get a free, no-obligation inspection today.`;
+  const title = `Roof Repair in ${location.city}, TX | Free Inspections | NovaRoof Solutions`;
+  const description = `Need fast roof repair in ${location.city}, TX? We connect you with vetted local roofers for hail damage, leaks, and shingle repair. Get a free, no-obligation inspection today.`;
   const ogImageUrl = 'https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyb29mJTIwcmVwYWlyfGVufDB8fHx8MTc2NTQwODIwN3ww&ixlib=rb-4.1.0&q=80&w=1200';
   const canonicalUrl = `/${SERVICE_SLUG}/${location.slug}/`;
 
@@ -60,28 +60,28 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
 
 const getFaqs = (city: string) => [
     {
-      question: `How much does a roof repair cost in Austin, TX?`,
-      answer: `In Austin, a minor roof repair like replacing a few wind-damaged shingles might cost between $300 and $600. A more moderate repair, such as fixing a leak around a chimney or vent, could range from $600 to $1,500. The final cost depends heavily on the material of your roof, the extent of the damage (e.g., hail vs. simple wear), and the accessibility of the repair area. The best way to get an accurate price is to schedule a free, no-obligation inspection.`
+      question: `How much does a roof repair cost in ${city}, TX?`,
+      answer: `In ${city}, a minor roof repair like replacing a few wind-damaged shingles might cost between $300 and $700. A more moderate repair, such as fixing a leak around a chimney or vent, could range from $600 to $1,500. The final cost depends heavily on the material of your roof, the extent of the damage (e.g., hail vs. simple wear), and the accessibility of the repair area. The best way to get an accurate price is to schedule a free, no-obligation inspection.`
     },
     {
       question: "My roof isn't leaking, but I see damaged shingles. Should I get it repaired?",
-      answer: "Yes, absolutely. Damaged, cracked, or missing shingles are an open invitation for water to seep into your roof's underlayment and decking. In Austin's climate, with its intense sun and sudden downpours, a small issue can quickly lead to wood rot, mold growth in your attic, and expensive structural damage. Proactive repairs are always more affordable than waiting for a major leak."
+      answer: "Yes, absolutely. Damaged, cracked, or missing shingles are an open invitation for water to seep into your roof's underlayment and decking. In a climate like ours, with its intense sun and sudden downpours, a small issue can quickly lead to wood rot, mold growth in your attic, and expensive structural damage. Proactive repairs are always more affordable than waiting for a major leak."
     },
     {
-      question: "How can I tell if my roof has hail damage after a storm in Austin?",
-      answer: "Austin's hailstorms can be deceptive. From the ground, look for dents on your gutters, downspouts, or AC unit. On the roof, hail leaves 'bruises' on asphalt shingles—dark, soft spots where the protective granules have been knocked off. If you have a metal roof, you'll see clear dents. It's often hard to spot from the ground, which is why a professional inspection after a significant storm is highly recommended to protect your insurance claim rights."
+      question: `How can I tell if my roof has hail damage after a storm in ${city}?`,
+      answer: `${city}'s hailstorms can be deceptive. From the ground, look for dents on your gutters, downspouts, or AC unit. On the roof, hail leaves 'bruises' on asphalt shingles—dark, soft spots where the protective granules have been knocked off. If you have a metal roof, you'll see clear dents. It's often hard to spot from the ground, which is why a professional inspection after a significant storm is highly recommended to protect your insurance claim rights.`
     },
     {
         question: "Should I repair my roof or get a full replacement?",
         answer: "The decision depends on three main factors: your roof's age, the extent of the damage, and your future plans. If your roof is under 15 years old and the damage is confined to one area (e.g., a few missing shingles), a repair is typically the most cost-effective solution. However, if your roof is over 20 years old, has multiple leaks, or more than 30% of the surface is damaged, a replacement is often the smarter long-term investment."
     },
     {
-        question: `How quickly can I get a roofer for an emergency repair in the Austin area?`,
-        answer: `We specialize in rapid response. After you contact us, our goal is to have a licensed Austin-area roofer get in touch with you within minutes. For emergencies like a severe leak after a storm, a contractor can often be on-site the same day to perform a temporary fix, like tarping, to prevent further water damage while a permanent repair is planned.`
+        question: `How quickly can I get a roofer for an emergency repair in the ${city} area?`,
+        answer: `We specialize in rapid response. After you contact us, our goal is to have a licensed ${city}-area roofer get in touch with you within minutes. For emergencies like a severe leak after a storm, a contractor can often be on-site the same day to perform a temporary fix, like tarping, to prevent further water damage while a permanent repair is planned.`
     },
     {
         question: `Do the roofers you work with help with insurance claims?`,
-        answer: `Yes. The local Austin roofing contractors in our network are highly experienced in working with all major insurance carriers. They know exactly how to document hail, wind, and storm damage with the photos and detailed reports that insurance adjusters require, which helps ensure your claim is processed smoothly and fairly.`
+        answer: `Yes. The local ${city} roofing contractors in our network are highly experienced in working with all major insurance carriers. They know exactly how to document hail, wind, and storm damage with the photos and detailed reports that insurance adjusters require, which helps ensure your claim is processed smoothly and fairly.`
     }
 ];
 
@@ -89,7 +89,6 @@ const AustinContent = () => (
     <section className="bg-card py-16 md:py-24">
         <div className="container">
             <div className="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
-                <h2>Your Trusted Partner for Roof Repair in Austin</h2>
                 <p className="lead">
                     An aging or damaged roof is a homeowner's worst nightmare, especially in a city with weather as unpredictable as Austin's. From the intense summer sun and surprise hailstorms to high winds and torrential downpours, your roof is your home’s first and most important line of defense. Ignoring a small issue like a few missing shingles or a minor leak can quickly escalate into costly structural damage, wood rot, and dangerous mold growth.
                 </p>
@@ -103,7 +102,7 @@ const AustinContent = () => (
                 </p>
                 <h3>Hail & Storm Damage Repair</h3>
                 <p>
-                    Austin is no stranger to severe thunderstorms that can drop large, destructive hail. This is the #1 cause of roof damage in the area. Our contractors specialize in identifying hail impacts—which can be subtle—and providing the comprehensive documentation needed for your insurance claim. We connect you with pros who can handle everything from replacing bruised shingles to full-scale restoration after a major storm.
+                    Austin is in the heart of "Hail Alley," and severe thunderstorms are the #1 cause of roof damage in the area. Our contractors specialize in identifying hail impacts—which can be subtle—and providing the comprehensive documentation needed for your insurance claim. We connect you with pros who can handle everything from replacing bruised shingles to full-scale restoration after a major storm.
                 </p>
                 <h3>Leaky Roof Repair</h3>
                 <p>
@@ -186,7 +185,6 @@ export default function Page({ params }: { params: { slug: string } }) {
       />
       <HowItWorks />
       {location.slug === 'austin-tx' ? <AustinContent /> : null}
-      <Services />
       <Faq faqs={faqs}/>
       <Testimonials />
       <Contact />
