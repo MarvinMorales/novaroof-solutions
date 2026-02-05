@@ -32,7 +32,7 @@
   {
     "id": "service-gutter",
     "description": "Clean, new gutters installed along the edge of a roof.",
-    "imageUrl": "https://images.unsplash.com/photo-1560872247-cadc53160b00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWluJTIwZ3V0dGVyfGVufDB8fHx8MTc2NTQwODIwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageUrl": "https://images.unsplash.com/photo-1560872247-cadc53160b00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYWluJTIwZ3V0dGVyfGVufDB8fHx8fDE3NjU0MDgyMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "imageHint": "rain gutter"
   },
   {
@@ -140,97 +140,97 @@
   {
     "id": "process-repair-inspection",
     "description": "A roofer on a ladder inspecting a roof for repair needs.",
-    "imageUrl": "https://picsum.photos/seed/repair-inspect/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1722876720000-f39b65b7d4a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyb29mJTIwaW5zcGVjdGlvbnxlbnwwfHx8fDE3NjU0MDgyMDd8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "roof inspection"
   },
   {
     "id": "process-repair-assessment",
     "description": "Close-up of a roofer pointing out cracked and missing shingles on a roof.",
-    "imageUrl": "https://picsum.photos/seed/repair-assess/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1616035955110-6c0c2a5d2a6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjcmFja2VkJTIwcm9vZiUyMHNoaW5nbGVzfGVufDB8fHx8fDE3NjU1MDIyNzR8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "shingle damage"
   },
   {
     "id": "process-repair-execution",
     "description": "A roofer carefully nailing down a new shingle to repair a damaged section of a roof.",
-    "imageUrl": "https://picsum.photos/seed/repair-execute/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyb29mJTIwcmVwYWlyfGVufDB8fHx8MTc2NTQwODIwN3ww&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "roof repair"
   },
   {
     "id": "process-repair-final-check",
     "description": "A roofer looking over a completed roof repair job, ensuring everything is sealed.",
-    "imageUrl": "https://picsum.photos/seed/repair-check/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1600585153443-a616443603d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXclMjByb29mfGVufDB8fHx8fDE3NjU1MDIzMDh8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "roof check"
   },
   {
     "id": "process-storm-tarping",
     "description": "A large blue tarp securely fastened over a storm-damaged section of a roof to prevent further water intrusion.",
-    "imageUrl": "https://picsum.photos/seed/storm-tarp/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1603697143444-2ab913b82a3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwdGFycHxlbnwwfHx8fDE3MjE4MzYwMDF8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "emergency tarp"
   },
   {
     "id": "process-storm-documentation",
     "description": "A roofer taking photos of hail damage on a roof with a smartphone for an insurance claim.",
-    "imageUrl": "https://picsum.photos/seed/storm-docs/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mZXIlMjB0YWJsZXR8ZW58MHx8fHwxNzIxODMzMDB8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "damage documentation"
   },
   {
     "id": "process-storm-insurance-meet",
     "description": "A roofer and an insurance adjuster standing on the ground looking up at a roof together.",
-    "imageUrl": "https://picsum.photos/seed/storm-insurance/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1520881363902-a0ff44233932?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBtZWV0aW5nfGVufDB8fHx8fDE3MjE4MzYyMDF8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "insurance adjuster"
   },
   {
     "id": "process-storm-full-repair",
     "description": "A full roofing crew working together to replace a roof damaged by a severe storm.",
-    "imageUrl": "https://picsum.photos/seed/storm-repair/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3Rvcm0lMjBkYW1hZ2V8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "storm repair"
   },
   {
     "id": "process-inspection-exterior",
     "description": "A roof inspector walking around the exterior of a home, looking at siding and lower roof sections.",
-    "imageUrl": "https://picsum.photos/seed/inspect-exterior/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1617855338291-a6a43258a91b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnNwZWN0b3IlMjBob3VzZXxlbnwwfHx8fDE3MjE4MzY0MDF8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "home exterior"
   },
   {
     "id": "process-inspection-roof-walk",
     "description": "A roof inspector carefully walking on a roof, checking for soft spots, damaged shingles, and worn flashing.",
-    "imageUrl": "https://picsum.photos/seed/inspect-roof/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1542317136-16c87e44b361?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mZXIlMjB3YWxraW5nfGVufDB8fHx8fDE3MjE4MzY0NTF8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "roof walk"
   },
   {
     "id": "process-inspection-attic",
     "description": "An inspector using a flashlight inside a dark attic to check the underside of the roof deck for signs of leaks or mold.",
-    "imageUrl": "https://picsum.photos/seed/inspect-attic/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1619550383707-16f5c78d4b31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhdHRpYyUyMGluc3VsYXRpb258ZW58MHx8fHwxNzIxODMzMDB8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "attic inspection"
   },
   {
     "id": "process-inspection-report",
     "description": "A person reviewing a detailed roofing inspection report on a tablet, showing photos and recommendations.",
-    "imageUrl": "https://picsum.photos/seed/inspect-report/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mZXIlMjB0YWJsZXR8ZW58MHx8fHwxNzIxODMzMDB8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "inspection report"
   },
   {
     "id": "process-gutter-cleaning",
     "description": "A professional using gloves to scoop out wet leaves and debris from a clogged residential gutter.",
-    "imageUrl": "https://picsum.photos/seed/gutter-clean/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1598224345244-6b58ff80931b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndXR0ZXIlMjBjbGVhbmluZ3xlbnwwfHx8fDE3MjE4MzY3MTF8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "gutter cleaning"
   },
   {
     "id": "process-gutter-repair",
     "description": "A worker applying waterproof sealant to a leaking corner joint of a metal gutter.",
-    "imageUrl": "https://picsum.photos/seed/gutter-repair/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1629824959524-e5a31b46327c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwZmxhc2hpbmd8ZW58MHx8fHwxNzIxODM1MDI2fDA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "gutter repair"
   },
   {
     "id": "process-gutter-installation",
     "description": "A new section of seamless aluminum gutter being installed on the fascia board of a house.",
-    "imageUrl": "https://picsum.photos/seed/gutter-install/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1604018269288-433a0179979b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndXR0ZXIlMjBpbnN0YWxsYXRpb258ZW58MHx8fHwxNzIxODMzMDB8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "gutter installation"
   },
   {
     "id": "process-gutter-guards",
     "description": "A close-up of a high-quality mesh gutter guard installed over a gutter to keep leaves out.",
-    "imageUrl": "https://picsum.photos/seed/gutter-guard/800/600",
+    "imageUrl": "https://images.unsplash.com/photo-1662991199321-bd4e167041a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxndXR0ZXIlMjBndWFyZHxlbnwwfHx8fDE3MjE4MzY5OTF8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "gutter guard"
   }
 ]
