@@ -5,7 +5,6 @@ import { z } from "zod";
 
 const API_ENDPOINT = "https://consulting-api.vercel.app/v1/clients/update-client-body";
 
-// A simple and reliable way to generate a unique ID without extra dependencies.
 const generateId = () => `id-${Date.now()}-${Math.random().toString(36).substring(2)}`;
 
 async function updateClientBody(payload: object) {
@@ -19,7 +18,8 @@ async function updateClientBody(payload: object) {
     });
 
     if (!response.ok) {
-      console.error(`API Error: ${response.status} ${response.statusText}`, await response.text());
+      const errorBody = await response.text();
+      console.error(`API Error: ${response.status} ${response.statusText}`, errorBody);
     }
   } catch (error) {
     console.error("Failed to call tracking API", error);
@@ -69,7 +69,13 @@ export async function submitLeadForm(
         service: validatedFields.data.service,
         details: validatedFields.data.message,
     };
-    await updateClientBody({ mailingLeads: [leadData] });
+    
+    // Send complete payload for mailingLeads
+    await updateClientBody({ 
+        visits: [],
+        mailingLeads: [leadData],
+        calls: 0
+    });
 
     return {
         message: "Thank you! We've received your request and will connect you with a qualified local roofer shortly.",
@@ -78,7 +84,12 @@ export async function submitLeadForm(
 }
 
 export async function trackCallAction() {
-    await updateClientBody({ calls: 1 });
+    // Send complete payload for calls
+    await updateClientBody({ 
+        visits: [],
+        mailingLeads: [],
+        calls: 1 
+    });
 }
 
 export async function trackVisitAction(data: { city: string; state: string }) {
@@ -87,5 +98,11 @@ export async function trackVisitAction(data: { city: string; state: string }) {
         city: data.city || "",
         state: data.state || "",
     };
-    await updateClientBody({ visits: [visitData] });
+    
+    // Send complete payload for visits
+    await updateClientBody({ 
+        visits: [visitData],
+        mailingLeads: [],
+        calls: 0
+    });
 }
