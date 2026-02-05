@@ -39,7 +39,7 @@ export function Hero({ h1, subheading, size = 'default', showButtons = true, ima
           ? (size === 'default' ? "h-[70vh] md:h-[85vh]" : "h-[300px]")
           : `bg-primary ${size === 'default' ? 'py-24 md:py-32' : 'py-16 md:py-20'}`
     )}>
-      {isImageVariant && image && (
+      {isImageVariant && (
         <>
             <Image
                 src={heroImage.imageUrl}

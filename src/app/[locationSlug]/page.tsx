@@ -93,7 +93,7 @@ export default function Page({ params }: { params: { locationSlug: string } }) {
       <HowItWorks />
       <Services locationSlug={location.slug} />
       <Faq />
-      <Testimonials />
+      <Testimonials location={location} />
       <Contact />
     </>
   );

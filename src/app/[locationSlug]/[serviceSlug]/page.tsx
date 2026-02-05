@@ -167,7 +167,7 @@ export default function Page({ params }: { params: { locationSlug: string, servi
       <ServiceProcess serviceSlug={service.slug} />
       <Services title={`Other Services in ${location.city}`} locationSlug={location.slug} excludeSlug={service.slug} />
       <Faq faqs={faqs} />
-      <Testimonials />
+      <Testimonials location={location} service={service} />
       <Contact />
       <NearbyLocations currentLocation={location} service={service} />
       <StickyCTA />
