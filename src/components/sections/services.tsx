@@ -8,42 +8,42 @@ const servicesData = [
     {
         icon: <Home />,
         title: "Roof Replacement",
-        description: "Full roof replacements using high-quality materials like asphalt shingles, metal, and tile for long-lasting protection.",
+        description: "Whether your roof is aging or has extensive damage, we connect you with pros for full replacements. Choose from high-quality materials like asphalt shingles, durable metal, or elegant tile for long-lasting protection.",
         imageId: "service-shingle",
         link: "/roof-replacement/houston-tx"
     },
     {
         icon: <Wrench />,
         title: "Roof Repair",
-        description: "From minor leaks to missing shingles, we find local pros to handle all types of roof repairs quickly and efficiently.",
+        description: "From missing shingles to damaged flashing, we find local experts to handle all types of roof repairs. Extend the life of your roof by fixing small issues before they become big problems.",
         imageId: "service-repair",
         link: "/roof-repair/houston-tx"
     },
     {
         icon: <Zap />,
         title: "Emergency & Storm Damage",
-        description: "24/7 emergency services for urgent repairs after a storm, hail, or high winds to secure your home immediately.",
+        description: "When disaster strikes, a fast response is critical. We provide access to 24/7 emergency services for urgent repairs after storms, hail, or high winds to secure your home and prevent further damage.",
         imageId: "service-storm",
         link: "/emergency-roof-repair/houston-tx"
     },
     {
         icon: <ShieldCheck />,
         title: "Roof Inspection",
-        description: "Comprehensive roof inspections to assess the condition of your roof, identify potential issues, and assist with insurance claims.",
+        description: "Get a professional assessment of your roof's condition. We connect you with experts who can identify potential issues, estimate remaining lifespan, and document damage for insurance claims.",
         imageId: "service-inspection",
         link: "/roof-repair/houston-tx" // No dedicated inspection page yet
     },
     {
         icon: <Replace />,
         title: "Roof Leak Repair",
-        description: "Specialized leak detection and repair to prevent water damage and protect your home's structural integrity.",
+        description: "Our network specializes in advanced leak detection and reliable repairs to protect your home's structure and interior. Stop water damage and prevent mold growth with a permanent fix.",
         imageId: "service-metal", // Re-using image
         link: "/roof-leak-repair/houston-tx"
     },
     {
         icon: <Droplets />,
         title: "Gutter Services",
-        description: "Connect with experts for gutter installation, repair, and cleaning to ensure proper water drainage.",
+        description: "Proper water drainage is essential. We connect you with experts for seamless gutter installation, repairs, cleaning, and gutter guard installation to protect your roof and foundation.",
         imageId: "service-gutter",
         link: "/roof-repair/houston-tx" // No dedicated gutter page yet
     },
