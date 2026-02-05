@@ -1,3 +1,4 @@
+
 "use client";
 
 const API_ENDPOINT = "https://consulting-api.vercel.app/v1/clients/update-client-body?client_id=0590bc6a-8d60-4af7-9e7e-78d72919153b";
@@ -42,14 +43,14 @@ export async function trackVisit(data: { city: string; state: string }) {
     });
 }
 
-export async function trackLead(leadData: { name: string; email: string; phone: string; service: string; message: string; zip: string; }) {
+export async function trackLead(leadData: { name: string; email: string; phone: string; service: string; message: string; zip: string; address: string; city: string; }) {
      const leadPayload = {
         id: generateId(),
         name: leadData.name,
         email: leadData.email,
         phone: leadData.phone,
         service: leadData.service,
-        details: `${leadData.message} (ZIP: ${leadData.zip})`,
+        details: `${leadData.message} (Address: ${leadData.address}, ${leadData.city}, ${leadData.zip})`,
     };
     
     await updateClientBody({ 

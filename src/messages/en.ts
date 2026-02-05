@@ -1,3 +1,4 @@
+
 export const messages = {
   Header: {
     home: "Home",
@@ -115,6 +116,10 @@ export const messages = {
     nameLabel: "Full Name",
     namePlaceholder: "John Doe",
     phoneLabel: "Phone Number",
+    addressLabel: "Street Address",
+    addressPlaceholder: "123 Main St",
+    cityLabel: "City",
+    cityPlaceholder: "Houston",
     zipLabel: "ZIP Code",
     problemLabel: "Describe Your Roofing Problem",
     problemPlaceholder: "E.g., 'I have a leak in my living room ceiling' or 'I need a quote for a full roof replacement.'",
@@ -145,5 +150,3 @@ export const messages = {
     value4Desc: "Our goal is to make the process of finding a trustworthy roofer as simple and stress-free as possible for homeowners."
   }
 };
-
-    

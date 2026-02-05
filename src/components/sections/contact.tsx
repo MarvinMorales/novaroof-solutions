@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
@@ -27,6 +28,8 @@ const leadSchema = z.object({
   phone: z.string().refine((value) => /^\(\d{3}\) \d{3}-\d{4}$/.test(value), {
     message: "Please enter a valid 10-digit phone number.",
   }),
+  address: z.string().min(5, { message: "Please enter a valid address." }),
+  city: z.string().min(2, { message: "Please enter a valid city." }),
   zip: z.string().regex(/^\d{5}$/, { message: "Please enter a valid 5-digit ZIP code." }),
   problem: z.string().min(10, { message: "Please describe your project in at least 10 characters." }),
 });
@@ -58,6 +61,8 @@ export function Contact() {
     defaultValues: {
       name: "",
       phone: "",
+      address: "",
+      city: "",
       zip: "",
       problem: "",
     },
@@ -86,6 +91,8 @@ export function Contact() {
       const leadData = {
         name: data.name,
         phone: data.phone,
+        address: data.address,
+        city: data.city,
         zip: data.zip,
         service: serviceValue,
         message: data.problem,
@@ -133,23 +140,49 @@ export function Contact() {
                     </FormItem>
                   )}
                 />
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>{t('Contact.phoneLabel')}</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="tel"
+                          placeholder="(123) 456-7890"
+                          {...field}
+                          onChange={(e) => {
+                              const formatted = formatPhoneNumber(e.target.value);
+                              field.onChange(formatted);
+                          }}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="address"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>{t('Contact.addressLabel')}</FormLabel>
+                      <FormControl>
+                        <Input placeholder={t('Contact.addressPlaceholder')} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
                  <div className="grid sm:grid-cols-2 gap-4">
                     <FormField
                       control={form.control}
-                      name="phone"
+                      name="city"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>{t('Contact.phoneLabel')}</FormLabel>
+                          <FormLabel>{t('Contact.cityLabel')}</FormLabel>
                           <FormControl>
-                            <Input
-                              type="tel"
-                              placeholder="(123) 456-7890"
-                              {...field}
-                              onChange={(e) => {
-                                  const formatted = formatPhoneNumber(e.target.value);
-                                  field.onChange(formatted);
-                              }}
-                            />
+                            <Input placeholder={t('Contact.cityPlaceholder')} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>

@@ -1,3 +1,4 @@
+
 export const messages = {
   Header: {
     home: "Inicio",
@@ -115,6 +116,10 @@ export const messages = {
     nameLabel: "Nombre Completo",
     namePlaceholder: "Juan Pérez",
     phoneLabel: "Número de Teléfono",
+    addressLabel: "Dirección",
+    addressPlaceholder: "123 Calle Principal",
+    cityLabel: "Ciudad",
+    cityPlaceholder: "Houston",
     zipLabel: "Código Postal",
     problemLabel: "Describe tu Problema de Techado",
     problemPlaceholder: "Ej: 'Tengo una fuga en el techo de mi sala' o 'Necesito una cotización para un reemplazo completo del techo.'",
@@ -145,5 +150,3 @@ export const messages = {
     value4Desc: "Nuestro objetivo es hacer que el proceso de encontrar un techador confiable sea lo más simple y libre de estrés posible para los propietarios de viviendas."
   }
 };
-
-    
