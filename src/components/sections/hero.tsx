@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 const heroImage = {
-  description: "A professional roofer working on a roof.",
-  imageUrl: "https://westpacroofing.com/wp-content/uploads/2022/07/Questions-to-Ask-Before-Hiring-a-Roofer.jpg",
-  imageHint: "roofer working"
+  description: "A professional roofer repairing a damaged roof.",
+  imageUrl: "https://phs-roof.com/wp-content/uploads/2025/09/Roof-Damage-Repair.webp",
+  imageHint: "roof damage repair"
 };
 
 export function Hero() {
