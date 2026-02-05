@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 const heroImage = {
-  description: "A professional roofer installing new asphalt shingles on a residential roof.",
-  imageUrl: "https://images.unsplash.com/photo-1564883250-137937353195?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb29mZXJ8ZW58MHx8fHwxNzY1NDk5MzUxfDA&ixlib=rb-4.1.0&q=80&w=1200",
+  description: "A professional roofer working on a roof.",
+  imageUrl: "https://static.wixstatic.com/media/ba2cd3_7beb9da6a792462d9aa2a4c2c00a2f33~mv2.jpg/v1/fill/w_740,h_494,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ba2cd3_7beb9da6a792462d9aa2a4c2c00a2f33~mv2.jpg",
   imageHint: "roofer working"
 };
 
