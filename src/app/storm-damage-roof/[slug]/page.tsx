@@ -8,6 +8,7 @@ import { Contact } from '@/components/sections/contact';
 import { generateLocalBusinessSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
+import { Services } from '@/components/sections/services';
 
 const SERVICE_SLUG = 'storm-damage-roof';
 
@@ -83,6 +84,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       />
       <Hero />
       <HowItWorks />
+      <Services />
       <CitySpecificSection location={location} />
       <Faq faqs={faqs}/>
       <Contact />
