@@ -131,7 +131,7 @@ export function CitySpecificSection({ location, service }: { location: LocationD
                                 <h3 className="font-headline text-lg font-semibold text-destructive">The Problem</h3>
                             </div>
                             <h4 className="font-semibold text-foreground mb-1">{item.problem.title}</h4>
-                            <p className="text-sm text-muted-foreground">{item.problem.description}</p>
+                            <p className="text-sm text-muted-foreground">{item.problem.description.replace(/{city}/g, location.city)}</p>
                         </div>
                         <div>
                             <div className="flex items-center gap-2 mb-2">
@@ -139,7 +139,7 @@ export function CitySpecificSection({ location, service }: { location: LocationD
                                 <h3 className="font-headline text-lg font-semibold text-primary">The Solution</h3>
                             </div>
                              <h4 className="font-semibold text-foreground mb-1">{item.solution.title}</h4>
-                            <p className="text-sm text-muted-foreground">{item.solution.description}</p>
+                            <p className="text-sm text-muted-foreground">{item.solution.description.replace(/{city}/g, location.city)}</p>
                         </div>
                     </div>
                 </div>
