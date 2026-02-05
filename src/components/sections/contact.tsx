@@ -89,7 +89,7 @@ export function Contact() {
 
 
   return (
-    <section id="contact" className="w-full py-16 md:py-24 bg-muted/30">
+    <section id="contact" className="w-full py-16 md:py-24 bg-background">
       <div className="container">
         <Card className="max-w-2xl mx-auto shadow-2xl">
           <CardHeader className="text-center">
