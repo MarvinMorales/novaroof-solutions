@@ -2,9 +2,11 @@
 "use server";
 
 import { z } from "zod";
-import { randomUUID } from "crypto";
 
 const API_ENDPOINT = "https://consulting-api.vercel.app/v1/clients/update-client-body";
+
+// A simple and reliable way to generate a unique ID without extra dependencies.
+const generateId = () => `id-${Date.now()}-${Math.random().toString(36).substring(2)}`;
 
 async function updateClientBody(payload: object) {
   try {
@@ -60,7 +62,7 @@ export async function submitLeadForm(
     console.log("New Roofing Lead Captured:", validatedFields.data);
 
     const leadData = {
-        id: randomUUID(),
+        id: generateId(),
         name: validatedFields.data.name,
         email: validatedFields.data.email,
         phone: validatedFields.data.phone || "",
@@ -81,7 +83,7 @@ export async function trackCallAction() {
 
 export async function trackVisitAction(data: { city: string; state: string }) {
     const visitData = {
-        id: randomUUID(),
+        id: generateId(),
         city: data.city || "",
         state: data.state || "",
     };
