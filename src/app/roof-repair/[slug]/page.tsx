@@ -9,6 +9,7 @@ import { generateLocalBusinessSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
 import { Services } from '@/components/sections/services';
+import { Testimonials } from '@/components/sections/testimonials';
 
 const SERVICE_SLUG = 'roof-repair';
 
@@ -65,6 +66,14 @@ const getFaqs = (city: string) => [
       question: "Should I repair or replace my roof?",
       answer: "It depends on the age of your roof and the extent of the damage. A contractor can assess the situation and give you an honest recommendation."
     },
+    {
+      question: "What types of roof damage can be repaired?",
+      answer: "Our network contractors can fix a wide range of issues, including missing or cracked shingles, damaged flashing around chimneys and vents, minor leaks, and problems caused by hail or wind."
+    },
+    {
+      question: "How long does a roof repair take?",
+      answer: "Most common repairs, like replacing a few shingles or sealing a leak, can be completed in just a few hours. More extensive repairs might take a full day."
+    }
 ];
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -88,6 +97,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <Services />
       <CitySpecificSection location={location} />
       <Faq faqs={faqs}/>
+      <Testimonials />
       <Contact />
       <NearbyLocations currentLocation={location} service={service} />
     </>

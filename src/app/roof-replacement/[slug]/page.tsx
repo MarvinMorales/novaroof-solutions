@@ -9,6 +9,7 @@ import { generateLocalBusinessSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
 import { Services } from '@/components/sections/services';
+import { Testimonials } from '@/components/sections/testimonials';
 
 const SERVICE_SLUG = 'roof-replacement';
 
@@ -65,6 +66,14 @@ const getFaqs = (city: string) => [
       question: "What roofing materials are popular in this area?",
       answer: "Asphalt shingles are the most common, but metal and tile roofs are also popular choices for their durability against local weather conditions."
     },
+    {
+      question: "How do I know if I need a full replacement or just a repair?",
+      answer: "Key signs include the age of your roof (over 20-25 years for asphalt), widespread curling or missing shingles, and persistent leaks. A professional inspection can give you a definitive answer."
+    },
+    {
+      question: "Do you offer warranties on new roof installations?",
+      answer: "Yes, the contractors in our network provide warranties on both materials (from the manufacturer) and their workmanship. This ensures your investment is protected."
+    }
 ];
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -88,6 +97,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <Services />
       <CitySpecificSection location={location} />
       <Faq faqs={faqs}/>
+      <Testimonials />
       <Contact />
       <NearbyLocations currentLocation={location} service={service} />
     </>

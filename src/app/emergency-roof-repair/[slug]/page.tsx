@@ -9,6 +9,7 @@ import { generateLocalBusinessSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
 import { Services } from '@/components/sections/services';
+import { Testimonials } from '@/components/sections/testimonials';
 
 const SERVICE_SLUG = 'emergency-roof-repair';
 
@@ -72,6 +73,10 @@ const getFaqs = (city: string) => [
       answer: "A roofing emergency is any situation that immediately endangers your property and safety, such as major leaks during a storm, significant structural damage from a fallen tree, or extensive damage from high winds or hail."
     },
     {
+      question: "What should I do immediately after my roof is damaged?",
+      answer: "For your safety, stay inside and avoid the damaged area. If there's a leak, use buckets to catch water and move valuable items. Do not go on the roof. Call a professional for an emergency tarping service to prevent further water damage."
+    },
+    {
       question: "Will my insurance cover emergency roof repairs?",
       answer: "Most homeowner's insurance policies cover emergency repairs required to prevent further damage to your home (e.g., tarping). The contractors in our network can help document the damage for your insurance claim."
     },
@@ -102,6 +107,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <Services />
       <CitySpecificSection location={location} />
       <Faq faqs={faqs} />
+      <Testimonials />
       <Contact />
       <NearbyLocations currentLocation={location} service={service} />
     </>

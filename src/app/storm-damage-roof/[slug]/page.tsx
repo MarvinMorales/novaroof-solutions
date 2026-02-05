@@ -9,6 +9,7 @@ import { generateLocalBusinessSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
 import { Services } from '@/components/sections/services';
+import { Testimonials } from '@/components/sections/testimonials';
 
 const SERVICE_SLUG = 'storm-damage-roof';
 
@@ -65,6 +66,14 @@ const getFaqs = (city: string) => [
       question: "How can I tell if my roof has hail damage?",
       answer: "Hail damage can be subtle. Look for dents on gutters and vents, or bruised/cracked shingles. A professional inspection is the best way to know for sure."
     },
+    {
+      question: "What type of documentation do I need for my insurance claim?",
+      answer: "You will need clear photos and/or videos of the damage, along with a detailed report from a professional roofing contractor. The roofers we connect you with are experts at providing this documentation."
+    },
+    {
+      question: "What if my insurance claim is denied?",
+      answer: "If your claim is denied, you have the right to appeal. The contractor can provide additional evidence and sometimes recommend a public adjuster to help with the process. It's important to have a professional on your side."
+    }
 ];
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -87,6 +96,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <Services />
       <CitySpecificSection location={location} />
       <Faq faqs={faqs}/>
+      <Testimonials />
       <Contact />
       <NearbyLocations currentLocation={location} service={service} />
     </>

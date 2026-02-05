@@ -9,6 +9,7 @@ import { generateLocalBusinessSchema } from '@/lib/schema';
 import { CitySpecificSection } from '@/components/sections/city-specific-section';
 import { NearbyLocations } from '@/components/sections/nearby-locations';
 import { Services } from '@/components/sections/services';
+import { Testimonials } from '@/components/sections/testimonials';
 
 const SERVICE_SLUG = 'roof-leak-repair';
 
@@ -65,6 +66,14 @@ const getFaqs = (city: string) => [
       question: "Is a small leak a big deal?",
       answer: "Yes. Even a small leak can lead to major problems like mold, rot, and structural damage over time. It's best to get it fixed immediately."
     },
+    {
+      question: "What are common signs of a hidden roof leak?",
+      answer: "Look for water stains on your ceiling or walls, a musty odor in your attic, or cracked and blistering paint. These are all signs you may have a hidden leak that needs professional attention."
+    },
+    {
+        question: "Can you fix a leak without replacing the whole roof?",
+        answer: "Absolutely. In most cases, leaks can be isolated and repaired by replacing specific shingles, flashing, or sealing vents. A full replacement is usually only necessary for older roofs or widespread damage."
+    }
 ];
 
 export default function Page({ params }: { params: { slug: string } }) {
@@ -87,6 +96,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <Services />
       <CitySpecificSection location={location} />
       <Faq faqs={faqs}/>
+      <Testimonials />
       <Contact />
       <NearbyLocations currentLocation={location} service={service} />
     </>
