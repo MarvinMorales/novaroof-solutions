@@ -57,7 +57,7 @@ export const generateBreadcrumbSchema = (crumbs: Breadcrumb[]) => {
 }
 
 export const generateLocalBusinessSchema = (location: LocationData, service: typeof services[0]) => {
-  const url = `https://www.novaroofsolutions.com/${service.slug}/${location.slug}/`;
+  const url = `https://www.novaroofsolutions.com/${location.slug}/${service.slug}/`;
   return {
     "@context": "https://schema.org",
     "@type": "Service",

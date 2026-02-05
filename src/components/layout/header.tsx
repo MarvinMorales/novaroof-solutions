@@ -22,11 +22,11 @@ const navLinks = [
 ];
 
 const services = [
-    { href: '/roof-repair/houston-tx', label: 'Roof Repair' },
-    { href: '/roof-replacement/houston-tx', label: 'Roof Replacement' },
-    { href: '/emergency-roof-repair/houston-tx', label: 'Emergency Repair' },
-    { href: '/storm-damage-roof/houston-tx', label: 'Storm Damage' },
-    { href: '/roof-leak-repair/houston-tx', label: 'Roof Leak Repair' },
+    { href: '/houston-tx/roof-repair', label: 'Roof Repair' },
+    { href: '/houston-tx/roof-replacement', label: 'Roof Replacement' },
+    { href: '/houston-tx/emergency-roof-repair', label: 'Emergency Repair' },
+    { href: '/houston-tx/storm-damage-roof', label: 'Storm Damage' },
+    { href: '/houston-tx/roof-leak-repair', label: 'Roof Leak Repair' },
 ];
 
 
@@ -41,6 +41,7 @@ export function Header() {
 
   const isLinkActive = (href: string) => {
     if (href === '/') return pathname === '/';
+    // This will need adjustment if we want to highlight "Services" when on a service page
     return pathname.startsWith(href);
   }
 
@@ -69,7 +70,7 @@ export function Header() {
             </Link>
           ))}
             <DropdownMenu>
-              <DropdownMenuTrigger className={cn('text-sm font-medium transition-colors hover:text-primary text-muted-foreground flex items-center gap-1')}>
+              <DropdownMenuTrigger className={cn('text-sm font-medium transition-colors hover:text-primary text-muted-foreground flex items-center gap-1', {'text-primary': pathname.includes(services[0].href.split('/')[1])})}>
                 Services
               </DropdownMenuTrigger>
               <DropdownMenuContent>

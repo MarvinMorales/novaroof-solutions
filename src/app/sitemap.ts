@@ -3,8 +3,6 @@ import { locations, services } from '@/lib/locations';
 
 export const dynamic = 'force-static';
 
-const URL = 'https://www.novaroofsolutions.com';
-
 const priorityMap: Record<string, number> = {
   'emergency-roof-repair': 1.0,
   'storm-damage-roof': 0.9,
@@ -29,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     services
       .filter((service) => priorityMap[service.slug])
       .map((service) => ({
-        url: `${URL}/${service.slug}/${location.slug}/`,
+        url: `${URL}/${location.slug}/${service.slug}/`,
         lastModified: new Date(),
         changeFrequency: changeFreqMap[service.slug],
         priority: priorityMap[service.slug],
