@@ -50,7 +50,7 @@
   {
     "id": "why-us-quality",
     "description": "Four different types of quality roofing materials displayed.",
-    "imageUrl": "https://roofmaster.ca/wp-content/uploads/2020/08/4-best-roofing-materials-for-the-canadian-climate.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1617909337229-c4b3a4f6a738?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29maW5nJTIwbWF0ZXJpYWxzfGVufDB8fHx8fDE3MjE4NDQwNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "imageHint": "roofing materials"
   },
   {
@@ -104,13 +104,13 @@
   {
     "id": "process-tear-off",
     "description": "Roofers tearing off old shingles from a residential roof to prepare for a new installation.",
-    "imageUrl": "https://westpacroofing.com/wp-content/uploads/2022/07/Questions-to-Ask-Before-Hiring-a-Roofer.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1599015953935-433a7a99c922?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwdGVhcm9mZnxlbnwwfHx8fDE3MjE4NDM4ODR8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "roof tear-off"
   },
   {
     "id": "process-deck-inspection",
     "description": "A close-up of a wooden roof deck being inspected for water damage or rot before new underlayment is installed.",
-    "imageUrl": "https://static.wixstatic.com/media/2d8c0d_6a6b8c7e0c0d4a7b8e1b1c1e7a5c8c6c~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2d8c0d_6a6b8c7e0c0d4a7b8e1b1c1e7a5c8c6c~mv2.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1631589728773-77401a6b4c3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb29mJTIwZGVja2luZ3xlbnwwfHx8fDE3MjE4NDM5NDJ8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "wood deck"
   },
   {
@@ -176,7 +176,7 @@
   {
     "id": "process-storm-insurance-meet",
     "description": "A roofer and an insurance adjuster standing on the ground looking up at a roof together.",
-    "imageUrl": "https://images.unsplash.com/photo-1520881363902-a0ff44233932?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBtZWV0aW5nfGVufDB8fHx8fDE3MjE4MzYyMDF8MA&ixlib=rb-4.1.0&q=80&w=800",
+    "imageUrl": "https://images.unsplash.com/photo-1520881363902-a0ff44233932?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHjb25zdHJ1Y3Rpb24lMjBtZWV0aW5nfGVufDB8fHx8fDE3MjE4MzYyMDF8MA&ixlib=rb-4.1.0&q=80&w=800",
     "imageHint": "insurance adjuster"
   },
   {
