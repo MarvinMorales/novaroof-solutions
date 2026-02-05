@@ -27,9 +27,9 @@ export const generateLocalBusinessSchema = (location: LocationData, service: typ
     serviceType: service.name,
     provider: {
         "@type": "LocalBusiness",
-        name: "USA Roof Pros",
+        name: "NovaRoof Solutions",
         description: `A referral service connecting homeowners with licensed roofing contractors in ${location.city}, ${location.state}.`,
-        telephone: "+1-888-555-7663",
+        telephone: "+1-562-317-7925",
         areaServed: {
             "@type": "City",
             name: location.city,

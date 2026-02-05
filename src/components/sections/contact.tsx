@@ -29,10 +29,31 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Mail, Phone } from "lucide-react";
 
+const formatPhoneNumber = (value: string) => {
+    if (!value) return value;
+    const onlyNums = value.replace(/\D/g, '');
+    if (onlyNums.length <= 3) {
+      return `(${onlyNums}`;
+    }
+    if (onlyNums.length <= 6) {
+      return `(${onlyNums.slice(0, 3)}) ${onlyNums.slice(3)}`;
+    }
+    return `(${onlyNums.slice(0, 3)}) ${onlyNums.slice(3, 6)}-${onlyNums.slice(6, 10)}`;
+};
+
 const leadSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Please enter a valid email address."),
-  phone: z.string().optional(),
+  phone: z.string().optional().refine(
+    (value) => {
+        if (!value) return true;
+        const onlyNums = value.replace(/\D/g, '');
+        return onlyNums.length === 10;
+    },
+    {
+        message: "Phone number must have 10 digits.",
+    }
+  ),
   service: z.string().min(1, "Please select a service."),
   message: z.string().min(10, "Message must be at least 10 characters."),
 });
@@ -108,7 +129,7 @@ export function Contact() {
                 <div>
                     <h3 className="font-semibold text-lg">Email Us</h3>
                     <p className="text-muted-foreground">For questions about our service.</p>
-                    <a href="mailto:contact@usaroofpros.com" className="text-primary hover:underline">contact@usaroofpros.com</a>
+                    <a href="mailto:contact@novaroofsolutions.com" className="text-primary hover:underline">contact@novaroofsolutions.com</a>
                 </div>
             </div>
             <div className="flex items-start gap-4">
@@ -118,7 +139,7 @@ export function Contact() {
                 <div>
                     <h3 className="font-semibold text-lg">Call Us</h3>
                     <p className="text-muted-foreground">Speak directly with our team.</p>
-                    <a href="tel:888-555-7663" onClick={handleCallClick} className="text-primary hover:underline">888-555-ROOF</a>
+                    <a href="tel:5623177925" onClick={handleCallClick} className="text-primary hover:underline">(562) 317-7925</a>
                 </div>
             </div>
           </div>
@@ -173,6 +194,10 @@ export function Contact() {
                             type="tel"
                             placeholder="(123) 456-7890"
                             {...field}
+                            onChange={(e) => {
+                                const formatted = formatPhoneNumber(e.target.value);
+                                field.onChange(formatted);
+                            }}
                           />
                         </FormControl>
                         <FormMessage />

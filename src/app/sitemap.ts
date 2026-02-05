@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { locations, services } from '@/lib/locations';
 
-const URL = 'https://www.usaroofpros.com';
+const URL = 'https://www.novaroofsolutions.com';
 
 const priorityMap: Record<string, number> = {
   'emergency-roof-repair': 1.0,

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 const pageTitle = 'Privacy Policy';
-const pageDescription = 'Learn how USA Roof Pros collects, uses, and protects your personal information.';
+const pageDescription = 'Learn how NovaRoof Solutions collects, uses, and protects your personal information.';
 const ogImageUrl = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaG91c2V8ZW58MHx8fHwxNzE3NzgwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1200';
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
             
             <div className="space-y-6 text-muted-foreground text-base md:text-lg">
                 <p>
-                  USA Roof Pros ("we," "us," or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site").
+                  NovaRoof Solutions ("we," "us," or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, including any other media form, media channel, mobile website, or mobile application related or connected thereto (collectively, the "Site").
                 </p>
                 <p>
                   Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
@@ -88,7 +88,7 @@ export default function PrivacyPolicyPage() {
                       If you have questions or comments about this Privacy Policy, please contact us:
                     </p>
                     <ul className="list-disc list-outside pl-5 space-y-2">
-                        <li>By email: <a href="mailto:contact@usaroofpros.com" className="text-primary hover:underline">contact@usaroofpros.com</a></li>
+                        <li>By email: <a href="mailto:contact@novaroofsolutions.com" className="text-primary hover:underline">contact@novaroofsolutions.com</a></li>
                     </ul>
                 </div>
             </div>

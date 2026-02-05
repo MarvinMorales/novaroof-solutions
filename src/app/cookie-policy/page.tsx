@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 const pageTitle = 'Cookie Policy';
-const pageDescription = 'Information about how USA Roof Pros uses cookies on our website.';
+const pageDescription = 'Information about how NovaRoof Solutions uses cookies on our website.';
 const ogImageUrl = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaG91c2V8ZW58MHx8fHwxNzE3NzgwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1200';
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export default function CookiePolicyPage() {
 
             <div className="space-y-6 text-muted-foreground text-base md:text-lg">
                 <p>
-                  This Cookie Policy explains what cookies are and how USA Roof Pros ("we," "us," or "our") uses them. You should read this policy to understand what type of cookies we use, the information we collect using cookies and how that information is used.
+                  This Cookie Policy explains what cookies are and how NovaRoof Solutions ("we," "us," or "our") uses them. You should read this policy to understand what type of cookies we use, the information we collect using cookies and how that information is used.
                 </p>
 
                 <div className="space-y-4 pt-6">
@@ -76,7 +76,7 @@ export default function CookiePolicyPage() {
                       If you have any questions about this Cookie Policy, you can contact us:
                     </p>
                     <ul className="list-disc list-outside pl-5 space-y-2">
-                        <li>By email: <a href="mailto:contact@usaroofpros.com" className="text-primary hover:underline">contact@usaroofpros.com</a></li>
+                        <li>By email: <a href="mailto:contact@novaroofsolutions.com" className="text-primary hover:underline">contact@novaroofsolutions.com</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 const pageTitle = 'Terms of Service';
-const pageDescription = 'Read the terms and conditions for using the USA Roof Pros website.';
+const pageDescription = 'Read the terms and conditions for using the NovaRoof Solutions website.';
 const ogImageUrl = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaG91c2V8ZW58MHx8fHwxNzE3NzgwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1200';
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function TermsOfServicePage() {
                 <div className="space-y-4 pt-6">
                     <h2 className="font-headline text-2xl font-semibold border-b pb-2 text-foreground">1. Agreement to Terms</h2>
                     <p>
-                    These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and USA Roof Pros (“Company”, “we”, “us”, or “our”), concerning your access to and use of our website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).
+                    These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and NovaRoof Solutions (“Company”, “we”, “us”, or “our”), concerning your access to and use of our website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).
                     </p>
                     <p>
                     We are a roofing marketing and referral service. We do not provide roofing services ourselves. We connect homeowners with licensed and insured third-party roofing contractors.
@@ -77,7 +77,7 @@ export default function TermsOfServicePage() {
                     In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:
                     </p>
                      <ul className="list-disc list-outside pl-5 space-y-2">
-                        <li>By email: <a href="mailto:contact@usaroofpros.com" className="text-primary hover:underline">contact@usaroofpros.com</a></li>
+                        <li>By email: <a href="mailto:contact@novaroofsolutions.com" className="text-primary hover:underline">contact@novaroofsolutions.com</a></li>
                     </ul>
                 </div>
             </div>

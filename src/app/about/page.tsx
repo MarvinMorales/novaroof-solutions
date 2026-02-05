@@ -3,8 +3,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CheckCircle } from 'lucide-react';
 import type { Metadata } from 'next';
 
-const pageTitle = 'About USA Roof Pros';
-const pageDescription = 'Learn how USA Roof Pros connects homeowners with top-rated, licensed, and insured roofing contractors across the United States.';
+const pageTitle = 'About NovaRoof Solutions';
+const pageDescription = 'Learn how NovaRoof Solutions connects homeowners with top-rated, licensed, and insured roofing contractors across the United States.';
 const ogImageUrl = 'https://images.unsplash.com/photo-1509453721491-c3af5961df76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTM3NjQ5OXww&ixlib=rb-4.1.0&q=80&w=1200';
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export default function AboutPage() {
   return (
     <div className="bg-background">
       <section className="container py-16 md:py-24 text-center">
-        <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">About USA Roof Pros</h1>
+        <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">About NovaRoof Solutions</h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
           Connecting homeowners with America's most trusted roofing professionals.
         </p>
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <div className="space-y-6">
             <h2 className="font-headline text-3xl font-semibold">Our Mission</h2>
             <p className="text-muted-foreground">
-              Finding a reliable roofing contractor can be stressful, especially when you have a leak or storm damage. USA Roof Pros was founded to solve this problem. We are not a roofing company; we are a marketing and referral service dedicated to making it easy for homeowners to connect with pre-screened, high-quality local roofers.
+              Finding a reliable roofing contractor can be stressful, especially when you have a leak or storm damage. NovaRoof Solutions was founded to solve this problem. We are not a roofing company; we are a marketing and referral service dedicated to making it easy for homeowners to connect with pre-screened, high-quality local roofers.
             </p>
             <p className="text-muted-foreground">
               Our extensive network of licensed and insured contractors ensures that no matter where you are, you can quickly get a quote from a qualified professional you can trust. We do the vetting so you don't have to.

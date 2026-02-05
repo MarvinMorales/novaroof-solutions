@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Mail, Phone, MapPin, ShieldCheck } from 'lucide-react';
+import { Mail, Phone, ShieldCheck } from 'lucide-react';
 import { trackCall } from '@/lib/api-client';
 
 const BrandIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -26,7 +26,7 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2 font-bold">
               <BrandIcon className="h-8 w-8 text-primary" />
-              <span className="font-headline text-2xl">USA Roof Pros</span>
+              <span className="font-headline text-2xl">NovaRoof Solutions</span>
             </Link>
             <p className="text-muted-foreground text-sm">
               Connecting you with trusted, local roofing contractors for all your repair and replacement needs.
@@ -57,24 +57,24 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
                 <li className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-primary shrink-0" />
-                    <a href="tel:888-555-7663" onClick={handleCallClick} className="text-muted-foreground hover:text-primary transition-colors">888-555-ROOF</a>
+                    <a href="tel:5623177925" onClick={handleCallClick} className="text-muted-foreground hover:text-primary transition-colors">(562) 317-7925</a>
                 </li>
                 <li className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-primary shrink-0" />
-                    <a href="mailto:contact@usaroofpros.com" className="text-muted-foreground hover:text-primary transition-colors">contact@usaroofpros.com</a>
+                    <a href="mailto:contact@novaroofsolutions.com" className="text-muted-foreground hover:text-primary transition-colors">contact@novaroofsolutions.com</a>
                 </li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t">
           <p className="text-xs text-muted-foreground text-center">
-            <strong>Disclaimer:</strong> USA Roof Pros is a roofing marketing and referral service. We do not perform roofing work ourselves. We connect homeowners with licensed and insured roofing contractors in their area. All contractual agreements and warranties are between the homeowner and the selected contractor.
+            <strong>Disclaimer:</strong> NovaRoof Solutions is a roofing marketing and referral service. We do not perform roofing work ourselves. We connect homeowners with licensed and insured roofing contractors in their area. All contractual agreements and warranties are between the homeowner and the selected contractor.
           </p>
         </div>
       </div>
       <div className="bg-muted/50">
         <div className="container py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} USA Roof Pros. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NovaRoof Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

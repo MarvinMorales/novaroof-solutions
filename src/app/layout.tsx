@@ -21,10 +21,10 @@ const spaceGrotesk = Space_Grotesk({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.usaroofpros.com'), // IMPORTANT: Replace with your production domain
+  metadataBase: new URL('https://www.novaroofsolutions.com'), // IMPORTANT: Replace with your production domain
   title: {
-    default: 'USA Roof Pros - Connecting You With Trusted Local Roofers',
-    template: '%s | USA Roof Pros',
+    default: 'NovaRoof Solutions - Connecting You With Trusted Local Roofers',
+    template: '%s | NovaRoof Solutions',
   },
   description: 'We connect you with licensed and insured local roofing contractors for repair, replacement, and emergency services. Get a free, no-obligation quote today.',
   keywords: ['roofing contractors', 'roof repair', 'roof replacement', 'emergency roof repair', 'storm damage'],
