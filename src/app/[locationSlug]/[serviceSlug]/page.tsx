@@ -11,7 +11,6 @@ import { Testimonials } from '@/components/sections/testimonials';
 import { Breadcrumbs, type BreadcrumbLink } from '@/components/layout/breadcrumbs';
 import { Services } from '@/components/sections/services';
 import { ServiceProcess } from '@/components/sections/service-process';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { StickyCTA } from '@/components/layout/sticky-cta';
 
 export async function generateStaticParams() {
@@ -111,8 +110,6 @@ export default function Page({ params }: { params: { locationSlug: string, servi
     notFound();
   }
 
-  const serviceImage = PlaceHolderImages.find(img => img.id === service.imageId);
-
   const faqs = getFaqs(location.city, service.slug);
   const fullUrl = `https://www.novaroofsolutions.com`;
 
@@ -121,6 +118,8 @@ export default function Page({ params }: { params: { locationSlug: string, servi
     { name: `${location.city}, ${location.stateCode}`, href: `/${location.slug}/` },
     { name: service.name, href: `/${location.slug}/${service.slug}/` }
   ];
+
+  const serviceSubheading = `Your trusted local connection for professional ${service.name.toLowerCase()} services in ${location.city}. We connect you with top-rated, licensed contractors ready to provide a free, no-obligation estimate.`;
 
   return (
     <div className="pb-24">
@@ -134,9 +133,10 @@ export default function Page({ params }: { params: { locationSlug: string, servi
       />
       <Hero 
         h1={`${service.name} in ${location.city}`}
+        subheading={serviceSubheading}
         size="small"
         showButtons={false}
-        image={serviceImage}
+        variant="solid"
       />
       <Breadcrumbs links={breadcrumbs} />
       <CitySpecificSection location={location} />
