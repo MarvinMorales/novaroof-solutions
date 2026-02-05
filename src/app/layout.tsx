@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
@@ -48,7 +49,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <WhatsAppButton />
+        {/* <WhatsAppButton /> */}
         <Toaster />
         <VisitTracker />
       </body>
