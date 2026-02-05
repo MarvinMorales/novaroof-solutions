@@ -11,6 +11,8 @@ import { Testimonials } from '@/components/sections/testimonials';
 import { Breadcrumbs, type BreadcrumbLink } from '@/components/layout/breadcrumbs';
 import { Services } from '@/components/sections/services';
 import { ServiceProcess } from '@/components/sections/service-process';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { StickyCTA } from '@/components/layout/sticky-cta';
 
 export async function generateStaticParams() {
   const params: { locationSlug: string; serviceSlug: string }[] = [];
@@ -109,6 +111,8 @@ export default function Page({ params }: { params: { locationSlug: string, servi
     notFound();
   }
 
+  const serviceImage = PlaceHolderImages.find(img => img.id === service.imageId);
+
   const faqs = getFaqs(location.city, service.slug);
   const fullUrl = `https://www.novaroofsolutions.com`;
 
@@ -119,7 +123,7 @@ export default function Page({ params }: { params: { locationSlug: string, servi
   ];
 
   return (
-    <>
+    <div className="pb-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateLocalBusinessSchema(location, service)) }}
@@ -132,6 +136,7 @@ export default function Page({ params }: { params: { locationSlug: string, servi
         h1={`${service.name} in ${location.city}`}
         size="small"
         showButtons={false}
+        image={serviceImage}
       />
       <Breadcrumbs links={breadcrumbs} />
       <CitySpecificSection location={location} />
@@ -141,6 +146,7 @@ export default function Page({ params }: { params: { locationSlug: string, servi
       <Testimonials />
       <Contact />
       <NearbyLocations currentLocation={location} service={service} />
-    </>
+      <StickyCTA />
+    </div>
   );
 }

@@ -6,8 +6,10 @@ import Link from 'next/link';
 import { Phone } from 'lucide-react';
 import { trackCall } from '@/lib/api-client';
 import { cn } from '@/lib/utils';
+import type { ImagePlaceholder } from '@/lib/placeholder-images';
 
-const heroImage = {
+const defaultHeroImage: ImagePlaceholder = {
+  id: 'hero-default',
   description: "A professional roofer repairing a damaged roof.",
   imageUrl: "https://phs-roof.com/wp-content/uploads/2025/09/Roof-Damage-Repair.webp",
   imageHint: "roof damage repair"
@@ -18,17 +20,20 @@ type HeroProps = {
     subheading?: string;
     size?: 'default' | 'small';
     showButtons?: boolean;
+    image?: ImagePlaceholder;
 }
 
-export function Hero({ h1, subheading, size = 'default', showButtons = true }: HeroProps) {
+export function Hero({ h1, subheading, size = 'default', showButtons = true, image }: HeroProps) {
     const handleCallClick = () => {
         trackCall();
     };
+
+    const heroImage = image || defaultHeroImage;
     
   return (
     <section className={cn(
         "relative w-full flex items-center justify-center text-primary-foreground",
-        size === 'default' ? "h-[70vh] md:h-[85vh]" : "h-[40vh] md:h-[50vh]"
+        size === 'default' ? "h-[70vh] md:h-[85vh]" : "h-[300px]"
     )}>
       <Image
         src={heroImage.imageUrl}

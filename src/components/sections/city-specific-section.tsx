@@ -2,7 +2,7 @@ import type { LocationData } from '@/lib/locations';
 import { localProblemsMap, commonRiskToProblemKey } from '@/lib/local-problems';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { AlertCircle, ShieldCheck } from 'lucide-react';
 
 const getImage = (id: string) => PlaceHolderImages.find(p => p.id === id);
@@ -22,66 +22,63 @@ export function CitySpecificSection({ location }: { location: LocationData }) {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">
-            Your Local {location.city} Roofing Challenges, Solved.
+            Your Local {location.city} Roofing Challenges, Solved
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             {location.localContent.intro}
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-start">
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {problemsToDisplay.map((item, index) => {
             const problemImage = getImage(item.problem.imageId);
             const solutionImage = getImage(item.solution.imageId);
 
             return (
-              <div key={index} className="space-y-8">
-                {/* Problem Card */}
-                <Card className="overflow-hidden shadow-lg">
-                  {problemImage && (
-                    <Image
-                      src={problemImage.imageUrl}
-                      alt={problemImage.description}
-                      data-ai-hint={problemImage.imageHint}
-                      width={800}
-                      height={500}
-                      className="object-cover w-full h-56"
-                    />
-                  )}
-                  <CardHeader className="flex-row gap-4 items-center bg-destructive/10">
-                    <AlertCircle className="h-8 w-8 text-destructive shrink-0" />
-                    <div>
-                      <CardTitle className="font-headline text-destructive text-xl">The Problem: {item.problem.title}</CardTitle>
+              <Card key={index} className="overflow-hidden shadow-lg w-full bg-card">
+                <div className="grid grid-cols-2">
+                    {problemImage && (
+                        <Image
+                            src={problemImage.imageUrl}
+                            alt={problemImage.description}
+                            data-ai-hint={problemImage.imageHint}
+                            width={400}
+                            height={300}
+                            className="object-cover w-full h-48"
+                        />
+                    )}
+                    {solutionImage && (
+                         <Image
+                            src={solutionImage.imageUrl}
+                            alt={solutionImage.description}
+                            data-ai-hint={solutionImage.imageHint}
+                            width={400}
+                            height={300}
+                            className="object-cover w-full h-48"
+                        />
+                    )}
+                </div>
+                <div className="p-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <div className="flex items-center gap-2 mb-2">
+                                <AlertCircle className="h-6 w-6 text-destructive shrink-0" />
+                                <h3 className="font-headline text-lg font-semibold text-destructive">The Problem</h3>
+                            </div>
+                            <h4 className="font-semibold text-foreground mb-1">{item.problem.title}</h4>
+                            <p className="text-sm text-muted-foreground">{item.problem.description}</p>
+                        </div>
+                        <div>
+                            <div className="flex items-center gap-2 mb-2">
+                                <ShieldCheck className="h-6 w-6 text-primary shrink-0" />
+                                <h3 className="font-headline text-lg font-semibold text-primary">The Solution</h3>
+                            </div>
+                             <h4 className="font-semibold text-foreground mb-1">{item.solution.title}</h4>
+                            <p className="text-sm text-muted-foreground">{item.solution.description}</p>
+                        </div>
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{item.problem.description}</p>
-                  </CardContent>
-                </Card>
-
-                {/* Solution Card */}
-                <Card className="overflow-hidden shadow-lg border-primary/50 bg-green-50/20 dark:bg-green-900/10">
-                   {solutionImage && (
-                    <Image
-                      src={solutionImage.imageUrl}
-                      alt={solutionImage.description}
-                      data-ai-hint={solutionImage.imageHint}
-                      width={800}
-                      height={500}
-                      className="object-cover w-full h-56"
-                    />
-                  )}
-                  <CardHeader className="flex-row gap-4 items-center bg-primary/10">
-                    <ShieldCheck className="h-8 w-8 text-primary shrink-0" />
-                     <div>
-                      <CardTitle className="font-headline text-primary text-xl">The Solution: {item.solution.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{item.solution.description}</p>
-                  </CardContent>
-                </Card>
-              </div>
+                </div>
+              </Card>
             );
           })}
         </div>
@@ -96,5 +93,3 @@ export function CitySpecificSection({ location }: { location: LocationData }) {
     </section>
   );
 }
-
-    
