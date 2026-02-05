@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { usePathname } from 'next/navigation'
-import { getLocationBySlug, getServiceBySlug } from "@/lib/locations"
+import { getLocationBySlug, getServiceBySlug, services } from "@/lib/locations"
 
 export type BreadcrumbLink = {
   name: string
@@ -31,6 +31,14 @@ export function Breadcrumbs() {
         
         if (staticRouteNameMap[firstSegment]) {
             links.push({ name: staticRouteNameMap[firstSegment], href: `/${firstSegment}/` });
+        } else if (firstSegment === 'service') {
+            if (pathSegments.length > 1) {
+                const serviceSlug = pathSegments[1];
+                const service = getServiceBySlug(serviceSlug);
+                if (service) {
+                    links.push({ name: service.name, href: `/service/${service.slug}/` });
+                }
+            }
         } else {
             const location = getLocationBySlug(firstSegment);
 

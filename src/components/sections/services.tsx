@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Wrench, Home, ShieldCheck, Droplets, Zap, Replace } from "lucide-react";
+import { Wrench, Home, ShieldCheck, Droplets, Zap, Replace, Eye } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
@@ -28,14 +28,14 @@ const servicesData = [
         slug: "emergency-roof-repair"
     },
     {
-        icon: <ShieldCheck />,
+        icon: <Eye />,
         title: "Roof Inspection",
         description: "Get a professional assessment of your roof's condition. We connect you with experts who can identify potential issues, estimate remaining lifespan, and document damage for insurance claims.",
         imageId: "service-inspection",
         slug: "roof-inspection" 
     },
     {
-        icon: <Replace />,
+        icon: <ShieldCheck />,
         title: "Roof Leak Repair",
         description: "Our network specializes in advanced leak detection and reliable repairs to protect your home's structure and interior. Stop water damage and prevent mold growth with a permanent fix.",
         imageId: "solution-leak-repair", 
@@ -58,7 +58,7 @@ type ServicesProps = {
     excludeSlug?: string;
 }
 
-export function Services({ locationSlug = 'houston-tx', title = "Comprehensive Roofing Solutions", excludeSlug }: ServicesProps) {
+export function Services({ locationSlug, title = "Comprehensive Roofing Solutions", excludeSlug }: ServicesProps) {
     const servicesToDisplay = excludeSlug 
         ? servicesData.filter(s => s.slug !== excludeSlug)
         : servicesData;
@@ -79,7 +79,7 @@ export function Services({ locationSlug = 'houston-tx', title = "Comprehensive R
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {servicesToDisplay.map((service) => {
                         const image = getImage(service.imageId);
-                        const link = `/${locationSlug}/${service.slug}/`;
+                        const link = locationSlug ? `/${locationSlug}/${service.slug}/` : `/service/${service.slug}/`;
                         return (
                             <Card key={service.title} className="flex flex-col overflow-hidden group transition-shadow duration-300 w-full hover:shadow-xl bg-card">
                                 {image && (

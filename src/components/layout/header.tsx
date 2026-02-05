@@ -21,13 +21,14 @@ const navLinks = [
   { href: '/about/', label: 'About Us' },
 ];
 
-const defaultLocationSlug = 'houston-tx';
 const services = [
-    { href: `/${defaultLocationSlug}/roof-repair/`, label: 'Roof Repair' },
-    { href: `/${defaultLocationSlug}/roof-replacement/`, label: 'Roof Replacement' },
-    { href: `/${defaultLocationSlug}/emergency-roof-repair/`, label: 'Emergency Repair' },
-    { href: `/${defaultLocationSlug}/storm-damage-roof/`, label: 'Storm Damage' },
-    { href: `/${defaultLocationSlug}/roof-leak-repair/`, label: 'Roof Leak Repair' },
+    { href: `/service/roof-repair/`, label: 'Roof Repair', slug: 'roof-repair' },
+    { href: `/service/roof-replacement/`, label: 'Roof Replacement', slug: 'roof-replacement' },
+    { href: `/service/emergency-roof-repair/`, label: 'Emergency Repair', slug: 'emergency-roof-repair' },
+    { href: `/service/storm-damage-roof/`, label: 'Storm Damage', slug: 'storm-damage-roof' },
+    { href: `/service/roof-leak-repair/`, label: 'Roof Leak Repair', slug: 'roof-leak-repair' },
+    { href: `/service/roof-inspection/`, label: 'Roof Inspection', slug: 'roof-inspection' },
+    { href: `/service/gutter-services/`, label: 'Gutter Services', slug: 'gutter-services' },
 ];
 
 
@@ -50,10 +51,11 @@ export function Header() {
   }
 
   const isServicePageActive = () => {
-      const pathSegments = pathname.split('/');
-      if (pathSegments.length < 3) return false;
-      const serviceSlug = pathSegments[2];
-      return services.some(service => service.href.includes(serviceSlug));
+      const pathSegments = pathname.split('/').filter(Boolean);
+      if (pathSegments.length < 2) return false;
+      
+      const potentialSlug = pathSegments[1];
+      return services.some(service => service.slug === potentialSlug);
   }
 
   const handleCallClick = () => {
