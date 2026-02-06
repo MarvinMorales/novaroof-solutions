@@ -57,7 +57,7 @@ export default function AboutPage() {
   const { t } = useTranslation();
   const pageTitle = t('AboutPage.meta.title');
   const pageDescription = t('AboutPage.meta.description');
-  const ogImageUrl = 'https://images.unsplash.com/photo-1509453721491-c3af5961df76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTM3NjQ5OXww&ixlib=rb-4.1.0&q=80&w=1200';
+  const ogImageUrl = 'https://picsum.photos/seed/og-team/1200/630';
 
   return (
     <>

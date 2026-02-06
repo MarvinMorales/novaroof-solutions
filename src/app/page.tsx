@@ -15,7 +15,7 @@ export default function Home() {
 
   const pageTitle = t('HomePage.meta.title');
   const pageDescription = t('HomePage.meta.description');
-  const ogImageUrl = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaG91c2V8ZW58MHx8fHwxNzE3NzgwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1200';
+  const ogImageUrl = 'https://picsum.photos/seed/og-main/1200/630';
 
   return (
     <>

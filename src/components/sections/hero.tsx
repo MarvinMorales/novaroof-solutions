@@ -11,7 +11,7 @@ import { useTranslation } from '@/hooks/use-translation';
 const defaultHeroImage: ImagePlaceholder = {
   id: 'hero-default',
   description: "A beautiful modern house with a perfectly installed new roof.",
-  imageUrl: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob3VzZXxlbnwwfHx8fDE3NjU0MDgwNTV8MA&ixlib=rb-4.1.0&q=80&w=1200",
+  imageUrl: "https://picsum.photos/seed/hero-main/1200/800",
   imageHint: "modern house"
 };
 

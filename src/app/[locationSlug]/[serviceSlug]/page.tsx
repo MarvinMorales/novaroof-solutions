@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: { locationSlug: str
       url: canonicalUrl,
       images: [
         {
-          url: 'https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3Rvcm0lMjBkYW1hZ2V8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1200',
+          url: 'https://picsum.photos/seed/og-storm/1200/630',
           width: 1200,
           height: 630,
           alt: `${service.title} in ${location.city}`,
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: { params: { locationSlug: str
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://images.unsplash.com/photo-1640296150617-1ede154483d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3Rvcm0lMjBkYW1hZ2V8ZW58MHx8fHwxNzY1NDA4MjA3fDA&ixlib=rb-4.1.0&q=80&w=1200'],
+      images: ['https://picsum.photos/seed/og-storm/1200/630'],
     },
   };
 }
