@@ -2,32 +2,57 @@
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { CheckCircle, ShieldCheck, TrendingUp, Users } from 'lucide-react';
+import { Award, BookOpen, ClipboardCheck, MapPin, Shield, Shuffle, Users } from 'lucide-react';
 import Head from 'next/head';
 import { useTranslation } from '@/hooks/use-translation';
 import { Hero } from '@/components/sections/hero';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const aboutImage = PlaceHolderImages.find(img => img.id === 'about-us-team');
-const whyUsImage = PlaceHolderImages.find(img => img.id === 'process-final-cleanup');
+const differenceImage = PlaceHolderImages.find(img => img.id === 'why-us-quality');
 
 
-const values = [
-  {
-    icon: ShieldCheck,
-    titleKey: 'value1Title',
-    descriptionKey: 'value1Desc'
-  },
-  {
-    icon: TrendingUp,
-    titleKey: 'value2Title',
-    descriptionKey: 'value2Desc'
-  },
+const philosophy = [
   {
     icon: Users,
-    titleKey: 'value3Title',
-    descriptionKey: 'value3Desc'
+    titleKey: 'philosophy1Title',
+    descriptionKey: 'philosophy1Desc'
+  },
+  {
+    icon: MapPin,
+    titleKey: 'philosophy2Title',
+    descriptionKey: 'philosophy2Desc'
+  },
+  {
+    icon: Award,
+    titleKey: 'philosophy3Title',
+    descriptionKey: 'philosophy3Desc'
   }
 ];
+
+const differencePoints = [
+    {
+      icon: ClipboardCheck,
+      titleKey: 'difference1Title',
+      descriptionKey: 'difference1Desc'
+    },
+    {
+      icon: Shuffle,
+      titleKey: 'difference2Title',
+      descriptionKey: 'difference2Desc'
+    },
+    {
+      icon: Shield,
+      titleKey: 'difference3Title',
+      descriptionKey: 'difference3Desc'
+    },
+    {
+      icon: BookOpen,
+      titleKey: 'difference4Title',
+      descriptionKey: 'difference4Desc'
+    }
+  ];
 
 export default function AboutPage() {
   const { t } = useTranslation();
@@ -88,10 +113,21 @@ export default function AboutPage() {
         <section className="bg-muted/50">
             <div className="container py-16 md:py-24">
                 <div className="max-w-3xl mx-auto text-center">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">{t('AboutPage.visionTitle')}</h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    {t('AboutPage.visionText')}
-                </p>
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">{t('AboutPage.philosophyTitle')}</h2>
+                    <p className="mt-4 text-lg text-muted-foreground">
+                        {t('AboutPage.philosophySubtitle')}
+                    </p>
+                </div>
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {philosophy.map((item) => (
+                        <div key={item.titleKey} className="text-center p-6 bg-card rounded-lg shadow-sm">
+                            <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary mb-4">
+                                <item.icon className="h-6 w-6" />
+                            </div>
+                            <h3 className="font-headline text-xl font-semibold">{t(`AboutPage.${item.titleKey}`)}</h3>
+                            <p className="mt-2 text-muted-foreground text-sm">{t(`AboutPage.${item.descriptionKey}`)}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
@@ -99,30 +135,30 @@ export default function AboutPage() {
         <section className="container py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
              <div className="md:order-2">
-                <h2 className="font-headline text-3xl font-semibold tracking-tighter">{t('AboutPage.whyUsTitle')}</h2>
+                <h2 className="font-headline text-3xl font-semibold tracking-tighter">{t('AboutPage.differenceTitle')}</h2>
                 <p className="mt-4 text-muted-foreground">
-                    {t('AboutPage.whyUsText')}
+                    {t('AboutPage.differenceSubtitle')}
                 </p>
                 <div className="mt-6 space-y-4">
-                    {values.map((value) => (
-                        <div key={value.titleKey} className="flex items-start gap-4">
+                    {differencePoints.map((point) => (
+                        <div key={point.titleKey} className="flex items-start gap-4">
                             <div className="flex-shrink-0 mt-1">
-                                <value.icon className="h-6 w-6 text-primary" />
+                                <point.icon className="h-6 w-6 text-primary" />
                             </div>
                             <div>
-                                <h3 className="font-semibold">{t(`AboutPage.${value.titleKey}`)}</h3>
-                                <p className="text-muted-foreground text-sm">{t(`AboutPage.${value.descriptionKey}`)}</p>
+                                <h3 className="font-semibold">{t(`AboutPage.${point.titleKey}`)}</h3>
+                                <p className="text-muted-foreground text-sm">{t(`AboutPage.${point.descriptionKey}`)}</p>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
             <div className="md:order-1">
-              {whyUsImage && (
+              {differenceImage && (
                 <Image
-                  src={whyUsImage.imageUrl}
-                  alt={whyUsImage.description}
-                  data-ai-hint={whyUsImage.imageHint}
+                  src={differenceImage.imageUrl}
+                  alt={differenceImage.description}
+                  data-ai-hint={differenceImage.imageHint}
                   width={800}
                   height={600}
                   className="rounded-lg shadow-lg object-cover aspect-[4/3]"
@@ -153,9 +189,19 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <section className="container py-16 md:py-24 text-center">
+            <div className="max-w-3xl mx-auto">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold">{t('AboutPage.commitmentTitle')}</h2>
+                <p className="mt-4 text-lg text-muted-foreground">
+                    {t('AboutPage.commitmentText')}
+                </p>
+                <Button asChild size="lg" className="mt-8">
+                    <Link href="/#contact">{t('Header.getQuote')}</Link>
+                </Button>
+            </div>
+        </section>
       </div>
     </>
   );
 }
-
-    

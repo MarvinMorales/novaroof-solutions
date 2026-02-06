@@ -148,24 +148,32 @@ export const messages = {
   },
   AboutPage: {
     meta: {
-        title: "Sobre NovaRoof Solutions",
-        description: "Descubra cómo NovaRoof Solutions conecta a los propietarios de viviendas con los contratistas de techos mejor calificados, con licencia y asegurados en todo Estados Unidos."
+        title: "Sobre NovaRoof Solutions: Nuestra Misión y Proceso",
+        description: "Conozca sobre NovaRoof Solutions. Somos una empresa de tecnología dedicada a conectar a propietarios con contratistas de techos locales, con licencia y asegurados de primer nivel."
     },
-    title: "Tu Socio en la Protección de Tu Hogar",
-    subtitle: "Creemos que cada propietario merece un techo seguro y confiable sin el estrés de encontrar un contratista de confianza.",
-    storyTitle: "Nuestra Historia: De la Frustración a la Solución",
-    storyText1: "NovaRoof Solutions nació de una frustración común: el proceso abrumador y a menudo incierto de encontrar un contratista de techado calificado. Después de ver a amigos y familiares luchar persiguiendo cotizaciones, verificando licencias y lidiando con compañías poco confiables, especialmente después de una tormenta cuando el tiempo es crítico, supimos que tenía que haber una mejor manera.",
-    storyText2: "Decidimos construir esa mejor manera. No somos techadores; somos expertos en tecnología y logística apasionados por la defensa del consumidor. Creamos una plataforma para cerrar la brecha, aprovechando una red nacional de profesionales de techado investigados y de alta calidad, y facilitando que los propietarios se conecten con ellos. Nuestra misión es reemplazar la ansiedad de la reparación del techo con la confianza de un trabajo bien hecho.",
-    visionTitle: "Nuestra Visión para el Futuro",
-    visionText: "Nuestro objetivo es convertirnos en el enlace más confiable y transparente entre los propietarios y la industria de servicios para el hogar. Comenzamos con el techado porque es uno de los componentes más críticos de una casa, pero nuestra visión se extiende a la creación de una experiencia fluida y confiable para todas las reparaciones y mejoras importantes del hogar.",
-    whyUsTitle: "¿Por Qué Elegir NovaRoof?",
-    whyUsText: "En un mercado saturado, nos destacamos por centrarnos en lo que más importa: confianza, velocidad y calidad. No somos solo un directorio; somos tu socio en el proceso.",
-    value1Title: "Proceso de Verificación Riguroso",
-    value1Desc: "No agregamos cualquier empresa a nuestra red. Cada contratista es examinado minuciosamente para verificar su licencia, cobertura de seguro completa y un historial comprobado de comentarios positivos de los clientes.",
-    value2Title: "Eficiencia y Velocidad",
-    value2Desc: "Cuando tu techo tiene una fuga, no tienes tiempo que perder. Nuestro sistema está diseñado para conectarte con un profesional local disponible en minutos, no en días.",
-    value3Title: "Enfoque Total en el Propietario",
-    value3Desc: "Nuestro servicio se centra en ti. Siempre es gratuito para los propietarios y nunca hay obligación de contratar. Te empoderamos para que tomes la mejor decisión para tu hogar.",
+    title: "Redefiniendo la Forma en que los Propietarios Encuentran Techadores",
+    subtitle: "Somos un equipo dedicado de defensores del consumidor y expertos en tecnología, comprometidos a brindar simplicidad, transparencia y confianza a la industria del techado.",
+    storyTitle: "Nuestra Historia de Fundación",
+    storyText1: "NovaRoof Solutions nació de una frustración común: el proceso abrumador y a menudo incierto de encontrar un contratista de techado calificado. Nuestros fundadores, un grupo de propietarios y entusiastas de la tecnología, se cansaron de ver a amigos y familiares navegar por un sistema roto. Vieron el estrés de perseguir cotizaciones, la confusión de verificar licencias y la ansiedad de tratar con compañías poco confiables, especialmente después de una tormenta cuando el tiempo es crítico.",
+    storyText2: "El momento 'eureka' llegó después de una gran tormenta de granizo. Mientras que algunos vecinos recibieron reparaciones de calidad, otros se quedaron con trabajos de mala calidad y reclamaciones de seguros sin resolver. La única diferencia fue la calidad de su contratista. Sabíamos que la tecnología podría resolver este problema. No somos techadores, somos solucionadores de problemas. Nos dedicamos a construir una plataforma inteligente basada en datos que investiga y se asocia solo con las mejores compañías de techado locales en todo el país. Nuestra misión es reemplazar las conjeturas con certeza.",
+    philosophyTitle: "Nuestra Filosofía Central",
+    philosophySubtitle: "Toda nuestra operación se basa en tres principios inquebrantables que guían cada decisión que tomamos y cada asociación que formamos.",
+    philosophy1Title: "Empoderar al Propietario",
+    philosophy1Desc: "Nuestro servicio es, y siempre será, 100% gratuito para los propietarios. Brindamos la información y las conexiones que necesita para tomar una decisión informada sin presión ni obligación.",
+    philosophy2Title: "Promover la Experiencia Local",
+    philosophy2Desc: "Creemos que el mejor trabajo lo realizan profesionales locales que comprenden los desafíos climáticos regionales, los materiales y los códigos de construcción. Buscamos y promovemos activamente a estos expertos comunitarios.",
+    philosophy3Title: "Exigir Calidad sin Compromisos",
+    philosophy3Desc: "La confianza se gana. Solo nos asociamos con contratistas que demuestran un compromiso constante con la excelencia, respaldado por licencias adecuadas, un seguro completo y un historial comprobado de clientes satisfechos.",
+    differenceTitle: "La Diferencia NovaRoof",
+    differenceSubtitle: "Somos más que un simple directorio; somos un servicio dedicado de investigación y emparejamiento. Esto es lo que nos diferencia de la competencia.",
+    difference1Title: "Investigación Rigurosa de 5 Puntos",
+    difference1Desc: "Cada contratista en nuestra red debe pasar una estricta selección que incluye verificación de licencia, cheques de cobertura de seguro (Responsabilidad Civil General y Compensación para Trabajadores), análisis de reputación en línea y prueba de experiencia local.",
+    difference2Title: "Emparejamiento Inteligente en Tiempo Real",
+    difference2Desc: "Nuestro sistema patentado empareja instantáneamente su necesidad específica (por ejemplo, 'reparación de emergencia de tejas en Phoenix') con un contratista calificado y disponible que se especializa en ese tipo exacto de trabajo.",
+    difference3Title: "Un Escudo Contra los 'Cazatormentas'",
+    difference3Desc: "Después de una gran tormenta, 'cazatormentas' poco confiables inundan las áreas afectadas. Al conectarlo con compañías locales previamente investigadas, lo ayudamos a evitar estafas y aseguramos que su trabajo tenga garantía a largo plazo.",
+    difference4Title: "Un Enfoque en la Educación del Propietario",
+    difference4Desc: "Desde nuestras páginas de servicio detalladas hasta nuestras guías climáticas locales, le proporcionamos la información que necesita para comprender su proyecto de techado, hacer las preguntas correctas y tratar con los contratistas con confianza.",
     processTitle: "Nuestro Proceso Simple y Probado",
     processSubtitle: "Hemos simplificado el proceso de encontrar un gran techador en cuatro sencillos pasos.",
     processStep1Title: "Envía Tu Solicitud",
@@ -175,8 +183,8 @@ export const messages = {
     processStep3Title: "Recibe Tu Cotización",
     processStep3Desc: "El contratista te contacta para programar una inspección gratuita en el lugar y proporcionar un presupuesto sin compromiso.",
     processStep4Title: "Trabajo Terminado",
-    processStep4Desc: "Contratas al contratista en el que confías. Ellos completan el trabajo y tu hogar está protegido. Así de simple."
+    processStep4Desc: "Contratas al contratista en el que confías. Ellos completan el trabajo y tu hogar está protegido. Así de simple.",
+    commitmentTitle: "Su Socio de Confianza en la Protección del Hogar",
+    commitmentText: "Su hogar es su activo más valioso, y su techo es su protector más importante. Nos tomamos nuestro papel en esa ecuación muy en serio. Nuestro compromiso es proporcionar un camino rápido, gratuito y confiable para encontrar un profesional en el que pueda confiar. Estamos aquí para ayudarlo a proteger su hogar y su tranquilidad."
   }
 };
-
-    

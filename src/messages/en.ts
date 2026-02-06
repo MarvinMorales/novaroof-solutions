@@ -148,24 +148,35 @@ export const messages = {
   },
   AboutPage: {
     meta: {
-        title: "About NovaRoof Solutions",
-        description: "Learn how NovaRoof Solutions connects homeowners with top-rated, licensed, and insured roofing contractors across the United States."
+        title: "About NovaRoof Solutions: Our Mission and Process",
+        description: "Learn about NovaRoof Solutions. We're a technology company dedicated to connecting homeowners with top-rated, licensed, and insured local roofing contractors."
     },
-    title: "Your Partner in Protecting Your Home",
-    subtitle: "We believe every homeowner deserves a safe, reliable roof without the stress of finding a trustworthy contractor.",
-    storyTitle: "Our Story: From Frustration to Solution",
-    storyText1: "NovaRoof Solutions was born from a common frustration: the overwhelming and often uncertain process of finding a qualified roofing contractor. After seeing friends and family struggle with chasing down quotes, verifying licenses, and dealing with unreliable companies—especially after a storm when time is critical—we knew there had to be a better way.",
-    storyText2: "We decided to build that better way. We're not roofers; we're technology and logistics experts passionate about consumer advocacy. We created a platform to bridge the gap, leveraging a nationwide network of vetted, high-quality roofing professionals and making it simple for homeowners to connect with them. Our mission is to replace the anxiety of roof repair with the confidence of a job done right.",
-    visionTitle: "Our Vision for the Future",
-    visionText: "Our goal is to become the most trusted and transparent link between homeowners and the home services industry. We started with roofing because it's one of the most critical components of a home, but our vision extends to creating a seamless, reliable experience for all major home repairs and improvements.",
-    whyUsTitle: "Why Choose NovaRoof?",
-    whyUsText: "In a crowded market, we stand out by focusing on what matters most: trust, speed, and quality. We're not just a directory; we're your partner in the process.",
-    value1Title: "Rigorous Vetting Process",
-    value1Desc: "We don't just add any company to our network. Every contractor is thoroughly screened for proper licensing, full insurance coverage, and a proven history of positive customer feedback.",
-    value2Title: "Efficiency and Speed",
-    value2Desc: "When your roof is leaking, you don't have time to wait. Our system is built to connect you with a local, available professional in minutes, not days.",
-    value3Title: "Complete Homeowner Focus",
-    value3Desc: "Our service is built around you. It's always free for homeowners, and there is never any obligation to hire. We empower you to make the best choice for your home.",
+    title: "Redefining the Way Homeowners Find Roofers",
+    subtitle: "We are a dedicated team of consumer advocates and technology experts, committed to bringing simplicity, transparency, and trust to the roofing industry.",
+    storyTitle: "Our Founding Story",
+    storyText1: "NovaRoof Solutions was born from a common frustration: the overwhelming and often uncertain process of finding a qualified roofing contractor. Our founders, a group of homeowners and technology enthusiasts, grew tired of watching friends and family navigate a broken system. They saw the stress of chasing down quotes, the confusion of verifying licenses, and the anxiety of dealing with unreliable companies, especially after a storm when time is critical.",
+    storyText2: "The 'aha' moment came after a major hailstorm. While some neighbors received quality repairs, others were left with shoddy work and unresolved insurance claims. The only difference was the quality of their contractor. We knew technology could solve this problem. We are not roofers—we are problem solvers. We dedicated ourselves to building a smart, data-driven platform that vets and partners with only the best local roofing companies across the nation. Our mission is to replace guesswork with certainty.",
+    
+    philosophyTitle: "Our Core Philosophy",
+    philosophySubtitle: "Our entire operation is built on three unwavering principles that guide every decision we make and every partnership we form.",
+    philosophy1Title: "Empower the Homeowner",
+    philosophy1Desc: "Our service is, and always will be, 100% free for homeowners. We provide the information and connections you need to make an informed decision with zero pressure and zero obligation.",
+    philosophy2Title: "Champion Local Expertise",
+    philosophy2Desc: "We believe the best work is done by local professionals who understand regional climate challenges, materials, and building codes. We actively seek out and promote these community-based experts.",
+    philosophy3Title: "Demand Uncompromising Quality",
+    philosophy3Desc: "Trust is earned. We only partner with contractors who demonstrate a consistent commitment to excellence, backed by proper licensing, comprehensive insurance, and a proven track record of satisfied customers.",
+
+    differenceTitle: "The NovaRoof Difference",
+    differenceSubtitle: "We are more than just a directory; we are a dedicated vetting and matching service. Here’s what sets us apart from the competition.",
+    difference1Title: "Rigorous 5-Point Vetting",
+    difference1Desc: "Every contractor in our network must pass a strict screening that includes license verification, insurance coverage checks (General Liability & Worker's Comp), online reputation analysis, and proof of local experience.",
+    difference2Title: "Intelligent, Real-Time Matching",
+    difference2Desc: "Our proprietary system instantly matches your specific need (e.g., 'emergency tile repair in Phoenix') with a qualified, available contractor who specializes in that exact type of work.",
+    difference3Title: "A Shield Against Storm Chasers",
+    difference3Desc: "After a major storm, untrustworthy 'storm chasers' flood affected areas. By connecting you with pre-vetted, local companies, we help you avoid scams and ensure your work is warrantied for the long term.",
+    difference4Title: "A Focus on Homeowner Education",
+    difference4Desc: "From our detailed service pages to our local climate guides, we provide the information you need to understand your roofing project, ask the right questions, and deal with contractors confidently.",
+
     processTitle: "Our Simple, Proven Process",
     processSubtitle: "We've streamlined the process of finding a great roofer into four easy steps.",
     processStep1Title: "Submit Your Request",
@@ -175,8 +186,9 @@ export const messages = {
     processStep3Title: "Receive Your Quote",
     processStep3Desc: "The contractor contacts you to schedule a free, on-site inspection and provide a no-obligation estimate.",
     processStep4Title: "Job Completed",
-    processStep4Desc: "You hire the contractor you trust. They complete the work, and your home is protected. It's that simple."
+    processStep4Desc: "You hire the contractor you trust. They complete the work, and your home is protected. It's that simple.",
+
+    commitmentTitle: "Your Trusted Partner in Home Protection",
+    commitmentText: "Your home is your most valuable asset, and your roof is its most important protector. We take our role in that equation seriously. Our commitment is to provide a fast, free, and reliable path to finding a professional you can trust. We're here to help you protect your home and your peace of mind."
   }
 };
-
-    
