@@ -2,7 +2,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Wrench, Home, ShieldCheck, Droplets, Zap, Eye, Mountain, ShieldAlert, Wind, Hammer, Award } from "lucide-react";
-import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -120,12 +119,13 @@ export function Services({ locationSlug, title, excludeSlug }: ServicesProps) {
                                 {image && (
                                     <Link href={link} className="overflow-hidden block">
                                         <div className="overflow-hidden">
-                                            <Image 
+                                            <img 
                                                 src={image.imageUrl}
                                                 alt={image.description}
                                                 data-ai-hint={image.imageHint}
                                                 width={600}
                                                 height={400}
+                                                loading="lazy"
                                                 className="object-cover w-full h-48 group-hover:scale-105 transition-transform duration-300"
                                             />
                                         </div>

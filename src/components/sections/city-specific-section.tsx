@@ -1,6 +1,5 @@
 import type { LocationData, ServiceData } from '@/lib/locations';
 import { localProblemsMap, commonRiskToProblemKey } from '@/lib/local-problems';
-import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card } from '@/components/ui/card';
 import { AlertCircle, ShieldCheck } from 'lucide-react';
@@ -106,12 +105,12 @@ export function CitySpecificSection({ location, service }: { location: LocationD
               <Card key={index} className="overflow-hidden shadow-lg w-full bg-card flex flex-col">
                 {problemImage && (
                   <div className="relative aspect-video w-full">
-                    <Image
+                    <img
                       src={problemImage.imageUrl}
                       alt={problemImage.description}
                       data-ai-hint={problemImage.imageHint}
-                      fill
-                      className="object-cover"
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>
                 )}

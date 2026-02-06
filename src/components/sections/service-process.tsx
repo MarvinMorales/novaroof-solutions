@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
 
@@ -299,12 +298,12 @@ export function ServiceProcess({ serviceSlug }: { serviceSlug: string }) {
                 <div className={isReversed ? 'lg:order-2' : ''}>
                   {image && (
                     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg">
-                      <Image
+                      <img
                         src={image.imageUrl}
                         alt={image.description}
                         data-ai-hint={image.imageHint}
-                        fill
-                        className="object-cover"
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover"
                       />
                     </div>
                   )}

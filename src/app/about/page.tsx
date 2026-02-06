@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Award, BookOpen, ClipboardCheck, MapPin, Shield, Shuffle, Users } from 'lucide-react';
 import Head from 'next/head';
@@ -97,13 +96,14 @@ export default function AboutPage() {
             </div>
             <div>
               {aboutImage && (
-                <Image
+                <img
                   src={aboutImage.imageUrl}
                   alt={aboutImage.description}
                   data-ai-hint={aboutImage.imageHint}
                   width={800}
                   height={600}
-                  className="rounded-lg shadow-lg object-cover aspect-[4/3]"
+                  loading="lazy"
+                  className="rounded-lg shadow-lg object-cover aspect-[4/3] w-full"
                 />
               )}
             </div>
@@ -155,13 +155,14 @@ export default function AboutPage() {
             </div>
             <div className="md:order-1">
               {differenceImage && (
-                <Image
+                <img
                   src={differenceImage.imageUrl}
                   alt={differenceImage.description}
                   data-ai-hint={differenceImage.imageHint}
                   width={800}
                   height={600}
-                  className="rounded-lg shadow-lg object-cover aspect-[4/3]"
+                  loading="lazy"
+                  className="rounded-lg shadow-lg object-cover aspect-[4/3] w-full"
                 />
               )}
             </div>

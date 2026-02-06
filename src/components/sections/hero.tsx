@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Phone } from 'lucide-react';
@@ -44,13 +43,12 @@ export function Hero({ h1, subheading, size = 'default', showButtons = true, ima
     )}>
       {isImageVariant && (
         <>
-            <Image
+            <img
                 src={heroImage.imageUrl}
                 alt={heroImage.description}
                 data-ai-hint={heroImage.imageHint}
-                fill
-                className="object-cover"
-                priority
+                fetchpriority="high"
+                className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
         </>
