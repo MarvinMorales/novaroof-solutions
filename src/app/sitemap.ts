@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 const BASE_URL = 'https://www.novaroofsolutions.com';
 
-// 🔥 Prioridad basada en intención comercial real
+// Prioridad basada en intención comercial real
 const priorityMap: Record<string, number> = {
   'emergency-roof-repair': 1.0,
   'storm-damage-roof': 0.9,
@@ -40,7 +40,6 @@ const changeFreqMap: Record<
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // 🔥 /location/service (páginas que generan dinero)
   const servicePages: MetadataRoute.Sitemap = locations.flatMap((location) =>
     services
       .filter((service) => priorityMap[service.slug])
@@ -54,7 +53,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
   );
 
-  // 🏙️ /location (hub pages)
   const locationPages: MetadataRoute.Sitemap = locations.map((location) => ({
     url: `${BASE_URL}/${location.slug}/`,
     lastModified: location.updatedAt
@@ -64,7 +62,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  // 🏠 Páginas estáticas clave
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}/`,

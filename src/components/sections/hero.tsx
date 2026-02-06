@@ -9,10 +9,10 @@ import type { ImagePlaceholder } from '@/lib/placeholder-images';
 import { useTranslation } from '@/hooks/use-translation';
 
 const defaultHeroImage: ImagePlaceholder = {
-  id: 'hero-default',
-  description: "A beautiful modern house with a perfectly installed new roof.",
-  imageUrl: "https://picsum.photos/seed/hero-main/1200/800",
-  imageHint: "modern house"
+  id: 'solution-new-shingles',
+  description: "A perfectly installed new roof with high-quality architectural shingles, serving as the main hero image.",
+  imageUrl: "https://picsum.photos/seed/newshingles1/1200/800",
+  imageHint: "new roof"
 };
 
 type HeroProps = {
@@ -49,6 +49,8 @@ export function Hero({ h1, subheading, size = 'default', showButtons = true, ima
                 data-ai-hint={heroImage.imageHint}
                 fetchpriority="high"
                 className="absolute inset-0 w-full h-full object-cover"
+                width={1200}
+                height={800}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
         </>

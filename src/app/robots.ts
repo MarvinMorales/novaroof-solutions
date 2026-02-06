@@ -9,22 +9,16 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: 'Googlebot',
-        allow: '/',
         disallow: [
           '/thank-you/',
           '/api/',
-          '/*?*',
-          '/*&*',
         ],
       },
       {
         userAgent: '*',
-        allow: '/',
         disallow: [
           '/thank-you/',
           '/api/',
-          '/*?*',
-          '/*&*',
         ],
       },
     ],
