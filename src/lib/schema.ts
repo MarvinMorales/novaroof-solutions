@@ -16,7 +16,7 @@ export const generateOrganizationSchema = () => {
         "@type": "Organization",
         "name": "NovaRoof Solutions",
         "url": "https://www.novaroofsolutions.com",
-        "logo": "https://www.novaroofsolutions.com/logo.png", // Placeholder
+        "logo": "https://www.novaroofsolutions.com/icon.svg",
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-562-317-7925",

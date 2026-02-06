@@ -1,4 +1,3 @@
-"use server";
 
 // This file is intentionally left mostly empty.
 // Form submissions are now handled client-side in src/components/sections/contact.tsx
