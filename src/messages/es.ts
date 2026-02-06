@@ -64,7 +64,15 @@ export const messages = {
   Services: {
     'roof-replacement': {
       title: "Reemplazo de Techo",
-      description: "Ya sea que tu techo esté envejeciendo o tenga daños extensos, te conectamos con profesionales para reemplazos completos. Elige entre materiales de alta calidad como tejas de asfalto, metal duradero o tejas elegantes para una protección duradera."
+      description: "Ya sea que su techo esté envejeciendo o tenga daños extensos, lo conectamos con profesionales para reemplazos completos utilizando materiales de alta calidad para una protección duradera."
+    },
+    'new-roof-installation': {
+        title: "Instalación de Techo Nuevo",
+        description: "Para construcciones nuevas o ampliaciones de viviendas, encontramos techadores expertos que se especializan en instalar sistemas de techado completos desde cero, asegurando un resultado impecable."
+    },
+    'asphalt-shingle-roofing': {
+        title: "Techos de Tejas Asfálticas",
+        description: "Una opción popular, asequible y duradera. Encontramos profesionales expertos en instalar y reparar todo tipo de tejas asfálticas, tanto arquitectónicas como de 3 lengüetas."
     },
     'roof-repair': {
       title: "Reparación de Techo",
@@ -93,6 +101,14 @@ export const messages = {
     'metal-roofing': {
       title: "Techos de Metal",
       description: "Actualiza a un techo de metal duradero y de bajo consumo. Te conectamos con profesionales que se especializan en sistemas de costura alzada y otros sistemas metálicos para una apariencia moderna y protección duradera."
+    },
+    'storm-damage-roof': {
+        title: "Reparación de Daños por Tormenta",
+        description: "Después de una tormenta, necesita ayuda rápida y confiable. Lo conectamos con especialistas en daños por tormentas que pueden evaluar los daños, proporcionar lonas de emergencia y guiarlo a través del proceso del seguro."
+    },
+    'roof-vent-installation': {
+        title: "Instalación de Ventilación de Techo",
+        description: "La ventilación adecuada del ático es clave para la salud de su techo y la eficiencia energética de su hogar. Encontramos profesionales para servicios profesionales de instalación y reparación de ventilación de techo."
     }
   },
   FAQ: {
@@ -135,22 +151,32 @@ export const messages = {
         title: "Sobre NovaRoof Solutions",
         description: "Descubra cómo NovaRoof Solutions conecta a los propietarios de viviendas con los contratistas de techos mejor calificados, con licencia y asegurados en todo Estados Unidos."
     },
-    title: "Sobre NovaRoof Solutions",
-    subtitle: "Conectando a los propietarios de viviendas con los profesionales de techado más confiables de América.",
-    missionTitle: "Nuestra Misión",
-    missionText1: "Encontrar un contratista de techado confiable puede ser estresante, especialmente cuando tienes una fuga o daño por tormenta. NovaRoof Solutions se fundó para resolver este problema. No somos una empresa de techado; somos un servicio de marketing y referencia dedicado a facilitar que los propietarios se conecten con techadores locales preseleccionados y de alta calidad.",
-    missionText2: "Nuestra extensa red de contratistas con licencia y asegurados garantiza que, sin importar dónde te encuentres, puedas obtener rápidamente una cotización de un profesional calificado en quien puedas confiar. Nosotros hacemos la selección para que tú no tengas que hacerlo.",
-    howWeHelpTitle: "Cómo Ayudamos",
-    howWeHelpText: "Cerramos la brecha entre los propietarios necesitados y los techadores calificados listos para ayudar. Desde reparaciones menores hasta reemplazos completos y servicios de emergencia, nuestra plataforma simplifica el proceso, brindando tranquilidad y asegurando que tu hogar esté protegido por los mejores en el negocio.",
-    principlesTitle: "Nuestros Principios Fundamentales",
-    principlesSubtitle: "Los principios que guían nuestro servicio y nuestra red.",
-    value1Title: "Profesionales Verificados",
-    value1Desc: "Cada techador en nuestra red tiene licencia, está asegurado y tiene un historial comprobado de mano de obra de calidad.",
-    value2Title: "Velocidad y Eficiencia",
-    value2Desc: "Te conectamos rápidamente con contratistas disponibles en tu área, lo cual es crítico durante emergencias de techado.",
-    value3Title: "Transparencia Total",
-    value3Desc: "Creemos en un proceso claro y honesto. Obtén cotizaciones gratuitas y sin compromiso para que puedas tomar decisiones informadas.",
-    value4Title: "Enfoque en el Cliente",
-    value4Desc: "Nuestro objetivo es hacer que el proceso de encontrar un techador confiable sea lo más simple y libre de estrés posible para los propietarios de viviendas."
+    title: "Tu Socio en la Protección de Tu Hogar",
+    subtitle: "Creemos que cada propietario merece un techo seguro y confiable sin el estrés de encontrar un contratista de confianza.",
+    storyTitle: "Nuestra Historia: De la Frustración a la Solución",
+    storyText1: "NovaRoof Solutions nació de una frustración común: el proceso abrumador y a menudo incierto de encontrar un contratista de techado calificado. Después de ver a amigos y familiares luchar persiguiendo cotizaciones, verificando licencias y lidiando con compañías poco confiables, especialmente después de una tormenta cuando el tiempo es crítico, supimos que tenía que haber una mejor manera.",
+    storyText2: "Decidimos construir esa mejor manera. No somos techadores; somos expertos en tecnología y logística apasionados por la defensa del consumidor. Creamos una plataforma para cerrar la brecha, aprovechando una red nacional de profesionales de techado investigados y de alta calidad, y facilitando que los propietarios se conecten con ellos. Nuestra misión es reemplazar la ansiedad de la reparación del techo con la confianza de un trabajo bien hecho.",
+    visionTitle: "Nuestra Visión para el Futuro",
+    visionText: "Nuestro objetivo es convertirnos en el enlace más confiable y transparente entre los propietarios y la industria de servicios para el hogar. Comenzamos con el techado porque es uno de los componentes más críticos de una casa, pero nuestra visión se extiende a la creación de una experiencia fluida y confiable para todas las reparaciones y mejoras importantes del hogar.",
+    whyUsTitle: "¿Por Qué Elegir NovaRoof?",
+    whyUsText: "En un mercado saturado, nos destacamos por centrarnos en lo que más importa: confianza, velocidad y calidad. No somos solo un directorio; somos tu socio en el proceso.",
+    value1Title: "Proceso de Verificación Riguroso",
+    value1Desc: "No agregamos cualquier empresa a nuestra red. Cada contratista es examinado minuciosamente para verificar su licencia, cobertura de seguro completa y un historial comprobado de comentarios positivos de los clientes.",
+    value2Title: "Eficiencia y Velocidad",
+    value2Desc: "Cuando tu techo tiene una fuga, no tienes tiempo que perder. Nuestro sistema está diseñado para conectarte con un profesional local disponible en minutos, no en días.",
+    value3Title: "Enfoque Total en el Propietario",
+    value3Desc: "Nuestro servicio se centra en ti. Siempre es gratuito para los propietarios y nunca hay obligación de contratar. Te empoderamos para que tomes la mejor decisión para tu hogar.",
+    processTitle: "Nuestro Proceso Simple y Probado",
+    processSubtitle: "Hemos simplificado el proceso de encontrar un gran techador en cuatro sencillos pasos.",
+    processStep1Title: "Envía Tu Solicitud",
+    processStep1Desc: "Llena un formulario simple con los detalles de tu proyecto. Toma menos de un minuto.",
+    processStep2Title: "Conexión Instantánea",
+    processStep2Desc: "Nuestro sistema te conecta inmediatamente con un profesional de primera categoría y preseleccionado en tu área.",
+    processStep3Title: "Recibe Tu Cotización",
+    processStep3Desc: "El contratista te contacta para programar una inspección gratuita en el lugar y proporcionar un presupuesto sin compromiso.",
+    processStep4Title: "Trabajo Terminado",
+    processStep4Desc: "Contratas al contratista en el que confías. Ellos completan el trabajo y tu hogar está protegido. Así de simple."
   }
 };
+
+    

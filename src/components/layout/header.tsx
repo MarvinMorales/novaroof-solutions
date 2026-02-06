@@ -19,15 +19,18 @@ import { LanguageSwitcher } from './language-switcher';
 
 
 const services = [
-    { href: `/service/roof-repair/`, label: 'Roof Repair', slug: 'roof-repair' },
-    { href: `/service/roof-replacement/`, label: 'Roof Replacement', slug: 'roof-replacement' },
-    { href: `/service/emergency-roof-repair/`, label: 'Emergency Repair', slug: 'emergency-roof-repair' },
-    { href: `/service/storm-damage-roof/`, label: 'Storm Damage', slug: 'storm-damage-roof' },
-    { href: `/service/hail-damage-roof-repair/`, label: 'Hail Damage Repair', slug: 'hail-damage-roof-repair' },
-    { href: `/service/roof-leak-repair/`, label: 'Roof Leak Repair', slug: 'roof-leak-repair' },
-    { href: `/service/roof-inspection/`, label: 'Roof Inspection', slug: 'roof-inspection' },
-    { href: `/service/gutter-services/`, label: 'Gutter Services', slug: 'gutter-services' },
-    { href: `/service/metal-roofing/`, label: 'Metal Roofing', slug: 'metal-roofing' },
+    { slug: 'new-roof-installation' },
+    { slug: 'roof-replacement' },
+    { slug: 'asphalt-shingle-roofing' },
+    { slug: 'metal-roofing' },
+    { slug: 'roof-repair' },
+    { slug: 'emergency-roof-repair' },
+    { slug: 'storm-damage-roof' },
+    { slug: 'hail-damage-roof-repair' },
+    { slug: 'roof-leak-repair' },
+    { slug: 'roof-inspection' },
+    { slug: 'gutter-services' },
+    { slug: 'roof-vent-installation' },
 ];
 
 
@@ -93,8 +96,8 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {services.map(service => (
-                    <DropdownMenuItem key={service.href} asChild>
-                        <Link href={service.href}>{t(`Services.${service.slug}.title`)}</Link>
+                    <DropdownMenuItem key={service.slug} asChild>
+                        <Link href={`/service/${service.slug}/`}>{t(`Services.${service.slug}.title`)}</Link>
                     </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -127,7 +130,7 @@ export function Header() {
                   <span className="font-headline text-lg">NovaRoof Solutions</span>
                 </Link>
                 <nav className="flex flex-col gap-4">
-                  {[...navLinks, ...services].map((link) => (
+                  {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
@@ -137,9 +140,21 @@ export function Header() {
                          isLinkActive(link.href) ? 'text-primary' : 'text-foreground'
                       )}
                     >
-                      {link.label in t('Services') ? t(`Services.${link.slug}.title`) : link.label}
+                      {link.label}
                     </Link>
                   ))}
+                  <div className="pl-4 border-l-2 border-primary/50 flex flex-col gap-4 pt-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/service/${service.slug}/`}
+                        onClick={() => setSheetOpen(false)}
+                        className="text-lg font-medium transition-colors hover:text-primary text-foreground"
+                      >
+                        {t(`Services.${service.slug}.title`)}
+                      </Link>
+                    ))}
+                  </div>
                 </nav>
                  <Button asChild size="lg" className="mt-4" variant="outline">
                     <a href="tel:5623177925" onClick={() => { handleCallClick(); setSheetOpen(false); }}>

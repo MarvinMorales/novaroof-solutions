@@ -115,6 +115,22 @@ export const services = [
         imageId: "service-shingle"
     },
     {
+        slug: "new-roof-installation",
+        name: "New Roof Installation",
+        title: "New Roof Installation",
+        h1: "New Roof Installation",
+        description: "Planning a new construction or adding an extension in {city}, {state}? We connect you with expert roofers who specialize in new roof installations from the ground up, ensuring a flawless and durable result.",
+        imageId: "solution-new-shingles"
+    },
+    {
+        slug: "asphalt-shingle-roofing",
+        name: "Asphalt Shingle Roofing",
+        title: "Asphalt Shingle Roofing",
+        h1: "Asphalt Shingle Roofing",
+        description: "Asphalt shingles are a popular, affordable, and durable choice. We connect you with pros in {city}, {state} who are experts in installing and repairing all types of architectural and 3-tab shingles.",
+        imageId: "service-shingle"
+    },
+    {
         slug: "emergency-roof-repair",
         name: "Emergency Roof Repair",
         title: "Emergency Roof Repair",
@@ -169,6 +185,14 @@ export const services = [
         h1: "Metal Roofing Services",
         description: "Upgrade to a durable, energy-efficient metal roof in {city}, {state}. We connect you with specialists in standing seam and other metal roofing systems. Get a long-lasting solution with a free quote.",
         imageId: "service-metal"
+    },
+    {
+        slug: "roof-vent-installation",
+        name: "Roof Vent Installation",
+        title: "Roof Vent Installation",
+        h1: "Roof Vent Installation",
+        description: "Proper attic ventilation is key to your roof's health and your home's energy efficiency. We connect you with pros in {city}, {state} for professional roof vent installation and repair services.",
+        imageId: "service-vent"
     }
 ];
 
@@ -181,4 +205,5 @@ export const getNearbyCities = (currentState: string, currentCity: string): Loca
 export const getServiceBySlug = (slug: string) => services.find(s => s.slug === slug);
 export const getLocationBySlug = (slug: string) => locations.find(l => l.slug === slug);
 
+    
     

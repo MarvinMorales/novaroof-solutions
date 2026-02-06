@@ -135,6 +135,24 @@ const getFaqs = (city: string, serviceSlug: string) => {
             { question: `Is a metal roof noisy when it rains?`, answer: `This is a common myth. When installed over a solid roof deck with proper insulation, a metal roof is no noisier during a rainstorm than a shingle roof.` },
             { question: "Can you install a metal roof over existing shingles?", answer: "In some cases, yes, which can save on labor costs for tearing off the old roof. However, a full tear-off is often recommended to allow for inspection of the underlying roof deck for any damage." },
             { question: `How much more does a metal roof cost than shingles?`, answer: `Initially, a metal roof can cost two to three times more than an asphalt shingle roof. However, its long lifespan, durability, and energy savings often make it a more cost-effective choice over the life of your home.` }
+        ],
+        'new-roof-installation': [
+            { question: `What is the process for a new roof installation in ${city}?`, answer: `The process in ${city} typically involves a site assessment, material selection, tear-off of any existing structure (if applicable), decking inspection, installation of underlayment and new roofing material, and a final cleanup. A professional will handle all necessary permits.` },
+            { question: `How long does a new roof installation take?`, answer: `For a new construction project, the roofing phase for an average-sized home can take between 2 to 5 days, depending on the complexity, materials used, and weather conditions in ${city}.` },
+            { question: `What materials are best for a new roof in ${city}?`, answer: `The best materials depend on your budget, desired aesthetic, and local climate. Asphalt shingles are a popular and cost-effective choice. Metal roofing offers superior durability and energy efficiency, which is great for ${city}'s weather. Our network pros can walk you through the options.` },
+            { question: `Do I need a permit for a new roof installation in ${city}?`, answer: `Yes, in almost all cases, a building permit is required for a new roof installation in ${city}. The professional contractor you hire will be responsible for securing the permit and ensuring the installation meets all local building codes.` },
+        ],
+        'asphalt-shingle-roofing': [
+            { question: `What are the advantages of asphalt shingles in ${city}?`, answer: `Asphalt shingles are popular in ${city} because they offer a great balance of affordability, durability, and style. They come in a wide variety of colors and designs, are easy to repair, and can last for 20-30 years with proper maintenance.` },
+            { question: `What is the difference between 3-tab and architectural shingles?`, answer: `3-tab shingles are flat, single-layer shingles that provide a basic, uniform look. Architectural (or dimensional) shingles are thicker, multi-layered, and create a more textured, high-end appearance. They are also more durable and often come with longer warranties.` },
+            { question: `How do I know when my asphalt shingles need replacing?`, answer: `Look for shingles that are cracking, curling at the edges, or have significant granule loss (you'll see a lot of black sand-like material in your gutters). An inspection can determine if you need a full replacement or just a repair.` },
+            { question: `Can you install asphalt shingles in any weather in ${city}?`, answer: `Roofers avoid installing shingles in extreme cold, as the shingles can become brittle and their sealant strips won't activate properly. They also avoid installation during rain. The pros in ${city} will schedule work during appropriate weather conditions.` },
+        ],
+        'roof-vent-installation': [
+            { question: `Why is attic ventilation important in ${city}?`, answer: `Proper ventilation in ${city} helps regulate your attic's temperature. In summer, it expels hot air, reducing the load on your AC. In winter, it prevents warm, moist air from causing condensation and mold. It is crucial for both energy efficiency and the longevity of your roof structure.` },
+            { question: `What are the different types of roof vents?`, answer: `There are several types, including ridge vents (along the peak), soffit vents (for intake), gable vents, and powered or solar-powered vents. A professional can determine the best combination for a balanced system for your home.` },
+            { question: `Can adding more vents lower my energy bills?`, answer: `Yes, if your attic is currently under-ventilated. By reducing heat buildup in the summer and moisture in the winter, a properly balanced ventilation system can make your home more comfortable and reduce HVAC costs.` },
+            { question: `How much does it cost to install a roof vent in ${city}?`, answer: `The cost can vary widely depending on the type of vent and the complexity of the installation. A simple static vent might cost a few hundred dollars, while a solar-powered vent could be more. A contractor can provide a specific quote after an assessment.` },
         ]
     };
     return allFaqs[serviceSlug as keyof typeof allFaqs] || [];
@@ -188,4 +206,5 @@ export default function Page({ params }: { params: { locationSlug: string, servi
   );
 }
 
+    
     

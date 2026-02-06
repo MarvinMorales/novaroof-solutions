@@ -176,7 +176,7 @@
   {
     "id": "process-storm-insurance-meet",
     "description": "A roofer discussing an insurance claim with a homeowner, reviewing documents.",
-    "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1080&auto=format&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1554224155-8d044b4082e8?q=80&w=800&auto=format&fit=crop",
     "imageHint": "insurance claim"
   },
   {
@@ -244,5 +244,11 @@
     "description": "Close-up of a worker installing the final metal trim and flashing on a metal roof.",
     "imageUrl": "https://images.unsplash.com/photo-1629824959524-e5a31b46327c?q=80&w=800&auto=format&fit=crop",
     "imageHint": "metal roof trim"
+  },
+  {
+    "id": "service-vent",
+    "description": "A turbine roof vent installed on a shingle roof, helping to ventilate the attic.",
+    "imageUrl": "https://images.unsplash.com/photo-1572260621238-c6753597c276?q=80&w=800&auto=format&fit=crop",
+    "imageHint": "roof vent"
   }
 ]

@@ -2,28 +2,30 @@
 
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ShieldCheck, TrendingUp, Users } from 'lucide-react';
 import Head from 'next/head';
 import { useTranslation } from '@/hooks/use-translation';
+import { Hero } from '@/components/sections/hero';
 
 const aboutImage = PlaceHolderImages.find(img => img.id === 'about-us-team');
+const whyUsImage = PlaceHolderImages.find(img => img.id === 'process-final-cleanup');
+
 
 const values = [
   {
+    icon: ShieldCheck,
     titleKey: 'value1Title',
     descriptionKey: 'value1Desc'
   },
   {
+    icon: TrendingUp,
     titleKey: 'value2Title',
     descriptionKey: 'value2Desc'
   },
   {
+    icon: Users,
     titleKey: 'value3Title',
     descriptionKey: 'value3Desc'
-  },
-  {
-    titleKey: 'value4Title',
-    descriptionKey: 'value4Desc'
   }
 ];
 
@@ -49,26 +51,23 @@ export default function AboutPage() {
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
       <div className="bg-background">
-        <section className="container py-16 md:py-24 text-center">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter">{t('AboutPage.title')}</h1>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            {t('AboutPage.subtitle')}
-          </p>
-        </section>
+        <Hero
+            h1={t('AboutPage.title')}
+            subheading={t('AboutPage.subtitle')}
+            size="small"
+            showButtons={false}
+            variant="solid"
+        />
 
-        <section className="container pb-16 md:pb-24">
+        <section className="container py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="font-headline text-3xl font-semibold">{t('AboutPage.missionTitle')}</h2>
+              <h2 className="font-headline text-3xl font-semibold tracking-tighter">{t('AboutPage.storyTitle')}</h2>
               <p className="text-muted-foreground">
-                {t('AboutPage.missionText1')}
+                {t('AboutPage.storyText1')}
               </p>
               <p className="text-muted-foreground">
-                {t('AboutPage.missionText2')}
-              </p>
-              <h2 className="font-headline text-3xl font-semibold mt-8">{t('AboutPage.howWeHelpTitle')}</h2>
-              <p className="text-muted-foreground">
-                {t('AboutPage.howWeHelpText')}
+                {t('AboutPage.storyText2')}
               </p>
             </div>
             <div>
@@ -86,22 +85,69 @@ export default function AboutPage() {
           </div>
         </section>
         
-        <section className="bg-card">
+        <section className="bg-muted/50">
+            <div className="container py-16 md:py-24">
+                <div className="max-w-3xl mx-auto text-center">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold tracking-tighter">{t('AboutPage.visionTitle')}</h2>
+                <p className="mt-4 text-lg text-muted-foreground">
+                    {t('AboutPage.visionText')}
+                </p>
+                </div>
+            </div>
+        </section>
+
+        <section className="container py-16 md:py-24">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+             <div className="md:order-2">
+                <h2 className="font-headline text-3xl font-semibold tracking-tighter">{t('AboutPage.whyUsTitle')}</h2>
+                <p className="mt-4 text-muted-foreground">
+                    {t('AboutPage.whyUsText')}
+                </p>
+                <div className="mt-6 space-y-4">
+                    {values.map((value) => (
+                        <div key={value.titleKey} className="flex items-start gap-4">
+                            <div className="flex-shrink-0 mt-1">
+                                <value.icon className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                                <h3 className="font-semibold">{t(`AboutPage.${value.titleKey}`)}</h3>
+                                <p className="text-muted-foreground text-sm">{t(`AboutPage.${value.descriptionKey}`)}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="md:order-1">
+              {whyUsImage && (
+                <Image
+                  src={whyUsImage.imageUrl}
+                  alt={whyUsImage.description}
+                  data-ai-hint={whyUsImage.imageHint}
+                  width={800}
+                  height={600}
+                  className="rounded-lg shadow-lg object-cover aspect-[4/3]"
+                />
+              )}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-muted/50">
           <div className="container py-16 md:py-24">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="font-headline text-3xl md:text-4xl font-bold">{t('AboutPage.principlesTitle')}</h2>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">{t('AboutPage.processTitle')}</h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                {t('AboutPage.principlesSubtitle')}
+                {t('AboutPage.processSubtitle')}
               </p>
             </div>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value) => (
-                <div key={value.titleKey} className="text-center">
-                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground mb-4">
-                    <CheckCircle className="h-6 w-6" />
+              {Array.from({ length: 4 }).map((_, index) => (
+                <div key={index} className="text-center">
+                  <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mb-4 font-bold text-2xl">
+                    {index + 1}
                   </div>
-                  <h3 className="font-headline text-xl font-semibold">{t(`AboutPage.${value.titleKey}`)}</h3>
-                  <p className="mt-2 text-muted-foreground text-sm">{t(`AboutPage.${value.descriptionKey}`)}</p>
+                  <h3 className="font-headline text-xl font-semibold">{t(`AboutPage.processStep${index + 1}Title`)}</h3>
+                  <p className="mt-2 text-muted-foreground text-sm">{t(`AboutPage.processStep${index + 1}Desc`)}</p>
                 </div>
               ))}
             </div>
@@ -111,3 +157,5 @@ export default function AboutPage() {
     </>
   );
 }
+
+    

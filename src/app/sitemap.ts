@@ -12,9 +12,12 @@ const priorityMap: Record<string, number> = {
   'roof-leak-repair': 0.9,
   'roof-repair': 0.8,
   'roof-replacement': 0.7,
+  'new-roof-installation': 0.7,
+  'asphalt-shingle-roofing': 0.6,
+  'metal-roofing': 0.7,
   'roof-inspection': 0.7,
   'gutter-services': 0.6,
-  'metal-roofing': 0.7,
+  'roof-vent-installation': 0.5,
 };
 
 const changeFreqMap: Record<
@@ -27,9 +30,12 @@ const changeFreqMap: Record<
   'roof-leak-repair': 'monthly',
   'roof-repair': 'monthly',
   'roof-replacement': 'yearly',
+  'new-roof-installation': 'yearly',
+  'asphalt-shingle-roofing': 'yearly',
+  'metal-roofing': 'yearly',
   'roof-inspection': 'monthly',
   'gutter-services': 'monthly',
-  'metal-roofing': 'yearly',
+  'roof-vent-installation': 'yearly',
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -83,4 +89,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [...staticPages, ...locationPages, ...servicePages, ...legalPages];
 }
 
+    
     

@@ -204,8 +204,40 @@ const processData: Record<string, { title: string, intro: string, steps: Process
       },
     ],
   },
+  'roof-vent-installation': {
+    title: 'The Roof Vent Installation Process',
+    intro: 'Proper attic ventilation is crucial for extending your roof\'s life and improving energy efficiency. Here’s how the pros in our network handle roof vent installation.',
+    steps: [
+      {
+        step: 1,
+        title: 'Ventilation Assessment',
+        description: 'A pro will first calculate your attic\'s required airflow based on its square footage. They determine the best type (ridge, soffit, gable, or powered vents) and placement to create a balanced intake and exhaust system.',
+        imageId: 'process-inspection-report',
+      },
+      {
+        step: 2,
+        title: 'Precise Cutting & Opening',
+        description: 'Using exact measurements, the roofer cuts the opening for the new vent through the shingles and roof decking. They take care to avoid structural trusses and electrical wiring, ensuring a clean and safe installation.',
+        imageId: 'process-deck-inspection',
+      },
+      {
+        step: 3,
+        title: 'Secure Installation & Sealing',
+        description: 'The new vent is placed into the opening and securely fastened to the roof deck. A generous amount of professional-grade roofing sealant is applied under the vent\'s flange to create a primary waterproof barrier.',
+        imageId: 'solution-leak-repair',
+      },
+      {
+        step: 4,
+        title: 'Final Flashing & Weatherproofing',
+        description: 'The roofer integrates the vent with the existing shingles, ensuring water is shed correctly around and over the vent. This critical step prevents any leaks and ensures the vent is fully weatherproofed for long-term performance.',
+        imageId: 'process-flashing-install',
+      }
+    ]
+  }
 };
 
+processData['new-roof-installation'] = processData['roof-replacement'];
+processData['asphalt-shingle-roofing'] = processData['roof-replacement'];
 processData['hail-damage-roof-repair'] = {
   title: 'The Hail Damage Repair Process: From Inspection to Restoration',
   intro: 'Hail damage can be subtle but destructive. The professionals in our network follow a meticulous process to ensure all damage is found, documented, and properly repaired, restoring the integrity of your roof.',
@@ -290,3 +322,5 @@ export function ServiceProcess({ serviceSlug }: { serviceSlug: string }) {
     </section>
   );
 }
+
+    

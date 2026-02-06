@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Wrench, Home, ShieldCheck, Droplets, Zap, Eye, Mountain, ShieldAlert } from "lucide-react";
+import { Wrench, Home, ShieldCheck, Droplets, Zap, Eye, Mountain, ShieldAlert, Wind, Hammer, Award } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
@@ -10,10 +10,16 @@ import { useTranslation } from "@/hooks/use-translation";
 
 const servicesData = [
     {
+        icon: <Hammer />,
+        titleKey: "new-roof-installation",
+        imageId: "solution-new-shingles",
+        slug: "new-roof-installation"
+    },
+    {
         icon: <Home />,
-        titleKey: "roof-replacement",
+        titleKey: "asphalt-shingle-roofing",
         imageId: "service-shingle",
-        slug: "roof-replacement"
+        slug: "asphalt-shingle-roofing"
     },
     {
         icon: <Wrench />,
@@ -57,6 +63,18 @@ const servicesData = [
         imageId: "service-metal",
         slug: "metal-roofing"
     },
+    {
+        icon: <Award />,
+        titleKey: "roof-replacement",
+        imageId: "solution-cool-roof",
+        slug: "roof-replacement"
+    },
+    {
+        icon: <Wind />,
+        titleKey: "roof-vent-installation",
+        imageId: "service-vent",
+        slug: "roof-vent-installation"
+    },
 ];
 
 const getImage = (id: string) => PlaceHolderImages.find(p => p.id === id);
@@ -94,8 +112,8 @@ export function Services({ locationSlug, title, excludeSlug }: ServicesProps) {
                     {servicesToDisplay.map((service) => {
                         const image = getImage(service.imageId);
                         const link = locationSlug ? `/${locationSlug}/${service.slug}/` : `/service/${service.slug}/`;
-                        const serviceTitle = t(`Services.${service.titleKey}.title`);
-                        const serviceDescription = t(`Services.${service.titleKey}.description`);
+                        const serviceTitle = t(`Services.${service.slug as 'roof-repair'}.title`);
+                        const serviceDescription = t(`Services.${service.slug as 'roof-repair'}.description`);
 
                         return (
                             <Card key={service.titleKey} className="flex flex-col overflow-hidden group transition-shadow duration-300 w-full hover:shadow-xl bg-card">
