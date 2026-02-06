@@ -1,14 +1,34 @@
 import { MetadataRoute } from 'next';
 
-const URL = 'https://www.novaroofsolutions.com';
+const BASE_URL = 'https://www.novaroofsolutions.com';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/thank-you'],
-    },
-    sitemap: `${URL}/sitemap.xml`,
+    rules: [
+      // 🔎 GOOGLEBOT (prioridad SEO)
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: [
+          '/thank-you',
+          '/api',
+          '/*?*',          // bloquea parámetros
+          '/*&*',
+        ],
+      },
+
+      // 🤖 OTROS BOTS
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/thank-you',
+          '/api',
+          '/*?*',
+          '/*&*',
+        ],
+      },
+    ],
+    sitemap: `${BASE_URL}/sitemap.xml`,
   };
 }
