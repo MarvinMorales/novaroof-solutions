@@ -206,6 +206,36 @@ const processData: Record<string, { title: string, intro: string, steps: Process
   },
 };
 
+processData['hail-damage-roof-repair'] = {
+  title: 'The Hail Damage Repair Process: From Inspection to Restoration',
+  intro: 'Hail damage can be subtle but destructive. The professionals in our network follow a meticulous process to ensure all damage is found, documented, and properly repaired, restoring the integrity of your roof.',
+  steps: [
+    {
+      step: 1,
+      title: 'Detailed Hail Damage Inspection',
+      description: 'The process starts with a comprehensive inspection. A specialist will get on your roof to identify all signs of hail impact, including bruises, cracks, and granule loss on shingles, as well as dents on vents, flashing, and gutters.',
+      imageId: 'process-repair-inspection',
+    },
+    {
+      step: 2,
+      title: 'Thorough Insurance Documentation',
+      description: 'The contractor will meticulously document all findings with high-resolution photos and a detailed report. This evidence is essential for filing a successful homeowner\'s insurance claim and ensuring the adjuster approves the full scope of necessary repairs.',
+      imageId: 'process-storm-documentation',
+    },
+    {
+      step: 3,
+      title: 'Insurance Claim Management',
+      description: 'Experienced contractors will meet with your insurance adjuster on-site to walk them through the damage, ensuring nothing is missed. They advocate on your behalf to get the necessary repairs or full replacement covered.',
+      imageId: 'process-storm-insurance-meet',
+    },
+    {
+      step: 4,
+      title: 'Full Restoration & Upgrade Options',
+      description: 'Once the claim is approved, the crew performs a complete restoration. This is also the perfect time to consider upgrading to Class 4 impact-resistant shingles, which can prevent future damage and lower your insurance premiums.',
+      imageId: 'solution-new-shingles',
+    },
+  ],
+};
 processData['roof-leak-repair'] = processData['roof-repair'];
 processData['storm-damage-roof'] = processData['emergency-roof-repair'];
 
@@ -260,5 +290,3 @@ export function ServiceProcess({ serviceSlug }: { serviceSlug: string }) {
     </section>
   );
 }
-
-    

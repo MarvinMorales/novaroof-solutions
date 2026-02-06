@@ -23,6 +23,7 @@ const services = [
     { href: `/service/roof-replacement/`, label: 'Roof Replacement', slug: 'roof-replacement' },
     { href: `/service/emergency-roof-repair/`, label: 'Emergency Repair', slug: 'emergency-roof-repair' },
     { href: `/service/storm-damage-roof/`, label: 'Storm Damage', slug: 'storm-damage-roof' },
+    { href: `/service/hail-damage-roof-repair/`, label: 'Hail Damage Repair', slug: 'hail-damage-roof-repair' },
     { href: `/service/roof-leak-repair/`, label: 'Roof Leak Repair', slug: 'roof-leak-repair' },
     { href: `/service/roof-inspection/`, label: 'Roof Inspection', slug: 'roof-inspection' },
     { href: `/service/gutter-services/`, label: 'Gutter Services', slug: 'gutter-services' },

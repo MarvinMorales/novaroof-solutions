@@ -98,6 +98,24 @@ export const testimonialsData: Testimonial[] = [
         comment: "We're new to Dallas and wanted to know the condition of our roof before hail season. The inspector they found was incredibly thorough and gave us a detailed report. Great for peace of mind.",
         rating: 5,
     },
+    {
+        id: 32,
+        name: "Mark T.",
+        city: "Denver",
+        stateCode: "CO",
+        serviceSlug: "hail-damage-roof-repair",
+        comment: "After a major hailstorm, our roof was dented everywhere. The service found us a local Denver crew that was amazing. They documented everything for our insurance and installed impact-resistant shingles. Great experience.",
+        rating: 5,
+    },
+    {
+        id: 33,
+        name: "Brenda J.",
+        city: "Fort Worth",
+        stateCode: "TX",
+        serviceSlug: "hail-damage-roof-repair",
+        comment: "I didn't think the hail was that bad, but the free inspection they arranged found a ton of hidden damage. The Fort Worth contractor they connected us with fixed it fast and helped with the insurance process.",
+        rating: 5,
+    },
 
     // Phoenix, AZ
     {

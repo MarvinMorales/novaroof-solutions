@@ -74,6 +74,10 @@ export const messages = {
       title: "Emergencia y Daño por Tormenta",
       description: "Cuando ocurre un desastre, una respuesta rápida es crítica. Brindamos acceso a servicios de emergencia 24/7 para reparaciones urgentes después de tormentas, granizo o vientos fuertes para asegurar tu hogar y prevenir más daños."
     },
+    'hail-damage-roof-repair': {
+      title: "Reparación de Daños por Granizo",
+      description: "Especializados en identificar y reparar daños por granizo. Nuestra red de profesionales ayuda con los reclamos de seguros y puede instalar tejas resistentes a impactos para protección futura."
+    },
     'roof-inspection': {
       title: "Inspección de Techo",
       description: "Obtén una evaluación profesional del estado de tu techo. Te conectamos con expertos que pueden identificar problemas potenciales, estimar la vida útil restante y documentar daños para reclamos de seguros."

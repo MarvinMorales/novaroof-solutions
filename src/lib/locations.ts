@@ -131,6 +131,14 @@ export const services = [
         imageId: "service-storm"
     },
     {
+        slug: "hail-damage-roof-repair",
+        name: "Hail Damage Roof Repair",
+        title: "Hail Damage Roof Repair",
+        h1: "Hail Damage Roof Repair",
+        description: "Expert hail damage roof repair in {city}, {state}. Our network of roofers specializes in identifying and repairing hail damage to protect your home. We help with insurance claims. Get a free inspection.",
+        imageId: "problem-hail-damage"
+    },
+    {
         slug: "roof-leak-repair",
         name: "Roof Leak Repair",
         title: "Roof Leak Repair",

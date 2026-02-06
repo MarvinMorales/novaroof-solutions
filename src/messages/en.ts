@@ -74,6 +74,10 @@ export const messages = {
       title: "Emergency & Storm Damage",
       description: "When disaster strikes, a fast response is critical. We provide access to 24/7 emergency services for urgent repairs after storms, hail, or high winds to secure your home and prevent further damage."
     },
+    'hail-damage-roof-repair': {
+      title: "Hail Damage Repair",
+      description: "Specialized in identifying and repairing hail damage. Our network of pros helps with insurance claims and can upgrade you to impact-resistant shingles for future protection."
+    },
     'roof-inspection': {
       title: "Roof Inspection",
       description: "Get a professional assessment of your roof's condition. We connect you with experts who can identify potential issues, estimate remaining lifespan, and document damage for insurance claims."

@@ -90,4 +90,15 @@ export const commonRiskToProblemKey: Record<string, keyof typeof localProblemsMa
     "sudden downpours": "rain",
 };
 
+const serviceToRelevantProblems: Record<string, string[]> = {
+    'roof-repair': ['hail', 'wind', 'sun', 'rain'],
+    'roof-leak-repair': ['rain', 'hail', 'wind'],
+    'roof-replacement': ['sun', 'hail', 'wind'],
+    'emergency-roof-repair': ['wind', 'hail', 'rain'],
+    'storm-damage-roof': ['wind', 'hail', 'rain'],
+    'hail-damage-roof-repair': ['hail'],
+    'roof-inspection': ['hail', 'wind', 'sun', 'rain'],
+    'metal-roofing': ['sun', 'wind', 'hail'],
+};
     
+

@@ -8,6 +8,7 @@ const URL = 'https://www.novaroofsolutions.com';
 const priorityMap: Record<string, number> = {
   'emergency-roof-repair': 1.0,
   'storm-damage-roof': 0.9,
+  'hail-damage-roof-repair': 0.9,
   'roof-leak-repair': 0.9,
   'roof-repair': 0.8,
   'roof-replacement': 0.7,
@@ -22,6 +23,7 @@ const changeFreqMap: Record<
 > = {
   'emergency-roof-repair': 'weekly',
   'storm-damage-roof': 'weekly',
+  'hail-damage-roof-repair': 'weekly',
   'roof-leak-repair': 'monthly',
   'roof-repair': 'monthly',
   'roof-replacement': 'yearly',
