@@ -2,7 +2,7 @@
   {
     "id": "hero-default",
     "description": "A beautiful modern house with a perfectly installed new roof.",
-    "imageUrl": "https://images.unsplash.com/photo-1605146769289-440113cc3d00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob3VzZXxlbnwwfHx8fDE3NjU0MDgwNTV8MA&ixlib=rb-4.1.0&q=80&w=1200",
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3JtJTIwaG91c2V8ZW58MHx8fHwxNzE3NzgwNTM2fDA&ixlib=rb-4.1.0&q=80&w=1200",
     "imageHint": "modern house"
   },
   {
@@ -32,7 +32,7 @@
   {
     "id": "service-gutter",
     "description": "Clean, new white rain gutters installed perfectly along the edge of a house.",
-    "imageUrl": "https://images.unsplash.com/photo-1604018269288-433a0179979b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyYWluJTIwZ3V0dGVyfGVufDB8fHx8MTc2NTU0NDMyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageUrl": "https://images.unsplash.com/photo-1604018269288-433a0179979b?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "rain gutter"
   },
   {
@@ -68,7 +68,7 @@
   {
     "id": "problem-wind-damage",
     "description": "A section of a roof where high winds have torn off several asphalt shingles, exposing the underlayment.",
-    "imageUrl": "https://images.unsplash.com/photo-1603697143444-2ab913b82a3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aW5kJTIwZGFtYWdlJTIwcm9vZnxlbnwwfHx8fDE3NjU1NDQ2ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageUrl": "https://images.unsplash.com/photo-1542054234853-e5c9a9f45143?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "wind damage"
   },
   {
@@ -92,7 +92,7 @@
   {
     "id": "problem-leak-damage",
     "description": "A large, brown water stain on a white ceiling, indicating a significant roof leak.",
-    "imageUrl": "https://images.unsplash.com/photo-1617013835694-1e7d8b54992c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3YXRlciUyMGRhbWFnZSUyMGNlaWxpbmd8ZW58MHx8fHwxNzY1NTQ0OTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageUrl": "https://images.unsplash.com/photo-1601131498642-72010f911a37?q=80&w=1080&auto=format&fit=crop",
     "imageHint": "ceiling leak"
   },
   {
@@ -116,7 +116,7 @@
   {
     "id": "process-underlayment",
     "description": "A roofer rolling out new black synthetic underlayment on a clean roof deck, providing a water-resistant barrier.",
-    "imageUrl": "https://images.unsplash.com/photo-1599015953935-433a7a99c922?q=80&w=1080&auto=format&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1629824959495-2234c9c1b827?q=80&w=800&auto=format&fit=crop",
     "imageHint": "roof underlayment"
   },
   {
@@ -176,7 +176,7 @@
   {
     "id": "process-storm-insurance-meet",
     "description": "A roofer discussing an insurance claim with a homeowner, reviewing documents.",
-    "imageUrl": "https://images.unsplash.com/photo-1554224155-8d044b4082e8?q=80&w=800&auto=format&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=800&auto=format&fit=crop",
     "imageHint": "insurance claim"
   },
   {
