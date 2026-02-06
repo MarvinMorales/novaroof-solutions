@@ -30,7 +30,7 @@ export function HowItWorks() {
     ]
 
     return (
-        <section id="how-it-works" className="w-full py-16 md:py-24">
+        <section id="how-it-works" className="w-full py-20 md:py-28">
             <div className="container">
                 <div className="max-w-3xl mx-auto text-center">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">{t('HowItWorks.title')}</h2>

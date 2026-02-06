@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 const BASE_URL = 'https://www.novaroofsolutions.com';
 
-// Prioridad REAL (solo dinero)
+// 🔥 Prioridad basada en intención comercial real
 const priorityMap: Record<string, number> = {
   'emergency-roof-repair': 1.0,
   'storm-damage-roof': 0.9,
@@ -40,12 +40,12 @@ const changeFreqMap: Record<
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // 🔥 PÁGINAS PRINCIPALES: /location/service
+  // 🔥 /location/service (páginas que generan dinero)
   const servicePages: MetadataRoute.Sitemap = locations.flatMap((location) =>
     services
       .filter((service) => priorityMap[service.slug])
       .map((service) => ({
-        url: `${BASE_URL}/${location.slug}/${service.slug}`,
+        url: `${BASE_URL}/${location.slug}/${service.slug}/`,
         lastModified: location.updatedAt
           ? new Date(location.updatedAt)
           : new Date('2025-01-01'),
@@ -54,9 +54,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
   );
 
-  // 🏙️ PÁGINAS DE CIUDAD (hub, NO competir)
+  // 🏙️ /location (hub pages)
   const locationPages: MetadataRoute.Sitemap = locations.map((location) => ({
-    url: `${BASE_URL}/${location.slug}`,
+    url: `${BASE_URL}/${location.slug}/`,
     lastModified: location.updatedAt
       ? new Date(location.updatedAt)
       : new Date('2025-01-01'),
@@ -64,22 +64,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  // 🏠 PÁGINAS ESTÁTICAS IMPORTANTES
+  // 🏠 Páginas estáticas clave
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: BASE_URL,
+      url: `${BASE_URL}/`,
       lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: `${BASE_URL}/about`,
+      url: `${BASE_URL}/about/`,
       lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',
       priority: 0.4,
     },
     {
-      url: `${BASE_URL}/contact`,
+      url: `${BASE_URL}/contact/`,
       lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',
       priority: 0.6,
