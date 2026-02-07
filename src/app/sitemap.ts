@@ -8,7 +8,7 @@ const BASE_URL = 'https://www.novaroofsolutions.com';
 // Prioridad basada en intención comercial real
 const priorityMap: Record<string, number> = {
   'emergency-roof-repair': 1.0,
-  'storm-damage-roof': 0.9,
+  'storm-damage-repair': 0.9,
   'hail-damage-roof-repair': 0.9,
   'roof-leak-repair': 0.9,
   'roof-repair': 0.8,
@@ -26,7 +26,7 @@ const changeFreqMap: Record<
   MetadataRoute.Sitemap[number]['changeFrequency']
 > = {
   'emergency-roof-repair': 'weekly',
-  'storm-damage-roof': 'weekly',
+  'storm-damage-repair': 'weekly',
   'hail-damage-roof-repair': 'weekly',
   'roof-leak-repair': 'monthly',
   'roof-repair': 'monthly',
