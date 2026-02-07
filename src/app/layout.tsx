@@ -1,27 +1,22 @@
-
 import type { Metadata, Viewport } from 'next';
-import { Roboto } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/components/layout/header';
-import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
-import { WhatsAppButton } from '@/components/layout/whatsapp-button';
-import { VisitTracker } from '@/components/analytics/visit-tracker';
-import { Breadcrumbs } from '@/components/layout/breadcrumbs';
-import { I18nProvider } from '@/context/i18n-context';
+import { StickyCallButton } from '@/components/leadgen/StickyCallButton';
+import { MinimalFooter } from '@/components/leadgen/MinimalFooter';
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-roboto',
+  weight: ['400', '700', '900'],
+  variable: '--font-inter',
 });
 
 
 const APP_NAME = "NovaRoof Solutions";
-const APP_DEFAULT_TITLE = "NovaRoof Solutions - Connecting You With Trusted Local Roofers";
+const APP_DEFAULT_TITLE = "NovaRoof Solutions - 24/7 Emergency Roofing Contractors";
 const APP_TITLE_TEMPLATE = "%s | NovaRoof Solutions";
-const APP_DESCRIPTION = "We connect you with licensed and insured local roofing contractors for repair, replacement, and emergency services. Get a free, no-obligation quote today.";
+const APP_DESCRIPTION = "Get immediate quotes from licensed local roofing contractors for emergency repairs, storm damage, and replacements. Available 24/7. Call now for a free estimate.";
 
 
 export const metadata: Metadata = {
@@ -31,34 +26,6 @@ export const metadata: Metadata = {
     template: APP_TITLE_TEMPLATE,
   },
   description: APP_DESCRIPTION,
-  metadataBase: new URL('https://www.novaroofsolutions.com'),
-  manifest: "/manifest.json",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: APP_DEFAULT_TITLE,
-  },
-  formatDetection: {
-    telephone: false,
-  },
-  openGraph: {
-    type: "website",
-    siteName: APP_NAME,
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
-    },
-    description: APP_DESCRIPTION,
-  },
-  twitter: {
-    card: "summary",
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
-    },
-    description: APP_DESCRIPTION,
-  },
-  keywords: ['roofing contractors', 'roof repair', 'roof replacement', 'emergency roof repair', 'storm damage', 'local roofers'],
   robots: {
     index: true,
     follow: true,
@@ -76,17 +43,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("scroll-smooth", roboto.variable)}>
-      <body className="font-body antialiased flex flex-col min-h-screen">
-        <I18nProvider>
-          <Header />
-          <Breadcrumbs />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-          {/* <WhatsAppButton /> */}
-          <Toaster />
-          <VisitTracker />
-        </I18nProvider>
+    <html lang="en" className={cn("scroll-smooth", inter.variable)}>
+      <body className="font-body bg-background text-foreground antialiased">
+        <main className="flex-grow">{children}</main>
+        <MinimalFooter />
+        <StickyCallButton />
+        <Toaster />
       </body>
     </html>
   );
