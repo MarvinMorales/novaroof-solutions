@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { locations, services } from '@/lib/locations';
+import { locations, services } from '@/lib/data';
 
 export const dynamic = 'force-static';
 
@@ -45,43 +45,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter((service) => priorityMap[service.slug])
       .map((service) => ({
         url: `${BASE_URL}/${location.slug}/${service.slug}/`,
-        lastModified: location.updatedAt
-          ? new Date(location.updatedAt)
-          : new Date('2025-01-01'),
+        lastModified: new Date('2025-01-01'),
         changeFrequency: changeFreqMap[service.slug],
         priority: priorityMap[service.slug],
       }))
   );
-
-  const locationPages: MetadataRoute.Sitemap = locations.map((location) => ({
-    url: `${BASE_URL}/${location.slug}/`,
-    lastModified: location.updatedAt
-      ? new Date(location.updatedAt)
-      : new Date('2025-01-01'),
-    changeFrequency: 'monthly',
-    priority: 0.3,
-  }));
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}/`,
       lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',
-      priority: 1,
+      priority: 0.3,
     },
-    {
-      url: `${BASE_URL}/about/`,
+     {
+      url: `${BASE_URL}/privacy-policy/`,
       lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',
-      priority: 0.4,
+      priority: 0.1,
     },
-    {
-      url: `${BASE_URL}/contact/`,
+     {
+      url: `${BASE_URL}/terms-of-service/`,
       lastModified: new Date('2025-01-01'),
       changeFrequency: 'yearly',
-      priority: 0.6,
+      priority: 0.1,
     },
   ];
 
-  return [...staticPages, ...locationPages, ...servicePages];
+  return [...staticPages, ...servicePages];
 }
