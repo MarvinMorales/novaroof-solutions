@@ -8,6 +8,7 @@ import { ServicesHighlight } from '@/components/leadgen/ServicesHighlight';
 import { UrgencySection } from '@/components/leadgen/UrgencySection';
 import { HowItWorks } from '@/components/leadgen/HowItWorks';
 import { CallToAction } from '@/components/leadgen/CallToAction';
+import { LocalIntro } from '@/components/leadgen/LocalIntro';
 
 // Generate all possible city/service combinations for static export
 export async function generateStaticParams() {
@@ -64,11 +65,13 @@ export default function Page({ params }: { params: { locationSlug: string, servi
   if (!location || !service) {
     notFound();
   }
+  
+  const { pageContext } = location;
 
   return (
     <div className="pb-24 md:pb-0">
       <script
-        type-="application/ld+json"
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generatePageSchema(location, service)) }}
       />
       <Hero
@@ -78,12 +81,25 @@ export default function Page({ params }: { params: { locationSlug: string, servi
       />
       <TrustBadges />
       <main>
+        {pageContext?.introduction && (
+            <LocalIntro 
+                serviceName={service.name}
+                city={location.city}
+                introduction={pageContext.introduction}
+            />
+        )}
         <ServicesHighlight 
             currentServiceSlug={service.slug}
             locationSlug={location.slug}
         />
-        <UrgencySection />
-        <HowItWorks />
+        <UrgencySection 
+            title={pageContext?.urgencyTitle}
+            reasons={pageContext?.urgencyReasons}
+        />
+        <HowItWorks 
+            title={pageContext?.howItWorksTitle}
+            steps={pageContext?.steps}
+        />
         <CallToAction />
       </main>
     </div>
