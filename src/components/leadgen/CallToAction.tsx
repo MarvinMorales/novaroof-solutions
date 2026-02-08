@@ -13,7 +13,7 @@ export function CallToAction() {
           Don't Wait—Protect Your Home Now
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          A small leak can become a major disaster. Get a fast, free, no-obligation quote from a local expert today. We're available 24/7.
+          Every hour you wait, a small leak can cause more damage. Protect your home and get a fast, free, no-obligation quote from a local expert now. We're available 24/7.
         </p>
         <Button asChild size="lg" className="mt-8 text-lg md:text-xl h-14 px-10 shadow-lg animate-pulse">
           <a

@@ -19,7 +19,7 @@ export function Hero({ serviceName, city, state }: HeroProps) {
           {serviceName} in {city}, {state}
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
-          Get a Fast, Free Quote from a Licensed Local Pro. 24/7 Emergency Service Available.
+          Leaks, storm damage, or an aging roof? Get immediate help. We connect you with local, licensed roofers for a fast, free quote—24/7.
         </p>
         <Button asChild size="lg" className="mt-8 text-lg md:text-xl h-14 px-10 shadow-lg animate-pulse">
           <a
