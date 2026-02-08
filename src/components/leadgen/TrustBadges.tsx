@@ -1,4 +1,4 @@
-import { ShieldCheck, UserCheck, Clock } from 'lucide-react';
+import { ShieldCheck, UserCheck, Clock, MapPin } from 'lucide-react';
 
 const trustPoints = [
   {
@@ -7,11 +7,15 @@ const trustPoints = [
   },
   {
     icon: <UserCheck className="h-8 w-8 text-primary" />,
-    text: 'Local Vetted Pros',
+    text: 'Vetted Professionals',
+  },
+  {
+    icon: <MapPin className="h-8 w-8 text-primary" />,
+    text: 'Local Service Partners',
   },
   {
     icon: <Clock className="h-8 w-8 text-primary" />,
-    text: '24/7 Fast Response',
+    text: 'Same-Day Inspections',
   },
 ];
 
@@ -19,7 +23,7 @@ export function TrustBadges() {
   return (
     <section className="bg-secondary py-8">
       <div className="container">
-        <div className="grid grid-cols-3 gap-4 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {trustPoints.map((point) => (
             <div key={point.text} className="flex flex-col items-center gap-2">
               {point.icon}
