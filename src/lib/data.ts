@@ -1,8 +1,9 @@
 import { CheckCircle, ShieldCheck, Users, Zap } from 'lucide-react';
 
 // Centralized Phone Number
-export const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER || '(832) 555-ROOF';
+export const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER || '(562) 317-7925';
 export const sanitizedPhoneNumber = phoneNumber.replace(/\D/g, '');
+export const domain = 'novaroofsolutions.com';
 
 // Locations
 export const locations = [
@@ -88,17 +89,17 @@ export const galleryImages = [
 // Testimonials
 export const testimonials = [
   {
-    quote: "Apex Roofing transformed our home. The team was professional, efficient, and the quality of their work is outstanding. They handled everything after the storm, making a stressful situation easy.",
+    quote: "Nova Roof Solutions transformed our home. The team was professional, efficient, and the quality of their work is outstanding. They handled everything after the storm, making a stressful situation easy.",
     name: "Sarah L.",
     location: "The Woodlands, TX",
   },
   {
-    quote: "As a business owner, I needed a reliable team for our new facility. Apex delivered on time and on budget. Their communication and attention to detail were second to none. Highly recommend.",
+    quote: "As a business owner, I needed a reliable team for our new facility. Nova delivered on time and on budget. Their communication and attention to detail were second to none. Highly recommend.",
     name: "David Chen",
     location: "Katy, TX",
   },
   {
-    quote: "After seeing water stains on our ceiling, we called Apex for an estimate. They were honest, transparent, and didn't try to upsell us. The repair was done quickly and we haven't had an issue since.",
+    quote: "After seeing water stains on our ceiling, we called Nova for an estimate. They were honest, transparent, and didn't try to upsell us. The repair was done quickly and we haven't had an issue since.",
     name: "Maria Rodriguez",
     location: "Sugar Land, TX",
   },

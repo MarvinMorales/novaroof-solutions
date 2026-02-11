@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
+import { domain } from '@/lib/data';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -12,10 +13,11 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const APP_NAME = "Apex Roofing Solutions";
-const APP_DESCRIPTION = "Premier roofing services in Houston. Expert repairs, replacements, and installations for residential and commercial properties. Call for a free quote.";
+const APP_NAME = "Nova Roof Solutions";
+const APP_DESCRIPTION = "Premier roofing services in Texas. Expert repairs, replacements, and installations for residential and commercial properties. Call for a free quote.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://${domain}`),
   title: APP_NAME,
   description: APP_DESCRIPTION,
 };

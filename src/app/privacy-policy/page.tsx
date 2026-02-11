@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Apex Roofing Solutions',
+  title: 'Privacy Policy | Nova Roof Solutions',
   robots: {
     index: false,
   },
@@ -17,7 +17,7 @@ export default function PrivacyPolicyPage() {
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-foreground">1. Introduction</h2>
           <p>
-            Welcome to Apex Roofing Solutions. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
+            Welcome to Nova Roof Solutions. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
           </p>
         </div>
 

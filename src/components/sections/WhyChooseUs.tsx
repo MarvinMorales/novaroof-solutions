@@ -9,7 +9,7 @@ export function WhyChooseUs({ location }: WhyChooseUsProps) {
     <section className="py-20 md:py-28 bg-secondary">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold md:text-4xl text-primary">Why Choose Apex Roofing in {location.city}?</h2>
+          <h2 className="text-3xl font-bold md:text-4xl text-primary">Why Choose Nova Roof Solutions in {location.city}?</h2>
           <p className="text-lg text-muted-foreground">
             When you choose us, you're partnering with a team that values integrity, quality, and your complete satisfaction. We're committed to providing the best roofing experience in Texas.
           </p>
