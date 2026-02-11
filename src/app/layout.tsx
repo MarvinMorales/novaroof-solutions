@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
+import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({
