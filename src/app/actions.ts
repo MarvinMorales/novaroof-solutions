@@ -22,7 +22,7 @@ export type ContactState = {
   }
 }
 
-const API_URL = 'https://consulting-api.vercel.app/v1/clients/update-client-body?client_id=sssd';
+const API_URL = 'https://consulting-api.vercel.app/v1/clients/update-client-body?client_id=0590bc6a-8d60-4af7-9e7e-78d72919153b';
 
 export async function submitContactForm(
   prevState: ContactState,
@@ -54,7 +54,7 @@ export async function submitContactForm(
   };
 
   const body = {
-    visits: 1,
+    visits: 0,
     mailingLeads: [leadData],
     calls: 0,
   };
