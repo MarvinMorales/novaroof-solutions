@@ -22,6 +22,8 @@ export type ContactState = {
   }
 }
 
+const API_URL = 'https://consulting-api.vercel.app/v1/clients/update-client-body?client_id=sssd';
+
 export async function submitContactForm(
   prevState: ContactState,
   formData: FormData,
@@ -42,12 +44,47 @@ export async function submitContactForm(
     };
   }
 
-  // Here you would typically send an email, save to a database, etc.
-  // For this example, we'll just log it and return a success message.
-  console.log('Form data submitted:', validatedFields.data);
-
-  return {
-    message: "Thank you for your message! We'll be in touch shortly.",
-    status: 'success',
+  const leadData = {
+    name: validatedFields.data.name,
+    email: validatedFields.data.email,
+    phone: validatedFields.data.phone || '',
+    service: validatedFields.data.service,
+    message: validatedFields.data.message,
+    timestamp: new Date().toISOString(),
   };
+
+  const body = {
+    visits: 1,
+    mailingLeads: [leadData],
+    calls: 0,
+  };
+
+  try {
+    const response = await fetch(API_URL, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ message: 'Failed to parse error response' }));
+      console.error('API Error:', errorData);
+      throw new Error(`API request failed with status ${response.status}: ${errorData.message || 'Unknown error'}`);
+    }
+    
+    return {
+      message: "Thank you for your message! We'll be in touch shortly.",
+      status: 'success',
+    };
+
+  } catch (error) {
+    console.error('Submission Error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred. Please try again later.';
+    return {
+      message: errorMessage,
+      status: 'error',
+    };
+  }
 }

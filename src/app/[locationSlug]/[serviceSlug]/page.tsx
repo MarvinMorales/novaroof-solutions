@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = `${service.title} in ${location.city}, ${location.state} | Nova Roof Solutions`;
+  const title = `${service.title} in ${location.city}, ${location.state} | Novaroof Solutions`;
   const description = `Expert ${service.title} in ${location.city}. We offer fast, reliable, and professional roofing services for ${location.city} homeowners. Get a free estimate today.`;
 
   return {

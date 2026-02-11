@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 import { phoneNumber, sanitizedPhoneNumber } from '@/lib/data';
+import { trackCall } from '@/lib/tracking';
 
 type CtaBannerProps = {
     location: { city: string };
@@ -21,6 +22,7 @@ export function CtaBanner({ location }: CtaBannerProps) {
           <a
             href={`tel:${sanitizedPhoneNumber}`}
             className="flex items-center gap-3"
+            onClick={trackCall}
           >
             <Phone className="h-6 w-6" />
             Get Your Free Estimate Now

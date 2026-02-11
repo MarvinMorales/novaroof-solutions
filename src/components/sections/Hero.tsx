@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 import { phoneNumber, sanitizedPhoneNumber } from '@/lib/data';
+import { trackCall } from '@/lib/tracking';
 
 type HeroProps = {
     location: { city: string; state: string };
@@ -31,7 +32,7 @@ export function Hero({ location, service }: HeroProps) {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button size="lg" asChild className="text-lg h-14 px-10 shadow-lg animate-pulse">
-              <a href={`tel:${sanitizedPhoneNumber}`} className="flex items-center gap-3">
+              <a href={`tel:${sanitizedPhoneNumber}`} className="flex items-center gap-3" onClick={trackCall}>
                 <Phone className="h-6 w-6" />
                 Call For Your FREE Estimate
               </a>

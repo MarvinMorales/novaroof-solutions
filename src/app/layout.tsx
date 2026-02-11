@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { domain } from '@/lib/data';
+import { Tracker } from '@/components/analytics/Tracker';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,12 +14,15 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const APP_NAME = "Nova Roof Solutions";
+const APP_NAME = "Novaroof Solutions";
 const APP_DESCRIPTION = "Premier roofing services in Texas. Expert repairs, replacements, and installations for residential and commercial properties. Call for a free quote.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${domain}`),
-  title: APP_NAME,
+  title: {
+    default: `${APP_NAME} | Expert Roofing in Texas`,
+    template: `%s | ${APP_NAME}`,
+  },
   description: APP_DESCRIPTION,
 };
 
@@ -34,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("scroll-smooth", inter.variable)}>
       <body className="font-sans bg-background text-foreground antialiased">
+        <Tracker />
         <Header />
         <main>{children}</main>
         <Footer />
