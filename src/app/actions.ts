@@ -78,6 +78,7 @@ export async function submitContactForm(
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
+        'X-API-KEY': 'Hassi&Marv20162018'
       },
       body: JSON.stringify(body),
     });
