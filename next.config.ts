@@ -1,7 +1,6 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Static export is removed to allow for server actions for the contact form.
   images: {
     remotePatterns: [
       {
@@ -15,6 +14,15 @@ const nextConfig: NextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/houston-tx/roof-repair',
+        permanent: true,
+      },
+    ]
   },
 };
 

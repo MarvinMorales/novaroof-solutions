@@ -4,12 +4,17 @@ import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 import { phoneNumber, sanitizedPhoneNumber } from '@/lib/data';
 
-export function Hero() {
+type HeroProps = {
+    location: { city: string; state: string };
+    service: { title: string };
+};
+
+export function Hero({ location, service }: HeroProps) {
   return (
     <section className="relative h-[80vh] min-h-[500px] w-full">
       <Image
         src="https://picsum.photos/seed/hero-bg/1920/1080"
-        alt="Modern home with a perfectly installed new roof"
+        alt={`Professional ${service.title} in ${location.city}, ${location.state}`}
         fill
         className="object-cover"
         priority
@@ -19,10 +24,10 @@ export function Hero() {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="container text-center text-primary-foreground">
           <h1 className="text-4xl font-black tracking-tight text-white drop-shadow-lg md:text-6xl lg:text-7xl">
-            Houston's Premier Roofing Experts
+            {service.title} in {location.city}, {location.state}
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-200 drop-shadow-md md:text-xl">
-            Unmatched Quality & Reliability for Your Home or Business. From Storm Damage Repair to Full Replacements, We've Got You Covered.
+            Unmatched Quality & Reliability for Your Texas Home. From Storm Damage Repair to Full Replacements, We've Got You Covered.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button size="lg" asChild className="text-lg h-14 px-10 shadow-lg animate-pulse">

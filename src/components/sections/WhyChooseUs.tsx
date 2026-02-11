@@ -1,13 +1,17 @@
 import { whyChooseUsPoints } from '@/lib/data';
 
-export function WhyChooseUs() {
+type WhyChooseUsProps = {
+    location: { city: string };
+};
+
+export function WhyChooseUs({ location }: WhyChooseUsProps) {
   return (
     <section className="py-20 md:py-28 bg-secondary">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold md:text-4xl text-primary">Why Choose Apex Roofing?</h2>
+          <h2 className="text-3xl font-bold md:text-4xl text-primary">Why Choose Apex Roofing in {location.city}?</h2>
           <p className="text-lg text-muted-foreground">
-            When you choose us, you're partnering with a team that values integrity, quality, and your complete satisfaction. We're committed to providing the best roofing experience in Houston.
+            When you choose us, you're partnering with a team that values integrity, quality, and your complete satisfaction. We're committed to providing the best roofing experience in Texas.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
