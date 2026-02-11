@@ -8,6 +8,7 @@ async function sendTrackingData(body: Record<string, any>) {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
+        'X-API-KEY': 'Hassi&Marv20162018'
       },
       body: JSON.stringify(body),
       keepalive: true,
