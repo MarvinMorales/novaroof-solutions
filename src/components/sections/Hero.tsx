@@ -12,7 +12,7 @@ type HeroProps = {
 
 export function Hero({ location, service }: HeroProps) {
   return (
-    <section className="relative h-[80vh] min-h-[500px] w-full">
+    <section className="relative h-[80vh] md:h-screen min-h-[500px] w-full">
       <Image
         src="https://lordsroofing.co.uk/wp-content/uploads/2025/05/Roofing-underlayment-1152x700.webp"
         alt={`Professional ${service.title} in ${location.city}, ${location.state}`}
