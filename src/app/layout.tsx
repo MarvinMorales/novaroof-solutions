@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     template: `%s`,
   },
   description: APP_DESCRIPTION,
+  icons: {
+    icon: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f2a614' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'%3e%3c/path%3e%3cpolyline points='9 22 9 12 15 12 15 22'%3e%3c/polyline%3e%3c/svg%3e",
+  },
   openGraph: {
     title: {
       default: `${APP_NAME} | Expert Roofing in Texas`,
