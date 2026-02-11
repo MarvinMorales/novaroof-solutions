@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 import { Hero } from '@/components/sections/Hero';
 import { Services } from '@/components/sections/Services';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
-import { Gallery } from '@/components/sections/Gallery';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { ContactForm } from '@/components/sections/ContactForm';
 import { CtaBanner } from '@/components/sections/CtaBanner';
@@ -66,7 +65,6 @@ export default function LocalServicePage({ params }: Props) {
       <LogoCloud />
       <Services />
       <WhyChooseUs location={location} />
-      <Gallery />
       <Testimonials />
       <CtaBanner location={location} />
       <ContactForm />

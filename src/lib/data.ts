@@ -26,28 +26,28 @@ export const services = [
     slug: 'roof-repair',
     title: "Roof Repair",
     description: "From minor leaks to major issues, we provide reliable roof repairs to protect your Texas home from harsh weather.",
-    image: "https://picsum.photos/seed/repair/800/600",
+    image: "https://images.pexels.com/photos/33404248/pexels-photo-33404248.jpeg",
     imageHint: "roof repair"
   },
   {
     slug: 'roof-replacement',
     title: "Roof Replacement",
     description: "Full roof replacements using premium materials for long-lasting protection and enhanced curb appeal for your Texas property.",
-    image: "https://picsum.photos/seed/replacement/800/600",
+    image: "https://collinsandsonroofing.com/wp-content/uploads/2023/10/collins-blog-88-1080x675.jpg",
     imageHint: "new roof installation"
   },
   {
     slug: 'storm-damage-repair',
     title: "Storm Damage Repair",
     description: "Rapid response and expert repair for damage caused by Texas hurricanes, hail, and high winds.",
-    image: "https://picsum.photos/seed/stormdamage/800/600",
+    image: "https://ahouseinthehills.com/wp-content/uploads/2026/02/Close-up-of-asphalt-roof-shingles-lifted-by-wind-showing-torn-edges-and-debris-under-a-cloudy-sky-with-dramatic-storm-damage-detail.png.webp",
     imageHint: "storm damaged roof"
   },
   {
     slug: 'commercial-roofing',
     title: "Commercial Roofing",
     description: "Scalable and robust roofing systems for businesses, warehouses, and commercial properties across Texas.",
-    image: "https://picsum.photos/seed/commercial/800/600",
+    image: "https://www.stahlroofing.ca/wp-content/uploads/2020/08/Reasons-To-Work-With-A-Professional-Commercial-Roofing-Company-2.jpg.webp",
     imageHint: "commercial building roof"
   },
 ];
@@ -74,16 +74,6 @@ export const whyChooseUsPoints = [
     title: "Rapid Response & Free Estimates",
     description: "We provide fast, detailed, and transparent estimates for all projects, helping you make informed decisions quickly.",
   },
-];
-
-// Gallery Images
-export const galleryImages = [
-  { id: 1, src: "https://picsum.photos/seed/gallery1/1024/768", alt: "Completed shingle roof on a modern Texas home.", hint: "shingle roof" },
-  { id: 2, src: "https://picsum.photos/seed/gallery2/1024/768", alt: "Detailed view of metal roof installation in Houston.", hint: "metal roof" },
-  { id: 3, src: "https://picsum.photos/seed/gallery3/1024/768", alt: "Large commercial roofing project in Texas.", hint: "commercial roof" },
-  { id: 4, src: "https://picsum.photos/seed/gallery4/1024/768", alt: "Repairing storm damage on a residential roof in Texas.", hint: "roof repair" },
-  { id: 5, src: "https://picsum.photos/seed/gallery5/1024/768", alt: "Beautiful new tile roof in a Texas suburban neighborhood.", hint: "tile roof" },
-  { id: 6, src: "https://picsum.photos/seed/gallery6/1024/768", alt: "Team of Texas roofers working on a large-scale installation.", hint: "roofing team" },
 ];
 
 // Testimonials

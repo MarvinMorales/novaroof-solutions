@@ -11,6 +11,22 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'lordsroofing.co.uk',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'collinsandsonroofing.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ahouseinthehills.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.stahlroofing.ca',
+      },
     ],
   },
   typescript: {

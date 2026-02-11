@@ -24,10 +24,10 @@ export function Hero({ location, service }: HeroProps) {
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/50 to-transparent" />
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="container text-center text-primary-foreground">
-          <h1 className="text-4xl font-black tracking-tight text-white drop-shadow-lg md:text-6xl lg:text-7xl">
+          <h1 className="text-4xl font-black tracking-tight text-white drop-shadow-2xl md:text-6xl lg:text-7xl">
             {service.title} in {location.city}, {location.state}
           </h1>
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-200 drop-shadow-md md:text-xl">
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-200 drop-shadow-xl md:text-xl">
             Unmatched Quality & Reliability for Your Texas Home. From Storm Damage Repair to Full Replacements, We've Got You Covered.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -41,7 +41,7 @@ export function Hero({ location, service }: HeroProps) {
                <a href="#contact">Request an Estimate Online</a>
             </Button>
           </div>
-           <p className="mt-4 text-2xl md:text-3xl font-black tracking-wider text-primary drop-shadow-lg">
+           <p className="mt-4 text-2xl md:text-3xl font-black tracking-wider text-primary drop-shadow-xl">
               {phoneNumber}
           </p>
         </div>
