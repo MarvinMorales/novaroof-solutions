@@ -11,9 +11,9 @@ export function Faq() {
     <section id="faq" className="py-20 md:py-28 bg-secondary">
       <div className="container max-w-4xl mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-bold md:text-4xl text-foreground">Preguntas Frecuentes Sobre Techos en Houston</h2>
+          <h2 className="text-3xl font-bold md:text-4xl text-foreground">Frequently Asked Questions About Roofing in Houston</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Respuestas claras a tus dudas más comunes. Estamos aquí para ayudarte a tomar la mejor decisión para tu hogar.
+            Clear answers to your most common questions. We're here to help you make the best decision for your home.
           </p>
         </div>
         <Accordion type="single" collapsible className="w-full mt-12 space-y-4">

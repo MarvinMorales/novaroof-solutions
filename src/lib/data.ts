@@ -27,28 +27,32 @@ export const services = [
     title: "Roof Repair",
     description: "From minor leaks to major issues, we provide reliable roof repairs to protect your Texas home from harsh weather.",
     image: "https://images.pexels.com/photos/33404248/pexels-photo-33404248.jpeg",
-    imageHint: "roof repair"
+    imageHint: "roof repair",
+    alt: "Professional roof repair service in Houston TX for leaks and damage."
   },
   {
     slug: 'roof-replacement',
     title: "Roof Replacement",
     description: "Full roof replacements using premium materials for long-lasting protection and enhanced curb appeal for your Texas property.",
     image: "https://collinsandsonroofing.com/wp-content/uploads/2023/10/collins-blog-88-1080x675.jpg",
-    imageHint: "new roof installation"
+    imageHint: "new roof installation",
+    alt: "Complete roof replacement with new shingles in Houston."
   },
   {
     slug: 'storm-damage-repair',
     title: "Storm Damage Repair",
     description: "Rapid response and expert repair for damage caused by Texas hurricanes, hail, and high winds.",
     image: "https://ahouseinthehills.com/wp-content/uploads/2026/02/Close-up-of-asphalt-roof-shingles-lifted-by-wind-showing-torn-edges-and-debris-under-a-cloudy-sky-with-dramatic-storm-damage-detail.png.webp",
-    imageHint: "storm damaged roof"
+    imageHint: "storm damaged roof",
+    alt: "Storm damage roof repair in Houston for hail and wind damage."
   },
   {
     slug: 'commercial-roofing',
     title: "Commercial Roofing",
     description: "Scalable and robust roofing systems for businesses, warehouses, and commercial properties across Texas.",
     image: "https://www.stahlroofing.ca/wp-content/uploads/2020/08/Reasons-To-Work-With-A-Professional-Commercial-Roofing-Company-2.jpg.webp",
-    imageHint: "commercial building roof"
+    imageHint: "commercial building roof",
+    alt: "Commercial roofing services for a large building in Houston."
   },
 ];
 
@@ -56,23 +60,23 @@ export const services = [
 export const whyChooseUsPoints = [
   {
     icon: CheckCircle,
-    title: "Contratista Certificado por GAF",
-    description: "Nuestra certificación GAF nos coloca en el 3% superior de los contratistas de techos. Esto garantiza que utilizamos los mejores materiales y técnicas de instalación, respaldados por las garantías más sólidas de la industria.",
+    title: "GAF Certified Contractor",
+    description: "Our GAF certification places us in the top 3% of roofing contractors, ensuring top-quality materials and installation techniques backed by the industry's strongest warranties.",
   },
   {
     icon: ShieldCheck,
-    title: "Totalmente Asegurados para tu Protección",
-    description: "Tu tranquilidad es nuestra prioridad. Contamos con un seguro de responsabilidad civil completo de $2 millones, protegiendo tu propiedad y a nuestro equipo durante todo el proyecto.",
+    title: "Fully Insured for Your Protection",
+    description: "Your peace of mind is our priority. We carry full liability insurance, protecting your property and our team throughout the entire project.",
   },
   {
     icon: Users,
-    title: "Expertos Locales de Houston",
-    description: "Conocemos el clima de Texas. Nuestro equipo de profesionales locales entiende los desafíos únicos del calor, la humedad y las tormentas de Houston, asegurando una solución duradera.",
+    title: "Local Houston Experts",
+    description: "We know Texas weather. Our team of local professionals understands the unique challenges of Houston's heat, humidity, and storms, ensuring a durable, long-lasting solution.",
   },
   {
     icon: Zap,
-    title: "Respuesta Rápida y Presupuestos Gratis",
-    description: "El tiempo es crucial con un techo dañado. Ofrecemos una respuesta rápida para inspeccionar tu propiedad y proporcionar un presupuesto gratuito, detallado y sin compromiso para que tomes una decisión informada.",
+    title: "Rapid Response & Free Estimates",
+    description: "Time is critical with a damaged roof. We offer a fast response to inspect your property and provide a free, detailed, no-obligation estimate for an informed decision.",
   },
 ];
 
@@ -98,23 +102,36 @@ export const testimonials = [
 // FAQ Content
 export const faqContent = [
   {
-    question: "Cuánto cuesta la reparación de un techo en Houston, TX?",
-    answer: "El costo de una reparación de techo en Houston puede variar significativamente dependiendo de la magnitud del daño, los materiales utilizados y la complejidad del techo. Las reparaciones menores, como reemplazar algunas tejas, pueden costar entre $300 y $700. Reparaciones más extensas, como arreglar una fuga o reemplazar una sección dañada por una tormenta, pueden oscilar entre $700 y $2,500. Para daños estructurales importantes, el costo puede ser mayor. En Novaroof Solutions, entendemos que cada techo es único. Por eso, ofrecemos una inspección y un presupuesto GRATUITO y sin compromiso para darte un precio exacto y transparente adaptado a las necesidades específicas de tu hogar en Houston.",
-    slug: "costo-reparacion-techo-houston"
+    question: "How much does roof repair cost in Houston, TX?",
+    answer: "Roof repair costs in Houston vary depending on the extent of the damage, the materials needed, and your roof's size and pitch. Minor repairs, like replacing a few missing shingles, can be a few hundred dollars, while more significant leak repairs might cost more. We provide a detailed, transparent, and free estimate after a thorough inspection so you know the exact cost upfront.",
+    slug: "cost-roof-repair-houston"
   },
   {
-    question: "Cuándo debería reparar en lugar de reemplazar mi techo?",
-    answer: "La decisión de reparar o reemplazar un techo en Texas depende de tres factores clave: la edad del techo, la extensión del daño y tus planes a futuro. Generalmente, si tu techo tiene menos de 15 años y el daño está localizado en un área pequeña (por ejemplo, algunas tejas faltantes por el viento), una reparación profesional es suficiente. Sin embargo, si tu techo se acerca al final de su vida útil (20-25 años para tejas de asfalto), tiene múltiples fugas, o más del 30% de la superficie está dañada por granizo o una tormenta, el reemplazo completo suele ser la opción más rentable y segura a largo plazo. Un reemplazo también es una excelente inversión si planeas vender tu casa pronto.",
-    slug: "reparar-vs-reemplazar-techo"
+    question: "Do you offer emergency roof repair in Houston?",
+    answer: "Yes, we provide fast emergency roof repair services across Houston for urgent issues like severe leaks and storm damage. Our team is ready to respond quickly to protect your home from further damage.",
+    slug: "emergency-roof-repair-houston"
   },
   {
-    question: "Qué debo hacer inmediatamente después de una tormenta en Houston?",
-    answer: "La seguridad es lo primero. Después de una tormenta severa en Houston, no te subas al techo. Desde el suelo, inspecciona visualmente si hay daños evidentes como tejas caídas en el jardín. En el interior, busca signos de goteras o manchas de agua en los techos. Documenta cualquier daño que veas con fotografías para tu reclamación de seguro. Si es seguro hacerlo y tienes una fuga activa, puedes colocar un balde para recoger el agua. Luego, llama a un profesional de inmediato. En Novaroof Solutions, ofrecemos inspecciones de emergencia para evaluar los daños, realizar reparaciones temporales para prevenir más daños por agua y guiarte en cada paso del proceso de reclamación al seguro.",
-    slug: "danos-por-tormenta-houston"
+    question: "How long does a roof repair take?",
+    answer: "The timeline depends on the complexity of the job. Most common repairs, such as fixing leaks or replacing shingles, are completed within a single day. We work efficiently to minimize disruption to your routine and secure your home as quickly as possible.",
+    slug: "roof-repair-duration"
   },
   {
-    question: "Están certificados y asegurados para trabajar en Texas?",
-    answer: "Absolutamente. Novaroof Solutions es un contratista certificado por GAF, lo que significa que cumplimos con los más altos estándares de instalación y profesionalismo de la industria. Además, estamos completamente asegurados y tenemos una póliza de responsabilidad civil de $2 millones para la protección total de tu propiedad y tu tranquilidad. Operamos con equipos internos de expertos locales de Texas, no con subcontratistas, para garantizar una calidad constante en cada proyecto que realizamos.",
-    slug: "certificacion-seguro-texas"
+    question: "Will my insurance cover the roof repair?",
+    answer: "In many cases, especially for storm or hail damage, your homeowner's insurance will cover the cost of roof repair. We have extensive experience working with insurance companies and can assist you with the claims process to ensure it's as smooth and stress-free as possible.",
+    slug: "insurance-coverage-roof-repair"
   }
+];
+
+export const areasWeServe = [
+  "Katy",
+  "Cypress",
+  "The Woodlands",
+  "Sugar Land",
+  "Pearland",
+  "Spring Branch",
+  "Memorial",
+  "Kingwood",
+  "Clear Lake",
+  "Downtown Houston"
 ];

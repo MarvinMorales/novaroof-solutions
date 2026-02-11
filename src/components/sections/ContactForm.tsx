@@ -17,7 +17,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" disabled={pending} className="w-full">
-      {pending ? 'Enviando...' : 'Enviar Mensaje'}
+      {pending ? 'Sending...' : 'Send Message'}
     </Button>
   );
 }
@@ -47,48 +47,48 @@ export function ContactForm() {
       <div className="container max-w-3xl mx-auto">
         <Card>
           <CardHeader className="text-center">
-            <CardTitle className="text-3xl md:text-4xl">Solicita un Presupuesto Gratuito</CardTitle>
+            <CardTitle className="text-3xl md:text-4xl">Request a Free Quote</CardTitle>
             <CardDescription className="text-lg">
-              ¿Prefieres escribir? Completa el formulario y uno de nuestros especialistas en techos se pondrá en contacto contigo a la brevedad.
+              Prefer to write? Fill out the form and one of our roofing specialists will contact you shortly.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form action={formAction} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Nombre Completo</Label>
+                  <Label htmlFor="name">Full Name</Label>
                   <Input id="name" name="name" placeholder="John Doe" required />
                   {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Correo Electrónico</Label>
+                  <Label htmlFor="email">Email Address</Label>
                   <Input id="email" name="email" type="email" placeholder="you@example.com" required />
                   {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
                 </div>
               </div>
 
                <div className="space-y-2">
-                  <Label htmlFor="phone">Número de Teléfono (Opcional)</Label>
+                  <Label htmlFor="phone">Phone Number (Optional)</Label>
                   <Input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" />
                </div>
 
               <div className="space-y-2">
-                <Label htmlFor="service">¿Qué servicio necesitas?</Label>
+                <Label htmlFor="service">What service do you need?</Label>
                 <Select name="service" required>
                   <SelectTrigger id="service">
-                    <SelectValue placeholder="Selecciona un servicio" />
+                    <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
                     {services.map(s => <SelectItem key={s.title} value={s.title}>{s.title}</SelectItem>)}
-                    <SelectItem value="Other">Otro / No estoy seguro</SelectItem>
+                    <SelectItem value="Other">Other / Not Sure</SelectItem>
                   </SelectContent>
                 </Select>
                  {state.errors?.service && <p className="text-sm text-destructive">{state.errors.service[0]}</p>}
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Mensaje</Label>
-                <Textarea id="message" name="message" placeholder="Cuéntanos sobre tu proyecto..." required className="min-h-[120px]" />
+                <Label htmlFor="message">Message</Label>
+                <Textarea id="message" name="message" placeholder="Tell us about your project..." required className="min-h-[120px]" />
                 {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message[0]}</p>}
               </div>
               
