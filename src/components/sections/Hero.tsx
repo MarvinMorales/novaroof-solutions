@@ -14,12 +14,12 @@ export function Hero({ location, service }: HeroProps) {
   return (
     <section className="relative h-[80vh] min-h-[500px] w-full">
       <Image
-        src="https://picsum.photos/seed/roofing-sunset/1920/1080"
+        src="https://lordsroofing.co.uk/wp-content/uploads/2025/05/Roofing-underlayment-1152x700.webp"
         alt={`Professional ${service.title} in ${location.city}, ${location.state}`}
         fill
         className="object-cover"
         priority
-        data-ai-hint="roofing sunset"
+        data-ai-hint="roofing underlayment"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/50 to-transparent" />
       <div className="absolute inset-0 flex items-center justify-center">
