@@ -42,11 +42,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const title = `${service.title} in ${location.city}, ${location.state} | Novaroof Solutions`;
-  const description = `Expert ${service.title} in ${location.city}. We offer fast, reliable, and professional roofing services for ${location.city} homeowners. Get a free estimate today.`;
+  const description = `Need expert ${service.title} in ${location.city}, ${location.state}? Novaroof Solutions offers fast, reliable, and professional roofing services for ${location.city} homeowners and businesses. Whether you're dealing with storm damage, leaks, or need a full replacement, our GAF certified contractors are ready 24/7. We provide free, no-obligation estimates and are fully insured for your peace of mind. As local Texas experts, we understand the unique weather challenges in ${location.city}. Call now for immediate assistance.`;
+
+  const url = `/${params.locationSlug}/${params.serviceSlug}`;
 
   return {
     title,
     description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      images: [
+        {
+          url: service.image,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [service.image],
+    },
   };
 }
 

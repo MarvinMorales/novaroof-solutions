@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Novaroof Solutions',
   robots: {
     index: false,
+    follow: true,
   },
 };
 

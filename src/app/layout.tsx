@@ -21,9 +21,37 @@ export const metadata: Metadata = {
   metadataBase: new URL(`https://${domain}`),
   title: {
     default: `${APP_NAME} | Expert Roofing in Texas`,
-    template: `%s | ${APP_NAME}`,
+    template: `%s`,
   },
   description: APP_DESCRIPTION,
+  openGraph: {
+    title: {
+      default: `${APP_NAME} | Expert Roofing in Texas`,
+      template: `%s`,
+    },
+    description: APP_DESCRIPTION,
+    siteName: APP_NAME,
+    url: new URL(`https://${domain}`),
+    images: [
+      {
+        url: 'https://lordsroofing.co.uk/wp-content/uploads/2025/05/Roofing-underlayment-1152x700.webp',
+        width: 1152,
+        height: 700,
+        alt: 'Professional roofing services by Novaroof Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: {
+      default: `${APP_NAME} | Expert Roofing in Texas`,
+      template: `%s`,
+    },
+    description: APP_DESCRIPTION,
+    images: ['https://lordsroofing.co.uk/wp-content/uploads/2025/05/Roofing-underlayment-1152x700.webp'],
+  },
 };
 
 export const viewport: Viewport = {
