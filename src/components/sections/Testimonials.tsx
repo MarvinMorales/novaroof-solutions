@@ -1,15 +1,23 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { testimonials } from '@/lib/data';
+import { i18n } from '@/lib/data';
 import { Star } from 'lucide-react';
 
-export function Testimonials() {
+type TestimonialsProps = {
+  lang: 'en' | 'es';
+  location: { city: string };
+};
+
+export function Testimonials({ lang, location }: TestimonialsProps) {
+  const t = i18n[lang].testimonialsSection;
+  const testimonials = i18n[lang].testimonials;
+
   return (
     <section className="py-20 md:py-28 bg-secondary">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold md:text-4xl">Lo Que Dicen Nuestros Clientes</h2>
+          <h2 className="text-3xl font-bold md:text-4xl">{t.title}</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Estamos orgullosos de habernos ganado la confianza de propietarios y empresas en toda el área de Houston.
+            {t.description(location.city)}
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

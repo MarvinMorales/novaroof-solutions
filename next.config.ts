@@ -39,7 +39,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/',
-        destination: '/houston-tx/roof-repair',
+        destination: '/es/houston-tx/roof-repair',
         permanent: true,
       },
     ]

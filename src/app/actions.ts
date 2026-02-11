@@ -1,14 +1,22 @@
 'use server';
 
 import { z } from 'zod';
+import { i18n } from '@/lib/data';
 
-const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters."),
-  email: z.string().email("Invalid email address."),
-  phone: z.string().optional(),
-  service: z.string(),
-  message: z.string().min(10, "Message must be at least 10 characters."),
-});
+type Language = 'en' | 'es';
+
+const getContactSchema = (lang: Language) => {
+  const t = i18n[lang].contactForm.validation;
+  return z.object({
+    name: z.string().min(2, t.name),
+    email: z.string().email(t.email),
+    phone: z.string().optional(),
+    service: z.string({ required_error: t.service }),
+    message: z.string().min(10, t.message),
+    lang: z.enum(['en', 'es']),
+  });
+}
+
 
 export type ContactState = {
   message: string;
@@ -28,17 +36,23 @@ export async function submitContactForm(
   prevState: ContactState,
   formData: FormData,
 ): Promise<ContactState> {
+  const lang = (formData.get('lang') || 'es') as Language;
+  const contactSchema = getContactSchema(lang);
+  const t = i18n[lang].contactForm;
+
+
   const validatedFields = contactSchema.safeParse({
     name: formData.get('name'),
     email: formData.get('email'),
     phone: formData.get('phone'),
     service: formData.get('service'),
     message: formData.get('message'),
+    lang: formData.get('lang'),
   });
 
   if (!validatedFields.success) {
     return {
-      message: 'Please correct the errors below.',
+      message: t.validation.formError,
       status: 'error',
       errors: validatedFields.error.flatten().fieldErrors,
     };
@@ -75,13 +89,13 @@ export async function submitContactForm(
     }
     
     return {
-      message: "Thank you for your message! We'll be in touch shortly.",
+      message: t.validation.success,
       status: 'success',
     };
 
   } catch (error) {
     console.error('Submission Error:', error);
-    const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred. Please try again later.';
+    const errorMessage = error instanceof Error ? error.message : t.validation.unexpectedError;
     return {
       message: errorMessage,
       status: 'error',
