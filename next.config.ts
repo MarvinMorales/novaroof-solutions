@@ -1,19 +1,15 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Use static export for maximum performance and compatibility with any static host.
-  output: 'export',
-  
-  // Ensures clean URLs that are compatible with most static hosting providers.
-  trailingSlash: true,
-
-  // Since we are not using next/image for optimization, we can disable it.
-  // We will use standard <img> tags for full control.
+  // Static export is removed to allow for server actions for the contact form.
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+    ],
   },
-
-  // These flags help during development but are good practice to have.
   typescript: {
     ignoreBuildErrors: true,
   },

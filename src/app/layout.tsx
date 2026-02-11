@@ -2,8 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import { StickyCallButton } from '@/components/leadgen/StickyCallButton';
-import { MinimalFooter } from '@/components/leadgen/MinimalFooter';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -11,20 +12,16 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const APP_NAME = "Local Roofing Quotes";
-const APP_DESCRIPTION = "Get immediate quotes from licensed local roofing contractors for emergency repairs, storm damage, and replacements. Available 24/7. Call now for a free estimate.";
+const APP_NAME = "Apex Roofing Solutions";
+const APP_DESCRIPTION = "Premier roofing services in Houston. Expert repairs, replacements, and installations for residential and commercial properties. Call for a free quote.";
 
 export const metadata: Metadata = {
-  applicationName: APP_NAME,
+  title: APP_NAME,
   description: APP_DESCRIPTION,
-  robots: {
-    index: true,
-    follow: true,
-  }
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FFFFFF",
+  themeColor: "#111827",
 };
 
 export default function RootLayout({
@@ -35,9 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("scroll-smooth", inter.variable)}>
       <body className="font-sans bg-background text-foreground antialiased">
-        <main className="flex-grow">{children}</main>
-        <MinimalFooter />
-        <StickyCallButton />
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <Toaster />
       </body>
     </html>
   );
