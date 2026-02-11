@@ -12,7 +12,7 @@ export function LogoCloud() {
     <div className="bg-secondary py-12">
       <div className="container">
         <h2 className="text-center text-lg font-semibold text-muted-foreground">
-          Partnered with the Industry's Most Trusted Brands
+          Trabajamos con las Marcas Más Confiables de la Industria
         </h2>
         <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-5 items-center">
           {logos.map((logo) => (

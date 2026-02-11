@@ -9,6 +9,7 @@ import { Testimonials } from '@/components/sections/Testimonials';
 import { ContactForm } from '@/components/sections/ContactForm';
 import { CtaBanner } from '@/components/sections/CtaBanner';
 import { LogoCloud } from '@/components/sections/LogoCloud';
+import { Faq } from '@/components/sections/Faq';
 
 type Props = {
   params: {
@@ -88,6 +89,7 @@ export default function LocalServicePage({ params }: Props) {
       <Services />
       <WhyChooseUs location={location} />
       <Testimonials />
+      <Faq />
       <CtaBanner location={location} />
       <ContactForm />
     </>

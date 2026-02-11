@@ -56,23 +56,23 @@ export const services = [
 export const whyChooseUsPoints = [
   {
     icon: CheckCircle,
-    title: "GAF Certified Contractor",
-    description: "As a GAF certified contractor, we adhere to the highest standards of quality and professionalism in the industry.",
+    title: "Contratista Certificado por GAF",
+    description: "Nuestra certificación GAF nos coloca en el 3% superior de los contratistas de techos. Esto garantiza que utilizamos los mejores materiales y técnicas de instalación, respaldados por las garantías más sólidas de la industria.",
   },
   {
     icon: ShieldCheck,
-    title: "Fully Insured & Bonded",
-    description: "We carry comprehensive insurance coverage, including a $2 million liability policy, for your complete peace of mind.",
+    title: "Totalmente Asegurados para tu Protección",
+    description: "Tu tranquilidad es nuestra prioridad. Contamos con un seguro de responsabilidad civil completo de $2 millones, protegiendo tu propiedad y a nuestro equipo durante todo el proyecto.",
   },
   {
     icon: Users,
-    title: "Local Texas Experts",
-    description: "Our team consists of dedicated, in-house roofing professionals who understand Texas weather—we never use subcontractors.",
+    title: "Expertos Locales de Houston",
+    description: "Conocemos el clima de Texas. Nuestro equipo de profesionales locales entiende los desafíos únicos del calor, la humedad y las tormentas de Houston, asegurando una solución duradera.",
   },
   {
     icon: Zap,
-    title: "Rapid Response & Free Estimates",
-    description: "We provide fast, detailed, and transparent estimates for all projects, helping you make informed decisions quickly.",
+    title: "Respuesta Rápida y Presupuestos Gratis",
+    description: "El tiempo es crucial con un techo dañado. Ofrecemos una respuesta rápida para inspeccionar tu propiedad y proporcionar un presupuesto gratuito, detallado y sin compromiso para que tomes una decisión informada.",
   },
 ];
 
@@ -93,4 +93,28 @@ export const testimonials = [
     name: "Maria Rodriguez",
     location: "Sugar Land, TX",
   },
+];
+
+// FAQ Content
+export const faqContent = [
+  {
+    question: "Cuánto cuesta la reparación de un techo en Houston, TX?",
+    answer: "El costo de una reparación de techo en Houston puede variar significativamente dependiendo de la magnitud del daño, los materiales utilizados y la complejidad del techo. Las reparaciones menores, como reemplazar algunas tejas, pueden costar entre $300 y $700. Reparaciones más extensas, como arreglar una fuga o reemplazar una sección dañada por una tormenta, pueden oscilar entre $700 y $2,500. Para daños estructurales importantes, el costo puede ser mayor. En Novaroof Solutions, entendemos que cada techo es único. Por eso, ofrecemos una inspección y un presupuesto GRATUITO y sin compromiso para darte un precio exacto y transparente adaptado a las necesidades específicas de tu hogar en Houston.",
+    slug: "costo-reparacion-techo-houston"
+  },
+  {
+    question: "Cuándo debería reparar en lugar de reemplazar mi techo?",
+    answer: "La decisión de reparar o reemplazar un techo en Texas depende de tres factores clave: la edad del techo, la extensión del daño y tus planes a futuro. Generalmente, si tu techo tiene menos de 15 años y el daño está localizado en un área pequeña (por ejemplo, algunas tejas faltantes por el viento), una reparación profesional es suficiente. Sin embargo, si tu techo se acerca al final de su vida útil (20-25 años para tejas de asfalto), tiene múltiples fugas, o más del 30% de la superficie está dañada por granizo o una tormenta, el reemplazo completo suele ser la opción más rentable y segura a largo plazo. Un reemplazo también es una excelente inversión si planeas vender tu casa pronto.",
+    slug: "reparar-vs-reemplazar-techo"
+  },
+  {
+    question: "Qué debo hacer inmediatamente después de una tormenta en Houston?",
+    answer: "La seguridad es lo primero. Después de una tormenta severa en Houston, no te subas al techo. Desde el suelo, inspecciona visualmente si hay daños evidentes como tejas caídas en el jardín. En el interior, busca signos de goteras o manchas de agua en los techos. Documenta cualquier daño que veas con fotografías para tu reclamación de seguro. Si es seguro hacerlo y tienes una fuga activa, puedes colocar un balde para recoger el agua. Luego, llama a un profesional de inmediato. En Novaroof Solutions, ofrecemos inspecciones de emergencia para evaluar los daños, realizar reparaciones temporales para prevenir más daños por agua y guiarte en cada paso del proceso de reclamación al seguro.",
+    slug: "danos-por-tormenta-houston"
+  },
+  {
+    question: "Están certificados y asegurados para trabajar en Texas?",
+    answer: "Absolutamente. Novaroof Solutions es un contratista certificado por GAF, lo que significa que cumplimos con los más altos estándares de instalación y profesionalismo de la industria. Además, estamos completamente asegurados y tenemos una póliza de responsabilidad civil de $2 millones para la protección total de tu propiedad y tu tranquilidad. Operamos con equipos internos de expertos locales de Texas, no con subcontratistas, para garantizar una calidad constante en cada proyecto que realizamos.",
+    slug: "certificacion-seguro-texas"
+  }
 ];

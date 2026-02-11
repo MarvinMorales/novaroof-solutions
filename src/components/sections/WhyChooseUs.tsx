@@ -9,9 +9,9 @@ export function WhyChooseUs({ location }: WhyChooseUsProps) {
     <section className="py-20 md:py-28 bg-secondary">
       <div className="container grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
-          <h2 className="text-3xl font-bold md:text-4xl text-primary">Why Choose Novaroof Solutions in {location.city}?</h2>
+          <h2 className="text-3xl font-bold md:text-4xl text-primary">¿Por Qué Elegir a Novaroof Solutions en {location.city}?</h2>
           <p className="text-lg text-muted-foreground">
-            When you choose us, you're partnering with a team that values integrity, quality, and your complete satisfaction. We're committed to providing the best roofing experience in Texas.
+            Cuando nos eliges, te asocias con un equipo que valora la integridad, la calidad y tu completa satisfacción. Estamos comprometidos a brindar la mejor experiencia de techado en Texas, con la garantía y la experiencia que solo un contratista local y certificado puede ofrecer.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
